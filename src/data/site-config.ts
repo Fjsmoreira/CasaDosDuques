@@ -5,8 +5,8 @@ export const SITE_CONFIG = {
   description: 'A meticulously renovated 90-year-old holiday home in Abiul, Pombal. Sleeps 8 guests with pool, 450m² garden, and stunning views of Central Portugal.',
   contact: {
     email: 'fernando@casadosduques.pt',
-    phone: '+316 1234 3221',
-    whatsapp: '+31612343221',
+    phone: '+31 631 683 221',
+    whatsapp: '+31 631 683 221',
   },
   address: {
     street: 'Rua D. Afonso Henriques n 9',

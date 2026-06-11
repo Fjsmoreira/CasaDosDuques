@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTASection from '../components/CTASection.astro';
+import MapSection from '../components/MapSection.astro';
 import { SITE_CONFIG } from '../data/site-config.ts';
 ---
 
@@ -12,15 +13,15 @@ import { SITE_CONFIG } from '../data/site-config.ts';
   <div class="max-w-4xl mx-auto px-4 py-12">
     <h1 class="text-4xl font-bold text-olive-800 mb-6">Where We Are — Abiul, Pombal, Central Portugal</h1>
     
-    <!-- Map placeholder -->
-    <div class="bg-olive-50 rounded-xl h-80 flex items-center justify-center mb-8 border border-olive-200">
-      <div class="text-center text-olive-600">
-        <div class="text-4xl mb-2">🗺️</div>
-        <p class="font-semibold">Map — Casa dos Duques</p>
-        <p class="text-sm">{SITE_CONFIG.address.street}, {SITE_CONFIG.address.town}</p>
-        <p class="text-sm">Leaflet/OSM map will be embedded here</p>
-      </div>
-    </div>
+    <MapSection
+      lat={SITE_CONFIG.coordinates.lat}
+      lng={SITE_CONFIG.coordinates.lng}
+      address={SITE_CONFIG.address.street}
+      town={SITE_CONFIG.address.town}
+      district={SITE_CONFIG.address.district}
+      height="h-[300px] md:h-[400px]"
+      client:load
+    />
 
     <div class="grid md:grid-cols-2 gap-6 mb-10">
       <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">

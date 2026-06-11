@@ -1,0 +1,121 @@
+---
+export interface Props {
+  lat?: number;
+  lng?: number;
+  address?: string;
+  town?: string;
+  district?: string;
+  height?: string;
+}
+
+const {
+  lat = 39.8726,
+  lng = -8.5386,
+  address = 'Rua D. Afonso Henriques n 9',
+  town = 'Abiul',
+  district = 'Pombal',
+  height = 'h-[400px] md:h-[400px]',
+} = Astro.props;
+---
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+<script>
+  const initMap = () => {
+    const map = L.map('map').setView([39.8726, -8.5386], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 19,
+    }).addTo(map);
+
+    // Create a dark olive-themed marker icon using divIcon
+    const oliveIcon = L.divIcon({
+      className: 'custom-olive-marker',
+      html: `<div style="
+        background-color: #4a5d23;
+        width: 32px;
+        height: 32px;
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      ">
+        <span style="
+          width: 12px;
+          height: 12px;
+          background-color: #fff;
+          border-radius: 50%;
+          display: inline-block;
+          transform: rotate(45deg);
+        "></span>
+      </div>`,
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
+      popupAnchor: [0, -36],
+    });
+
+    const popupContent = `
+      <div style="font-family: system-ui, sans-serif; line-height: 1.4;">
+        <strong style="color: #4a5d23; font-size: 14px;">Casa dos Duques</strong><br />
+        <span style="color: #5c6b3f; font-size: 13px;">
+          ${address}<br />
+          ${town}, ${district}<br />
+          Portugal
+        </span>
+      </div>
+    `;
+
+    L.marker([39.8726, -8.5386], { icon: oliveIcon })
+      .addTo(map)
+      .bindPopup(popupContent);
+
+    // Handle case where container doesn't have height yet
+    setTimeout(() => map.invalidateSize(), 300);
+  };
+
+  // Wait for DOM and leaflet to fully load
+  if (document.readyState === 'complete') {
+    initMap();
+  } else {
+    window.addEventListener('load', initMap);
+  }
+</script>
+
+<style is:global>
+  .custom-olive-marker {
+    background: transparent !important;
+    border: none !important;
+  }
+  #map {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid #d4c9a8;
+    z-index: 0;
+  }
+  .leaflet-popup-content-wrapper {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .leaflet-popup-tip {
+    box-shadow: none;
+  }
+</style>
+
+<div
+  id="map"
+  class="w-full {height} rounded-xl border border-warm-sand shadow-sm"
+  aria-label="Map showing Casa dos Duques at {address}, {town}, {district}, Portugal"
+></div>

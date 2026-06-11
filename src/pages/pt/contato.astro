@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import MapSection from '../../components/MapSection.astro';
 import { SITE_CONFIG } from '../../data/site-config.ts';
 ---
 
@@ -43,5 +44,15 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
         </form>
       </div>
     </div>
+
+    <MapSection
+      lat={SITE_CONFIG.coordinates.lat}
+      lng={SITE_CONFIG.coordinates.lng}
+      address={SITE_CONFIG.address.street}
+      town={SITE_CONFIG.address.town}
+      district={SITE_CONFIG.address.district}
+      height="h-[300px] md:h-[400px]"
+      client:load
+    />
   </div>
 </BaseLayout>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import MapSection from '../components/MapSection.astro';
 import { SITE_CONFIG } from '../data/site-config.ts';
 
 const schema = {
@@ -95,14 +96,14 @@ const schema = {
       </div>
     </div>
 
-    <!-- Map placeholder -->
-    <div class="bg-olive-50 rounded-xl h-64 flex items-center justify-center mb-8 border border-olive-200">
-      <div class="text-center text-olive-600">
-        <div class="text-4xl mb-2">🗺️</div>
-        <p class="font-semibold">Map — Find Us</p>
-        <p class="text-sm">{SITE_CONFIG.address.street}, {SITE_CONFIG.address.town}, {SITE_CONFIG.address.district}</p>
-        <p class="text-sm">Leaflet/OSM map with geocoded pin will be embedded here</p>
-      </div>
-    </div>
+    <MapSection
+      lat={SITE_CONFIG.coordinates.lat}
+      lng={SITE_CONFIG.coordinates.lng}
+      address={SITE_CONFIG.address.street}
+      town={SITE_CONFIG.address.town}
+      district={SITE_CONFIG.address.district}
+      height="h-[300px] md:h-[400px]"
+      client:load
+    />
   </div>
 </BaseLayout>
