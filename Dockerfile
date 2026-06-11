@@ -1,11 +1,9 @@
 FROM node:22-alpine
-RUN apk add --no-cache nginx
 WORKDIR /app
+RUN apk add --no-cache python3
 COPY package.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-RUN cp -r /app/dist/* /usr/share/nginx/html/ && \
-    cp /app/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["python3", "-m", "http.server", "80", "-d", "/app/dist/", "--bind", "0.0.0.0"]
