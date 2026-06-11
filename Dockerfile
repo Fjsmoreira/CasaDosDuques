@@ -1,18 +1,11 @@
-FROM node:22-alpine AS build
+FROM node:22-alpine
+RUN apk add --no-cache nginx
 WORKDIR /app
 COPY package.json ./
 RUN npm install
 COPY . .
 RUN npm run build
-
-FROM nginx:alpine
-
-# Copy built site
-COPY --from=build /app/dist/ /usr/share/nginx/html/
-
-# Copy nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
+RUN cp -r /app/dist/* /usr/share/nginx/html/ && \
+    cp /app/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]
