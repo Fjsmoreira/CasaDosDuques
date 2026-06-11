@@ -1,0 +1,64 @@
+---
+import { SITE_CONFIG, LOCALES } from '../data/site-config.ts';
+
+const currentPath = Astro.url.pathname;
+const localeMatch = currentPath.match(/^\/(pt|nl|fr)\//);
+const locale = localeMatch ? localeMatch[1] : 'en';
+
+const t: Record<string, string> = {
+  en: 'All rights reserved.',
+  pt: 'Todos os direitos reservados.',
+  nl: 'Alle rechten voorbehouden.',
+  fr: 'Tous droits réservés.',
+};
+
+const alText: Record<string, string> = {
+  en: 'Licensed Local Accommodation',
+  pt: 'Alojamento Local Licenciado',
+  nl: 'Gelicenseerd Lokaal Verblijf',
+  fr: 'Hébergement Local Agréé',
+};
+
+const privacyPath = locale === 'en' ? '/privacy/' : `/${locale}/privacidade/`;
+const contactPath = locale === 'en' ? '/contact/' : `/${locale}/contato/`;
+---
+
+<footer class="bg-olive-800 text-white">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-bold text-lg mb-3">{SITE_CONFIG.name}</h3>
+        <p class="text-olive-200 text-sm leading-relaxed">
+          {SITE_CONFIG.address.street}<br />
+          {SITE_CONFIG.address.town}, {SITE_CONFIG.address.postcode}<br />
+          {SITE_CONFIG.address.district}, {SITE_CONFIG.address.country}
+        </p>
+        <p class="mt-2 text-olive-200 text-sm">{alText[locale] || alText.en} — {SITE_CONFIG.alRegistration}</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-3">{locale === 'en' ? 'Contact' : locale === 'pt' ? 'Contactos' : locale === 'nl' ? 'Contact' : 'Contact'}</h3>
+        <p class="text-olive-200 text-sm">
+          <a href={`mailto:${SITE_CONFIG.contact.email}`} class="hover:text-warm-cream transition-colors">{SITE_CONFIG.contact.email}</a>
+        </p>
+        <p class="text-olive-200 text-sm mt-1">{SITE_CONFIG.contact.phone}</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-lg mb-3">{locale === 'en' ? 'Links' : locale === 'pt' ? 'Links' : locale === 'nl' ? 'Links' : 'Liens'}</h3>
+        <nav class="space-y-2 text-sm">
+          <a href={privacyPath} class="block text-olive-200 hover:text-warm-cream transition-colors">
+            {locale === 'en' ? 'Privacy Policy' : locale === 'pt' ? 'Política de Privacidade' : locale === 'nl' ? 'Privacybeleid' : 'Politique de Confidentialité'}
+          </a>
+          <a href={contactPath} class="block text-olive-200 hover:text-warm-cream transition-colors">
+            {locale === 'en' ? 'Contact' : locale === 'pt' ? 'Contactos' : locale === 'nl' ? 'Contact' : 'Contact'}
+          </a>
+          <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="block text-olive-200 hover:text-warm-cream transition-colors">
+            Airbnb
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="border-t border-olive-700 mt-8 pt-6 text-center text-olive-300 text-sm">
+      &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. {t[locale] || t.en}
+    </div>
+  </div>
+</footer>

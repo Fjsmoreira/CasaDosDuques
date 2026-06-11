@@ -1,0 +1,63 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
+  image?: string;
+  overlay?: boolean;
+}
+
+const {
+  title,
+  subtitle,
+  tagline,
+  primaryCta,
+  secondaryCta,
+  image = '/images/hero-default.jpg',
+  overlay = true,
+} = Astro.props;
+---
+
+<section class="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img
+      src={image}
+      alt=""
+      class="w-full h-full object-cover"
+      loading="eager"
+      decoding="async"
+    />
+    {overlay && <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />}
+  </div>
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+      {title}
+    </h1>
+    {subtitle && (
+      <p class="text-xl md:text-2xl text-white/90 mb-3">{subtitle}</p>
+    )}
+    {tagline && (
+      <p class="text-base md:text-lg text-white/80 mb-8 max-w-2xl mx-auto">{tagline}</p>
+    )}
+    <div class="flex flex-wrap gap-4 justify-center">
+      {primaryCta && (
+        <a
+          href={primaryCta.href}
+          class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors text-lg"
+        >
+          {primaryCta.label}
+        </a>
+      )}
+      {secondaryCta && (
+        <a
+          href={secondaryCta.href}
+          class="inline-block bg-white/20 hover:bg-white/30 text-white font-semibold px-8 py-3 rounded-lg backdrop-blur-sm border border-white/30 transition-colors text-lg"
+        >
+          {secondaryCta.label}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

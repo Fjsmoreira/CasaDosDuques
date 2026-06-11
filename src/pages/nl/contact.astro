@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Contact — Casa dos Duques, Abiul, Pombal"
+  description="Neem contact op met Fernando & Isabelle bij Casa dos Duques."
+  canonical="/nl/contact/"
+  locale="nl"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Contact</h1>
+    <div class="space-y-4">
+      <div class="bg-warm-cream rounded-xl p-5">
+        <h3 class="font-semibold text-olive-800 mb-1">📧 Email</h3>
+        <a href="mailto:fernando@casadosduques.pt" class="text-terracotta-600 hover:underline">fernando@casadosduques.pt</a>
+      </div>
+      <div class="bg-warm-cream rounded-xl p-5">
+        <h3 class="font-semibold text-olive-800 mb-1">📞 Telefoon / WhatsApp</h3>
+        <p class="text-slate-warm">{SITE_CONFIG.contact.phone}</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

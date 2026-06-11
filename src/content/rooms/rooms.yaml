@@ -1,0 +1,31 @@
+- name: "Bedroom 1 — Kids' Room"
+  slug: "bedroom-1"
+  bed_type: "bunk"
+  ensuite: false
+  max_guests: 2
+  description: "A cozy room with a bunk bed, perfect for children or extra guests"
+  floor: 1
+
+- name: "Bedroom 2 — Double Room"
+  slug: "bedroom-2"
+  bed_type: "double"
+  ensuite: false
+  max_guests: 2
+  description: "Comfortable double bedroom with traditional character"
+  floor: 1
+
+- name: "Bedroom 3 — Double Room"
+  slug: "bedroom-3"
+  bed_type: "double"
+  ensuite: false
+  max_guests: 2
+  description: "Spacious double bedroom with views of the garden"
+  floor: 1
+
+- name: "Bedroom 4 — Master Suite"
+  slug: "bedroom-4"
+  bed_type: "double"
+  ensuite: true
+  max_guests: 2
+  description: "Master bedroom with ensuite bathroom featuring a bath. The most private room in the house"
+  floor: 1

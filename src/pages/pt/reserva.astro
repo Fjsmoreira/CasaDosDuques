@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Reservar Casa dos Duques — Casa de Férias em Abiul, Pombal"
+  description="Reserve a sua estadia na Casa dos Duques. Contacte-nos diretamente para os melhores preços ou reserve pelo Airbnb. 8 hóspedes, piscina, jardim — as suas férias perfeitas no Centro de Portugal."
+  canonical="/pt/reserva/"
+  locale="pt"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Reserve a Sua Estadia</h1>
+    <p class="text-slate-warm mb-8">Pronto para conhecer a Casa dos Duques? Pode reservar diretamente connosco ou através do Airbnb.</p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-terracotta-50 rounded-xl p-8 text-center border border-terracotta-200">
+        <div class="text-4xl mb-3">📧</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-3">Reservar Diretamente</h2>
+        <p class="text-sm text-slate-warm mb-4">Reserve diretamente connosco para os melhores preços e atendimento personalizado.</p>
+        <a href="mailto:fernando@casadosduques.pt" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-6 py-3 rounded-lg">
+          Email: fernando@casadosduques.pt
+        </a>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center border border-warm-sand shadow-sm">
+        <div class="text-4xl mb-3">🏠</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-3">Reservar no Airbnb</h2>
+        <p class="text-sm text-slate-warm mb-4">Veja o nosso anúncio no Airbnb. Classificado com 4.97/5 — Guest Favorite.</p>
+        <a href={SITE_CONFIG.airbnbUrl} target="_blank" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-6 py-3 rounded-lg">
+          Ver no Airbnb →
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

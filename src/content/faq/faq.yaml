@@ -1,0 +1,49 @@
+- question: "What are the check-in and check-out times?"
+  answer: "Check-in is from 16:00 and check-out is by 11:00. Early check-in or late check-out may be available on request — please contact us in advance."
+  category: "booking"
+  priority: 1
+
+- question: "How many guests can stay?"
+  answer: "The house sleeps up to 8 guests across 4 bedrooms (6 adults maximum, plus 2 children and 1 baby). We have one double bed per room plus a bunk bed in the kids' room."
+  category: "house"
+  priority: 2
+
+- question: "Is the pool open year-round?"
+  answer: "The 8m swimming pool is typically available from May to September, depending on weather conditions. The pool has no gate or lock — children must be supervised at all times."
+  category: "pool"
+  priority: 3
+
+- question: "Is parking available?"
+  answer: "Yes, free on-site parking is available at the property."
+  category: "parking"
+  priority: 4
+
+- question: "Are pets allowed?"
+  answer: "Please contact us to discuss bringing pets. We may be able to accommodate well-behaved pets on a case-by-case basis."
+  category: "house"
+  priority: 5
+
+- question: "Is there WiFi?"
+  answer: "Yes, free high-speed WiFi is available throughout the house."
+  category: "house"
+  priority: 6
+
+- question: "What's nearby?"
+  answer: "The house is in the quiet historic town of Abiul. Within walking distance you'll find a café, mini-market, pharmacy, and restaurant. Pombal (with supermarkets, restaurants, and the castle) is a 10-minute drive. Beaches are 35-40 minutes away."
+  category: "location"
+  priority: 7
+
+- question: "How far is the nearest beach?"
+  answer: "The closest beach is Praia da Leirosa (37 min) followed by Praia do Osso da Baleia (38 min) in Pombal municipality. Figueira da Foz (47 min) and Nazaré (65 min) are popular day-trip destinations."
+  category: "location"
+  priority: 8
+
+- question: "Is the house suitable for people with limited mobility?"
+  answer: "The house has traditional features such as stairs and uneven surfaces that may not be suitable for guests with mobility issues. Please contact us to discuss your specific needs."
+  category: "house"
+  priority: 9
+
+- question: "Is there air conditioning?"
+  answer: "No, the house does not have air conditioning. The thick stone walls keep the house naturally cool in summer. Fans are available in the bedrooms."
+  category: "house"
+  priority: 10

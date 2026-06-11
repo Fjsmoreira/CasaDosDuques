@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Blog — Casa dos Duques | Abiul, Pombal & Central Portugal Travel Guide"
+  description="Explore our blog for travel tips, local guides, and things to do in Abiul, Pombal, and Central Portugal. Discover the best beaches, day trips, and hidden gems."
+  canonical="/blog/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-4">Blog</h1>
+    <p class="text-slate-warm mb-8">Travel tips, local guides, and stories from Central Portugal</p>
+
+    <div class="space-y-8">
+      <article class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-xs text-slate-warm mb-2">
+            <span class="bg-olive-100 text-olive-700 px-2 py-1 rounded">Central Portugal</span>
+            <span>June 2026</span>
+          </div>
+          <h2 class="text-xl font-semibold text-olive-800 mb-2">
+            <a href="/blog/discover-abiul-pombal-central-portugal/" class="hover:text-terracotta-600 transition-colors">
+              Discover Abiul and Pombal — Your Guide to Central Portugal's Best-Kept Secret
+            </a>
+          </h2>
+          <p class="text-sm text-slate-warm leading-relaxed">
+            Tucked away in the heart of Portugal, between the UNESCO-listed monasteries of Batalha and Alcobaça,
+            lies the charming town of Abiul and its larger neighbour Pombal. This is Central Portugal at its most authentic.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</BaseLayout>

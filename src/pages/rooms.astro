@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Bedrooms — Sleeping Up to 8 Guests in Comfort | Casa dos Duques"
+  description="4 bedrooms, 5 beds, 3 bathrooms at Casa dos Duques. One master ensuite, one kids' bunk room, and two double bedrooms. Sleeps up to 6 adults + 2 children + 1 baby."
+  canonical="/rooms/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-4">Bedrooms — Sleeping Up to 8 Guests in Comfort</h1>
+    <p class="text-slate-warm mb-8">4 bedrooms · 5 beds · 3 bathrooms · Sleeps up to 8 guests (6 adults + 2 children + 1 baby)</p>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <div class="text-4xl mb-2">🛏️</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-2">Bedroom 1 — Kids' Room</h2>
+        <p class="text-sm text-slate-warm mb-3">1 bunk bed · Sleeps 2</p>
+        <p class="text-sm text-slate-warm">A cozy room with a bunk bed, perfect for children or extra guests.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <div class="text-4xl mb-2">🛌</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-2">Bedroom 2 — Double Room</h2>
+        <p class="text-sm text-slate-warm mb-3">1 double bed · Sleeps 2</p>
+        <p class="text-sm text-slate-warm">Comfortable double bedroom with traditional character.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <div class="text-4xl mb-2">🛌</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-2">Bedroom 3 — Double Room</h2>
+        <p class="text-sm text-slate-warm mb-3">1 double bed · Sleeps 2</p>
+        <p class="text-sm text-slate-warm">Spacious double bedroom with views of the garden.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <div class="text-4xl mb-2">👑</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-2">Bedroom 4 — Master Suite</h2>
+        <p class="text-sm text-slate-warm mb-3">1 double bed · Ensuite bathroom · Sleeps 2</p>
+        <p class="text-sm text-slate-warm">Master bedroom with ensuite bathroom featuring a bath. The most private room in the house.</p>
+      </div>
+    </div>
+
+    <section class="bg-warm-cream rounded-xl p-6 mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Bathrooms</h2>
+      <ul class="space-y-2 text-slate-warm">
+        <li>🛁 Ensuite bathroom (Bedroom 4) — bath</li>
+        <li>🚿 Shared bathroom 1 — shower</li>
+        <li>🚿 Shared bathroom 2 — shower</li>
+      </ul>
+    </section>
+  </div>
+
+  <CTASection
+    title="Ready to Book?"
+    subtitle="Check availability for your preferred room configuration"
+    primaryCta={{ label: 'Check Availability', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

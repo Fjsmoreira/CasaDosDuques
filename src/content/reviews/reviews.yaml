@@ -1,0 +1,23 @@
+- guest_name: "Ana & Miguel"
+  date: "2025-09-15"
+  rating: 5
+  text: "An absolutely stunning house! Every detail has been thought of. The garden and pool are incredible, and the location is perfect for exploring central Portugal. We'll definitely be back."
+  source: "airbnb"
+  language: "pt"
+  featured: true
+
+- guest_name: "Thomas & Sarah"
+  date: "2025-08-20"
+  rating: 5
+  text: "Casa dos Duques exceeded our expectations. The house is beautiful — a perfect blend of rustic charm and modern comfort. The pool and garden are wonderful for families. Fernando and Isabelle were excellent hosts."
+  source: "airbnb"
+  language: "en"
+  featured: true
+
+- guest_name: "Mark & Lisa"
+  date: "2025-07-10"
+  rating: 5
+  text: "We spent a magical week here. The location is ideal — quiet and peaceful, yet close to everything. We visited Tomar, Batalha, and Nazaré as day trips. The house itself is gorgeous, and the garden is paradise."
+  source: "airbnb"
+  language: "en"
+  featured: true

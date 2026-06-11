@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Amenities — Everything Included at Casa dos Duques | Abiul, Pombal"
+  description="Pool, 450m² garden, BBQ, fireplace, fully equipped kitchen, WiFi, parking — everything you need for a perfect holiday in Central Portugal."
+  canonical="/amenities/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-4">Amenities</h1>
+    <p class="text-slate-warm mb-8">Everything you need for a comfortable, memorable stay.</p>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🏊</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Swimming Pool</h3>
+        <p class="text-sm text-slate-warm">8-meter pool. Available May-September. <em>No gate or lock — children must be supervised.</em></p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🌳</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Garden</h3>
+        <p class="text-sm text-slate-warm">450m² with several lounge areas, perfect for relaxing, sunbathing, and playing.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🍖</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">BBQ & Terrace</h3>
+        <p class="text-sm text-slate-warm">Outdoor barbecue and terrace for al fresco dining under the stars.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🍳</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Fully Equipped Kitchen</h3>
+        <p class="text-sm text-slate-warm">Oven, fridge, Nespresso machine, kettle, microwave, and all utensils.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🔥</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Fireplace</h3>
+        <p class="text-sm text-slate-warm">Cozy living room with fireplace for cooler evenings.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">📶</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">WiFi</h3>
+        <p class="text-sm text-slate-warm">Free high-speed wireless internet throughout.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🚗</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Free Parking</h3>
+        <p class="text-sm text-slate-warm">On-site parking available.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🧺</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Essentials</h3>
+        <p class="text-sm text-slate-warm">Bed linen, towels, shampoo, hair dryer included.</p>
+      </div>
+    </div>
+
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
+      <h3 class="font-semibold text-amber-800 mb-2">ℹ️ Please Note</h3>
+      <ul class="text-sm text-amber-700 space-y-1">
+        <li>No air conditioning — thick stone walls keep the house naturally cool in summer</li>
+        <li>No washer/dryer</li>
+        <li>Pool has no gate/lock — supervision essential for children</li>
+        <li>May not be suitable for guests with limited mobility</li>
+      </ul>
+    </div>
+  </div>
+
+  <CTASection
+    title="Book Your Stay"
+    primaryCta={{ label: 'Check Availability', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

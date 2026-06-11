@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Guide to Pombal — Castle, Restaurants & Everything You Need"
+  description="Complete guide to Pombal: medieval Knights Templar castle, Marquês de Pombal connection, best restaurants, supermarkets, and services — just 10 min from Casa dos Duques."
+  canonical="/guide/pombal/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Guide to Pombal — Castle, Culture & Everyday Convenience</h1>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">🏰 Pombal Castle</h2>
+      <p class="text-slate-warm leading-relaxed mb-3">
+        Dominating the town's skyline, Pombal Castle is a magnificent medieval fortress built by the 
+        Knights Templar in the 12th century. It was part of a defensive line protecting the 
+        Coimbra-Leiria region during the Reconquista. The castle offers panoramic views of the 
+        surrounding countryside and is a must-visit during your stay.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">👤 Marquês de Pombal</h2>
+      <p class="text-slate-warm leading-relaxed mb-3">
+        The town gave its name to Sebastião José de Carvalho e Melo, the 1st Marquês de Pombal, 
+        the powerful 18th-century prime minister who rebuilt Lisbon after the devastating 1755 
+        earthquake. His legacy is deeply connected to this region and the famous Távora affair.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">🍽️ Eating Out in Pombal</h2>
+      <p class="text-slate-warm mb-4">A 10-minute drive from Casa dos Duques, Pombal offers excellent dining options:</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">Churrasqueira O Tapa</span>
+          <span class="text-slate-warm block">Regional grill · +351 236 213 581</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">Vintage</span>
+          <span class="text-slate-warm block">Regional cuisine · +351 236 244 033</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">Mr Pizza</span>
+          <span class="text-slate-warm block">Pizza · Mo-Sa 12:00-23:00 · +351 236 244 333</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">Taberna Pombalina</span>
+          <span class="text-slate-warm block">Regional · Su-Fr 08:30-20:00 · +351 236 094 360</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">Big Shanghai</span>
+          <span class="text-slate-warm block">Chinese · +351 236 207 846</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">Rei dos Frangos</span>
+          <span class="text-slate-warm block">Grilled chicken</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">🛒 Shopping & Services</h2>
+      <ul class="space-y-2 text-sm text-slate-warm">
+        <li><strong>Aldi</strong> — Supermarket, daily 08:00-21:00</li>
+        <li><strong>Dias</strong> — Supermarket</li>
+        <li><strong>Multiple ATMs</strong> — SIBS Multibanco, Crédito Agrícola, Santander</li>
+      </ul>
+    </section>
+  </div>
+
+  <CTASection
+    title="Discover Pombal from Casa dos Duques"
+    subtitle="Just 10 minutes away — book your stay and explore"
+    primaryCta={{ label: 'Book Your Stay', href: '/booking/' }}
+    secondaryCta={{ label: 'See Things to Do', href: '/things-to-do/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

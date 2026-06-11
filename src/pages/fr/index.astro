@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Casa dos Duques | Maison de Vacances à Abiul, Pombal, Centre du Portugal"
+  description="Maison de vacances rénovée de 90 ans à Abiul, Pombal. Jusqu'à 8 personnes, 4 chambres, piscine, jardin de 450m². Centre du Portugal."
+  locale="fr"
+>
+  <Hero
+    title="Casa dos Duques"
+    subtitle="Votre Maison de Vacances au Centre du Portugal"
+    tagline="8 personnes · 4 chambres · Piscine · Jardin 450m²"
+    primaryCta={{ label: 'Voir Disponibilités & Réserver', href: '/fr/reservation/' }}
+    secondaryCta={{ label: 'Découvrir la Maison', href: '/fr/la-maison/' }}
+    image="/images/hero.jpg"
+  />
+  <CTASection
+    title="Prêt à Réserver?"
+    subtitle="AL 128717/AL — Hébergement Local Agréé à Abiul, Pombal"
+    primaryCta={{ label: 'Réserver', href: '/fr/reservation/' }}
+    secondaryCta={{ label: 'Voir sur Airbnb', href: SITE_CONFIG.airbnbUrl }}
+    variant="terracotta"
+  />
+</BaseLayout>

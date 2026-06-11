@@ -1,0 +1,80 @@
+- name: "Coimbra"
+  slug: "coimbra"
+  types: ["city", "university", "history"]
+  significance: "Home to one of Europe's oldest universities (founded 1290, UNESCO World Heritage) — a historic hilltop city with the Joanina Library and Baroque University tower"
+  drive_from_pombal: "40 min"
+  drive_from_abiul: "50 min"
+  unesco: true
+  description: "A beautiful historic city on the Mondego river, famous for its university, libraries, and student traditions."
+
+- name: "Leiria"
+  slug: "leiria"
+  types: ["city", "castle", "history"]
+  significance: "Dominated by the hilltop Leiria Castle (12th-century), with a compact historic centre and riverside promenade"
+  drive_from_pombal: "25 min"
+  drive_from_abiul: "25 min"
+  unesco: false
+  description: "The nearest city to Casa dos Duques, with a striking medieval castle and a lively town centre."
+
+- name: "Nazaré"
+  slug: "nazare"
+  types: ["beach", "surfing", "fishing"]
+  significance: "World-famous for its giant waves (up to 30m) at Norte Beach — the big-wave surfing capital"
+  drive_from_pombal: "35 min"
+  drive_from_abiul: "65 min"
+  unesco: false
+  description: "A dramatic coastal town with a clifftop promenade, cable car, and excellent seafood restaurants."
+
+- name: "Figueira da Foz"
+  slug: "figueira-da-foz"
+  types: ["beach", "resort"]
+  significance: "The largest beach resort in central Portugal with a 2km-long sandy city beach"
+  drive_from_pombal: "40 min"
+  drive_from_abiul: "47 min"
+  unesco: false
+  description: "A classic Portuguese beach town with a wide promenade, casino, and excellent surfing conditions."
+
+- name: "Tomar"
+  slug: "tomar"
+  types: ["monastery", "templar", "history"]
+  significance: "The Convent of Christ (UNESCO World Heritage), a Knights Templar fortress-monastery with the famous Manueline window"
+  drive_from_pombal: "30 min"
+  drive_from_abiul: "40 min"
+  unesco: true
+  description: "One of Portugal's most extraordinary architectural sites, steeped in Templar history."
+
+- name: "Fátima"
+  slug: "fatima"
+  types: ["pilgrimage", "religious"]
+  significance: "One of the world's most important Catholic pilgrimage sites, visited by millions annually"
+  drive_from_pombal: "30 min"
+  drive_from_abiul: "40 min"
+  unesco: false
+  description: "A major religious destination where the Virgin Mary is said to have appeared in 1917."
+
+- name: "Batalha"
+  slug: "batalha"
+  types: ["monastery", "gothic", "history"]
+  significance: "The Monastery of Batalha (UNESCO World Heritage), a Gothic masterpiece commemorating Portugal's victory at Aljubarrota"
+  drive_from_pombal: "25 min"
+  drive_from_abiul: "30 min"
+  unesco: true
+  description: "A stunning Gothic monastery with the famous Unfinished Chapels, a landmark of Portuguese architecture."
+
+- name: "Alcobaça"
+  slug: "alcobaca"
+  types: ["monastery", "cistercian", "history"]
+  significance: "The Monastery of Alcobaça (UNESCO World Heritage), a Cistercian abbey founded in 1153 — tombs of Pedro and Inês"
+  drive_from_pombal: "30 min"
+  drive_from_abiul: "35 min"
+  unesco: true
+  description: "One of the largest medieval Gothic monasteries in Europe, with a tragic love story."
+
+- name: "Conímbriga"
+  slug: "conimbriga"
+  types: ["ruins", "archaeology", "roman"]
+  significance: "The best-preserved Roman settlement in Portugal with extensive mosaic floors, thermal baths, and an aqueduct"
+  drive_from_pombal: "35 min"
+  drive_from_abiul: "40 min"
+  unesco: false
+  description: "Step back in time at Portugal's most impressive Roman ruins, near Condeixa-a-Nova."

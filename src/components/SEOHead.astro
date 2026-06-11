@@ -1,0 +1,45 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  schema?: Record<string, any>;
+}
+
+const { title, description, canonical, ogImage, schema } = Astro.props;
+const site = 'https://casadosduques.pt';
+const fullUrl = canonical ? `${site}${canonical}` : site;
+const defaultOgImage = ogImage || `${site}/og-default.jpg`;
+
+// Hreflang tags
+const currentPath = Astro.url.pathname;
+const isDefaultLocale = !currentPath.match(/^\/(pt|nl|fr)\//);
+const localePrefix = isDefaultLocale ? '' : currentPath.match(/^\/(pt|nl|fr)\//)?.[1] || '';
+const basePath = isDefaultLocale ? currentPath : currentPath.replace(/^\/(pt|nl|fr)/, '');
+
+const locales = [
+  { code: 'en', prefix: '' },
+  { code: 'pt', prefix: '/pt' },
+  { code: 'nl', prefix: '/nl' },
+  { code: 'fr', prefix: '/fr' },
+];
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={fullUrl} />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={fullUrl} />
+<meta property="og:image" content={defaultOgImage} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+{locales.map(loc => (
+  <link rel="alternate" hreflang={loc.code} href={`${site}${loc.prefix}${basePath}`} />
+))}
+<link rel="alternate" hreflang="x-default" href={`${site}${basePath}`} />
+{ schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} /> }

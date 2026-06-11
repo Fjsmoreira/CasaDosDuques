@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="450m² Garden & 8m Pool — Your Private Outdoor Retreat | Casa dos Duques"
+  description="Explore the beautiful 450m² garden and 8m pool at Casa dos Duques. Several lounge areas, barbecue terrace, and stunning views — your private outdoor paradise in Abiul."
+  canonical="/garden/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">450 m² of Garden & Pool — Your Private Outdoor Retreat</h1>
+    
+    <div class="grid grid-cols-2 gap-4 mb-8">
+      <img src="/images/garden-1.jpg" alt="Garden view" class="rounded-lg h-64 w-full object-cover" loading="eager" />
+      <img src="/images/garden-2.jpg" alt="Pool area" class="rounded-lg h-64 w-full object-cover" loading="eager" />
+    </div>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">🏊 The Pool</h2>
+      <p class="text-slate-warm leading-relaxed mb-3">
+        Our 8-meter swimming pool is the heart of the garden on warm summer days. Set within the 
+        450m² grounds, it offers a refreshing escape with plenty of space to lounge, read, and soak 
+        up the Portuguese sun.
+      </p>
+      <p class="text-sm text-amber-700 bg-amber-50 rounded-lg p-3">
+        ⚠️ Safety note: The pool does not have a gate or lock. Children must be supervised at all times.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">🌳 The Garden</h2>
+      <p class="text-slate-warm leading-relaxed mb-3">
+        The garden is one of Casa dos Duques's greatest assets. With 450 square metres of space, 
+        there are several distinct lounge areas where guests can relax in privacy, sunbathe in comfort, 
+        play games, or simply enjoy the tranquillity of the countryside.
+      </p>
+      <p class="text-slate-warm leading-relaxed">
+        The garden offers views of the surrounding valley and mountains, creating a peaceful backdrop 
+        for your holiday.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">🍖 Terrace & BBQ</h2>
+      <p class="text-slate-warm leading-relaxed">
+        The outdoor terrace is equipped with a barbecue, perfect for evening meals al fresco. 
+        Share a meal, watch the sunset, and enjoy the company of your loved ones in this 
+        beautiful setting.
+      </p>
+    </section>
+  </div>
+
+  <CTASection
+    title="Experience the Garden"
+    subtitle="Book your stay and enjoy your private outdoor paradise"
+    primaryCta={{ label: 'Check Availability', href: '/booking/' }}
+    variant="olive"
+  />
+</BaseLayout>

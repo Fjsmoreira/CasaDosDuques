@@ -1,11 +1,204 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CTASection from '../components/CTASection.astro';
+import CardGrid from '../components/CardGrid.astro';
+import { SITE_CONFIG } from '../data/site-config.ts';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'VacationRental',
+  name: SITE_CONFIG.name,
+  description: SITE_CONFIG.description,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: SITE_CONFIG.address.street,
+    addressLocality: SITE_CONFIG.address.town,
+    postalCode: SITE_CONFIG.address.postcode,
+    addressRegion: SITE_CONFIG.address.district,
+    addressCountry: 'PT',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: SITE_CONFIG.coordinates.lat,
+    longitude: SITE_CONFIG.coordinates.lng,
+  },
+  numberOfBedrooms: 4,
+  numberOfBathroomsTotal: 3,
+  occupancy: { '@type': 'QuantitativeValue', value: 8 },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: SITE_CONFIG.rating,
+    reviewCount: SITE_CONFIG.reviewCount,
+  },
+  amenityFeature: [
+    { '@type': 'LocationFeatureSpecification', name: 'Swimming pool' },
+    { '@type': 'LocationFeatureSpecification', name: 'Garden' },
+    { '@type': 'LocationFeatureSpecification', name: 'Free parking' },
+    { '@type': 'LocationFeatureSpecification', name: 'WiFi' },
+    { '@type': 'LocationFeatureSpecification', name: 'Kitchen' },
+  ],
+};
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout
+  title="Casa dos Duques | Holiday Home in Abiul, Pombal, Central Portugal"
+  description={SITE_CONFIG.description}
+  schema={schema}
+>
+  <!-- Hero -->
+  <Hero
+    title={SITE_CONFIG.name}
+    subtitle={SITE_CONFIG.tagline}
+    tagline="8 guests · 4 bedrooms · Pool · 450m² garden"
+    primaryCta={{ label: 'Check Availability & Book', href: '/booking/' }}
+    secondaryCta={{ label: 'Explore the House', href: '/the-house/' }}
+    image="/images/hero.jpg"
+  />
+
+  <!-- Trust strip -->
+  <div class="bg-olive-50 py-4">
+    <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-olive-700">
+      <span>⭐ Guest Favorite ★ 4.97/5</span>
+      <span>🏠 AL 128717/AL</span>
+      <span>👨‍👩‍👧‍👦 Up to 8 guests</span>
+      <span>🏛️ 4 UNESCO sites within 30 min</span>
+    </div>
+  </div>
+
+  <!-- House at a Glance -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold text-olive-800 mb-4">The House at a Glance</h2>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-warm-cream rounded-lg p-4 text-center">
+              <div class="text-2xl font-bold text-terracotta-600">4</div>
+              <div class="text-sm text-slate-warm">Bedrooms</div>
+            </div>
+            <div class="bg-warm-cream rounded-lg p-4 text-center">
+              <div class="text-2xl font-bold text-terracotta-600">5</div>
+              <div class="text-sm text-slate-warm">Beds</div>
+            </div>
+            <div class="bg-warm-cream rounded-lg p-4 text-center">
+              <div class="text-2xl font-bold text-terracotta-600">3</div>
+              <div class="text-sm text-slate-warm">Bathrooms</div>
+            </div>
+            <div class="bg-warm-cream rounded-lg p-4 text-center">
+              <div class="text-2xl font-bold text-terracotta-600">8</div>
+              <div class="text-sm text-slate-warm">Guests</div>
+            </div>
+          </div>
+          <p class="text-slate-warm leading-relaxed mb-4">
+            A meticulously renovated 90-year-old house in the quiet historic town of Abiul, Pombal. 
+            Restored with respect for original features — high ceilings, original stone walls, 
+            terracotta floors, and a warm ambience perfect for families and friends.
+          </p>
+          <p class="text-slate-warm leading-relaxed">
+            Located just 10 minutes from Pombal, 25 minutes from Leiria and Batalha, 
+            and 35 minutes from stunning beaches.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="/images/house-exterior.jpg" alt="Casa dos Duques exterior" class="rounded-xl w-full h-80 object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Guests Love It -->
+  <section class="py-16 bg-warm-cream">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-olive-800 mb-8 text-center">Why Guests Love It</h2>
+      <CardGrid
+        cards={[
+          {
+            icon: '🏊',
+            title: 'Pool & Garden',
+            description: '8m swimming pool, 450m² garden with several lounge areas, barbecue terrace — your private outdoor paradise.',
+            href: '/garden/',
+          },
+          {
+            icon: '🏡',
+            title: 'Restored with Soul',
+            description: 'Original stones, terracotta floors, high ceilings, wooden structure — a 90-year-old house brought back to life.',
+            href: '/the-house/',
+          },
+          {
+            icon: '📍',
+            title: 'Central Location',
+            description: '10 min to Pombal, 25 min to Leiria & Batalha, 35 min to beaches. Perfect base for exploring Central Portugal.',
+            href: '/location/',
+          },
+        ]}
+      />
+    </div>
+  </section>
+
+  <!-- Garden Gallery Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-olive-800 mb-4 text-center">The Garden & Pool</h2>
+      <p class="text-slate-warm text-center max-w-2xl mx-auto mb-8">
+        450 m² of outdoor space with several lounge areas — perfect for relaxing, sunbathing, 
+        al fresco dining, and playing.
+      </p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="/images/garden-1.jpg" alt="Garden view" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/garden-2.jpg" alt="Pool area" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/garden-3.jpg" alt="Terrace dining" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/garden-4.jpg" alt="Garden sunset" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+      </div>
+      <div class="text-center mt-6">
+        <a href="/garden/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold">See the Garden →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explore Central Portugal -->
+  <section class="py-16 bg-olive-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-olive-800 mb-8 text-center">Explore Central Portugal</h2>
+      <CardGrid
+        columns={4}
+        variant="compact"
+        cards={[
+          { icon: '🏰', title: 'Tomar', description: 'Templar Castle — 30 min', href: '/guide/central-portugal/' },
+          { icon: '🏖️', title: 'Nazaré', description: 'Big Waves — 35 min', href: '/guide/central-portugal/' },
+          { icon: '⛪', title: 'Batalha', description: 'UNESCO Monastery — 25 min', href: '/guide/central-portugal/' },
+          { icon: '🏛️', title: 'Coimbra', description: 'University City — 40 min', href: '/guide/central-portugal/' },
+        ]}
+      />
+      <div class="text-center mt-6">
+        <a href="/things-to-do/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold">Discover Things to Do →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="inline-flex items-center gap-2 bg-warm-cream px-4 py-2 rounded-full mb-4">
+        <span class="text-yellow-500 text-xl">★</span>
+        <span class="font-semibold text-olive-800">{SITE_CONFIG.rating}</span>
+        <span class="text-slate-warm">· Guest Favorite · {SITE_CONFIG.reviewCount} reviews</span>
+      </div>
+      <blockquote class="text-lg italic text-slate-warm max-w-2xl mx-auto mb-6">
+        "An absolutely stunning house! Every detail has been thought of. The garden and pool are incredible, 
+        and the location is perfect for exploring central Portugal."
+      </blockquote>
+      <p class="text-sm text-slate-warm mb-6">— Ana & Miguel, September 2025</p>
+      <a href="/reviews/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold">Read All Reviews →</a>
+    </div>
+  </section>
+
+  <!-- Booking CTA -->
+  <CTASection
+    title="Ready to Book Your Stay?"
+    subtitle="AL 128717/AL — Licensed local accommodation in Abiul, Pombal"
+    primaryCta={{ label: 'Book Directly with Us', href: '/booking/' }}
+    secondaryCta={{ label: 'Check on Airbnb', href: SITE_CONFIG.airbnbUrl }}
+    variant="terracotta"
+  />
+</BaseLayout>

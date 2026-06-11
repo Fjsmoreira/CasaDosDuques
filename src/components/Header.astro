@@ -1,0 +1,83 @@
+---
+import { NAV_LINKS, SITE_CONFIG } from '../data/site-config.ts';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+const currentPath = Astro.url.pathname;
+const isDefaultLocale = !currentPath.match(/^\/(pt|nl|fr)\//);
+const localeMatch = currentPath.match(/^\/(pt|nl|fr)\//);
+const locale = localeMatch ? localeMatch[1] : 'en';
+const navLinks = NAV_LINKS[locale as keyof typeof NAV_LINKS] || NAV_LINKS.en;
+const rootPath = isDefaultLocale ? '/' : `/${locale}/`;
+
+const isActive = (path: string) => {
+  if (path === rootPath) return currentPath === rootPath || currentPath === rootPath.replace(/\/$/, '');
+  return currentPath.startsWith(path);
+};
+---
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-sand">
+  <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href={rootPath} class="text-xl font-bold text-terracotta-600 hover:text-terracotta-700 transition-colors">
+      {SITE_CONFIG.name}
+    </a>
+    
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-1">
+      {navLinks.map(link => (
+        <a
+          href={link.path}
+          class={`px-3 py-2 text-sm rounded transition-colors ${
+            isActive(link.path)
+              ? 'text-terracotta-600 font-medium bg-terracotta-50'
+              : 'text-slate-warm hover:text-terracotta-600 hover:bg-terracotta-50'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+      <div class="ml-3 pl-3 border-l border-warm-sand">
+        <LanguageSwitcher />
+      </div>
+    </div>
+
+    <!-- Mobile nav toggle -->
+    <div class="md:hidden flex items-center gap-2">
+      <LanguageSwitcher />
+      <button id="menu-toggle" class="p-2 text-slate-warm" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-warm-sand">
+    <div class="px-4 py-2 space-y-1">
+      {navLinks.map(link => (
+        <a
+          href={link.path}
+          class={`block px-3 py-2 text-sm rounded ${
+            isActive(link.path)
+              ? 'text-terracotta-600 font-medium bg-terracotta-50'
+              : 'text-slate-warm hover:text-terracotta-600'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>

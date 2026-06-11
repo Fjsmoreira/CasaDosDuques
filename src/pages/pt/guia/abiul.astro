@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Guia de Abiul — História, Cultura e Informação Prática | Pombal"
+  description="Guia completo de Abiul, Pombal: foral de 1167, praça de touros mais antiga de Portugal, Festa do Bodo, e dicas práticas para quem fica na Casa dos Duques."
+  canonical="/pt/guia/abiul/"
+  locale="pt"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Guia de Abiul — História, Cultura e Informação Prática</h1>
+    
+    <p class="text-slate-warm leading-relaxed mb-6">
+      Abiul recebeu o seu primeiro foral em 1167, concedido por D. Afonso Henriques, sendo uma das
+      povoações mais antigas documentadas da região de Pombal. Esta herança medieval está presente
+      nas ruas estreitas, na arquitetura tradicional e nas tradições que perduram até hoje.
+    </p>
+
+    <div class="space-y-4 mb-8">
+      <div class="bg-warm-cream rounded-xl p-5">
+        <h3 class="font-semibold text-olive-800 mb-1">🏛️ Praça de Touros mais Antiga de Portugal</h3>
+        <p class="text-sm text-slate-warm">Abiul possui aquela que é considerada a praça de touros mais antiga de Portugal, testemunho das profundas tradições culturais da vila.</p>
+      </div>
+      <div class="bg-warm-cream rounded-xl p-5">
+        <h3 class="font-semibold text-olive-800 mb-1">👑 Casa de Aveiro</h3>
+        <p class="text-sm text-slate-warm">Abiul esteve historicamente ligada à poderosa Casa de Aveiro, que desempenhou um papel importante na história portuguesa até ao processo dos Távoras.</p>
+      </div>
+      <div class="bg-warm-cream rounded-xl p-5">
+        <h3 class="font-semibold text-olive-800 mb-1">🎉 Festa do Bodo</h3>
+        <p class="text-sm text-slate-warm">A Festa do Bodo é a mais importante tradição de Abiul, originária de uma promessa medieval feita durante a Peste Negra — uma tradição que continua até hoje.</p>
+      </div>
+    </div>
+
+    <p class="text-slate-warm mb-4">Tudo a poucos passos da Casa dos Duques:</p>
+    <div class="grid sm:grid-cols-2 gap-3 mb-8">
+      <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+        <span class="font-semibold">☕ Villa Cafe</span>
+        <span class="text-slate-warm block">24 m</span>
+      </div>
+      <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+        <span class="font-semibold">🏪 Mini-Mercado Fátima</span>
+        <span class="text-slate-warm block">29 m</span>
+      </div>
+      <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+        <span class="font-semibold">💊 Farmácia</span>
+        <span class="text-slate-warm block">49 m</span>
+      </div>
+      <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+        <span class="font-semibold">🍽️ Casa dos Bispos</span>
+        <span class="text-slate-warm block">137 m — restaurante</span>
+      </div>
+    </div>
+  </div>
+
+  <CTASection
+    title="Fique no Coração da História"
+    subtitle="Reserve a Casa dos Duques e viva a experiência autêntica de Abiul"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="olive"
+  />
+</BaseLayout>

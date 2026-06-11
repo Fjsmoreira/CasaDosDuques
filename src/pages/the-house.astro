@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+import { SITE_CONFIG } from '../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Casa dos Duques — A 90-Year-Old Renovated Holiday Home in Abiul, Pombal"
+  description="Discover the story of Casa dos Duques: a meticulously renovated 90-year-old house with original stones, terracotta floors, high ceilings, and a warm family ambience in Abiul, Pombal."
+  canonical="/the-house/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Casa dos Duques — A 90-Year-Old Renovated Holiday Home in Abiul</h1>
+    
+    <img src="/images/house-exterior.jpg" alt="Casa dos Duques exterior" class="w-full rounded-xl mb-8 h-96 object-cover" loading="eager" />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">The Story of the House</h2>
+      <p class="text-slate-warm leading-relaxed mb-4">
+        Casa dos Duques has stood in the heart of Abiul for over 90 years. Built in a time when 
+        craftsmanship was paramount, the house has witnessed the quiet rhythm of life in this 
+        historic town — from its 1167 royal charter to the present day.
+      </p>
+      <p class="text-slate-warm leading-relaxed mb-4">
+        After years of careful planning, the house was meticulously renovated with deep respect 
+        for its original character. Every decision was made to preserve what makes it special: 
+        the thick stone walls that keep the house cool in summer, the high ceilings that lend an 
+        airy feel, the original terracotta floor tiles, and the exposed wooden structure that 
+        tells the story of traditional Portuguese construction.
+      </p>
+      <p class="text-slate-warm leading-relaxed">
+        The result is a holiday home that feels both timeless and comfortable — a warm, inviting 
+        space where friends and family can gather, relax, and create memories.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Living Spaces</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-warm-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg text-olive-800 mb-2">🛋️ Living Room</h3>
+          <p class="text-slate-warm text-sm leading-relaxed">A cozy living room with a fireplace, perfect for cooler evenings. Comfortable seating, warm lighting, and a relaxed atmosphere.</p>
+        </div>
+        <div class="bg-warm-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg text-olive-800 mb-2">🍳 Kitchen & Dining</h3>
+          <p class="text-slate-warm text-sm leading-relaxed">Fully equipped kitchen with oven, fridge, Nespresso machine, kettle, microwave, and all utensils. Dining area for shared meals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Restoration Details</h2>
+      <ul class="space-y-3 text-slate-warm">
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> High ceilings preserved throughout the house</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Original stone walls carefully restored</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Traditional red terracotta floor tiles maintained</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Exposed wooden ceiling structure kept as a feature</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Thick walls provide natural insulation — cool in summer, warm in winter</li>
+      </ul>
+    </section>
+  </div>
+
+  <CTASection
+    title="Experience Casa dos Duques"
+    subtitle="Book your stay and discover the charm of this beautifully restored holiday home"
+    primaryCta={{ label: 'Check Availability', href: '/booking/' }}
+    secondaryCta={{ label: 'See the Rooms', href: '/rooms/' }}
+    variant="olive"
+  />
+</BaseLayout>

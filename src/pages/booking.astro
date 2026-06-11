@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Book Casa dos Duques — Holiday Home in Abiul, Pombal, Central Portugal"
+  description="Book your stay at Casa dos Duques. Contact us directly for the best rates or book through Airbnb. 8 guests, pool, garden — your perfect Central Portugal holiday."
+  canonical="/booking/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Book Your Stay at Casa dos Duques</h1>
+    <p class="text-slate-warm mb-8">
+      Ready to experience Casa dos Duques? You can book directly with us for the best rates,
+      or through Airbnb. We're here to help make your holiday perfect.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-terracotta-50 rounded-xl p-8 text-center border border-terracotta-200">
+        <div class="text-4xl mb-3">📧</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-3">Book Directly</h2>
+        <p class="text-sm text-slate-warm mb-4">
+          Book directly with us for the best rates and personal service.
+          Send us an enquiry and we'll get back to you promptly.
+        </p>
+        <a href="mailto:fernando@casadosduques.pt" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+          Email: fernando@casadosduques.pt
+        </a>
+      </div>
+
+      <div class="bg-white rounded-xl p-8 text-center border border-warm-sand shadow-sm">
+        <div class="text-4xl mb-3">🏠</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-3">Book on Airbnb</h2>
+        <p class="text-sm text-slate-warm mb-4">
+          Check our Airbnb listing for availability, reviews from past guests,
+          and the full experience. Rated 4.97/5 — Guest Favorite.
+        </p>
+        <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-6 py-3 rounded-lg transition-colors">
+          View on Airbnb →
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-warm-cream rounded-xl p-6 mb-8">
+      <h2 class="text-xl font-semibold text-olive-800 mb-3">Contact Form</h2>
+      <p class="text-sm text-slate-warm mb-4">Send us a message and we'll respond within 24 hours.</p>
+      <form action="mailto:fernando@casadosduques.pt" method="GET" class="space-y-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-olive-700 mb-1" for="name">Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-olive-700 mb-1" for="email">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-olive-700 mb-1" for="dates">Preferred Dates</label>
+          <input type="text" id="dates" name="dates" placeholder="e.g., July 15-22, 2026" class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-olive-700 mb-1" for="guests">Number of Guests</label>
+          <select id="guests" name="guests" class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none">
+            <option value="1-2">1-2 guests</option>
+            <option value="3-4">3-4 guests</option>
+            <option value="5-6">5-6 guests</option>
+            <option value="7-8">7-8 guests</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-olive-700 mb-1" for="message">Message</label>
+          <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none"></textarea>
+        </div>
+        <button type="submit" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+          Send Enquiry
+        </button>
+      </form>
+    </div>
+  </div>
+</BaseLayout>

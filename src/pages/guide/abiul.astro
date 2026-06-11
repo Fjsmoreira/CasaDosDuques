@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Guide to Abiul — History, Culture & Practical Info | Pombal, Portugal"
+  description="Complete guide to Abiul, Pombal: 1167 royal charter, oldest bullring in Portugal, Festa do Bodo tradition, and practical tips for visitors staying at Casa dos Duques."
+  canonical="/guide/abiul/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Guide to Abiul — History, Culture & Practical Info</h1>
+    
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">A Town with Royal Heritage</h2>
+      <p class="text-slate-warm leading-relaxed mb-3">
+        Abiul received its first royal charter (foral) in 1167 from King Afonso Henriques, making 
+        it one of the oldest documented settlements in the Pombal region. This medieval heritage 
+        is woven into the town's fabric — from its narrow streets and traditional architecture to 
+        its enduring traditions.
+      </p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Historical Highlights</h2>
+      <div class="space-y-4">
+        <div class="bg-warm-cream rounded-xl p-5">
+          <h3 class="font-semibold text-olive-800 mb-1">🏛️ Oldest Bullring in Portugal</h3>
+          <p class="text-sm text-slate-warm">Abiul is home to what is believed to be the oldest bullring (praça de touros) in Portugal, a testament to the town's deep-rooted cultural traditions.</p>
+        </div>
+        <div class="bg-warm-cream rounded-xl p-5">
+          <h3 class="font-semibold text-olive-800 mb-1">👑 House of Aveiro Connection</h3>
+          <p class="text-sm text-slate-warm">Abiul was historically linked to the powerful House of Aveiro, a noble family that played a significant role in Portuguese history until the Távora affair in the 18th century.</p>
+        </div>
+        <div class="bg-warm-cream rounded-xl p-5">
+          <h3 class="font-semibold text-olive-800 mb-1">🎉 Festa do Bodo</h3>
+          <p class="text-sm text-slate-warm">Abiul's most important traditional festival, originating from a medieval plague-vow tradition. The community promised to hold an annual feast in gratitude for being spared from the Black Death — a tradition that continues to this day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Practical Information</h2>
+      <p class="text-slate-warm leading-relaxed mb-4">Everything within walking distance from Casa dos Duques:</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">☕ Villa Cafe</span>
+          <span class="text-slate-warm block">24 m — coffee and snacks</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">🏪 Fátima Mini-Market</span>
+          <span class="text-slate-warm block">29 m — daily essentials</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">💊 Farmácia Pharmacy</span>
+          <span class="text-slate-warm block">49 m</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">🍽️ Casa dos Bispos</span>
+          <span class="text-slate-warm block">137 m — restaurant</span>
+        </div>
+        <div class="bg-white rounded-lg p-3 border border-warm-sand text-sm">
+          <span class="font-semibold">🏦 Crédito Agrícola</span>
+          <span class="text-slate-warm block">147 m — bank + ATM</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <CTASection
+    title="Stay in the Heart of History"
+    subtitle="Book Casa dos Duques and experience authentic Abiul"
+    primaryCta={{ label: 'Book Your Stay', href: '/booking/' }}
+    secondaryCta={{ label: 'Explore Pombal', href: '/guide/pombal/' }}
+    variant="olive"
+  />
+</BaseLayout>

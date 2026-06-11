@@ -1,0 +1,62 @@
+- category: "pool"
+  name: "Swimming Pool"
+  icon: "🏊"
+  available: true
+  description: "8-meter swimming pool perfect for cooling off on hot summer days"
+  safety_note: "Pool/hot tub without a gate or lock — children must be supervised at all times"
+
+- category: "garden"
+  name: "Garden & Grounds"
+  icon: "🌳"
+  available: true
+  description: "450m² garden with several lounge areas, perfect for relaxing, sunbathing, and playing"
+
+- category: "garden"
+  name: "BBQ & Terrace"
+  icon: "🍖"
+  available: true
+  description: "Outdoor barbecue and terrace for al fresco dining"
+
+- category: "kitchen"
+  name: "Fully Equipped Kitchen"
+  icon: "🍳"
+  available: true
+  description: "Oven, fridge, Nespresso machine, kettle, microwave, and all utensils"
+
+- category: "living"
+  name: "Fireplace"
+  icon: "🔥"
+  available: true
+  description: "Cozy living room with fireplace for cooler evenings"
+
+- category: "living"
+  name: "WiFi"
+  icon: "📶"
+  available: true
+  description: "Free high-speed wireless internet throughout"
+
+- category: "living"
+  name: "TV & Entertainment"
+  icon: "📺"
+  available: true
+
+- category: "parking"
+  name: "Free Parking"
+  icon: "🚗"
+  available: true
+  description: "On-site parking available"
+
+- category: "essentials"
+  name: "Bed Linen & Towels"
+  icon: "🛏️"
+  available: true
+
+- category: "essentials"
+  name: "Shampoo & Essentials"
+  icon: "🧴"
+  available: true
+
+- category: "essentials"
+  name: "Hair Dryer"
+  icon: "💨"
+  available: true

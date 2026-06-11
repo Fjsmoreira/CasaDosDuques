@@ -1,0 +1,32 @@
+---
+import { LOCALES, SITE_CONFIG } from '../data/site-config.ts';
+
+const currentPath = Astro.url.pathname;
+const isDefaultLocale = !currentPath.match(/^\/(pt|nl|fr)\//);
+const basePath = isDefaultLocale ? currentPath : currentPath.replace(/^\/(pt|nl|fr)/, '');
+
+const getLocalePath = (prefix: string) => {
+  if (prefix === '') return basePath || '/';
+  return `/${prefix}${basePath}`;
+};
+---
+
+<div class="flex gap-1 items-center">
+  {LOCALES.map(loc => {
+    const href = loc.path === '' ? basePath || '/' : `/${loc.path}${basePath}`;
+    const isActive = (loc.path === '' && isDefaultLocale) || (!isDefaultLocale && currentPath.startsWith(`/${loc.path}`));
+    return (
+      <a
+        href={href}
+        class={`px-2 py-1 text-sm rounded transition-colors ${
+          isActive
+            ? 'bg-terracotta-500 text-white font-medium'
+            : 'text-slate-warm hover:text-terracotta-600 hover:bg-terracotta-50'
+        }`}
+        aria-label={loc.label}
+      >
+        {loc.code.toUpperCase()}
+      </a>
+    );
+  })}
+</div>

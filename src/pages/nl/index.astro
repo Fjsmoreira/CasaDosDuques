@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Casa dos Duques | Vakantiehuis in Abiul, Pombal, Centraal Portugal"
+  description="Een gerenoveerd vakantiehuis uit 1930 in Abiul, Pombal. Geschikt voor 8 gasten, 4 slaapkamers, zwembad, 450m² tuin. Centraal Portugal."
+  locale="nl"
+>
+  <Hero
+    title="Casa dos Duques"
+    subtitle="Uw Vakantiehuis in Centraal Portugal"
+    tagline="8 gasten · 4 slaapkamers · Zwembad · 450m² tuin"
+    primaryCta={{ label: 'Beschikbaarheid & Boeken', href: '/nl/boeking/' }}
+    secondaryCta={{ label: 'Ontdek het Huis', href: '/nl/het-huis/' }}
+    image="/images/hero.jpg"
+  />
+  <CTASection
+    title="Klaar om te Boeken?"
+    subtitle="AL 128717/AL — Gelicenseerd Lokaal Verblijf in Abiul, Pombal"
+    primaryCta={{ label: 'Boek Nu', href: '/nl/boeking/' }}
+    secondaryCta={{ label: 'Bekijk op Airbnb', href: SITE_CONFIG.airbnbUrl }}
+    variant="terracotta"
+  />
+</BaseLayout>

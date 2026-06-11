@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import CTASection from '../../components/CTASection.astro';
+import CardGrid from '../../components/CardGrid.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Casa dos Duques | Casa de Férias em Abiul, Pombal, Centro de Portugal"
+  description="Casa recuperada de 90 anos em Abiul, Pombal. Dorme 8 hóspedes, 4 quartos, piscina, jardim de 450m². Perfeita para explorar o Centro de Portugal."
+  locale="pt"
+>
+  <Hero
+    title="Casa dos Duques"
+    subtitle="A Sua Casa de Férias no Centro de Portugal"
+    tagline="8 hóspedes · 4 quartos · Piscina · Jardim 450m²"
+    primaryCta={{ label: 'Ver Disponibilidade & Reservar', href: '/pt/reserva/' }}
+    secondaryCta={{ label: 'Conhecer a Casa', href: '/pt/a-casa/' }}
+    image="/images/hero.jpg"
+  />
+
+  <div class="bg-olive-50 py-4">
+    <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-olive-700">
+      <span>⭐ Guest Favorite ★ 4.97/5</span>
+      <span>🏠 AL 128717/AL</span>
+      <span>👨‍👩‍👧‍👦 Até 8 hóspedes</span>
+      <span>🏛️ 4 locais UNESCO a 30 min</span>
+    </div>
+  </div>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold text-olive-800 mb-4">A Casa Num Relance</h2>
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-warm-cream rounded-lg p-4 text-center">
+              <div class="text-2xl font-bold text-terracotta-600">4</div>
+              <div class="text-sm text-slate-warm">Quartos</div>
+            </div>
+            <div class="bg-warm-cream rounded-lg p-4 text-center">
+              <div class="text-2xl font-bold text-terracotta-600">5</div>
+              <div class="text-sm text-slate-warm">Camas</div>
+            </div>
+            <div class="bg-warm-cream rounded-lg p-4 text-center">
+              <div class="text-2xl font-bold text-terracotta-600">3</div>
+              <div class="text-sm text-slate-warm">Casas de Banho</div>
+            </div>
+            <div class="bg-warm-cream rounded-lg p-4 text-center">
+              <div class="text-2xl font-bold text-terracotta-600">8</div>
+              <div class="text-sm text-slate-warm">Hóspedes</div>
+            </div>
+          </div>
+          <p class="text-slate-warm leading-relaxed mb-4">
+            Uma casa de 90 anos meticulosamente recuperada na tranquila vila histórica de Abiul, Pombal.
+            Restaurada com respeito pelos elementos originais — tectos altos, paredes de pedra,
+            soalho de terracota e uma atmosfera acolhedora perfeita para famílias e amigos.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="/images/house-exterior.jpg" alt="Casa dos Duques exterior" class="rounded-xl w-full h-80 object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CardGrid
+    cards={[
+      { icon: '🏊', title: 'Piscina & Jardim', description: 'Piscina de 8m, jardim de 450m² com várias áreas de estar, churrasqueira — o seu paraíso privado ao ar livre.' },
+      { icon: '🏡', title: 'Restaurada com Alma', description: 'Pedras originais, soalho de terracota, tectos altos, estrutura de madeira — uma casa de 90 anos trazida de volta à vida.' },
+      { icon: '📍', title: 'Localização Central', description: '10 min de Pombal, 25 min de Leiria e Batalha, 35 min das praias. Base perfeita para explorar o Centro de Portugal.' },
+    ]}
+  />
+
+  <CTASection
+    title="Pronto para Reservar?"
+    subtitle="AL 128717/AL — Alojamento Local Licenciado em Abiul, Pombal"
+    primaryCta={{ label: 'Reservar Agora', href: '/pt/reserva/' }}
+    secondaryCta={{ label: 'Ver no Airbnb', href: SITE_CONFIG.airbnbUrl }}
+    variant="terracotta"
+  />
+</BaseLayout>
