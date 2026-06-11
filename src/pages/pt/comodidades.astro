@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Comodidades — Tudo Incluído na Casa dos Duques | Abiul, Pombal"
+  description="Piscina, jardim de 450m², churrasqueira, lareira, cozinha totalmente equipada, WiFi, estacionamento — tudo o que precisa para umas férias perfeitas no Centro de Portugal."
+  canonical="/pt/comodidades/"
+  locale="pt"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-4">Comodidades</h1>
+    <p class="text-slate-warm mb-8">Tudo o que precisa para uma estadia confortável e memorável.</p>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🏊</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Piscina</h3>
+        <p class="text-sm text-slate-warm">Piscina de 8 metros. Disponível de maio a setembro. <em>Sem vedação ou fecho — as crianças devem ser supervisionadas.</em></p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🌳</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Jardim</h3>
+        <p class="text-sm text-slate-warm">450m² com várias áreas de estar, perfeito para relaxar, tomar sol e brincar.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🍖</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Churrasco & Terraço</h3>
+        <p class="text-sm text-slate-warm">Churrasqueira exterior e terraço para refeições ao ar livre sob as estrelas.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🍳</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Cozinha Totalmente Equipada</h3>
+        <p class="text-sm text-slate-warm">Forno, frigorífico, máquina Nespresso, chaleira, micro-ondas e todos os utensílios.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🔥</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Lareira</h3>
+        <p class="text-sm text-slate-warm">Sala de estar acolhedora com lareira para as noites mais frescas.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">📶</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">WiFi</h3>
+        <p class="text-sm text-slate-warm">Internet sem fios de alta velocidade gratuita em toda a casa.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🚗</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Estacionamento Grátis</h3>
+        <p class="text-sm text-slate-warm">Estacionamento no local disponível.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🧺</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Essenciais</h3>
+        <p class="text-sm text-slate-warm">Roupa de cama, toalhas, champô, secador de cabelo incluídos.</p>
+      </div>
+    </div>
+
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
+      <h3 class="font-semibold text-amber-800 mb-2">ℹ️ Por Favor, Note</h3>
+      <ul class="text-sm text-amber-700 space-y-1">
+        <li>Sem ar condicionado — as grossas paredes de pedra mantêm a casa naturalmente fresca no verão</li>
+        <li>Sem máquina de lavar/secar</li>
+        <li>Piscina sem vedação/fecho — supervisão essencial para crianças</li>
+        <li>Pode não ser adequado para hóspedes com mobilidade reduzida</li>
+      </ul>
+    </div>
+  </div>
+
+  <CTASection
+    title="Reserve a Sua Estadia"
+    primaryCta={{ label: 'Ver Disponibilidade', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

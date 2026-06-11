@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Gastenrecensies — Casa dos Duques, Abiul, Pombal | Beoordeeld met 4,97/5"
+  description="Lees wat gasten zeggen over Casa dos Duques. Beoordeeld met 4,97/5 op Airbnb met Guest Favorite-status. Ontdek waarom bezoekers dol zijn op dit prachtig gerestaureerde vakantiehuis in Abiul."
+  canonical="/nl/reviews/"
+  locale="nl"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-4">Gastenrecensies</h1>
+    <div class="flex items-center gap-3 mb-8">
+      <span class="text-3xl text-yellow-500">★</span>
+      <span class="text-2xl font-bold text-olive-800">{SITE_CONFIG.rating}</span>
+      <span class="text-slate-warm">· Guest Favorite · 30+ recensies</span>
+    </div>
+
+    <div class="space-y-6 mb-10">
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <h3 class="font-semibold text-olive-800">Ana & Miguel</h3>
+            <p class="text-xs text-slate-warm">September 2025</p>
+          </div>
+          <div class="flex items-center gap-1 text-sm text-yellow-500">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+        </div>
+        <p class="text-slate-warm italic">"Een absoluut prachtig huis! Elk detail is doordacht. De tuin en het zwembad zijn ongelooflijk en de locatie is perfect om Centraal Portugal te verkennen. We komen zeker terug."</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <h3 class="font-semibold text-olive-800">Thomas & Sarah</h3>
+            <p class="text-xs text-slate-warm">Augustus 2025</p>
+          </div>
+          <div class="flex items-center gap-1 text-sm text-yellow-500">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+        </div>
+        <p class="text-slate-warm italic">"Casa dos Duques heeft onze verwachtingen overtroffen. Het huis is prachtig — een perfecte mix van rustieke charme en modern comfort. Het zwembad en de tuin zijn geweldig voor gezinnen. Fernando en Isabelle waren uitstekende gastheren."</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <h3 class="font-semibold text-olive-800">Mark & Lisa</h3>
+            <p class="text-xs text-slate-warm">Juli 2025</p>
+          </div>
+          <div class="flex items-center gap-1 text-sm text-yellow-500">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+        </div>
+        <p class="text-slate-warm italic">"We hebben hier een magische week doorgebracht. De locatie is ideaal — rustig en vredig, maar toch dicht bij alles. We hebben Tomar, Batalha en Nazaré bezocht als daguitstapjes. Het huis is prachtig en de tuin is de hemel op aarde."</p>
+      </div>
+    </div>
+
+    <div class="text-center text-sm text-slate-warm mb-8">
+      <p>Alle recensies worden getoond met toestemming van Airbnb-gasten.</p>
+      <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="text-terracotta-600 hover:underline">Bekijk alle recensies op Airbnb →</a>
+    </div>
+  </div>
+
+  <CTASection
+    title="Word Ook Een Blije Gast"
+    subtitle="Boek uw verblijf bij Casa dos Duques"
+    primaryCta={{ label: 'Beschikbaarheid Controleren', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

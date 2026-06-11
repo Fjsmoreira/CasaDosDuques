@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Tarieven — Vakantiehuisverhuur in Abiul, Pombal | Casa dos Duques"
+  description="Bekijk de actuele tarieven en beschikbaarheid voor Casa dos Duques. Wekelijkse en nachtelijke tarieven voor dit prachtige vakantiehuis voor 8 gasten met zwembad en tuin in Abiul, Pombal."
+  canonical="/nl/tarieven/"
+  locale="nl"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Tarieven & Beschikbaarheid</h1>
+    <p class="text-slate-warm mb-8">
+      Voor actuele tarieven en beschikbaarheid kunt u direct contact met ons opnemen of onze Airbnb-pagina bekijken.
+      Wij bieden concurrerende tarieven voor dit prachtige vakantiehuis voor 8 gasten.
+    </p>
+
+    <div class="bg-warm-cream rounded-xl p-8 mb-8 text-center">
+      <p class="text-lg text-slate-warm mb-4">
+        Voor de meest actuele prijzen en beschikbaarheid:
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/nl/boeking/" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+          Neem Contact Op voor Tarieven
+        </a>
+        <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-8 py-3 rounded-lg transition-colors">
+          Bekijk op Airbnb
+        </a>
+      </div>
+    </div>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Wat is Inbegrepen</h2>
+      <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-warm">
+        <li class="flex items-center gap-2">✓ 4 slaapkamers / 5 bedden / 3 badkamers</li>
+        <li class="flex items-center gap-2">✓ Geschikt voor 8 gasten</li>
+        <li class="flex items-center gap-2">✓ 8m zwembad (mei-sep)</li>
+        <li class="flex items-center gap-2">✓ 450m² tuin met loungeplekken</li>
+        <li class="flex items-center gap-2">✓ BBQ & buitenterras</li>
+        <li class="flex items-center gap-2">✓ Volledig uitgeruste keuken</li>
+        <li class="flex items-center gap-2">✓ Bedlinnen & handdoeken</li>
+        <li class="flex items-center gap-2">✓ Gratis WiFi & parkeren</li>
+        <li class="flex items-center gap-2">✓ Open haard</li>
+        <li class="flex items-center gap-2">✓ AL 128717/AL — Gelicenseerde accommodatie</li>
+      </ul>
+    </section>
+  </div>
+
+  <CTASection
+    title="Klaar om te Boeken?"
+    subtitle="Neem contact met ons op voor actuele tarieven en beschikbaarheid"
+    primaryCta={{ label: 'Informeer Nu', href: '/nl/boeking/' }}
+    variant="olive"
+  />
+</BaseLayout>

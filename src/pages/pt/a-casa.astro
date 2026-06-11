@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Casa dos Duques — Uma Casa de Férias de 90 Anos Restaurada em Abiul, Pombal"
+  description="Descubra a história da Casa dos Duques: uma casa de 90 anos meticulosamente restaurada, com pedras originais, soalho de terracota, tectos altos e um ambiente familiar acolhedor em Abiul, Pombal."
+  canonical="/pt/a-casa/"
+  locale="pt"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Casa dos Duques — Uma Casa de Férias de 90 Anos Restaurada em Abiul</h1>
+    
+    <img src="/images/house-exterior.jpg" alt="Casa dos Duques exterior" class="w-full rounded-xl mb-8 h-96 object-cover" loading="eager" />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">A História da Casa</h2>
+      <p class="text-slate-warm leading-relaxed mb-4">
+        A Casa dos Duques está no coração de Abiul há mais de 90 anos. Construída numa época em que 
+        o artesanato era primordial, a casa testemunhou o ritmo tranquilo da vida nesta 
+        vila histórica — desde o seu foral real de 1167 até aos dias de hoje.
+      </p>
+      <p class="text-slate-warm leading-relaxed mb-4">
+        Após anos de planeamento cuidadoso, a casa foi meticulosamente renovada com profundo respeito 
+        pelo seu carácter original. Cada decisão foi tomada para preservar o que a torna especial: 
+        as grossas paredes de pedra que mantêm a casa fresca no verão, os tectos altos que lhe conferem uma 
+        sensação de amplitude, os azulejos de terracota originais e a estrutura de madeira exposta que 
+        conta a história da construção tradicional portuguesa.
+      </p>
+      <p class="text-slate-warm leading-relaxed">
+        O resultado é uma casa de férias que parece intemporal e confortável — um espaço acolhedor e 
+        convidativo onde amigos e família se podem reunir, relaxar e criar memórias.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Espaços de Estar</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-warm-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg text-olive-800 mb-2">🛋️ Sala de Estar</h3>
+          <p class="text-slate-warm text-sm leading-relaxed">Uma sala de estar acolhedora com lareira, perfeita para as noites mais frescas. Assentos confortáveis, iluminação suave e uma atmosfera relaxada.</p>
+        </div>
+        <div class="bg-warm-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg text-olive-800 mb-2">🍳 Cozinha & Sala de Jantar</h3>
+          <p class="text-slate-warm text-sm leading-relaxed">Cozinha totalmente equipada com forno, frigorífico, máquina Nespresso, chaleira, micro-ondas e todos os utensílios. Área de jantar para refeições partilhadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Detalhes da Restauração</h2>
+      <ul class="space-y-3 text-slate-warm">
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Tectos altos preservados em toda a casa</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Paredes de pedra originais cuidadosamente restauradas</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Azulejos de terracota vermelhos tradicionais mantidos</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Estrutura de tecto de madeira exposta mantida como elemento decorativo</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Paredes grossas proporcionam isolamento natural — fresco no verão, quente no inverno</li>
+      </ul>
+    </section>
+  </div>
+
+  <CTASection
+    title="Viva a Experiência Casa dos Duques"
+    subtitle="Reserve a sua estadia e descubra o encanto desta casa de férias lindamente restaurada"
+    primaryCta={{ label: 'Ver Disponibilidade', href: '/pt/reserva/' }}
+    secondaryCta={{ label: 'Ver os Quartos', href: '/pt/quartos/' }}
+    variant="olive"
+  />
+</BaseLayout>

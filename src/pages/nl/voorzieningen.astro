@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Voorzieningen — Alles Inbegrepen bij Casa dos Duques | Abiul, Pombal"
+  description="Zwembad, 450m² tuin, BBQ, open haard, volledig uitgeruste keuken, WiFi, parkeren — alles wat u nodig heeft voor een perfecte vakantie in Centraal Portugal."
+  canonical="/nl/voorzieningen/"
+  locale="nl"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-4">Voorzieningen</h1>
+    <p class="text-slate-warm mb-8">Alles wat u nodig heeft voor een comfortabel, onvergetelijk verblijf.</p>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🏊</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Zwembad</h3>
+        <p class="text-sm text-slate-warm">8-meter zwembad. Beschikbaar mei-september. <em>Geen hek of slot — kinderen moeten worden begeleid.</em></p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🌳</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Tuin</h3>
+        <p class="text-sm text-slate-warm">450m² met meerdere loungeplekken, perfect om te ontspannen, zonnebaden en spelen.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🍖</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">BBQ & Terras</h3>
+        <p class="text-sm text-slate-warm">Buitenbarbecue en terras voor al fresco dineren onder de sterren.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🍳</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Volledig Uitgeruste Keuken</h3>
+        <p class="text-sm text-slate-warm">Oven, koelkast, Nespresso-apparaat, waterkoker, magnetron en alle keukengerei.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🔥</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Open Haard</h3>
+        <p class="text-sm text-slate-warm">Gezellige woonkamer met open haard voor koelere avonden.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">📶</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">WiFi</h3>
+        <p class="text-sm text-slate-warm">Gratis snel draadloos internet door het hele huis.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🚗</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Gratis Parkeren</h3>
+        <p class="text-sm text-slate-warm">Parkeren op het terrein beschikbaar.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <span class="text-3xl">🧺</span>
+        <h3 class="font-semibold text-lg text-olive-800 mt-2 mb-1">Essentials</h3>
+        <p class="text-sm text-slate-warm">Bedlinnen, handdoeken, shampoo, haardroger inbegrepen.</p>
+      </div>
+    </div>
+
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
+      <h3 class="font-semibold text-amber-800 mb-2">ℹ️ Let Op</h3>
+      <ul class="text-sm text-amber-700 space-y-1">
+        <li>Geen airconditioning — dikke stenen muren houden het huis op natuurlijke wijze koel in de zomer</li>
+        <li>Geen wasmachine/droger</li>
+        <li>Zwembad heeft geen hek/slot — toezicht op kinderen is essentieel</li>
+        <li>Mogelijk niet geschikt voor gasten met beperkte mobiliteit</li>
+      </ul>
+    </div>
+  </div>
+
+  <CTASection
+    title="Boek Uw Verblijf"
+    primaryCta={{ label: 'Beschikbaarheid Controleren', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

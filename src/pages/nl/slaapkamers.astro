@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Slaapkamers — Tot 8 Gasten Comfortabel Overnachten | Casa dos Duques"
+  description="4 slaapkamers, 5 bedden, 3 badkamers bij Casa dos Duques. Eén master ensuite, één kinderen-slaapkamer en twee tweepersoonskamers. Slaapt tot 6 volwassenen + 2 kinderen + 1 baby."
+  canonical="/nl/slaapkamers/"
+  locale="nl"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-4">Slaapkamers — Tot 8 Gasten Comfortabel Overnachten</h1>
+    <p class="text-slate-warm mb-8">4 slaapkamers · 5 bedden · 3 badkamers · Tot 8 gasten (6 volwassenen + 2 kinderen + 1 baby)</p>
+    
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
+        <img src="/images/room-1.jpg" alt="Kinderkamer met stapelbed" class="h-48 w-full object-cover" loading="lazy" />
+        <div class="p-6">
+          <h2 class="text-xl font-semibold text-olive-800 mb-2">Slaapkamer 1 — Kinderkamer</h2>
+          <p class="text-sm text-slate-warm mb-3">1 stapelbed · Slaapt 2</p>
+          <p class="text-sm text-slate-warm">Een gezellige kamer met een stapelbed, ideaal voor kinderen of extra gasten.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
+        <img src="/images/room-2.jpg" alt="Tweepersoonskamer met traditioneel karakter" class="h-48 w-full object-cover" loading="lazy" />
+        <div class="p-6">
+          <h2 class="text-xl font-semibold text-olive-800 mb-2">Slaapkamer 2 — Tweepersoonskamer</h2>
+          <p class="text-sm text-slate-warm mb-3">1 tweepersoonsbed · Slaapt 2</p>
+          <p class="text-sm text-slate-warm">Comfortabele tweepersoonskamer met traditioneel karakter.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
+        <img src="/images/room-3.jpg" alt="Ruime tweepersoonskamer met uitzicht op de tuin" class="h-48 w-full object-cover" loading="lazy" />
+        <div class="p-6">
+          <h2 class="text-xl font-semibold text-olive-800 mb-2">Slaapkamer 3 — Tweepersoonskamer</h2>
+          <p class="text-sm text-slate-warm mb-3">1 tweepersoonsbed · Slaapt 2</p>
+          <p class="text-sm text-slate-warm">Ruime tweepersoonskamer met uitzicht op de tuin.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
+        <img src="/images/room-4.jpg" alt="Master ensuite slaapkamer" class="h-48 w-full object-cover" loading="lazy" />
+        <div class="p-6">
+          <h2 class="text-xl font-semibold text-olive-800 mb-2">Slaapkamer 4 — Master Suite</h2>
+          <p class="text-sm text-slate-warm mb-3">1 tweepersoonsbed · Ensuite badkamer · Slaapt 2</p>
+          <p class="text-sm text-slate-warm">Master bedroom met eigen badkamer met bad. De meest privékamer van het huis.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-warm-cream rounded-xl p-6 mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Badkamers</h2>
+      <ul class="space-y-2 text-slate-warm">
+        <li>🛁 Ensuite badkamer (Slaapkamer 4) — bad</li>
+        <li>🚿 Gedeelde badkamer 1 — douche</li>
+        <li>🚿 Gedeelde badkamer 2 — douche</li>
+      </ul>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-6">Slaapkamer Galerij</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="/images/30ecfe34-26b5-45b5-b729-3a338987a597.jpeg" alt="Slaapkamer interieur" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/52f77659-d47c-4b83-9823-6762fbb714a9.jpeg" alt="Slaapkamer interieur" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/a880a2a5-2a4c-4a69-bbf3-ee8b217829ae.jpeg" alt="Slaapkamer interieur" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/aa5ccbfd-b90b-4beb-94ef-47bb2793d886.jpeg" alt="Slaapkamer interieur" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/caac1c63-2ec3-40e0-ab60-8ffac86d6a4f.jpeg" alt="Slaapkamer interieur" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/3421b389-d232-4fcd-831a-910850539d44.jpeg" alt="Slaapkamer interieur" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+      </div>
+    </section>
+  </div>
+
+  <CTASection
+    title="Klaar om te Boeken?"
+    subtitle="Controleer de beschikbaarheid voor uw gewenste kamerconfiguratie"
+    primaryCta={{ label: 'Beschikbaarheid Controleren', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

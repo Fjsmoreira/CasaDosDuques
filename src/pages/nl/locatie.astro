@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import MapSection from '../../components/MapSection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Locatie — Casa dos Duques in Abiul, Pombal, Centraal Portugal"
+  description="Vind Casa dos Duques in het historische stadje Abiul, district Pombal. 10 min naar Pombal, 25 min naar Batalha/Leiria, 35 min naar stranden. Lissabon 1,5 uur, Porto 1,5 uur."
+  canonical="/nl/locatie/"
+  locale="nl"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Waar We Zijn — Abiul, Pombal, Centraal Portugal</h1>
+    
+    <MapSection
+      lat={SITE_CONFIG.coordinates.lat}
+      lng={SITE_CONFIG.coordinates.lng}
+      address={SITE_CONFIG.address.street}
+      town={SITE_CONFIG.address.town}
+      district={SITE_CONFIG.address.district}
+      height="h-[300px] md:h-[400px]"
+      client:load
+    />
+
+    <div class="grid md:grid-cols-2 gap-6 mb-10">
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <h2 class="font-semibold text-lg text-olive-800 mb-3">📍 Snelle Feiten</h2>
+        <ul class="space-y-2 text-sm text-slate-warm">
+          <li><strong>Plaats:</strong> {SITE_CONFIG.address.town}, {SITE_CONFIG.address.district}</li>
+          <li><strong>District:</strong> {SITE_CONFIG.address.region}</li>
+          <li><strong>Regio:</strong> Centro de Portugal</li>
+          <li><strong>AL Registratie:</strong> {SITE_CONFIG.alRegistration}</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <h2 class="font-semibold text-lg text-olive-800 mb-3">🚗 Reistijden</h2>
+        <ul class="space-y-2 text-sm text-slate-warm">
+          <li><strong>Pombal:</strong> 10 min</li>
+          <li><strong>Leiria:</strong> 25 min</li>
+          <li><strong>Batalha (UNESCO):</strong> 25 min</li>
+          <li><strong>Stranden:</strong> 35-40 min</li>
+          <li><strong>Lissabon:</strong> ~1,5 uur (172 km)</li>
+          <li><strong>Porto:</strong> ~1,5 uur (180 km)</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Over Abiul</h2>
+      <p class="text-slate-warm leading-relaxed mb-3">
+        Abiul is een historisch stadje in de gemeente Pombal, met een rijke geschiedenis die teruggaat tot 
+        1167 toen het zijn eerste koninklijk handvest ontving. Het was historisch verbonden met het machtige 
+        Huis van Aveiro en herbergt wat wordt beschouwd als de oudste arena van Portugal.
+      </p>
+      <p class="text-slate-warm leading-relaxed">
+        Tegenwoordig is Abiul een vredig stadje met een sterk gemeenschapsgevoel. De nabijgelegen supermarkt, 
+        apotheek, cafés en restaurants zijn allemaal op loopafstand van het huis.
+      </p>
+      <a href="/nl/gids/abiul/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold mt-3">Lees de Abiul Gids →</a>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Over Pombal</h2>
+      <p class="text-slate-warm leading-relaxed mb-3">
+        Op slechts 10 minuten van het huis, is Pombal een charmant stadje gedomineerd door zijn middeleeuwse 
+        Tempelierskasteel. De stad biedt uitstekende winkelmogelijkheden (Aldi, Dias supermarkten), 
+        een ruime keuze aan restaurants, banken en alle essentiële diensten.
+      </p>
+      <p class="text-slate-warm leading-relaxed">
+        Pombal gaf zijn naam aan de Marquês de Pombal, de beroemde 18e-eeuwse premier van Portugal.
+      </p>
+      <a href="/nl/gids/pombal/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold mt-3">Lees de Pombal Gids →</a>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Centraal Portugal Hub</h2>
+      <p class="text-slate-warm leading-relaxed mb-3">
+        Casa dos Duques is perfect gelegen om het beste van Centraal Portugal te verkennen. 
+        Vier UNESCO-werelderfgoedlocaties zijn binnen 30 minuten rijden: Batalha-klooster, 
+        Alcobaça-klooster, het Convent van Christus in Tomar en de Universiteit van Coimbra.
+      </p>
+      <a href="/nl/gids/centraal-portugal/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold mt-3">Ontdek Centraal Portugal →</a>
+    </section>
+  </div>
+
+  <CTASection
+    title="Perfect Gelegen voor Ontdekkingen"
+    subtitle="Boek uw verblijf en verken het beste van Centraal Portugal vanuit Casa dos Duques"
+    primaryCta={{ label: 'Boek Uw Verblijf', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Redirecting to Garden Gallery"
+  description="Redirecting to the garden gallery page"
+  robots={{ index: false, follow: true }}
+  canonical="/garden/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-24 text-center">
+    <h1 class="text-3xl font-bold text-olive-800 mb-4">Redirecting to Garden Gallery</h1>
+    <p class="text-slate-warm mb-6">If you are not redirected automatically, <a href="/garden/" class="text-terracotta-600 hover:underline font-semibold">click here</a>.</p>
+  </div>
+</BaseLayout>
+
+<script>
+  window.location.href = '/garden/';
+</script>

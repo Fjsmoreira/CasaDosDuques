@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Casa dos Duques — Een 90-Jarig Gerenoveerd Vakantiehuis in Abiul, Pombal"
+  description="Ontdek het verhaal van Casa dos Duques: een zorgvuldig gerenoveerd 90 jaar oud huis met originele stenen, terracotta vloeren, hoge plafonds en een warme familiesfeer in Abiul, Pombal."
+  canonical="/nl/huis/"
+  locale="nl"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Casa dos Duques — Een 90-Jarig Gerenoveerd Vakantiehuis in Abiul</h1>
+    
+    <img src="/images/house-exterior.jpg" alt="Casa dos Duques exterieur" class="w-full rounded-xl mb-8 h-96 object-cover" loading="eager" />
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Het Verhaal van het Huis</h2>
+      <p class="text-slate-warm leading-relaxed mb-4">
+        Casa dos Duques staat al meer dan 90 jaar in het hart van Abiul. Gebouwd in een tijd waarin 
+        vakmanschap voorop stond, heeft het huis het rustige ritme van het leven in dit 
+        historische stadje meegemaakt — van het eerste koninklijk handvest in 1167 tot op de dag van vandaag.
+      </p>
+      <p class="text-slate-warm leading-relaxed mb-4">
+        Na jaren van zorgvuldige planning werd het huis minutieus gerenoveerd met diep respect 
+        voor het oorspronkelijke karakter. Elke beslissing werd genomen om te behouden wat het bijzonder maakt: 
+        de dikke stenen muren die het huis koel houden in de zomer, de hoge plafonds die een 
+        luchtig gevoel geven, de originele terracotta vloertegels en de zichtbare houten structuur die 
+        het verhaal vertelt van traditionele Portugese bouw.
+      </p>
+      <p class="text-slate-warm leading-relaxed">
+        Het resultaat is een vakantiehuis dat zowel tijdloos als comfortabel aanvoelt — een warme, uitnodigende 
+        ruimte waar vrienden en familie samen kunnen komen, ontspannen en herinneringen maken.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Woonruimtes</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-warm-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg text-olive-800 mb-2">🛋️ Woonkamer</h3>
+          <p class="text-slate-warm text-sm leading-relaxed">Een gezellige woonkamer met open haard, perfect voor koelere avonden. Comfortabele zitplaatsen, warme verlichting en een ontspannen sfeer.</p>
+        </div>
+        <div class="bg-warm-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg text-olive-800 mb-2">🍳 Keuken & Eetkamer</h3>
+          <p class="text-slate-warm text-sm leading-relaxed">Volledig uitgeruste keuken met oven, koelkast, Nespresso-apparaat, waterkoker, magnetron en alle keukengerei. Eetgedeelte voor gezamenlijke maaltijden.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Restauratie Details</h2>
+      <ul class="space-y-3 text-slate-warm">
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Hoge plafonds behouden in het hele huis</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Originele stenen muren zorgvuldig gerestaureerd</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Traditionele rode terracotta vloertegels behouden</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Zichtbare houten plafondstructuur als kenmerk behouden</li>
+        <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Dikke muren bieden natuurlijke isolatie — koel in zomer, warm in winter</li>
+      </ul>
+    </section>
+  </div>
+
+  <CTASection
+    title="Beleef Casa dos Duques"
+    subtitle="Boek uw verblijf en ontdek de charme van dit prachtig gerestaureerde vakantiehuis"
+    primaryCta={{ label: 'Beschikbaarheid Controleren', href: '/nl/boeking/' }}
+    secondaryCta={{ label: 'Bekijk de Slaapkamers', href: '/nl/slaapkamers/' }}
+    variant="olive"
+  />
+</BaseLayout>

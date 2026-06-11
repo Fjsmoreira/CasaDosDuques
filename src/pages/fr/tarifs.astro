@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Tarifs — Location de Maison de Vacances à Abiul, Pombal | Casa dos Duques"
+  description="Consultez les tarifs actuels et la disponibilité pour Casa dos Duques. Tarifs à la semaine et à la nuit pour cette belle maison de vacances de 8 personnes avec piscine et jardin à Abiul, Pombal."
+  locale="fr"
+  canonical="/fr/tarifs/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Tarifs & Disponibilité</h1>
+    <p class="text-slate-warm mb-8">
+      Pour connaître les tarifs et la disponibilité actuels, veuillez nous contacter directement ou consulter notre annonce Airbnb.
+      Nous proposons des tarifs compétitifs pour cette belle maison de vacances de 8 personnes.
+    </p>
+
+    <div class="bg-warm-cream rounded-xl p-8 mb-8 text-center">
+      <p class="text-lg text-slate-warm mb-4">
+        Pour les prix et disponibilités les plus récents :
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/fr/reservation/" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+          Contactez-nous pour les Tarifs
+        </a>
+        <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-8 py-3 rounded-lg transition-colors">
+          Voir sur Airbnb
+        </a>
+      </div>
+    </div>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Ce qui est Inclus</h2>
+      <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-warm">
+        <li class="flex items-center gap-2">✓ 4 chambres / 5 lits / 3 salles de bain</li>
+        <li class="flex items-center gap-2">✓ Jusqu'à 8 personnes</li>
+        <li class="flex items-center gap-2">✓ Piscine de 8m (mai-sept.)</li>
+        <li class="flex items-center gap-2">✓ Jardin de 450m² avec espaces de détente</li>
+        <li class="flex items-center gap-2">✓ Barbecue et terrasse extérieure</li>
+        <li class="flex items-center gap-2">✓ Cuisine entièrement équipée</li>
+        <li class="flex items-center gap-2">✓ Draps et serviettes</li>
+        <li class="flex items-center gap-2">✓ WiFi et parking gratuits</li>
+        <li class="flex items-center gap-2">✓ Cheminée</li>
+        <li class="flex items-center gap-2">✓ AL 128717/AL — Hébergement agréé</li>
+      </ul>
+    </section>
+  </div>
+
+  <CTASection
+    title="Prêt à Réserver ?"
+    subtitle="Contactez-nous pour les tarifs et disponibilités actuels"
+    primaryCta={{ label: 'Demander un Devis', href: '/fr/reservation/' }}
+    variant="olive"
+  />
+</BaseLayout>

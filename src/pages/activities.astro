@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Redirecting to Things to Do"
+  description="Redirecting to the things to do page"
+  robots={{ index: false, follow: true }}
+  canonical="/things-to-do/"
+>
+  <div class="max-w-4xl mx-auto px-4 py-24 text-center">
+    <h1 class="text-3xl font-bold text-olive-800 mb-4">Redirecting to Things to Do</h1>
+    <p class="text-slate-warm mb-6">If you are not redirected automatically, <a href="/things-to-do/" class="text-terracotta-600 hover:underline font-semibold">click here</a>.</p>
+  </div>
+</BaseLayout>
+
+<script>
+  window.location.href = '/things-to-do/';
+</script>

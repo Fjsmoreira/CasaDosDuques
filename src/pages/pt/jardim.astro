@@ -1,0 +1,337 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+// All UUID images from the Casa dos Duques WordPress collection
+// Organized by D3 classification mapping
+
+const poolGardenImages = [
+  // WP idx 4-7 (#4-7 pool/garden)
+  '12a0aa1f-692f-4fe2-ad23-0a52059ce32c',
+  '32bbb262-1336-420a-9f25-403d9a993b80',
+  '92a74fc0-5f5a-456c-885c-a1d3a1f67171',
+  'c00d422d-c41f-40e8-bf01-21eeaef3c621',
+  // WP idx 14-20 (#14-20 pool/garden)
+  '5fa97bc7-031e-4407-8799-c465c5b5d772',
+  '1e2a954f-adf1-4b6a-8df9-1e23ff619dc4',
+  '2eccd20c-17ee-4072-8a05-bd5d2359ddd2',
+  '0697bfa9-a8f7-4847-93d7-8155ecbb030a',
+  '04be686a-a4fe-484c-be4e-590aa81cf11a',
+  '1b5f5cec-a4ff-402a-b6a8-ac852df5f7a3',
+  'bce96ce7-bdf5-4cc2-9662-018f3054904f',
+  // WP idx 22-24 (#22-24 pool/garden)
+  'a7be8d24-1c80-44c6-98b9-0a2da7019da9',
+  'aa5ccbfd-b90b-4beb-94ef-47bb2793d886',
+  '3fb15595-5eb5-493a-a2db-acccf3593d74',
+  // #47 pool/garden
+  'a5bf17db-4423-4bbd-b565-5ddf4391110d',
+  // #51 pool/garden
+  'f48f0984-a176-4bf0-8a72-289b652a8c2a',
+  // #62 pool/garden
+  'eba59c3f-e9bc-4479-85b3-9b71460df598',
+  // Additional pool/garden images from collection
+  '574169fe-28ed-4cf5-a856-fe60fe2e2d92',
+  'c4a0d1e5-d45e-435f-947f-75224253c085',
+  '2f21c46e-f9c5-41eb-9b22-264e8158eb9b',
+  'ba9a905b-2d7b-4741-ac8f-ceafe2288cf6',
+  'd9b3dddf-d32c-4f9d-b466-b682a127f4a4',
+  '6ad793f2-00b0-4b33-9dd1-50c95412e783',
+  'f5eb62e5-b50f-438e-ae96-8c6188e75ad9',
+  'caac1c63-2ec3-40e0-ab60-8ffac86d6a4f',
+  '4f5427af-54d4-4841-8b24-2bda8d41ac1b',
+  // .jpg variant
+  '8e5cd75a-368c-4bbb-ba94-f098a1594aa6',
+];
+
+const heroExteriorImages = [
+  // #9 hero (WP idx 4)
+  'd4c8ef4b-2fa0-495b-baba-57104867048a',
+  // #10 hero (WP idx 10)
+  '1dd5fdd0-afd8-486b-a733-b5b538999d2a',
+  // #11 hero (WP idx 11)
+  '3470c83a-e010-42ef-b4ea-316344bc69e9',
+  // #12 hero (WP idx 12)
+  'd5facc44-501a-445c-8eb4-94cf90e682dc',
+  // #48 hero (WP idx 47)
+  '16b41c25-33a1-4607-9919-e7076c85ba9c',
+  // #53 hero (WP idx 52)
+  '467c6107-9824-44ec-98f5-fcc2d62cb186',
+  // Additional exterior images
+  '3421b389-d232-4fcd-831a-910850539d44',
+  '586cc2f2-d73e-46c6-b613-024fa6889014',
+  '9dbb9841-e49d-4a5a-883c-194a3c74997b',
+  '83b04082-dc26-4260-aa7c-4b894b9377ea',
+];
+
+const roomsInteriorImages = [
+  // #8 rooms (WP idx 8)
+  '30ecfe34-26b5-45b5-b729-3a338987a597',
+  // #21 rooms (WP idx 21)
+  '52f77659-d47c-4b83-9823-6762fbb714a9',
+  // #25 rooms (WP idx 25)
+  'a880a2a5-2a4c-4a69-bbf3-ee8b217829ae',
+  // #49 rooms (WP idx 49)
+  '1a376321-6b91-452b-b36a-14ed0d4f14eb',
+  // Additional interior images from collection
+  '07b9108e-9496-4e8b-a883-0ada355917af',
+  '1a43a296-ac44-498b-86ee-c004d600177c',
+  '3c344b84-9df6-466c-a31b-4d5a116ee6e3',
+  '67eb1ea5-e048-4ace-a621-f97f213052bf',
+  '6cbce955-d2e0-480c-b318-7eb5e027eb85',
+  '7a941336-07dc-4aaf-a5c7-b2b6263acce8',
+  '8f58fe7c-43b4-4dd7-aaf6-9e7c07521903',
+  '99676dc0-f6e7-4874-9043-3c6e996dc460',
+  '9c380723-8989-4b59-b95e-46486192237b',
+  'a972d33d-086b-46ea-a63d-934ec57827ff',
+  'b4215093-be7a-472d-a49c-f39938807710',
+  'c1eb8904-37f7-4f82-99e7-cd539bafd98a',
+  'd1b8dc3d-257c-4b3a-99f6-ec0ae3c76544',
+  'e6d96cd5-9736-4c30-a293-367d8b4cd757',
+  'f4cbf764-26d3-48bc-9128-ed4ef90bdbc8',
+  'f74a9a09-e91d-4d49-b205-f50e9d5bbe40',
+  'fbe29248-4838-4933-8a45-8cb4fa287fbf',
+];
+
+// Include .jpg extensions too
+const ext = (uuid: string) => {
+  // Check if there's a .jpg variant
+  if (uuid === '8e5cd75a-368c-4bbb-ba94-f098a1594aa6') return '.jpg';
+  return '.jpeg';
+};
+---
+
+<BaseLayout
+  title="450 m² de Jardim & Piscina — Galeria de Fotos | Casa dos Duques"
+  description="Veja a nossa galeria completa de fotos do jardim de 450m², piscina de 8m, exterior da casa e interiores da Casa dos Duques. O seu paraíso privado ao ar livre em Abiul."
+  canonical="/pt/jardim/"
+  locale="pt"
+>
+  <!-- Hero Section -->
+  <div class="max-w-6xl mx-auto px-4 pt-12 pb-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-olive-800 mb-4">450 m² de Jardim & Piscina — Galeria de Fotos</h1>
+    <p class="text-lg text-slate-warm leading-relaxed max-w-3xl">
+      Explore cada recanto da Casa dos Duques através da nossa coleção completa de fotografias.
+      Da piscina soalheira e do jardim luxuriante ao exterior encantador e aos interiores
+      cuidadosamente decorados — veja tudo antes de chegar.
+    </p>
+  </div>
+
+  <!-- Gallery Sections -->
+  <div class="max-w-6xl mx-auto px-4 pb-12">
+
+    <!-- Pool & Garden -->
+    <section class="mb-16" id="piscina-jardim">
+      <h2 class="text-3xl font-bold text-olive-700 mb-2 flex items-center gap-3">
+        <span class="text-3xl">🌿</span> Piscina &amp; Jardim
+      </h2>
+      <p class="text-slate-warm mb-6 ml-1">O coração do seu retiro ao ar livre — piscina, zonas de estar e vegetação luxuriante</p>
+      <div class="gallery-grid columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        {
+          poolGardenImages.map((uuid) => (
+            <img
+              src={`/images/${uuid}${ext(uuid)}`}
+              alt="Casa dos Duques piscina e jardim"
+              class="gallery-thumb w-full rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer object-cover break-inside-avoid"
+              loading="lazy"
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- House Exterior -->
+    <section class="mb-16" id="exterior-casa">
+      <h2 class="text-3xl font-bold text-olive-700 mb-2 flex items-center gap-3">
+        <span class="text-3xl">🏡</span> Exterior da Casa
+      </h2>
+      <p class="text-slate-warm mb-6 ml-1">A fachada encantadora e os arredores da Casa dos Duques</p>
+      <div class="gallery-grid columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        {
+          heroExteriorImages.map((uuid) => (
+            <img
+              src={`/images/${uuid}${ext(uuid)}`}
+              alt="Casa dos Duques exterior"
+              class="gallery-thumb w-full rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer object-cover break-inside-avoid"
+              loading="lazy"
+            />
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Rooms & Interiors -->
+    <section class="mb-16" id="quartos-interiores">
+      <h2 class="text-3xl font-bold text-olive-700 mb-2 flex items-center gap-3">
+        <span class="text-3xl">🛋️</span> Quartos &amp; Interiores
+      </h2>
+      <p class="text-slate-warm mb-6 ml-1">Espaços confortáveis e cuidadosamente decorados</p>
+      <div class="gallery-grid columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        {
+          roomsInteriorImages.map((uuid) => (
+            <img
+              src={`/images/${uuid}${ext(uuid)}`}
+              alt="Casa dos Duques interior"
+              class="gallery-thumb w-full rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer object-cover break-inside-avoid"
+              loading="lazy"
+            />
+          ))
+        }
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white text-4xl z-10 w-12 h-12 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 transition-colors">&times;</button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl z-10 w-12 h-12 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 transition-colors">&#8249;</button>
+    <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl" alt="Imagem ampliada" />
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl z-10 w-12 h-12 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 transition-colors">&#8250;</button>
+  </div>
+
+  <CTASection
+    title="Viva o Jardim"
+    subtitle="Reserve a sua estadia e desfrute do seu paraíso privado ao ar livre"
+    primaryCta={{ label: 'Ver Disponibilidade', href: '/pt/reserva/' }}
+    variant="olive"
+  />
+</BaseLayout>
+
+<script>
+  // Vanilla JS Lightbox
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+
+    let currentIndex = 0;
+    let allImages = [];
+
+    // Collect all gallery images
+    document.querySelectorAll('.gallery-thumb').forEach((img, index) => {
+      allImages.push(img);
+      img.addEventListener('click', () => openLightbox(index));
+    });
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightboxImage();
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function updateLightboxImage() {
+      const img = allImages[currentIndex];
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+      updateLightboxImage();
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % allImages.length;
+      updateLightboxImage();
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    prevBtn.addEventListener('click', prevImage);
+    nextBtn.addEventListener('click', nextImage);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('flex')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+    });
+
+    // Click outside image to close
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    lightbox.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) nextImage();
+        else prevImage();
+      }
+    }, { passive: true });
+  });
+</script>
+
+<style>
+  /* Improve masonry rendering */
+  .gallery-grid {
+    column-gap: 1rem;
+  }
+  .gallery-grid > img {
+    margin-bottom: 1rem;
+    display: block;
+  }
+  @media (max-width: 639px) {
+    .gallery-grid {
+      columns: 1;
+    }
+  }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .gallery-grid {
+      columns: 2;
+    }
+  }
+  @media (min-width: 1024px) {
+    .gallery-grid {
+      columns: 3;
+    }
+  }
+
+  /* Hover zoom effect */
+  .gallery-thumb {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .gallery-thumb:hover {
+    transform: scale(1.02);
+  }
+
+  /* Lightbox animations */
+  #lightbox {
+    animation: fadeIn 0.2s ease;
+  }
+  #lightbox-img {
+    animation: scaleIn 0.25s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+
+  /* Section divider */
+  section {
+    scroll-margin-top: 2rem;
+  }
+</style>

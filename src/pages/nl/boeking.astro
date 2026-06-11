@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Boek Casa dos Duques — Vakantiehuis in Abiul, Pombal, Centraal Portugal"
+  description="Boek uw verblijf bij Casa dos Duques. Neem direct contact met ons op voor de beste tarieven of boek via Airbnb. 8 gasten, zwembad, tuin — uw perfecte vakantie in Centraal Portugal."
+  canonical="/nl/boeking/"
+  locale="nl"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Boek Uw Verblijf bij Casa dos Duques</h1>
+    <p class="text-slate-warm mb-8">
+      Klaar om Casa dos Duques te ervaren? U kunt direct bij ons boeken voor de beste tarieven,
+      of via Airbnb. We staan klaar om uw vakantie perfect te maken.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-terracotta-50 rounded-xl p-8 text-center border border-terracotta-200">
+        <div class="text-4xl mb-3">📧</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-3">Direct Boeken</h2>
+        <p class="text-sm text-slate-warm mb-4">
+          Direct bij ons boeken voor de beste tarieven en persoonlijke service.
+          Stuur ons een bericht en we nemen spoedig contact met u op.
+        </p>
+        <a href="mailto:fernando@casadosduques.pt" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+          E-mail: fernando@casadosduques.pt
+        </a>
+      </div>
+
+      <div class="bg-white rounded-xl p-8 text-center border border-warm-sand shadow-sm">
+        <div class="text-4xl mb-3">🏠</div>
+        <h2 class="text-xl font-semibold text-olive-800 mb-3">Boek op Airbnb</h2>
+        <p class="text-sm text-slate-warm mb-4">
+          Bekijk onze Airbnb-pagina voor beschikbaarheid, recensies van eerdere gasten
+          en de volledige ervaring. Beoordeeld met 4,97/5 — Guest Favorite.
+        </p>
+        <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-6 py-3 rounded-lg transition-colors">
+          Bekijk op Airbnb →
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-warm-cream rounded-xl p-6 mb-8">
+      <h2 class="text-xl font-semibold text-olive-800 mb-3">Contactformulier</h2>
+      <p class="text-sm text-slate-warm mb-4">Stuur ons een bericht en we reageren binnen 24 uur.</p>
+      <form action="mailto:fernando@casadosduques.pt" method="GET" class="space-y-4">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-olive-700 mb-1" for="name">Naam</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-olive-700 mb-1" for="email">E-mail</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-olive-700 mb-1" for="dates">Gewenste Data</label>
+          <input type="text" id="dates" name="dates" placeholder="Bijv. 15-22 juli 2026" class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-olive-700 mb-1" for="guests">Aantal Gasten</label>
+          <select id="guests" name="guests" class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none">
+            <option value="1-2">1-2 gasten</option>
+            <option value="3-4">3-4 gasten</option>
+            <option value="5-6">5-6 gasten</option>
+            <option value="7-8">7-8 gasten</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-olive-700 mb-1" for="message">Bericht</label>
+          <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-warm-sand bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none"></textarea>
+        </div>
+        <button type="submit" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+          Verstuur Aanvraag
+        </button>
+      </form>
+    </div>
+  </div>
+</BaseLayout>
