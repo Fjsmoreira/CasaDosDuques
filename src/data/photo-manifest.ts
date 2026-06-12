@@ -8,6 +8,7 @@ export type PhotoCategory =
   | 'bedroom/kids room'
   | 'bedroom/double'
   | 'bathroom'
+  | 'interior/detail'
   | 'surroundings/unknown'
   | 'airbnb-unknown';
 export interface PropertyPhoto {
@@ -72,9 +73,9 @@ export const propertyPhotos: PropertyPhoto[] = [
   photo('d9b3dddf-d32c-4f9d-b466-b682a127f4a4.jpeg', '1466383909', 'Bedroom 3 image 2', 'bedroom/double', 'Bedroom 3', 'Bedroom 3 photo 2 from Airbnb gallery', 'Airbnb label: Bedroom 3 image 2. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
   photo('04be686a-a4fe-484c-be4e-590aa81cf11a.jpeg', '1466383997', 'Bedroom 3 image 3', 'bedroom/double', 'Bedroom 3', 'Bedroom 3 photo 3 from Airbnb gallery', 'Airbnb label: Bedroom 3 image 3. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
   photo('eba59c3f-e9bc-4479-85b3-9b71460df598.jpeg', '1429458604', 'Bedroom 3 image 4', 'bedroom/double', 'Bedroom 3', 'Bedroom 3 photo 4 from Airbnb gallery', 'Airbnb label: Bedroom 3 image 4. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
-  photo('f74a9a09-e91d-4d49-b205-f50e9d5bbe40.jpeg', '1466383904', 'Bedroom 4 image 1', 'bedroom/double', 'Bedroom 4', 'Bedroom 4 photo 1 from Airbnb gallery', 'Airbnb label: Bedroom 4 image 1. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
+  photo('f74a9a09-e91d-4d49-b205-f50e9d5bbe40.jpeg', '1466383904', 'Bedroom 4 image 1', 'bathroom', 'Bedroom 4 ensuite bathroom', 'Bedroom 4 ensuite shower/bath photo from Airbnb gallery', 'Airbnb label says Bedroom 4 image 1, but visual QA confirms this is a bathroom shower/bathtub image, not a bedroom.'),
   photo('ba9a905b-2d7b-4741-ac8f-ceafe2288cf6.jpeg', '1466383921', 'Bedroom 4 image 2', 'bedroom/double', 'Bedroom 4', 'Bedroom 4 photo 2 from Airbnb gallery', 'Airbnb label: Bedroom 4 image 2. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
-  photo('83b04082-dc26-4260-aa7c-4b894b9377ea.jpeg', '1466383931', 'Bedroom 4 image 3', 'bedroom/double', 'Bedroom 4', 'Bedroom 4 photo 3 from Airbnb gallery', 'Airbnb label: Bedroom 4 image 3. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
+  photo('83b04082-dc26-4260-aa7c-4b894b9377ea.jpeg', '1466383931', 'Bedroom 4 image 3', 'bathroom', 'Bedroom 4 ensuite bathroom', 'Bedroom 4 ensuite vanity/toilet photo from Airbnb gallery', 'Airbnb label says Bedroom 4 image 3, but visual QA confirms this is a bathroom vanity/toilet image, not a bedroom.'),
   photo('a5bf17db-4423-4bbd-b565-5ddf4391110d.jpeg', '1466384018', 'Bedroom 4 image 4', 'bedroom/double', 'Bedroom 4', 'Bedroom 4 photo 4 from Airbnb gallery', 'Airbnb label: Bedroom 4 image 4. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
   photo('caac1c63-2ec3-40e0-ab60-8ffac86d6a4f.jpeg', '1466384022', 'Bedroom 4 image 5', 'bedroom/double', 'Bedroom 4', 'Bedroom 4 photo 5 from Airbnb gallery', 'Airbnb label: Bedroom 4 image 5. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
   photo('574169fe-28ed-4cf5-a856-fe60fe2e2d92.jpeg', '1466383907', 'Full bathroom 1 image 1', 'bathroom', 'Full bathroom 1', 'Full bathroom 1 photo 1 from Airbnb gallery', 'Airbnb label: Full bathroom 1 image 1. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
@@ -96,13 +97,13 @@ export const propertyPhotos: PropertyPhoto[] = [
   photo('1e2a954f-adf1-4b6a-8df9-1e23ff619dc4.jpeg', '1466384108', 'Backyard image 11', 'garden', 'Backyard / garden area', 'Backyard photo 11 from Airbnb gallery', 'Airbnb label: Backyard image 11. Grouped by Airbnb public photo tour; no AI/vision classification used. Airbnb does not distinguish garden vs terrace/outdoor dining/BBQ in the label.'),
   photo('a7be8d24-1c80-44c6-98b9-0a2da7019da9.jpeg', '1429458675', 'Backyard image 12', 'garden', 'Backyard / garden area', 'Backyard photo 12 from Airbnb gallery', 'Airbnb label: Backyard image 12. Grouped by Airbnb public photo tour; no AI/vision classification used. Airbnb does not distinguish garden vs terrace/outdoor dining/BBQ in the label.'),
   photo('5fa97bc7-031e-4407-8799-c465c5b5d772.jpeg', '1429458509', 'Backyard image 13', 'garden', 'Backyard / garden area', 'Backyard photo 13 from Airbnb gallery', 'Airbnb label: Backyard image 13. Grouped by Airbnb public photo tour; no AI/vision classification used. Airbnb does not distinguish garden vs terrace/outdoor dining/BBQ in the label.'),
-  photo('07b9108e-9496-4e8b-a883-0ada355917af.jpeg', '1429458592', 'Backyard image 14', 'garden', 'Backyard / garden area', 'Backyard photo 14 from Airbnb gallery', 'Airbnb label: Backyard image 14. Grouped by Airbnb public photo tour; no AI/vision classification used. Airbnb does not distinguish garden vs terrace/outdoor dining/BBQ in the label.'),
+  photo('07b9108e-9496-4e8b-a883-0ada355917af.jpeg', '1429458592', 'Backyard image 14', 'interior/detail', 'Blue-and-white ceramic tile detail', 'Architectural tile detail from Airbnb gallery', 'Airbnb label says Backyard image 14, but visual QA confirms this is a blue-and-white ceramic tile/wall detail and should not be shown in Pool & Garden.'),
   photo('bce96ce7-bdf5-4cc2-9662-018f3054904f.jpeg', '1432302239', 'Exterior image 1', 'hero/exterior', 'Exterior / arrival area', 'Exterior photo 1 from Airbnb gallery', 'Airbnb label: Exterior image 1. Grouped by Airbnb public photo tour; no AI/vision classification used. Exterior/arrival grouping is used for house/exterior context, not room interiors.'),
   photo('d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg', '1466383951', 'Exterior image 2', 'hero/exterior', 'Exterior / arrival area', 'Exterior photo 2 from Airbnb gallery', 'Airbnb label: Exterior image 2. Grouped by Airbnb public photo tour; no AI/vision classification used. Exterior/arrival grouping is used for house/exterior context, not room interiors.'),
   photo('3470c83a-e010-42ef-b4ea-316344bc69e9.jpeg', '1466383959', 'Exterior image 3', 'hero/exterior', 'Exterior / arrival area', 'Exterior photo 3 from Airbnb gallery', 'Airbnb label: Exterior image 3. Grouped by Airbnb public photo tour; no AI/vision classification used. Exterior/arrival grouping is used for house/exterior context, not room interiors.'),
   photo('1dd5fdd0-afd8-486b-a733-b5b538999d2a.jpeg', '1466384095', 'Exterior image 4', 'hero/exterior', 'Exterior / arrival area', 'Exterior photo 4 from Airbnb gallery', 'Airbnb label: Exterior image 4. Grouped by Airbnb public photo tour; no AI/vision classification used. Exterior/arrival grouping is used for house/exterior context, not room interiors.'),
   photo('d4c8ef4b-2fa0-495b-baba-57104867048a.jpeg', '1430032093', 'Exterior image 5', 'hero/exterior', 'Exterior / arrival area', 'Exterior photo 5 from Airbnb gallery', 'Airbnb label: Exterior image 5. Grouped by Airbnb public photo tour; no AI/vision classification used. Exterior/arrival grouping is used for house/exterior context, not room interiors.'),
-  photo('30ecfe34-26b5-45b5-b729-3a338987a597.jpeg', '1429458460', 'Exterior image 6', 'hero/exterior', 'Exterior / arrival area', 'Exterior photo 6 from Airbnb gallery', 'Airbnb label: Exterior image 6. Grouped by Airbnb public photo tour; no AI/vision classification used. Exterior/arrival grouping is used for house/exterior context, not room interiors.'),
+  photo('30ecfe34-26b5-45b5-b729-3a338987a597.jpeg', '1429458460', 'Exterior image 6', 'interior/detail', 'Window view detail', 'Inside-looking-out window view from Airbnb gallery', 'Airbnb label says Exterior image 6, but visual QA confirms this is an inside-looking-out window/view photo and should not be shown in House Exterior.'),
   photo('16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg', '1466384078', 'Pool image 1', 'pool', 'Pool area', 'Pool photo 1 from Airbnb gallery', 'Airbnb label: Pool image 1. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
   photo('c00d422d-c41f-40e8-bf01-21eeaef3c621.jpeg', '1466384084', 'Pool image 2', 'pool', 'Pool area', 'Pool photo 2 from Airbnb gallery', 'Airbnb label: Pool image 2. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
   photo('92a74fc0-5f5a-456c-885c-a1d3a1f67171.jpeg', '1466384088', 'Pool image 3', 'pool', 'Pool area', 'Pool photo 3 from Airbnb gallery', 'Airbnb label: Pool image 3. Grouped by Airbnb public photo tour; no AI/vision classification used.'),
@@ -119,7 +120,7 @@ export const poolGardenPhotos = propertyPhotos.filter((photo) =>
 export const exteriorPhotos = propertyPhotos.filter((photo) => photo.category === 'hero/exterior');
 
 export const roomInteriorPhotos = propertyPhotos.filter((photo) =>
-  ['bedroom/kids room', 'bedroom/double', 'living/interior', 'kitchen', 'bathroom'].includes(photo.category),
+  ['bedroom/kids room', 'bedroom/double', 'living/interior', 'kitchen', 'bathroom', 'interior/detail'].includes(photo.category),
 );
 
 export const bedroomPhotos = propertyPhotos.filter((photo) =>
@@ -134,7 +135,7 @@ export const featuredRoomPhotos = {
   bedroom1: propertyPhotos.find((photo) => photo.airbnbLabel === 'Bedroom 1 image 1')!,
   bedroom2: propertyPhotos.find((photo) => photo.airbnbLabel === 'Bedroom 2 image 1')!,
   bedroom3: propertyPhotos.find((photo) => photo.airbnbLabel === 'Bedroom 3 image 1')!,
-  bedroom4: propertyPhotos.find((photo) => photo.airbnbLabel === 'Bedroom 4 image 1')!,
+  bedroom4: propertyPhotos.find((photo) => photo.airbnbLabel === 'Bedroom 4 image 2')!,
 };
 
 export const featuredBedroomGallery = [
