@@ -13,10 +13,10 @@ const currentLocale = getLocaleFromPath(currentPath);
     return (
       <a
         href={href}
-        class={`px-2 py-1 text-sm rounded transition-colors ${
+        class={`px-2.5 py-1.5 text-xs rounded-full transition-colors ${
           isActive
-            ? 'bg-terracotta-500 text-white font-medium'
-            : 'text-slate-warm hover:text-terracotta-600 hover:bg-terracotta-50'
+            ? 'bg-olive-900 text-white font-semibold'
+            : 'text-slate-warm hover:text-olive-900 hover:bg-olive-50'
         }`}
         aria-label={loc.label}
         aria-current={isActive ? 'true' : undefined}

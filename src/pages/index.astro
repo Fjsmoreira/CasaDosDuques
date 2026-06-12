@@ -50,21 +50,44 @@ const schema = {
   <Hero
     title={SITE_CONFIG.name}
     subtitle={SITE_CONFIG.tagline}
-    tagline="8 guests · 4 bedrooms · Pool · 450m² garden"
+    tagline="8 guests · 4 bedrooms · Private pool · 450 m² garden"
     primaryCta={{ label: 'Check Availability & Book', href: '/booking/' }}
     secondaryCta={{ label: 'Explore the House', href: '/the-house/' }}
     image="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg"
   />
 
-  <!-- Trust strip -->
-  <div class="bg-olive-50 py-4">
-    <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-olive-700">
-      <span>⭐ Guest Favorite ★ 4.97/5</span>
-      <span>🏠 AL 128717/AL</span>
-      <span>👨‍👩‍👧‍👦 Up to 8 guests</span>
-      <span>🏛️ 4 UNESCO sites within 30 min</span>
+  <!-- Airbnb-style summary + photo tour -->
+  <section class="bg-white border-b border-warm-sand py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between mb-5">
+        <div>
+          <p class="text-sm font-semibold text-olive-900">Guest Favorite · ★ 4.97 · {SITE_CONFIG.reviewCount} reviews</p>
+          <p class="text-slate-warm text-sm mt-1">8 guests · 4 bedrooms · 5 beds · 3 bathrooms · Private pool · 450m² garden</p>
+        </div>
+        <a href="/booking/" class="inline-flex w-fit items-center rounded-full bg-terracotta-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-terracotta-600 transition-colors">
+          Check availability
+        </a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 overflow-hidden rounded-[1.75rem]">
+        <a href="/garden/" class="col-span-2 row-span-2 min-h-[260px] md:min-h-[420px]">
+          <img src="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg" alt="Pool and garden at Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="eager" />
+        </a>
+        <a href="/rooms/" class="min-h-[126px] md:min-h-[206px]">
+          <img src="/images/airbnb/c1eb8904-37f7-4f82-99e7-cd539bafd98a.jpeg" alt="Bedroom at Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" />
+        </a>
+        <a href="/the-house/" class="min-h-[126px] md:min-h-[206px]">
+          <img src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Casa dos Duques exterior" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" />
+        </a>
+        <a href="/garden/" class="min-h-[126px] md:min-h-[206px]">
+          <img src="/images/airbnb/16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg" alt="Private pool area" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" />
+        </a>
+        <a href="/rooms/" class="relative min-h-[126px] md:min-h-[206px]">
+          <img src="/images/airbnb/1a43a296-ac44-498b-86ee-c004d600177c.jpeg" alt="Living space at Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" />
+          <span class="absolute bottom-3 right-3 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-olive-900 shadow-sm">View photos</span>
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- House at a Glance -->
   <section class="py-16 bg-white">
@@ -73,19 +96,19 @@ const schema = {
         <div class="md:w-1/2">
           <h2 class="text-3xl font-bold text-olive-800 mb-4">The House at a Glance</h2>
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="bg-warm-cream rounded-lg p-4 text-center">
+            <div class="bg-olive-50 rounded-2xl p-4 text-center border border-warm-sand">
               <div class="text-2xl font-bold text-terracotta-600">4</div>
               <div class="text-sm text-slate-warm">Bedrooms</div>
             </div>
-            <div class="bg-warm-cream rounded-lg p-4 text-center">
+            <div class="bg-olive-50 rounded-2xl p-4 text-center border border-warm-sand">
               <div class="text-2xl font-bold text-terracotta-600">5</div>
               <div class="text-sm text-slate-warm">Beds</div>
             </div>
-            <div class="bg-warm-cream rounded-lg p-4 text-center">
+            <div class="bg-olive-50 rounded-2xl p-4 text-center border border-warm-sand">
               <div class="text-2xl font-bold text-terracotta-600">3</div>
               <div class="text-sm text-slate-warm">Bathrooms</div>
             </div>
-            <div class="bg-warm-cream rounded-lg p-4 text-center">
+            <div class="bg-olive-50 rounded-2xl p-4 text-center border border-warm-sand">
               <div class="text-2xl font-bold text-terracotta-600">8</div>
               <div class="text-sm text-slate-warm">Guests</div>
             </div>
@@ -101,32 +124,29 @@ const schema = {
           </p>
         </div>
         <div class="md:w-1/2">
-          <img src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Casa dos Duques exterior" class="rounded-xl w-full h-80 object-cover" loading="lazy" />
+          <img src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Casa dos Duques exterior" class="rounded-[1.75rem] w-full h-80 object-cover" loading="lazy" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- Why Guests Love It -->
-  <section class="py-16 bg-warm-cream">
+  <section class="py-16 bg-olive-50">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-olive-800 mb-8 text-center">Why Guests Love It</h2>
       <CardGrid
         cards={[
           {
-            icon: '🏊',
             title: 'Pool & Garden',
             description: '8m swimming pool, 450m² garden with several lounge areas, barbecue terrace — your private outdoor paradise.',
             href: '/garden/',
           },
           {
-            icon: '🏡',
             title: 'Restored with Soul',
             description: 'Original stones, terracotta floors, high ceilings, wooden structure — a 90-year-old house brought back to life.',
             href: '/the-house/',
           },
           {
-            icon: '📍',
             title: 'Central Location',
             description: '10 min to Pombal, 25 min to Leiria & Batalha, 35 min to beaches. Perfect base for exploring Central Portugal.',
             href: '/location/',
@@ -144,11 +164,11 @@ const schema = {
         450 m² of outdoor space with several lounge areas — perfect for relaxing, sunbathing, 
         al fresco dining, and playing.
       </p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg" alt="Garden view" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
-        <img src="/images/airbnb/16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg" alt="Pool area" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
-        <img src="/images/airbnb/1e2a954f-adf1-4b6a-8df9-1e23ff619dc4.jpeg" alt="Backyard and garden area" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
-        <img src="/images/airbnb/fbe29248-4838-4933-8a45-8cb4fa287fbf.jpeg" alt="Backyard terrace area" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <img src="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg" alt="Garden view" class="rounded-2xl h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/airbnb/16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg" alt="Pool area" class="rounded-2xl h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/airbnb/1e2a954f-adf1-4b6a-8df9-1e23ff619dc4.jpeg" alt="Backyard and garden area" class="rounded-2xl h-48 w-full object-cover" loading="lazy" />
+        <img src="/images/airbnb/fbe29248-4838-4933-8a45-8cb4fa287fbf.jpeg" alt="Backyard terrace area" class="rounded-2xl h-48 w-full object-cover" loading="lazy" />
       </div>
       <div class="text-center mt-6">
         <a href="/garden/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold">See the Garden →</a>
@@ -164,10 +184,10 @@ const schema = {
         columns={4}
         variant="compact"
         cards={[
-          { icon: '🏰', title: 'Tomar', description: 'Templar Castle — 30 min', href: '/guide/central-portugal/' },
-          { icon: '🏖️', title: 'Nazaré', description: 'Big Waves — 35 min', href: '/guide/central-portugal/' },
-          { icon: '⛪', title: 'Batalha', description: 'UNESCO Monastery — 25 min', href: '/guide/central-portugal/' },
-          { icon: '🏛️', title: 'Coimbra', description: 'University City — 40 min', href: '/guide/central-portugal/' },
+          { title: 'Tomar', description: 'Templar Castle — 30 min', href: '/guide/central-portugal/' },
+          { title: 'Nazaré', description: 'Big Waves — 35 min', href: '/guide/central-portugal/' },
+          { title: 'Batalha', description: 'UNESCO Monastery — 25 min', href: '/guide/central-portugal/' },
+          { title: 'Coimbra', description: 'University City — 40 min', href: '/guide/central-portugal/' },
         ]}
       />
       <div class="text-center mt-6">
