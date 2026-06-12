@@ -1,20 +1,15 @@
 ---
-import { LOCALES, SITE_CONFIG } from '../data/site-config.ts';
+import { LOCALES } from '../data/site-config.ts';
+import { getLocaleFromPath, getLocalizedPath } from '../data/routes.ts';
 
 const currentPath = Astro.url.pathname;
-const isDefaultLocale = !currentPath.match(/^\/(pt|nl|fr)\//);
-const basePath = isDefaultLocale ? currentPath : currentPath.replace(/^\/(pt|nl|fr)/, '');
-
-const getLocalePath = (prefix: string) => {
-  if (prefix === '') return basePath || '/';
-  return `/${prefix}${basePath}`;
-};
+const currentLocale = getLocaleFromPath(currentPath);
 ---
 
 <div class="flex gap-1 items-center">
   {LOCALES.map(loc => {
-    const href = loc.path === '' ? basePath || '/' : `/${loc.path}${basePath}`;
-    const isActive = (loc.path === '' && isDefaultLocale) || (!isDefaultLocale && currentPath.startsWith(`/${loc.path}`));
+    const href = getLocalizedPath(currentPath, loc.code);
+    const isActive = loc.code === currentLocale;
     return (
       <a
         href={href}
@@ -24,6 +19,7 @@ const getLocalePath = (prefix: string) => {
             : 'text-slate-warm hover:text-terracotta-600 hover:bg-terracotta-50'
         }`}
         aria-label={loc.label}
+        aria-current={isActive ? 'true' : undefined}
       >
         {loc.code.toUpperCase()}
       </a>

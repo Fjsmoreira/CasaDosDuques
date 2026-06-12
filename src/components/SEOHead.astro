@@ -1,4 +1,6 @@
 ---
+import { getRouteKeyFromPath, LOCALE_CODES, ROUTE_GROUPS } from '../data/routes.ts';
+
 export interface Props {
   title: string;
   description: string;
@@ -12,18 +14,13 @@ const site = 'https://casadosduques.pt';
 const fullUrl = canonical ? `${site}${canonical}` : site;
 const defaultOgImage = ogImage || `${site}/og-default.jpg`;
 
-// Hreflang tags
+// Hreflang tags: only emit translated alternates when a real route exists.
 const currentPath = Astro.url.pathname;
-const isDefaultLocale = !currentPath.match(/^\/(pt|nl|fr)\//);
-const localePrefix = isDefaultLocale ? '' : currentPath.match(/^\/(pt|nl|fr)\//)?.[1] || '';
-const basePath = isDefaultLocale ? currentPath : currentPath.replace(/^\/(pt|nl|fr)/, '');
-
-const locales = [
-  { code: 'en', prefix: '' },
-  { code: 'pt', prefix: '/pt' },
-  { code: 'nl', prefix: '/nl' },
-  { code: 'fr', prefix: '/fr' },
-];
+const routeKey = getRouteKeyFromPath(canonical || currentPath);
+const alternates = routeKey
+  ? LOCALE_CODES.map(code => ({ code, href: ROUTE_GROUPS[routeKey][code] }))
+  : [{ code: 'en', href: canonical || currentPath }];
+const xDefaultHref = routeKey ? ROUTE_GROUPS[routeKey].en : canonical || currentPath;
 ---
 
 <title>{title}</title>
@@ -38,8 +35,8 @@ const locales = [
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-{locales.map(loc => (
-  <link rel="alternate" hreflang={loc.code} href={`${site}${loc.prefix}${basePath}`} />
+{alternates.map(loc => (
+  <link rel="alternate" hreflang={loc.code} href={`${site}${loc.href}`} />
 ))}
-<link rel="alternate" hreflang="x-default" href={`${site}${basePath}`} />
+<link rel="alternate" hreflang="x-default" href={`${site}${xDefaultHref}`} />
 { schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} /> }

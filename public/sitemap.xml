@@ -12,29 +12,554 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://casadosduques.pt/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://casadosduques.pt/the-house/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/the-house/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/a-casa/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/huis/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/la-maison/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/the-house/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/a-casa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/the-house/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/a-casa/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/huis/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/la-maison/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/the-house/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/huis/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/the-house/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/a-casa/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/huis/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/la-maison/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/the-house/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/la-maison/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/the-house/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/a-casa/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/huis/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/la-maison/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/the-house/" />
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://casadosduques.pt/rooms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/rooms/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/quartos/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/slaapkamers/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/chambres/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/rooms/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/quartos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/rooms/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/quartos/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/slaapkamers/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/chambres/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/rooms/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/slaapkamers/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/rooms/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/quartos/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/slaapkamers/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/chambres/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/rooms/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/chambres/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/rooms/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/quartos/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/slaapkamers/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/chambres/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/rooms/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://casadosduques.pt/amenities/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/amenities/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/comodidades/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/voorzieningen/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/equipements/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/amenities/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/comodidades/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/amenities/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/comodidades/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/voorzieningen/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/equipements/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/amenities/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/voorzieningen/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/amenities/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/comodidades/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/voorzieningen/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/equipements/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/amenities/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/equipements/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/amenities/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/comodidades/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/voorzieningen/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/equipements/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/amenities/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://casadosduques.pt/garden/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/garden/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/jardim/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/tuin/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/jardin/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/garden/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/jardim/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/garden/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/jardim/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/tuin/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/jardin/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/garden/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/tuin/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/garden/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/jardim/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/tuin/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/jardin/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/garden/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/jardin/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/garden/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/jardim/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/tuin/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/jardin/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/garden/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://casadosduques.pt/location/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/location/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/localizacao/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/locatie/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/emplacement/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/location/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/localizacao/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/location/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/localizacao/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/locatie/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/emplacement/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/location/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/locatie/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/location/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/localizacao/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/locatie/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/emplacement/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/location/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/emplacement/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/location/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/localizacao/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/locatie/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/emplacement/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/location/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/things-to-do/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/things-to-do/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/o-que-fazer/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/activiteiten/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/activites/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/things-to-do/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/o-que-fazer/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/things-to-do/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/o-que-fazer/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/activiteiten/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/activites/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/things-to-do/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/activiteiten/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/things-to-do/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/o-que-fazer/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/activiteiten/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/activites/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/things-to-do/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/activites/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/things-to-do/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/o-que-fazer/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/activiteiten/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/activites/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/things-to-do/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/day-trips/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/day-trips/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/passeios/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/daguitstapjes/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/excursions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/day-trips/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/passeios/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/day-trips/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/passeios/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/daguitstapjes/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/excursions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/day-trips/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/daguitstapjes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/day-trips/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/passeios/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/daguitstapjes/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/excursions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/day-trips/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/excursions/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/day-trips/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/passeios/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/daguitstapjes/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/excursions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/day-trips/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/beaches/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/beaches/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/praias/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/stranden/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/plages/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/beaches/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/praias/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/beaches/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/praias/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/stranden/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/plages/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/beaches/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/stranden/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/beaches/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/praias/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/stranden/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/plages/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/beaches/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/plages/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/beaches/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/praias/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/stranden/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/plages/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/beaches/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/rates/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/rates/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/precos/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/tarieven/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/tarifs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/rates/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/precos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/rates/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/precos/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/tarieven/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/tarifs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/rates/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/tarieven/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/rates/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/precos/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/tarieven/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/tarifs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/rates/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/tarifs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/rates/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/precos/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/tarieven/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/tarifs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/rates/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/booking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/booking/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/reserva/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/boeking/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/reservation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/booking/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/reserva/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/booking/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/reserva/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/boeking/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/reservation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/booking/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/boeking/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/booking/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/reserva/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/boeking/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/reservation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/booking/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/reservation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/booking/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/reserva/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/boeking/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/reservation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/booking/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/reviews/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/reviews/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/avaliacoes/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/reviews/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/avis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/reviews/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/avaliacoes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/reviews/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/avaliacoes/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/reviews/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/avis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/reviews/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/reviews/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/reviews/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/avaliacoes/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/reviews/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/avis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/reviews/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/avis/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/reviews/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/avaliacoes/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/reviews/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/avis/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/reviews/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/contact/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/contato/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/contact/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/contact/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/contato/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/contact/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/contato/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/contact/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/contact/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/contact/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/contato/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/contact/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/contact/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/contact/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/contato/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/contact/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/contact/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/privacy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/privacidade/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/privacy/" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/pt/privacidade/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/privacy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/privacidade/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/privacy/" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/nl/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/privacy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/privacidade/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/privacy/" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://casadosduques.pt/fr/confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://casadosduques.pt/privacy/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://casadosduques.pt/pt/privacidade/" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://casadosduques.pt/nl/privacy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://casadosduques.pt/fr/confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://casadosduques.pt/privacy/" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://casadosduques.pt/guide/abiul/</loc>
@@ -52,32 +577,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://casadosduques.pt/things-to-do/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://casadosduques.pt/day-trips/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://casadosduques.pt/beaches/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://casadosduques.pt/rates/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://casadosduques.pt/booking/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://casadosduques.pt/reviews/</loc>
+    <loc>https://casadosduques.pt/pt/guia/abiul/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -85,11 +585,6 @@
     <loc>https://casadosduques.pt/faq/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://casadosduques.pt/contact/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://casadosduques.pt/blog/</loc>
@@ -100,10 +595,5 @@
     <loc>https://casadosduques.pt/blog/discover-abiul-pombal-central-portugal/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://casadosduques.pt/privacy/</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>

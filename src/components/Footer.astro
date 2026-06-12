@@ -1,9 +1,9 @@
 ---
-import { SITE_CONFIG, LOCALES } from '../data/site-config.ts';
+import { SITE_CONFIG } from '../data/site-config.ts';
+import { getLocaleFromPath, ROUTE_GROUPS } from '../data/routes.ts';
 
 const currentPath = Astro.url.pathname;
-const localeMatch = currentPath.match(/^\/(pt|nl|fr)\//);
-const locale = localeMatch ? localeMatch[1] : 'en';
+const locale = getLocaleFromPath(currentPath);
 
 const t: Record<string, string> = {
   en: 'All rights reserved.',
@@ -19,8 +19,8 @@ const alText: Record<string, string> = {
   fr: 'Hébergement Local Agréé',
 };
 
-const privacyPath = locale === 'en' ? '/privacy/' : `/${locale}/privacidade/`;
-const contactPath = locale === 'en' ? '/contact/' : `/${locale}/contato/`;
+const privacyPath = ROUTE_GROUPS.privacy[locale];
+const contactPath = ROUTE_GROUPS.contact[locale];
 ---
 
 <footer class="bg-olive-800 text-white">

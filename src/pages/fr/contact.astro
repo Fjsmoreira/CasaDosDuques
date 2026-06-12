@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MapSection from '../../components/MapSection.astro';
+import { SITE_CONFIG } from '../../data/site-config.ts';
+---
+
+<BaseLayout
+  title="Contact — Casa dos Duques, Abiul, Pombal"
+  description="Contactez Fernando et Isabelle à Casa dos Duques. E-mail, téléphone, WhatsApp et adresse pour préparer votre séjour à Abiul, Pombal."
+  canonical="/fr/contact/"
+  locale="fr"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-olive-800 mb-6">Contact</h1>
+    <p class="text-slate-warm mb-8">
+      Vous souhaitez vérifier les disponibilités, poser une question ou préparer votre réservation ?
+      Envoyez-nous un message et nous vous répondrons rapidement.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="space-y-4">
+        <div class="bg-warm-cream rounded-xl p-5">
+          <h3 class="font-semibold text-olive-800 mb-1">📧 E-mail</h3>
+          <a href="mailto:fernando@casadosduques.pt" class="text-terracotta-600 hover:underline">fernando@casadosduques.pt</a>
+        </div>
+        <div class="bg-warm-cream rounded-xl p-5">
+          <h3 class="font-semibold text-olive-800 mb-1">📞 Téléphone / WhatsApp</h3>
+          <p class="text-slate-warm">{SITE_CONFIG.contact.phone}</p>
+        </div>
+        <div class="bg-warm-cream rounded-xl p-5">
+          <h3 class="font-semibold text-olive-800 mb-1">🏠 Adresse</h3>
+          <p class="text-sm text-slate-warm">
+            {SITE_CONFIG.address.street}<br />
+            {SITE_CONFIG.address.town}, {SITE_CONFIG.address.postcode}<br />
+            {SITE_CONFIG.address.district}, {SITE_CONFIG.address.country}
+          </p>
+        </div>
+        <div class="bg-warm-cream rounded-xl p-5">
+          <h3 class="font-semibold text-olive-800 mb-1">🔑 Enregistrement AL</h3>
+          <p class="text-sm text-slate-warm">{SITE_CONFIG.alRegistration} — Hébergement Local Agréé</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+        <h2 class="text-xl font-semibold text-olive-800 mb-4">Envoyer un message</h2>
+        <form action="mailto:fernando@casadosduques.pt" method="GET" class="space-y-4">
+          <input type="text" name="name" placeholder="Nom *" required class="w-full px-4 py-2 rounded-lg border border-warm-sand" />
+          <input type="email" name="email" placeholder="E-mail *" required class="w-full px-4 py-2 rounded-lg border border-warm-sand" />
+          <textarea name="message" rows="5" placeholder="Message *" required class="w-full px-4 py-2 rounded-lg border border-warm-sand"></textarea>
+          <button type="submit" class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-lg w-full">Envoyer le message</button>
+        </form>
+      </div>
+    </div>
+
+    <MapSection
+      lat={SITE_CONFIG.coordinates.lat}
+      lng={SITE_CONFIG.coordinates.lng}
+      address={SITE_CONFIG.address.street}
+      town={SITE_CONFIG.address.town}
+      district={SITE_CONFIG.address.district}
+      height="h-[300px] md:h-[400px]"
+      client:load
+    />
+  </div>
+</BaseLayout>
