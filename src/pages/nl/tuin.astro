@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTASection from '../../components/CTASection.astro';
-import { exteriorPhotos, poolGardenPhotos, roomInteriorPhotos } from '../../data/photo-manifest';
+import { exteriorPhotos, poolGardenPhotos } from '../../data/photo-manifest';
 
 ---
 
 <BaseLayout
   title="450m² Tuin & 8m Zwembad — Fotogalerij | Casa dos Duques"
-  description="Bekijk onze complete fotogalerij van de 450m² tuin, 8m zwembad, huis exterieur en kamers van Casa dos Duques. Uw privé buitenparadijs in Abiul."
+  description="Bekijk foto’s van de 450m² tuin, het 8m zwembad en het exterieur van Casa dos Duques. Uw privé buitenparadijs in Abiul."
   canonical="/nl/tuin/"
   locale="nl"
 >
@@ -16,8 +16,7 @@ import { exteriorPhotos, poolGardenPhotos, roomInteriorPhotos } from '../../data
     <h1 class="text-4xl md:text-5xl font-bold text-olive-800 mb-4">450 m² Tuin & Zwembad — Fotogalerij</h1>
     <p class="text-lg text-slate-warm leading-relaxed max-w-3xl">
       Ontdek elke hoek van Casa dos Duques door onze complete fotocollectie.
-      Van het zonnige zwembad en de weelderige tuin tot de charmante buitenkant en zorgvuldig
-      ingerichte interieurs — bekijk het allemaal voordat u aankomt.
+      Van het zonnige zwembad en de weelderige tuin tot de charmante buitenkant — bekijk de buitenruimtes voordat u aankomt.
     </p>
   </div>
 
@@ -64,25 +63,6 @@ import { exteriorPhotos, poolGardenPhotos, roomInteriorPhotos } from '../../data
       </div>
     </section>
 
-    <!-- Rooms & Interiors -->
-    <section class="mb-16" id="kamers-interieurs">
-      <h2 class="text-3xl font-bold text-olive-700 mb-2 flex items-center gap-3">
-        <span class="text-3xl">🛋️</span> Kamers &amp; Interieurs
-      </h2>
-      <p class="text-slate-warm mb-6 ml-1">Comfortabele, sfeervol ingerichte woonruimtes</p>
-      <div class="gallery-grid columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-        {
-          roomInteriorPhotos.map((photo) => (
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              class="gallery-thumb w-full rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer object-cover break-inside-avoid"
-              loading="lazy"
-            />
-          ))
-        }
-      </div>
-    </section>
 
   </div>
 

@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTASection from '../../components/CTASection.astro';
-import { exteriorPhotos, poolGardenPhotos, roomInteriorPhotos } from '../../data/photo-manifest';
+import { exteriorPhotos, poolGardenPhotos } from '../../data/photo-manifest';
 
 ---
 
 <BaseLayout
   title="450 m² de Jardim & Piscina — Galeria de Fotos | Casa dos Duques"
-  description="Veja a nossa galeria completa de fotos do jardim de 450m², piscina de 8m, exterior da casa e interiores da Casa dos Duques. O seu paraíso privado ao ar livre em Abiul."
+  description="Veja fotos do jardim de 450m², da piscina de 8m e do exterior da Casa dos Duques. O seu paraíso privado ao ar livre em Abiul."
   canonical="/pt/jardim/"
   locale="pt"
 >
@@ -16,8 +16,7 @@ import { exteriorPhotos, poolGardenPhotos, roomInteriorPhotos } from '../../data
     <h1 class="text-4xl md:text-5xl font-bold text-olive-800 mb-4">450 m² de Jardim & Piscina — Galeria de Fotos</h1>
     <p class="text-lg text-slate-warm leading-relaxed max-w-3xl">
       Explore cada recanto da Casa dos Duques através da nossa coleção completa de fotografias.
-      Da piscina soalheira e do jardim luxuriante ao exterior encantador e aos interiores
-      cuidadosamente decorados — veja tudo antes de chegar.
+      Da piscina soalheira e do jardim luxuriante ao exterior encantador — veja os espaços exteriores antes de chegar.
     </p>
   </div>
 
@@ -64,25 +63,6 @@ import { exteriorPhotos, poolGardenPhotos, roomInteriorPhotos } from '../../data
       </div>
     </section>
 
-    <!-- Rooms & Interiors -->
-    <section class="mb-16" id="quartos-interiores">
-      <h2 class="text-3xl font-bold text-olive-700 mb-2 flex items-center gap-3">
-        <span class="text-3xl">🛋️</span> Quartos &amp; Interiores
-      </h2>
-      <p class="text-slate-warm mb-6 ml-1">Espaços confortáveis e cuidadosamente decorados</p>
-      <div class="gallery-grid columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-        {
-          roomInteriorPhotos.map((photo) => (
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              class="gallery-thumb w-full rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer object-cover break-inside-avoid"
-              loading="lazy"
-            />
-          ))
-        }
-      </div>
-    </section>
 
   </div>
 
