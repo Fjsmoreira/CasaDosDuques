@@ -37,7 +37,7 @@ export const NAV_LINKS: Record<string, Array<{ label: string; path: string }>> =
     { label: 'Rooms', path: '/rooms/' },
     { label: 'Location', path: '/location/' },
     { label: 'Things to Do', path: '/things-to-do/' },
-    { label: 'Gallery', path: '/garden/' },
+    { label: 'Garden', path: '/garden/' },
     { label: 'Rates', path: '/rates/' },
     { label: 'Contact', path: '/contact/' },
     { label: 'Blog', path: '/blog/' },
