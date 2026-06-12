@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+type Locale = 'pt' | 'nl' | 'fr';
+
+export function getStaticPaths() {
+  const aliasTargets: Record<Locale, Record<string, string>> = {
+    pt: {
+      'the-house': '/pt/a-casa/',
+      rooms: '/pt/quartos/',
+      amenities: '/pt/comodidades/',
+      garden: '/pt/jardim/',
+      gallery: '/pt/jardim/',
+      location: '/pt/localizacao/',
+      'things-to-do': '/pt/o-que-fazer/',
+      'day-trips': '/pt/passeios/',
+      beaches: '/pt/praias/',
+      rates: '/pt/precos/',
+      booking: '/pt/reserva/',
+      reviews: '/pt/avaliacoes/',
+      contact: '/pt/contato/',
+      privacy: '/pt/privacidade/',
+    },
+    nl: {
+      'the-house': '/nl/huis/',
+      rooms: '/nl/slaapkamers/',
+      amenities: '/nl/voorzieningen/',
+      garden: '/nl/tuin/',
+      gallery: '/nl/tuin/',
+      location: '/nl/locatie/',
+      'things-to-do': '/nl/activiteiten/',
+      'day-trips': '/nl/daguitstapjes/',
+      beaches: '/nl/stranden/',
+      rates: '/nl/tarieven/',
+      booking: '/nl/boeking/',
+    },
+    fr: {
+      'the-house': '/fr/la-maison/',
+      rooms: '/fr/chambres/',
+      amenities: '/fr/equipements/',
+      garden: '/fr/jardin/',
+      gallery: '/fr/jardin/',
+      location: '/fr/emplacement/',
+      'things-to-do': '/fr/activites/',
+      'day-trips': '/fr/excursions/',
+      beaches: '/fr/plages/',
+      rates: '/fr/tarifs/',
+      booking: '/fr/reservation/',
+      reviews: '/fr/avis/',
+      privacy: '/fr/confidentialite/',
+    },
+  };
+
+  return Object.entries(aliasTargets).flatMap(([locale, aliases]) =>
+    Object.entries(aliases).map(([slug, target]) => ({
+      params: { locale, slug },
+      props: { locale, target },
+    })),
+  );
+}
+
+const { locale, target } = Astro.props as { locale: Locale; target: string };
+const label = locale === 'pt' ? 'Redirecionando' : locale === 'nl' ? 'Doorsturen' : 'Redirection';
+const linkText = locale === 'pt' ? 'clique aqui' : locale === 'nl' ? 'klik hier' : 'cliquez ici';
+---
+
+<BaseLayout
+  title={`${label} | Casa dos Duques`}
+  description={`Redirecting to ${target}`}
+  canonical={target}
+  locale={locale}
+>
+  <div class="max-w-4xl mx-auto px-4 py-24 text-center">
+    <h1 class="text-3xl font-bold text-olive-800 mb-4">{label}</h1>
+    <p class="text-slate-warm mb-6">
+      <a href={target} class="text-terracotta-600 hover:underline font-semibold">{linkText}</a>
+    </p>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ target }}>
+  window.location.replace(target);
+</script>

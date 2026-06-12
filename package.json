@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test:links": "node scripts/check-site.mjs"
   },
   "dependencies": {
     "@astrojs/react": "4.3.0",
