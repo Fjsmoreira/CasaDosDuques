@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
 ---
 
 <BaseLayout
@@ -12,6 +13,24 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     <p class="text-slate-warm mb-8">Travel tips, local guides, and stories from Central Portugal</p>
 
     <div class="space-y-8">
+      <article class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-xs text-slate-warm mb-2">
+            <span class="bg-olive-100 text-olive-700 px-2 py-1 rounded">Food & Dining</span>
+            <span>June 2026</span>
+          </div>
+          <h2 class="text-xl font-semibold text-olive-800 mb-2">
+            <a href="/blog/best-restaurants-pombal-portugal/" class="hover:text-terracotta-600 transition-colors">
+              Best Restaurants in Pombal, Portugal — A Local's Guide to Dining
+            </a>
+          </h2>
+          <p class="text-sm text-slate-warm leading-relaxed">
+            Discover the best restaurants in Pombal, Portugal. From Casa das Gatas' matured meats to
+            O Pote do Leitão's famous roast suckling pig, explore our curated guide to dining in Pombal.
+          </p>
+        </div>
+      </article>
+
       <article class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
         <div class="p-6">
           <div class="flex items-center gap-2 text-xs text-slate-warm mb-2">
