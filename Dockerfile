@@ -1,19 +1,28 @@
-FROM node:22-alpine
+FROM node:22-alpine AS build
 WORKDIR /app
-
-# Install all dependencies (sharp is needed for the Astro build)
-COPY package.json package-lock.json ./
-RUN npm install
-
-# Copy source and build
+COPY package.json package-lock.json* ./
+RUN npm ci
 COPY . .
 RUN npm run build
 
-# Prune dev dependencies after build for a smaller image
-RUN npm prune --omit=dev
+FROM nginx:alpine
+RUN apk add --no-cache nodejs supervisor
 
-# Create data directory for leads
-RUN mkdir -p /app/data
+# Copy app
+WORKDIR /app
+COPY --from=build /app/node_modules ./node_modules
+COPY --from=build /app/server.js /app/scripts/mailer.js /app/run-api.sh ./
+RUN chmod +x /app/run-api.sh
 
-EXPOSE 3000
-CMD ["node", "server.js"]
+# Copy static site
+COPY --from=build /app/dist/ /usr/share/nginx/html/
+
+# Copy configs
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY supervisord.conf /etc/supervisord.conf
+
+VOLUME /data
+
+EXPOSE 80
+
+CMD ["supervisord", "-c", "/etc/supervisord.conf"]

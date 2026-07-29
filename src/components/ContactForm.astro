@@ -31,6 +31,7 @@ const t: Record<string, {
   errorTitle: string;
   errorMessage: string;
   privacyNote: string;
+  gdprLabel: string;
 }> = {
   en: {
     heading: 'Send a Message',
@@ -50,6 +51,7 @@ const t: Record<string, {
     errorTitle: 'Something went wrong',
     errorMessage: 'Please try again or email us directly at fernando@casadosduques.pt.',
     privacyNote: 'Your details are only used to respond to your inquiry. No spam, ever.',
+    gdprLabel: 'I consent to having this website store my submitted information so they can respond to my inquiry.',
   },
   pt: {
     heading: 'Enviar Mensagem',
@@ -69,6 +71,7 @@ const t: Record<string, {
     errorTitle: 'Algo correu mal',
     errorMessage: 'Por favor tente novamente ou envie-nos um email para fernando@casadosduques.pt.',
     privacyNote: 'Os seus dados são usados apenas para responder à sua mensagem. Nada de spam.',
+    gdprLabel: 'Autorizo o armazenamento dos meus dados para que possam responder à minha mensagem.',
   },
   nl: {
     heading: 'Stuur een Bericht',
@@ -88,6 +91,7 @@ const t: Record<string, {
     errorTitle: 'Er is iets misgegaan',
     errorMessage: 'Probeer het opnieuw of stuur ons een e-mail op fernando@casadosduques.pt.',
     privacyNote: 'Je gegevens worden alleen gebruikt om op je bericht te reageren. Geen spam.',
+    gdprLabel: 'Ik geef toestemming om mijn gegevens op te slaan zodat er op mijn bericht gereageerd kan worden.',
   },
   fr: {
     heading: 'Envoyer un Message',
@@ -107,6 +111,7 @@ const t: Record<string, {
     errorTitle: 'Une erreur est survenue',
     errorMessage: 'Veuillez réessayer ou nous envoyer un e-mail à fernando@casadosduques.pt.',
     privacyNote: 'Vos informations sont uniquement utilisées pour répondre à votre demande. Pas de spam.',
+    gdprLabel: 'J\'autorise le stockage de mes informations afin de pouvoir répondre à ma demande.',
   },
 };
 
@@ -230,6 +235,19 @@ const formId = `contact-form-${locale}`;
       ></textarea>
     </div>
 
+    <div>
+      <label class="flex items-start gap-2 cursor-pointer">
+        <input
+          type="checkbox"
+          id={`${formId}-gdpr`}
+          name="gdpr"
+          required
+          class="mt-1 accent-terracotta-500"
+        />
+        <span class="text-xs text-muted font-body">{text.gdprLabel}</span>
+      </label>
+    </div>
+
     <button
       type="submit"
       id={`${formId}-submit`}
@@ -242,43 +260,43 @@ const formId = `contact-form-${locale}`;
   </form>
 </div>
 
-<script>
-  const form = document.getElementById('{formId}') as HTMLFormElement | null;
-  const successEl = document.getElementById('{formId}-success');
-  const errorEl = document.getElementById('{formId}-error');
-  const submitBtn = document.getElementById('{formId}-submit') as HTMLButtonElement | null;
+<script define:vars={{ formId, sendingLabel: text.sendingLabel, locale }}>
+  const form = document.getElementById(formId);
+  const successEl = document.getElementById(formId + '-success');
+  const errorEl = document.getElementById(formId + '-error');
+  const submitBtn = document.getElementById(formId + '-submit');
 
   if (form && submitBtn) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      successEl?.classList.add('hidden');
-      errorEl?.classList.add('hidden');
+      successEl.classList.add('hidden');
+      errorEl.classList.add('hidden');
 
       const originalText = submitBtn.textContent;
-      submitBtn.textContent = '{text.sendingLabel}';
+      submitBtn.textContent = sendingLabel;
       submitBtn.disabled = true;
 
       try {
         const formData = new FormData(form);
-        formData.append('language', '{locale}');
+        formData.append('language', locale);
 
         const response = await fetch('/api/contact', {
           method: 'POST',
-          body: new URLSearchParams(formData as any).toString(),
+          body: new URLSearchParams(formData).toString(),
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         });
 
         if (response.ok) {
           form.reset();
-          successEl?.classList.remove('hidden');
-          successEl?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          successEl.classList.remove('hidden');
+          successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
           throw new Error('Server returned ' + response.status);
         }
       } catch (err) {
-        errorEl?.classList.remove('hidden');
-        errorEl?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        errorEl.classList.remove('hidden');
+        errorEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
