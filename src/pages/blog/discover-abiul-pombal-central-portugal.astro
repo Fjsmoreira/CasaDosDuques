@@ -1,77 +1,143 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTASection from '../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/discover-abiul-pombal-central-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Discover Abiul and Pombal — Your Guide to Central Portugal from Casa dos Duques',
+      description: 'Discover Abiul and Pombal in Central Portugal: 1167 medieval history, Knights Templar castle, 4 UNESCO sites within 30-50 min, Atlantic beaches, river beaches, and Casa dos Duques — your base for exploring it all.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-06-01',
+      dateModified: '2026-07-29',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Discover Abiul and Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Discover Abiul and Pombal — Your Guide to Central Portugal's Best-Kept Secret"
   description="Discover Abiul and Pombal in Central Portugal: 1167 medieval history, Knights Templar castle, UNESCO monasteries, stunning beaches, and the beautifully restored Casa dos Duques holiday home."
   canonical="/blog/discover-abiul-pombal-central-portugal/"
+  schema={schema}
 >
   <article class="max-w-3xl mx-auto px-4 py-12">
     <div class="mb-8">
-      <div class="flex items-center gap-2 text-sm text-slate-warm mb-4">
-        <span class="bg-olive-100 text-olive-700 px-3 py-1 rounded">Central Portugal</span>
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Central Portugal</span>
         <span>June 2026</span>
-        <span>· 5 min read</span>
+        <span>&middot; 5 min read</span>
       </div>
-      <h1 class="text-4xl font-bold text-olive-800 leading-tight mb-4">Discover Abiul and Pombal — Your Guide to Central Portugal's Best-Kept Secret</h1>
-      <p class="text-lg text-slate-warm">Tucked away in the heart of Portugal, between the UNESCO-listed monasteries of Batalha and Alcobaça, lies the charming town of Abiul and its larger neighbour Pombal.</p>
+      <h1 class="leading-tight mb-4">Discover Abiul and Pombal — Your Guide to Central Portugal&rsquo;s Best-Kept Secret</h1>
+      <p class="text-lg text-muted font-body">Between the UNESCO-listed monasteries of Batalha and Alcoba&ccedil;a, in a region most travellers overlook, lie the historic town of Abiul and its larger neighbour Pombal — and they might just be the best base in Central Portugal.</p>
     </div>
 
-    <div class="text-slate-warm leading-relaxed space-y-4">
-      <p>When travellers think of Portugal, they often picture the sun-drenched beaches of the Algarve, the historic streets of Lisbon, or the port wine cellars of Porto. But those in the know make a beeline for Central Portugal — a region where medieval history, stunning nature, and authentic Portuguese culture converge.</p>
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>When travellers think of Portugal, they often picture the beaches of the Algarve, the streets of Lisbon, or the port wine cellars of Porto. But those in the know head to Central Portugal — a region where you can tour a 12th-century Templar castle in the morning, eat leit&atilde;o in a family-run tasca for lunch, and swim at a river beach with a waterfall by the afternoon.</p>
 
-      <p>At the heart of this remarkable region lies <strong>Abiul</strong>, a historic town in the municipality of <strong>Pombal</strong>, and home to <strong>Casa dos Duques</strong> — a beautifully restored 90-year-old holiday house that serves as the perfect base for exploration.</p>
+      <p>At the heart of this remarkable region lies <strong>Abiul</strong>, a historic town in the municipality of <strong>Pombal</strong>, and home to <strong><a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> — a beautifully restored 90-year-old holiday house that serves as the perfect base for exploration.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">A Town with Royal Heritage</h2>
-      <p>Abiul received its first royal charter (foral) in <strong>1167 from King Afonso Henriques</strong>, making it one of the oldest documented settlements in the Pombal region. Walk through its narrow streets and you'll feel the weight of centuries — in the traditional architecture, the historic bullring (believed to be the oldest in Portugal), and the enduring traditions like the annual <strong>Festa do Bodo</strong>, a festival that originated from a medieval plague-vow.</p>
+      <h2 class="mt-8 mb-3">A Town with Royal Heritage</h2>
+      <p>Abiul received its first royal charter (foral) in <strong>1167 from King Afonso Henriques</strong>, making it one of the oldest documented settlements in the Pombal region. Walk through its narrow streets and you&rsquo;ll feel the weight of centuries — in the traditional architecture, the historic bullring (believed to be the oldest in Portugal), and the enduring traditions like the annual <strong>Festa do Bodo</strong>, a festival that originated from a medieval plague-vow. <a href="/guide/abiul/" class="text-terracotta-500 hover:text-terracotta-600 underline">Read our full Abiul guide</a> for more historical detail.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">Pombal — Castle, History & Everyday Life</h2>
-      <p>Just a 10-minute drive from Abiul, Pombal is a lively town dominated by its <strong>12th-century Knights Templar castle</strong>. The castle offers panoramic views of the surrounding countryside and is a must-visit during any stay in the area. Pombal also gave its name to the <strong>Marquês de Pombal</strong>, Portugal's famous 18th-century prime minister who rebuilt Lisbon after the devastating 1755 earthquake.</p>
+      <h2 class="mt-8 mb-3">Pombal — Castle, History &amp; Everyday Life</h2>
+      <p>Just a 10-minute drive from Abiul, <a href="/guide/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Pombal</a> is a lively town dominated by its <strong>12th-century Knights Templar castle</strong>. The castle offers panoramic views of the surrounding countryside and is a must-visit during any stay in the area. Pombal also gave its name to the <strong>Marqu&ecirc;s de Pombal</strong>, Portugal&rsquo;s famous 18th-century prime minister who rebuilt Lisbon after the devastating 1755 earthquake.</p>
 
-      <p>The town offers excellent amenities: supermarkets (Aldi, Dias), a wide selection of restaurants serving everything from traditional Portuguese grill to Chinese cuisine, banks, and pharmacies — all within easy reach of Casa dos Duques.</p>
+      <p>The town offers excellent amenities: supermarkets (Aldi, Dias), a wide selection of restaurants — from traditional Portuguese grill to Chinese cuisine — banks, and pharmacies. For restaurant recommendations, see our <a href="/blog/best-restaurants-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guide to the best restaurants in Pombal</a>.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">Four UNESCO Sites Within 30 Minutes</h2>
-      <p>One of the most remarkable things about staying at Casa dos Duques is the location. Within a <strong>25-30 minute drive</strong>, you can visit four UNESCO World Heritage sites:</p>
+      <h2 class="mt-8 mb-3">UNESCO Sites Within Easy Reach</h2>
+      <p>Four UNESCO World Heritage sites sit within a 30&ndash;50 minute drive of Casa dos Duques. Here&rsquo;s what you need to know to plan your visits:</p>
 
-      <ul class="list-disc pl-6 space-y-2">
-        <li><strong>Batalha Monastery</strong> (25 min) — A Gothic masterpiece built to commemorate Portugal's victory at the 1385 Battle of Aljubarrota</li>
-        <li><strong>Alcobaça Monastery</strong> (30 min) — A Cistercian abbey housing the tombs of King Pedro I and Inês de Castro</li>
-        <li><strong>Tomar — Convent of Christ</strong> (30 min) — A Knights Templar fortress-monastery with the famous Manueline window</li>
-        <li><strong>Coimbra University</strong> (40 min) — One of Europe's oldest universities, with the stunning Joanina Library</li>
-      </ul>
+      <h3 class="mt-6 mb-2">Batalha Monastery</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 30 min drive</p>
+        <p><strong>&#128205; Location:</strong> Largo Infante Dom Henrique, Batalha</p>
+        <p><strong>&#127902; UNESCO since:</strong> 1983</p>
+        <p><strong>&#128338; Hours:</strong> Daily 9:00&ndash;18:00 (Apr&ndash;Sep until 18:30). Closed 1 Jan, Easter Sunday, 1 May, 25 Dec.</p>
+        <p><strong>&#128176; Price:</strong> &euro;6 (general). Combined tickets available with Alcoba&ccedil;a and Tomar.</p>
+        <p><strong>&#128118; Family-friendly:</strong> Yes — open spaces, no stairs in main nave.</p>
+      </div>
+      <p>A Gothic masterpiece built to commemorate Portugal&rsquo;s victory at the 1385 Battle of Aljubarrota. The highlight is the <strong>Unfinished Chapels</strong> (Capelas Imperfeitas) — an open-air octagonal mausoleum with intricate stonework that was never completed. Give yourself 1&ndash;1.5 hours.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">Beaches, River Beaches & Nature</h2>
-      <p>Central Portugal's coastline is spectacular and surprisingly uncrowded. From Casa dos Duques, you can reach the nearest beach — <strong>Praia da Leirosa</strong> — in just 37 minutes. <strong>Praia do Osso da Baleia</strong> (38 min) is actually in Pombal municipality, making it the closest beach within the district.</p>
+      <h3 class="mt-6 mb-2">Alcoba&ccedil;a Monastery</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 35 min drive</p>
+        <p><strong>&#128205; Location:</strong> Pra&ccedil;a 25 de Abril, Alcoba&ccedil;a</p>
+        <p><strong>&#127902; UNESCO since:</strong> 1989</p>
+        <p><strong>&#128338; Hours:</strong> Daily 9:00&ndash;18:00 (Apr&ndash;Sep until 19:00). Closed 1 Jan, Easter Sunday, 1 May, 25 Dec.</p>
+        <p><strong>&#128176; Price:</strong> &euro;6 (general). Combined ticket with Batalha and Tomar: &euro;15.</p>
+        <p><strong>&#128118; Family-friendly:</strong> Yes — wide open nave, easy to navigate.</p>
+      </div>
+      <p>A Cistercian abbey founded in 1153, this is one of the largest medieval Gothic monasteries in Europe. Don&rsquo;t miss the <strong>tombs of King Pedro I and In&ecirc;s de Castro</strong> — facing each other so that, as the legend goes, the first thing they see on Judgment Day is each other. Plan 1&ndash;1.5 hours. Pairs well with Nazar&eacute; (30 min away) for a seafood lunch by the ocean afterwards.</p>
 
-      <p>For a full day out, <strong>Figueira da Foz</strong> (47 min) offers a 2km sandy beach, a historic casino, and excellent seafood restaurants. <strong>Nazaré</strong> (65 min), famous worldwide for its giant waves reaching up to 30 metres, is a must-visit for the dramatic clifftop views alone.</p>
+      <h3 class="mt-6 mb-2">Tomar — Convent of Christ</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 40 min drive</p>
+        <p><strong>&#128205; Location:</strong> Colina do Castelo, Tomar</p>
+        <p><strong>&#127902; UNESCO since:</strong> 1983</p>
+        <p><strong>&#128338; Hours:</strong> Daily 9:00&ndash;17:30 (Jun&ndash;Sep until 18:30). Closed 1 Jan, Easter Sunday, 1 May, 25 Dec.</p>
+        <p><strong>&#128176; Price:</strong> &euro;6 (general). Combined ticket with Batalha and Alcoba&ccedil;a: &euro;15.</p>
+        <p><strong>&#128118; Family-friendly:</strong> With supervision — steep stairs in some areas, but the main Charola is accessible.</p>
+      </div>
+      <p>A Knights Templar fortress-monastery that served as the order&rsquo;s Portuguese headquarters. The <strong>Manueline window</strong> on the west fa&ccedil;ade — a riot of carved stone ropes, corals, and maritime motifs — is one of the most photographed details in Portuguese architecture. The octagonal Charola (the Templars&rsquo; original round church) is unlike anything else in Portugal. Budget 2 hours; the site is larger than it looks.</p>
 
-      <p>And for something truly unique, Central Portugal's <strong>river beaches (praias fluviais)</strong> offer crystal-clear freshwater swimming in stunning natural settings. <strong>Praia Fluvial do Mosteiro</strong> (50 min) and the spectacular <strong>Penedo Furado</strong> (60 min) with its natural waterfall pools are not to be missed.</p>
+      <h3 class="mt-6 mb-2">Coimbra University</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 50 min drive</p>
+        <p><strong>&#128205; Location:</strong> Pa&ccedil;o das Escolas, Coimbra</p>
+        <p><strong>&#127902; UNESCO since:</strong> 2013</p>
+        <p><strong>&#128338; Hours:</strong> Daily 9:00&ndash;17:00 (Apr&ndash;Sep until 19:30). Some buildings close during exam periods — check ahead.</p>
+        <p><strong>&#128176; Price:</strong> &euro;12.50 (full ticket: Joanina Library + Royal Palace + Chapel + Tower). Individual tickets available.</p>
+        <p><strong>&#128118; Family-friendly:</strong> Yes — tower climb is steep but optional. Stroller access limited in historic buildings.</p>
+      </div>
+      <p>Founded in 1290, Coimbra is one of Europe&rsquo;s oldest universities — older than Oxford&rsquo;s first college. The highlight is the <strong>Joanina Library</strong>, a Baroque masterpiece housing 60,000 books from the 16th to 18th centuries, with a resident colony of bats that protect the manuscripts by eating insects at night. Budget 2&ndash;3 hours for the university complex, then wander down to the Mondego riverfront for lunch. See our <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Central Portugal guide</a> for more.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">Why Stay at Casa dos Duques?</h2>
-      <p>Casa dos Duques is more than just a place to sleep — it's a destination in itself. This meticulously renovated 90-year-old house in the quiet historic town of Abiul offers:</p>
+      <p class="text-sm text-muted italic">&#9888;&#65039; Hours and prices are approximate and may change. Always check the official monument website before visiting, especially around public holidays.</p>
+
+      <h2 class="mt-8 mb-3">Beaches, River Beaches &amp; Nature</h2>
+      <p>Central Portugal&rsquo;s coastline runs for over 100 km and draws far fewer crowds than the Algarve. From Casa dos Duques, the nearest sandy beach — <strong>Praia da Leirosa</strong> — is a 37-minute drive. <strong>Praia do Osso da Baleia</strong> (38 min) lies within Pombal municipality itself.</p>
+
+      <p>For a full day out, <strong>Figueira da Foz</strong> (47 min) has a 2 km city beach, a historic casino, and seafood restaurants along the promenade. <strong>Nazar&eacute;</strong> (65 min) is known worldwide for giant waves reaching 30 metres at Praia do Norte — even if you visit in summer when the sea is calm, the clifftop views from the Sitio are worth the drive.</p>
+
+      <p>Inland, Central Portugal&rsquo;s <strong>river beaches (praias fluviais)</strong> offer freshwater swimming surrounded by forest and rock formations. <strong>Praia Fluvial do Mosteiro</strong> (50 min) sits in a quiet valley near Pedr&oacute;g&atilde;o Grande, while <strong>Penedo Furado</strong> (60 min) has natural waterfall pools with easy trail access. <strong>River beaches are seasonal — typically June through September</strong>, when water levels are lower and safer for swimming. Outside these months they may be inaccessible or unguarded. See our <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">beaches guide</a> for more options and current conditions.</p>
+
+      <h2 class="mt-8 mb-3">Why Stay at Casa dos Duques?</h2>
+      <p><a href="/the-house/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> is more than just a place to sleep — it&rsquo;s a destination in itself. This meticulously renovated 90-year-old house in the quiet historic town of Abiul offers:</p>
 
       <ul class="list-disc pl-6 space-y-2">
         <li><strong>4 bedrooms</strong> sleeping up to 8 guests (6 adults + 2 children + 1 baby)</li>
-        <li><strong>8-metre swimming pool</strong> and 450m² garden with lounge areas and barbecue</li>
+        <li><strong>8-metre swimming pool</strong> and 450 m&sup2; garden with lounge areas and barbecue</li>
         <li><strong>Original character preserved</strong> — stone walls, terracotta floors, high ceilings, fireplace</li>
         <li><strong>Fully equipped kitchen</strong> and modern amenities including WiFi</li>
         <li><strong>Guest Favorite</strong> on Airbnb, rated <strong>4.97/5</strong></li>
       </ul>
 
-      <p>Whether you're seeking a peaceful family retreat, a base for exploring Portugal's rich history, or simply a beautiful place to relax by the pool — Casa dos Duques delivers.</p>
+      <p>Whether you&rsquo;re seeking a peaceful family retreat, a base for exploring Portugal&rsquo;s rich history, or simply a beautiful place to relax by the pool — <a href="/booking/" class="text-terracotta-500 hover:text-terracotta-600 underline">book Casa dos Duques</a> for an unforgettable stay.</p>
     </div>
 
-    <div class="mt-8 p-6 bg-warm-cream rounded-xl">
-      <p class="text-sm text-slate-warm italic">Disclaimer: This blog post is based on verified historical sources including Wikipedia (EN/PT), OpenStreetMap data, and OSRM driving time calculations. Distances and times are approximate and for guidance only.</p>
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources: Wikipedia (EN/PT) for historical facts about Abiul and Pombal; OpenStreetMap and OSRM for driving times; official monument websites (mosteirobatalha.pt, mosteiroalcobaca.pt, conventocristo.pt, visit.uc.pt) for opening hours and pricing as of July 2026. All distances, times, and prices are approximate — always check official sites before visiting, as hours change seasonally and on public holidays.</p>
     </div>
   </article>
 
   <CTASection
-    title="Ready to Discover Central Portugal?"
+    title="Ready to discover Central Portugal?"
     subtitle="Book your stay at Casa dos Duques — your perfect base for exploration"
-    primaryCta={{ label: 'Book Your Stay', href: '/booking/' }}
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
     variant="terracotta"
   />
 </BaseLayout>

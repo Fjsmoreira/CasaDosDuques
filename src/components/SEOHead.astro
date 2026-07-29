@@ -1,39 +1,67 @@
 ---
-import { getRouteKeyFromPath, LOCALE_CODES, ROUTE_GROUPS } from '../data/routes.ts';
+import { getRouteKeyFromPath, LOCALE_CODES, ROUTE_GROUPS, type LocaleCode } from '../data/routes.ts';
+import { SITE_CONFIG } from '../data/site-config.ts';
 
 export interface Props {
   title: string;
   description: string;
   canonical?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   schema?: Record<string, any>;
+  locale?: string;
 }
 
-const { title, description, canonical, ogImage, schema } = Astro.props;
+const { title, description, canonical, ogImage, ogImageAlt, schema } = Astro.props;
+const locale = (Astro.props.locale || 'en') as LocaleCode;
 const site = 'https://casadosduques.pt';
-const fullUrl = canonical ? `${site}${canonical}` : site;
-const defaultOgImage = ogImage || `${site}/og-default.jpg`;
+const currentPath = Astro.url.pathname;
+const fullUrl = canonical ? `${site}${canonical}` : `${site}${currentPath}`;
+const usingDefaultOgImage = !ogImage;
+const defaultOgImage = ogImage || `${site}/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg`;
+const ogImageAltText =
+  ogImageAlt || 'Casa dos Duques — pool and garden holiday home in Abiul, Central Portugal';
 
 // Hreflang tags: only emit translated alternates when a real route exists.
-const currentPath = Astro.url.pathname;
 const routeKey = getRouteKeyFromPath(canonical || currentPath);
 const alternates = routeKey
-  ? LOCALE_CODES.map(code => ({ code, href: ROUTE_GROUPS[routeKey][code] }))
+  ? LOCALE_CODES
+      .filter(code => ROUTE_GROUPS[routeKey][code] !== undefined)
+      .map(code => ({ code, href: ROUTE_GROUPS[routeKey][code]! }))
   : [{ code: 'en', href: canonical || currentPath }];
-const xDefaultHref = routeKey ? ROUTE_GROUPS[routeKey].en : canonical || currentPath;
+const xDefaultHref = routeKey ? (ROUTE_GROUPS[routeKey].en || ROUTE_GROUPS[routeKey].pt || Object.values(ROUTE_GROUPS[routeKey])[0]) : (canonical || currentPath);
+
+// Open Graph locale codes.
+const OG_LOCALES: Record<string, string> = { en: 'en_GB', pt: 'pt_PT', nl: 'nl_NL', fr: 'fr_FR' };
+const ogLocale = OG_LOCALES[locale] || 'en_GB';
+const ogLocaleAlternates = alternates
+  .map(a => a.code)
+  .filter(code => code !== locale)
+  .map(code => OG_LOCALES[code])
+  .filter(Boolean);
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={fullUrl} />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content={SITE_CONFIG.name} />
+<meta property="og:locale" content={ogLocale} />
+{ogLocaleAlternates.map(alt => (
+  <meta property="og:locale:alternate" content={alt} />
+))}
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={fullUrl} />
 <meta property="og:image" content={defaultOgImage} />
+<meta property="og:image:alt" content={ogImageAltText} />
+{usingDefaultOgImage && <meta property="og:image:width" content="1440" />}
+{usingDefaultOgImage && <meta property="og:image:height" content="960" />}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={defaultOgImage} />
+<meta name="twitter:image:alt" content={ogImageAltText} />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 {alternates.map(loc => (
   <link rel="alternate" hreflang={loc.code} href={`${site}${loc.href}`} />

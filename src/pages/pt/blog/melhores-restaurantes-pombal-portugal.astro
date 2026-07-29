@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/melhores-restaurantes-pombal-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Melhores Restaurantes em Pombal, Portugal — Um Guia Local para Comer Bem',
+      description: 'Descubra os melhores restaurantes em Pombal. Das carnes maturadas da Casa das Gatas ao famoso leitão d\'O Pote do Leitão, mais o novo Café da Xénia para brunch — com distâncias a partir da Casa dos Duques.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-06-01',
+      dateModified: '2026-07-29',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Melhores Restaurantes em Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Melhores Restaurantes em Pombal, Portugal — Um Guia Local para Comer Bem"
+  description="Descubra os melhores restaurantes em Pombal. Das carnes maturadas da Casa das Gatas ao famoso leitão d'O Pote do Leitão, mais o novo Café da Xénia para brunch — com distâncias a partir da Casa dos Duques."
+  canonical="/pt/blog/melhores-restaurantes-pombal-portugal/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Gastronomia</span>
+        <span>Julho 2026</span>
+        <span>&middot; 8 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">Melhores Restaurantes em Pombal, Portugal — Um Guia Local para Comer Bem</h1>
+      <p class="text-lg text-muted font-body">A cena gastronómica de Pombal vai muito além do seu famoso leit&atilde;o. Do melhor brunch da regi&atilde;o no Caf&eacute; da X&eacute;nia aos especialistas em carnes maturadas e tascas tradicionais — aqui est&aacute; onde comer em Pombal e arredores, tudo a poucos minutos da Casa dos Duques.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Pombal &eacute; mais conhecida pelo seu <a href="/pt/guia/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">castelo templ&aacute;rio do s&eacute;culo XII</a> e pelo seu famoso <strong>Leit&atilde;o da Boa Vida</strong>. Mas al&eacute;m das muralhas do castelo, a cena gastron&oacute;mica da cidade tornou-se discretamente numa das melhores raz&otilde;es para visitar o Centro de Portugal — come&ccedil;ando pelo Caf&eacute; da X&eacute;nia, um espa&ccedil;o contempor&acirc;neo de brunch e workshops diferente de tudo o que existe na &aacute;rea, passando por restaurantes modernos de carnes maturadas e tascas tradicionais de comida caseira.</p>
+
+      <p>Todos os restaurantes aqui listados ficam a menos de 16 minutos de carro da <strong><a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> em Abiul. As dist&acirc;ncias e os tempos de viagem est&atilde;o indicados para cada um, para que possa planear as suas refei&ccedil;&otilde;es t&atilde;o facilmente como os seus passeios.</p>
+
+      <h2 class="mt-8 mb-3">1. Caf&eacute; da X&eacute;nia — Brunch, Workshops e Degusta&ccedil;&otilde;es</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 16 min de carro</p>
+        <p><strong>Cozinha:</strong> Brunch, Cafetaria, Portuguesa Sazonal</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro;&euro; (moderado)</p>
+        <p><strong>Hor&aacute;rio:</strong> Seg&ndash;Sex 8:00&ndash;19:00, S&aacute;b&ndash;Dom e Feriados 9:30&ndash;20:00</p>
+        <p><strong>Web:</strong> <a href="https://www.cafedaxenia.pt" class="text-terracotta-500 hover:text-terracotta-600 underline">cafedaxenia.pt</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/cafedaxenia/" class="text-terracotta-500 hover:text-terracotta-600 underline">@cafedaxenia</a></p>
+      </div>
+      <p>O Caf&eacute; da X&eacute;nia n&atilde;o se parece com mais nada na &aacute;rea de Pombal. Inspirado no conceito grego antigo de <em>xen&iacute;a</em> (&xi;&epsilon;&nu;&#943;&alpha;) — a arte sagrada da hospitalidade — este caf&eacute; nasceu da ideia de que a forma como recebemos algu&eacute;m importa tanto como aquilo que servimos.</p>
+      <p>A cozinha aposta num <strong>brunch contempor&acirc;neo</strong> com ingredientes sazonais e locais. Limonadas artesanais, sumos naturais e detox, cocktails de autor (experimente o Spritz da X&eacute;nia ou a Margarita de Frutos Vermelhos) e um programa completo de caf&eacute; e ch&aacute;s. As op&ccedil;&otilde;es vegan est&atilde;o claramente assinaladas em todo o menu.</p>
+      <p>Al&eacute;m da comida, o Caf&eacute; da X&eacute;nia organiza <strong>workshops, degusta&ccedil;&otilde;es guiadas, eventos de m&uacute;sica ao vivo e experi&ecirc;ncias gastron&oacute;micas privadas</strong>. Existe at&eacute; um programa de fideliza&ccedil;&atilde;o (&laquo;Amigos da X&eacute;nia&raquo;) e uma sala de reuni&otilde;es dedicada. &Eacute; o tipo de s&iacute;tio onde se pode demorar com um golden latte, participar numa prova dos licores artesanais de citrinos da casa ou reservar uma celebra&ccedil;&atilde;o privada.</p>
+      <p>Para os h&oacute;spedes da Casa dos Duques, &eacute; a paragem ideal para brunch ou lanche — especialmente para quem procura algo mais leve e contempor&acirc;neo entre as refei&ccedil;&otilde;es portuguesas mais pesadas.</p>
+
+      <OptimizedImage src="/images/blog/cafe-da-xenia.jpg" alt="Café da Xénia em Pombal — interior do café de brunch contemporâneo com luz quente, bar e zona de estar" class="w-full my-6" loading="lazy" width={800} height={600} sizes="(max-width: 896px) 100vw, 896px" />
+
+      <h2 class="mt-8 mb-3">2. Casa das Gatas</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 10 min de carro</p>
+        <p><strong>Cozinha:</strong> Portuguesa, Carnes Maturadas, Petiscos</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Rua do Louri&ccedil;al, Bairro Agorreta, Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro;&euro; (moderado)</p>
+        <p><strong>Web:</strong> <a href="https://www.casadasgatas.com" class="text-terracotta-500 hover:text-terracotta-600 underline">casadasgatas.com</a></p>
+      </div>
+      <p>A Casa das Gatas &eacute; um edif&iacute;cio do s&eacute;culo XX lindamente restaurado no bairro da Agorreta. O nome vem das duas irm&atilde;s (&laquo;gatas&raquo;) que originalmente geriam a pens&atilde;o e o restaurante — e hoje &eacute; uma das experi&ecirc;ncias gastron&oacute;micas mais distintas de Pombal.</p>
+      <p>A cozinha &eacute; conhecida pelas suas <strong>carnes maturadas</strong> — a estrela do menu. A par destas, encontra uma sele&ccedil;&atilde;o tentadora de petiscos, pratos de peixe fresco e sobremesas caseiras. A Casa das Gatas orgulha-se de usar produtos naturais da regi&atilde;o: Queijos de Sic&oacute;, azeite local e vinhos portugueses cuidadosamente selecionados de todas as regi&otilde;es do pa&iacute;s. O bar e o terra&ccedil;o s&atilde;o perfeitos para bebidas antes do jantar com petiscos.</p>
+
+      <h2 class="mt-8 mb-3">3. Vintage</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 10 min de carro</p>
+        <p><strong>Cozinha:</strong> Portuguesa</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Rua Alexandre Herculano, 5, 3100-494 Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro;&euro; (moderado)</p>
+        <p><strong>Telefone:</strong> 236 244 033</p>
+        <p><strong>Hor&aacute;rio:</strong> Seg&ndash;S&aacute;b 12:00&ndash;15:00 / 19:00&ndash;22:00 (Encerra ao Domingo)</p>
+      </div>
+      <p>Um local adorado no centro de Pombal, o Vintage serve comida tradicional portuguesa num ambiente acolhedor. &Eacute; o tipo de s&iacute;tio onde os locais v&atilde;o para uma refei&ccedil;&atilde;o de confian&ccedil;a — bem preparada, generosamente servida e cheia de sabor. Uma &oacute;ptima op&ccedil;&atilde;o para almo&ccedil;o depois de visitar o <a href="/pt/guia/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Castelo de Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">4. O Pote do Leit&atilde;o</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 12 min de carro</p>
+        <p><strong>Cozinha:</strong> Portuguesa, Leit&atilde;o</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Estrada do Louri&ccedil;al, 46, 3100-899 Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro;&euro; (moderado)</p>
+        <p><strong>Hor&aacute;rio:</strong> Ter&ndash;S&aacute;b 12:00&ndash;15:00 / 20:00&ndash;22:00, Dom 12:00&ndash;15:00 (Encerra &agrave; Segunda)</p>
+        <p><strong>Reservas:</strong> Recomendadas aos fins de semana</p>
+      </div>
+      <p>Se est&aacute; em Pombal, n&atilde;o pode sair sem provar leit&atilde;o — e O Pote do Leit&atilde;o &eacute; um dos melhores s&iacute;tios para o fazer. O nome diz tudo: este restaurante acolhedor &eacute; especialista em leit&atilde;o assado com pele perfeitamente crocante e carne tenra e saborosa. Wi-Fi gratuito e aceita reservas. Um aut&ecirc;ntico favorito local.</p>
+
+      <h2 class="mt-8 mb-3">5. Restaurante Os Pedros</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 12 min de carro</p>
+        <p><strong>Cozinha:</strong> Portuguesa, Marisco, Naco na Pedra</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Travasso, Estrada Nacional 1, 3100-371 Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro;&euro; (moderado)</p>
+        <p><strong>Telefone:</strong> 236 218 189</p>
+        <p><strong>Hor&aacute;rio:</strong> Ter&ndash;Dom 9:00&ndash;23:00 (Encerra &agrave; Segunda)</p>
+      </div>
+      <p>Um cl&aacute;ssico na cena gastron&oacute;mica de Pombal. Os Pedros &eacute; famoso pelo seu <strong>Naco na Pedra</strong> e <strong>Picanha na Pedra</strong> — bifes a chiar servidos em pedra quente &agrave; sua mesa. Muitos locais apontam estes como os melhores bifes da regi&atilde;o. O menu tamb&eacute;m inclui marisco fresco e cozinha tradicional portuguesa.</p>
+
+      <h2 class="mt-8 mb-3">6. O Manjar do Marqu&ecirc;s</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 10 min de carro</p>
+        <p><strong>Cozinha:</strong> Portuguesa, Mercearia, Petiscos</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Estrada Nacional, 1, 3100-000 Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro; (econ&oacute;mico)</p>
+        <p><strong>Hor&aacute;rio:</strong> Seg&ndash;Ter e Qui&ndash;S&aacute;b 9:00&ndash;23:30 (Encerra &agrave; Quarta)</p>
+      </div>
+      <p>Instalado num edif&iacute;cio com bela arquitetura em madeira, O Manjar do Marqu&ecirc;s &eacute; um espa&ccedil;o encantador que serve comida de conforto portuguesa. Experimente os crocantes <strong>bolinhos de bacalhau</strong>, bife de porco panado, saladas mistas frescas e filetes de pescada fritos. Adequado para fam&iacute;lias, grupos e esplanada nos meses mais quentes.</p>
+
+      <h2 class="mt-8 mb-3">7. Dom Lagar</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 12 min de carro</p>
+        <p><strong>Cozinha:</strong> Portuguesa, Marisco</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Venda da Cruz (perto de Pombal)</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro;&euro; (moderado)</p>
+      </div>
+      <p>Um dos restaurantes mais bem avaliados perto de Pombal, o Dom Lagar serve excelente cozinha tradicional portuguesa e marisco. Conhecido pelo ambiente descontra&iacute;do e por&ccedil;&otilde;es generosas, vale bem a pena a curta viagem desde o centro da cidade.</p>
+
+      <h2 class="mt-8 mb-3">8. Restaurante Ponte Romana</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 10 min de carro</p>
+        <p><strong>Cozinha:</strong> Tradicional Portuguesa</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Junto &agrave; Ponte Romana, Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro; (econ&oacute;mico)</p>
+      </div>
+      <p>Localizado perto da ponte romana hist&oacute;rica, este favorito local serve cozinha portuguesa caseira e honesta a pre&ccedil;os acess&iacute;veis. Muito popular entre os locais para almo&ccedil;o — chegue cedo se quiser mesa.</p>
+
+      <h2 class="mt-8 mb-3">9. Restaurante Solar do Bacalhau</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 10 min de carro</p>
+        <p><strong>Cozinha:</strong> Bacalhau, Portuguesa</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro;&euro; (moderado)</p>
+      </div>
+      <p>Como o nome sugere, este restaurante &eacute; especialista em <strong>bacalhau</strong> — o adorado fiel amigo dos portugueses. V&aacute;rias prepara&ccedil;&otilde;es, todas feitas da forma tradicional. Uma paragem obrigat&oacute;ria para os amantes de bacalhau que visitam a regi&atilde;o.</p>
+
+      <h2 class="mt-8 mb-3">10. O Burgo</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 10 min de carro</p>
+        <p><strong>Cozinha:</strong> Portuguesa</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro; (econ&oacute;mico)</p>
+      </div>
+      <p>Um restaurante local bem conceituado que serve comida portuguesa de qualidade a pre&ccedil;os justos. Simples, fi&aacute;vel e popular entre quem aprecia boas refei&ccedil;&otilde;es caseiras sem pretens&otilde;es.</p>
+
+      <h2 class="mt-8 mb-3">11. Z&eacute; Manel dos Ossos</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 10 min de carro</p>
+        <p><strong>Cozinha:</strong> Petiscos, Portuguesa</p>
+        <p><strong>Localiza&ccedil;&atilde;o:</strong> Pombal</p>
+        <p><strong>Pre&ccedil;o:</strong> &euro; (econ&oacute;mico)</p>
+      </div>
+      <p>Perfeito para uma noite informal. O Z&eacute; Manel dos Ossos &eacute; conhecido pelos seus petiscos e ambiente descontra&iacute;do. Ideal para grupos que queiram provar v&aacute;rios pratos pequenos com um copo de vinho.</p>
+
+      <h2 class="mt-8 mb-3">Comer em Abiul — A P&eacute;</h2>
+      <p>N&atilde;o precisa de ir at&eacute; Pombal para uma boa refei&ccedil;&atilde;o. Abiul tem duas excelentes op&ccedil;&otilde;es:</p>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Casa dos Bispos</strong> — Cozinha regional portuguesa, a 137 m da casa (2 min a p&eacute;).</p>
+        <p><strong>&#128205; Quinta das Vinhas</strong> — A 3 min de carro, pratos tradicionais em ambiente de campo.</p>
+      </div>
+
+      <h2 class="mt-8 mb-3">Dicas para Comer em Pombal</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Leit&atilde;o</strong> — O prato mais famoso de Pombal. N&atilde;o saia sem provar. A nossa escolha: O Pote do Leit&atilde;o.</li>
+        <li><strong>Bacalhau</strong> — Cada restaurante tem a sua vers&atilde;o. O Solar do Bacalhau &eacute; especialista.</li>
+        <li><strong>Reservas</strong> — Recomendadas aos fins de semana, especialmente na Casa das Gatas e n&rsquo;O Pote do Leit&atilde;o.</li>
+        <li><strong>Hor&aacute;rios</strong> — Almo&ccedil;o das 12:00 &agrave;s 15:00, jantar das 19:00 &agrave;s 22:00. Muitos restaurantes fecham ao domingo &agrave; noite ou &agrave; segunda-feira. Planeie com anteced&ecirc;ncia.</li>
+        <li><strong>Nota sazonal</strong> — Agosto &eacute; &eacute;poca alta de f&eacute;rias; reserve com anteced&ecirc;ncia. Algumas tascas mais pequenas podem fechar durante parte de agosto ou no Natal/Ano Novo.</li>
+      </ul>
+
+      <p class="mt-8">Quer venha pela hist&oacute;ria, pela natureza ou pela comida — a cena gastron&oacute;mica de Pombal n&atilde;o desilude. Todos os restaurantes deste guia ficam a uma curta dist&acirc;ncia de carro da <strong><a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> em Abiul, tornando f&aacute;cil explorar os melhores sabores da regi&atilde;o durante a sua estadia.</p>
+
+      <p class="mt-4">A planear explorar al&eacute;m de Pombal? Leia o nosso guia para <a href="/pt/blog/descobrir-abiul-pombal-centro-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">descobrir Abiul e o Centro de Portugal</a>, ou veja <a href="/pt/o-que-fazer/" class="text-terracotta-500 hover:text-terracotta-600 underline">o que fazer perto de Pombal</a> para ideias de passeios entre refei&ccedil;&otilde;es. Tem d&uacute;vidas sobre algum destes s&iacute;tios? <a href="/pt/contato/" class="text-terracotta-500 hover:text-terracotta-600 underline">Envie-nos uma mensagem</a> — teremos todo o gosto em partilhar mais dicas.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Websites e p&aacute;ginas oficiais dos restaurantes para hor&aacute;rios, moradas e menus. Tempos de viagem estimados via Google Maps a partir da Casa dos Duques (Rua D. Afonso Henriques n 9, Abiul 3100-012). Informa&ccedil;&atilde;o do Caf&eacute; da X&eacute;nia de <a href="https://www.cafedaxenia.pt" class="text-terracotta-500 hover:text-terracotta-600 underline">cafedaxenia.pt</a>. Verifique sempre os hor&aacute;rios atuais antes de visitar — podem mudar sazonalmente ou em feriados.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Fique connosco e saboreie a regi&atilde;o"
+    subtitle="Reserve a Casa dos Duques — todos os restaurantes deste guia est&atilde;o a menos de 16 minutos da sua porta"
+    primaryCta={{ label: 'Reserve a sua estadia', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

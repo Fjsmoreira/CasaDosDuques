@@ -38,11 +38,10 @@ const {
       maxZoom: 19,
     }).addTo(map);
 
-    // Create a dark olive-themed marker icon using divIcon
-    const oliveIcon = L.divIcon({
-      className: 'custom-olive-marker',
+    const markerIcon = L.divIcon({
+      className: 'custom-marker',
       html: `<div style="
-        background-color: #4a5d23;
+        background-color: #d46a3f;
         width: 32px;
         height: 32px;
         border-radius: 50% 50% 50% 0;
@@ -69,8 +68,8 @@ const {
 
     const popupContent = `
       <div style="font-family: system-ui, sans-serif; line-height: 1.4;">
-        <strong style="color: #4a5d23; font-size: 14px;">Casa dos Duques</strong><br />
-        <span style="color: #5c6b3f; font-size: 13px;">
+        <strong style="color: #2d221c; font-size: 14px;">Casa dos Duques</strong><br />
+        <span style="color: #8b7d73; font-size: 13px;">
           ${address}<br />
           ${town}, ${district}<br />
           Portugal
@@ -78,15 +77,13 @@ const {
       </div>
     `;
 
-    L.marker([39.8726, -8.5386], { icon: oliveIcon })
+    L.marker([39.8726, -8.5386], { icon: markerIcon })
       .addTo(map)
       .bindPopup(popupContent);
 
-    // Handle case where container doesn't have height yet
     setTimeout(() => map.invalidateSize(), 300);
   };
 
-  // Wait for DOM and leaflet to fully load
   if (document.readyState === 'complete') {
     initMap();
   } else {
@@ -95,18 +92,17 @@ const {
 </script>
 
 <style is:global>
-  .custom-olive-marker {
+  .custom-marker {
     background: transparent !important;
     border: none !important;
   }
   #map {
     width: 100%;
-    border-radius: 0.75rem;
-    border: 1px solid #d4c9a8;
+    border: 1px solid #d4c5b9;
     z-index: 0;
   }
   .leaflet-popup-content-wrapper {
-    border-radius: 0.5rem;
+    border-radius: 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
   .leaflet-popup-tip {
@@ -116,6 +112,6 @@ const {
 
 <div
   id="map"
-  class="w-full {height} rounded-xl border border-warm-sand shadow-sm"
+  class="w-full {height} border border-stone-300"
   aria-label="Map showing Casa dos Duques at {address}, {town}, {district}, Portugal"
 ></div>

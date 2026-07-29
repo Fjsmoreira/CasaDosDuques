@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Blogue — Casa dos Duques | Guia de Viagem de Abiul, Pombal e Centro de Portugal"
+  description="Explore o nosso blogue com dicas de viagem, guias locais e o que fazer em Abiul, Pombal e Centro de Portugal. Descubra os melhores restaurantes, passeios e tesouros escondidos."
+  canonical="/pt/blog/"
+  locale="pt"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">Blogue</p>
+    <h1 class="mb-4">Histórias e Guias do Centro de Portugal</h1>
+    <p class="text-muted font-body mb-10">Dicas de viagem, guias locais e histórias de Abiul, Pombal e arredores.</p>
+
+    <div class="space-y-8">
+      <article class="bg-white border border-stone-200 overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-xs text-muted font-body mb-2">
+            <span class="bg-stone-100 text-wood-700 px-2 py-1">Gastronomia</span>
+            <span>Julho 2026</span>
+          </div>
+          <h2 class="text-xl mb-2">
+            <a href="/pt/blog/melhores-restaurantes-pombal-portugal/" class="hover:text-terracotta-500 transition-colors">
+              Melhores Restaurantes em Pombal, Portugal — Um Guia Local para Comer Bem
+            </a>
+          </h2>
+          <p class="text-sm text-muted font-body leading-relaxed">
+            Descubra os melhores restaurantes em Pombal. Das carnes maturadas da Casa das Gatas ao famoso leitão d&rsquo;O Pote do Leitão, mais o novo Café da Xénia para brunch — tudo a menos de 16 minutos da Casa dos Duques.
+          </p>
+        </div>
+      </article>
+
+      <article class="bg-white border border-stone-200 overflow-hidden">
+        <div class="p-6">
+          <div class="flex items-center gap-2 text-xs text-muted font-body mb-2">
+            <span class="bg-stone-100 text-wood-700 px-2 py-1">Centro de Portugal</span>
+            <span>Julho 2026</span>
+          </div>
+          <h2 class="text-xl mb-2">
+            <a href="/pt/blog/descobrir-abiul-pombal-centro-portugal/" class="hover:text-terracotta-500 transition-colors">
+              Descobrir Abiul e Pombal — O Seu Guia do Centro de Portugal a Partir da Casa dos Duques
+            </a>
+          </h2>
+          <p class="text-sm text-muted font-body leading-relaxed">
+            Entre os mosteiros UNESCO da Batalha e de Alcobaça fica uma região que a maioria dos viajantes desconhece.
+            Descubra Abiul e Pombal: castelos templários, praias atlânticas, praias fluviais e quatro locais UNESCO a menos de 50 minutos.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</BaseLayout>

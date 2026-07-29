@@ -9,56 +9,20 @@ const warnings = [];
 
 const expectedRoutes = [
   '/',
-  '/the-house/', '/rooms/', '/amenities/', '/garden/', '/location/', '/things-to-do/', '/day-trips/', '/beaches/', '/rates/', '/booking/', '/reviews/', '/contact/', '/privacy/', '/faq/', '/blog/', '/blog/discover-abiul-pombal-central-portugal/',
-  '/pt/', '/pt/a-casa/', '/pt/quartos/', '/pt/comodidades/', '/pt/jardim/', '/pt/localizacao/', '/pt/o-que-fazer/', '/pt/passeios/', '/pt/praias/', '/pt/precos/', '/pt/reserva/', '/pt/avaliacoes/', '/pt/contato/', '/pt/privacidade/', '/pt/guia/abiul/',
-  '/nl/', '/nl/huis/', '/nl/slaapkamers/', '/nl/voorzieningen/', '/nl/tuin/', '/nl/locatie/', '/nl/activiteiten/', '/nl/daguitstapjes/', '/nl/stranden/', '/nl/tarieven/', '/nl/boeking/', '/nl/reviews/', '/nl/contact/', '/nl/privacy/',
-  '/fr/', '/fr/la-maison/', '/fr/chambres/', '/fr/equipements/', '/fr/jardin/', '/fr/emplacement/', '/fr/activites/', '/fr/excursions/', '/fr/plages/', '/fr/tarifs/', '/fr/reservation/', '/fr/avis/', '/fr/contact/', '/fr/confidentialite/',
+  '/the-house/', '/rooms/', '/amenities/', '/garden/', '/location/', '/things-to-do/', '/day-trips/', '/beaches/', '/rates/', '/booking/', '/reviews/', '/contact/', '/privacy/', '/faq/',
+  '/blog/', '/blog/discover-abiul-pombal-central-portugal/', '/blog/best-restaurants-pombal-portugal/',
+  '/guide/abiul/', '/guide/pombal/', '/guide/central-portugal/',
+  '/pt/', '/pt/a-casa/', '/pt/quartos/', '/pt/comodidades/', '/pt/jardim/', '/pt/localizacao/', '/pt/o-que-fazer/', '/pt/passeios/', '/pt/praias/', '/pt/precos/', '/pt/reserva/', '/pt/avaliacoes/', '/pt/contato/', '/pt/privacidade/', '/pt/faq/',
+  '/pt/guia/abiul/', '/pt/guia/pombal/', '/pt/guia/central-portugal/',
+  '/pt/blog/', '/pt/blog/melhores-restaurantes-pombal-portugal/', '/pt/blog/descobrir-abiul-pombal-centro-portugal/',
+  '/nl/', '/nl/huis/', '/nl/slaapkamers/', '/nl/voorzieningen/', '/nl/tuin/', '/nl/locatie/', '/nl/activiteiten/', '/nl/daguitstapjes/', '/nl/stranden/', '/nl/tarieven/', '/nl/boeking/', '/nl/reviews/', '/nl/contact/', '/nl/privacy/', '/nl/faq/',
+  '/nl/blog/', '/nl/blog/beste-restaurants-pombal-portugal/', '/nl/blog/ontdek-abiul-pombal-centraal-portugal/',
+  '/fr/', '/fr/la-maison/', '/fr/chambres/', '/fr/equipements/', '/fr/jardin/', '/fr/emplacement/', '/fr/activites/', '/fr/excursions/', '/fr/plages/', '/fr/tarifs/', '/fr/reservation/', '/fr/avis/', '/fr/contact/', '/fr/confidentialite/', '/fr/faq/',
+  '/fr/blog/', '/fr/blog/meilleurs-restaurants-pombal-portugal/', '/fr/blog/decouvrir-abiul-pombal-centre-portugal/',
 ];
 
-// Compatibility aliases people may type or stale links may keep after language switching.
-// Each alias must exist and point users to the canonical translated slug.
-const expectedRedirectAliases = {
-  // Localized pages must also tolerate English/default slugs under locale prefixes.
-  // This catches stale/manual URLs such as /pt/garden/.
-  '/pt/the-house/': '/pt/a-casa/',
-  '/pt/rooms/': '/pt/quartos/',
-  '/pt/amenities/': '/pt/comodidades/',
-  '/pt/garden/': '/pt/jardim/',
-  '/pt/gallery/': '/pt/jardim/',
-  '/pt/location/': '/pt/localizacao/',
-  '/pt/things-to-do/': '/pt/o-que-fazer/',
-  '/pt/day-trips/': '/pt/passeios/',
-  '/pt/beaches/': '/pt/praias/',
-  '/pt/rates/': '/pt/precos/',
-  '/pt/booking/': '/pt/reserva/',
-  '/pt/reviews/': '/pt/avaliacoes/',
-  '/pt/contact/': '/pt/contato/',
-  '/pt/privacy/': '/pt/privacidade/',
-  '/nl/the-house/': '/nl/huis/',
-  '/nl/rooms/': '/nl/slaapkamers/',
-  '/nl/amenities/': '/nl/voorzieningen/',
-  '/nl/garden/': '/nl/tuin/',
-  '/nl/gallery/': '/nl/tuin/',
-  '/nl/location/': '/nl/locatie/',
-  '/nl/things-to-do/': '/nl/activiteiten/',
-  '/nl/day-trips/': '/nl/daguitstapjes/',
-  '/nl/beaches/': '/nl/stranden/',
-  '/nl/rates/': '/nl/tarieven/',
-  '/nl/booking/': '/nl/boeking/',
-  '/fr/the-house/': '/fr/la-maison/',
-  '/fr/rooms/': '/fr/chambres/',
-  '/fr/amenities/': '/fr/equipements/',
-  '/fr/garden/': '/fr/jardin/',
-  '/fr/gallery/': '/fr/jardin/',
-  '/fr/location/': '/fr/emplacement/',
-  '/fr/things-to-do/': '/fr/activites/',
-  '/fr/day-trips/': '/fr/excursions/',
-  '/fr/beaches/': '/fr/plages/',
-  '/fr/rates/': '/fr/tarifs/',
-  '/fr/booking/': '/fr/reservation/',
-  '/fr/reviews/': '/fr/avis/',
-  '/fr/privacy/': '/fr/confidentialite/',
-};
+// Locale alias redirects are handled at the nginx level (301 rewrites).
+// See nginx.conf for the full list of English-slug-under-locale-prefix → canonical path redirects.
 
 const pagePathForRoute = (route) => {
   const normalized = route.split('?')[0].split('#')[0];
@@ -86,18 +50,6 @@ if (!existsSync(distDir)) {
 } else {
   for (const route of expectedRoutes) {
     if (!fileExistsForRoute(route)) failures.push(`Missing expected route: ${route}`);
-  }
-
-  for (const [alias, target] of Object.entries(expectedRedirectAliases)) {
-    const file = pagePathForRoute(alias);
-    if (!existsSync(file)) {
-      failures.push(`Missing compatibility redirect route: ${alias} -> ${target}`);
-      continue;
-    }
-    const html = readFileSync(file, 'utf8');
-    if (!html.includes(target)) {
-      failures.push(`Compatibility redirect ${alias} does not reference target ${target}`);
-    }
   }
 
   const htmlFiles = walkHtml(distDir);

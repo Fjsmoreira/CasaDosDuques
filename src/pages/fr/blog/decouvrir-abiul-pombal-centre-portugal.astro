@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/decouvrir-abiul-pombal-centre-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Découvrir Abiul et Pombal — Votre Guide du Centre du Portugal depuis la Casa dos Duques',
+      description: 'Découvrez Abiul et Pombal dans le Centre du Portugal : histoire médiévale depuis 1167, château templier, 4 sites UNESCO à 30-50 min, plages atlantiques, plages fluviales et la Casa dos Duques — votre base pour tout explorer.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-06-01',
+      dateModified: '2026-07-29',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Découvrir Abiul et Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Découvrir Abiul et Pombal — Votre Guide du Centre du Portugal depuis la Casa dos Duques"
+  description="Découvrez Abiul et Pombal dans le Centre du Portugal : histoire médiévale depuis 1167, château templier, 4 sites UNESCO à 30-50 min, plages atlantiques, plages fluviales et la Casa dos Duques — votre base pour tout explorer."
+  canonical="/fr/blog/decouvrir-abiul-pombal-centre-portugal/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Centre du Portugal</span>
+        <span>Juillet 2026</span>
+        <span>&middot; 7 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">D&eacute;couvrir Abiul et Pombal — Votre Guide du Centre du Portugal depuis la Casa dos Duques</h1>
+      <p class="text-lg text-muted font-body">Entre les monast&egrave;res UNESCO de Batalha et d&rsquo;Alcoba&ccedil;a, dans une r&eacute;gion que la plupart des voyageurs ignorent, se trouvent le village historique d&rsquo;Abiul et sa voisine plus grande, Pombal — et ils pourraient bien &ecirc;tre le meilleur point de chute du Centre du Portugal.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Quand on pense au Portugal, on imagine souvent les plages de l&rsquo;Algarve, les rues de Lisbonne ou les caves de vin de Porto. Mais les initi&eacute;s se dirigent vers le Centre du Portugal — une r&eacute;gion o&ugrave; l&rsquo;on peut visiter un ch&acirc;teau templier du XIIe si&egrave;cle le matin, d&eacute;jeuner d&rsquo;un leit&atilde;o dans une tasca familiale et se baigner dans une plage fluviale avec cascade l&rsquo;apr&egrave;s-midi.</p>
+
+      <p>Au c&oelig;ur de cette r&eacute;gion remarquable se trouve <strong>Abiul</strong>, un village historique dans la municipalit&eacute; de <strong>Pombal</strong>, et la maison de la <strong><a href="/fr/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> — une maison de vacances de 90 ans magnifiquement restaur&eacute;e qui constitue la base id&eacute;ale pour l&rsquo;exploration.</p>
+
+      <h2 class="mt-8 mb-3">Un Village au Patrimoine Royal</h2>
+      <p>Abiul a re&ccedil;u sa premi&egrave;re charte royale (foral) en <strong>1167 du Roi Afonso Henriques</strong>, ce qui en fait l&rsquo;une des plus anciennes localit&eacute;s document&eacute;es de la r&eacute;gion de Pombal. Parcourez ses ruelles &eacute;troites et vous sentirez le poids des si&egrave;cles — dans l&rsquo;architecture traditionnelle, les ar&egrave;nes historiques (consid&eacute;r&eacute;es comme les plus anciennes du Portugal) et les traditions qui perdurent, comme la <strong>Festa do Bodo</strong> annuelle, un festival n&eacute; d&rsquo;un v&oelig;u m&eacute;di&eacute;val contre la peste. <a href="/guide/abiul/" class="text-terracotta-500 hover:text-terracotta-600 underline">Lisez notre guide complet d&rsquo;Abiul</a> pour plus de d&eacute;tails historiques.</p>
+
+      <h2 class="mt-8 mb-3">Pombal — Ch&acirc;teau, Histoire et Vie Quotidienne</h2>
+      <p>&Agrave; seulement 10 minutes en voiture d&rsquo;Abiul, <a href="/guide/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Pombal</a> est une ville anim&eacute;e domin&eacute;e par son <strong>ch&acirc;teau templier du XIIe si&egrave;cle</strong>. Le ch&acirc;teau offre des vues panoramiques sur la campagne environnante et constitue une visite incontournable lors de tout s&eacute;jour dans la r&eacute;gion. Pombal a &eacute;galement donn&eacute; son nom au <strong>Marquis de Pombal</strong>, le c&eacute;l&egrave;bre premier ministre portugais du XVIIIe si&egrave;cle qui a reconstruit Lisbonne apr&egrave;s le tremblement de terre d&eacute;vastateur de 1755.</p>
+
+      <p>La ville offre d&rsquo;excellents services&nbsp;: supermarch&eacute;s (Aldi, Dias), un large choix de restaurants — du grill portugais traditionnel &agrave; la cuisine chinoise — banques et pharmacies. Pour des recommandations de restaurants, consultez notre <a href="/fr/blog/meilleurs-restaurants-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guide des meilleurs restaurants de Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">Sites UNESCO &agrave; Proximit&eacute;</h2>
+      <p>Quatre sites class&eacute;s au patrimoine mondial de l&rsquo;UNESCO se trouvent &agrave; 30&ndash;50 minutes de route de la Casa dos Duques. Voici ce que vous devez savoir pour planifier vos visites&nbsp;:</p>
+
+      <h3 class="mt-6 mb-2">Monast&egrave;re de Batalha</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance depuis la Casa dos Duques&nbsp;:</strong> 30 min en voiture</p>
+        <p><strong>&#128205; Adresse&nbsp;:</strong> Largo Infante Dom Henrique, Batalha</p>
+        <p><strong>&#127902; UNESCO depuis&nbsp;:</strong> 1983</p>
+        <p><strong>&#128338; Horaires&nbsp;:</strong> Tous les jours 9h00&ndash;18h00 (avr&ndash;sep jusqu&rsquo;&agrave; 18h30). Ferm&eacute; 1er jan, dimanche de P&acirc;ques, 1er mai, 25 d&eacute;c.</p>
+        <p><strong>&#128176; Prix&nbsp;:</strong> 6 &euro; (g&eacute;n&eacute;ral). Billets combin&eacute;s disponibles avec Alcoba&ccedil;a et Tomar.</p>
+        <p><strong>&#128118; Adapt&eacute; aux familles&nbsp;:</strong> Oui — espaces ouverts, pas d&rsquo;escaliers dans la nef principale.</p>
+      </div>
+      <p>Un chef-d&rsquo;&oelig;uvre gothique construit pour comm&eacute;morer la victoire du Portugal &agrave; la bataille d&rsquo;Aljubarrota en 1385. Le point culminant est les <strong>Chapelles Inachev&eacute;es</strong> (Capelas Imperfeitas) — un mausol&eacute;e octogonal en plein air aux sculptures de pierre complexes qui n&rsquo;a jamais &eacute;t&eacute; termin&eacute;. Pr&eacute;voyez 1&ndash;1,5 heure.</p>
+
+      <h3 class="mt-6 mb-2">Monast&egrave;re d&rsquo;Alcoba&ccedil;a</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance depuis la Casa dos Duques&nbsp;:</strong> 35 min en voiture</p>
+        <p><strong>&#128205; Adresse&nbsp;:</strong> Pra&ccedil;a 25 de Abril, Alcoba&ccedil;a</p>
+        <p><strong>&#127902; UNESCO depuis&nbsp;:</strong> 1989</p>
+        <p><strong>&#128338; Horaires&nbsp;:</strong> Tous les jours 9h00&ndash;18h00 (avr&ndash;sep jusqu&rsquo;&agrave; 19h00). Ferm&eacute; 1er jan, dimanche de P&acirc;ques, 1er mai, 25 d&eacute;c.</p>
+        <p><strong>&#128176; Prix&nbsp;:</strong> 6 &euro; (g&eacute;n&eacute;ral). Billet combin&eacute; avec Batalha et Tomar&nbsp;: 15 &euro;.</p>
+        <p><strong>&#128118; Adapt&eacute; aux familles&nbsp;:</strong> Oui — large nef, facile &agrave; parcourir.</p>
+      </div>
+      <p>Une abbaye cistercienne fond&eacute;e en 1153, l&rsquo;un des plus grands monast&egrave;res gothiques m&eacute;di&eacute;vaux d&rsquo;Europe. Ne manquez pas les <strong>tombeaux de Dom Pedro Ier et d&rsquo;In&ecirc;s de Castro</strong> — plac&eacute;s face &agrave; face pour que, selon la l&eacute;gende, la premi&egrave;re chose qu&rsquo;ils voient au Jour du Jugement soit l&rsquo;un l&rsquo;autre. Pr&eacute;voyez 1&ndash;1,5 heure. Se combine bien avec Nazar&eacute; (&agrave; 30 min) pour un d&eacute;jeuner de fruits de mer en bord de mer.</p>
+
+      <h3 class="mt-6 mb-2">Tomar — Couvent du Christ</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance depuis la Casa dos Duques&nbsp;:</strong> 40 min en voiture</p>
+        <p><strong>&#128205; Adresse&nbsp;:</strong> Colina do Castelo, Tomar</p>
+        <p><strong>&#127902; UNESCO depuis&nbsp;:</strong> 1983</p>
+        <p><strong>&#128338; Horaires&nbsp;:</strong> Tous les jours 9h00&ndash;17h30 (jun&ndash;sep jusqu&rsquo;&agrave; 18h30). Ferm&eacute; 1er jan, dimanche de P&acirc;ques, 1er mai, 25 d&eacute;c.</p>
+        <p><strong>&#128176; Prix&nbsp;:</strong> 6 &euro; (g&eacute;n&eacute;ral). Billet combin&eacute; avec Batalha et Alcoba&ccedil;a&nbsp;: 15 &euro;.</p>
+        <p><strong>&#128118; Adapt&eacute; aux familles&nbsp;:</strong> Sous surveillance — escaliers raides dans certaines zones, mais la Charola principale est accessible.</p>
+      </div>
+      <p>Une forteresse-monast&egrave;re des Templiers qui servait de quartier g&eacute;n&eacute;ral portugais de l&rsquo;ordre. La <strong>Fen&ecirc;tre Manueline</strong> sur la fa&ccedil;ade ouest — une explosion de cordages sculpt&eacute;s, de coraux et de motifs maritimes — est l&rsquo;un des d&eacute;tails les plus photographi&eacute;s de l&rsquo;architecture portugaise. La Charola octogonale (l&rsquo;&eacute;glise ronde originelle des Templiers) ne ressemble &agrave; rien d&rsquo;autre au Portugal. Pr&eacute;voyez 2 heures&nbsp;; le site est plus grand qu&rsquo;il n&rsquo;y para&icirc;t.</p>
+
+      <h3 class="mt-6 mb-2">Universit&eacute; de Coimbra</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance depuis la Casa dos Duques&nbsp;:</strong> 50 min en voiture</p>
+        <p><strong>&#128205; Adresse&nbsp;:</strong> Pa&ccedil;o das Escolas, Coimbra</p>
+        <p><strong>&#127902; UNESCO depuis&nbsp;:</strong> 2013</p>
+        <p><strong>&#128338; Horaires&nbsp;:</strong> Tous les jours 9h00&ndash;17h00 (avr&ndash;sep jusqu&rsquo;&agrave; 19h30). Certains b&acirc;timents ferment pendant les p&eacute;riodes d&rsquo;examens — v&eacute;rifiez &agrave; l&rsquo;avance.</p>
+        <p><strong>&#128176; Prix&nbsp;:</strong> 12,50 &euro; (billet complet&nbsp;: Biblioth&egrave;que Joanina + Palais Royal + Chapelle + Tour). Billets individuels disponibles.</p>
+        <p><strong>&#128118; Adapt&eacute; aux familles&nbsp;:</strong> Oui — la mont&eacute;e de la tour est raide mais optionnelle. Acc&egrave;s poussette limit&eacute; dans les b&acirc;timents historiques.</p>
+      </div>
+      <p>Fond&eacute;e en 1290, Coimbra est l&rsquo;une des plus anciennes universit&eacute;s d&rsquo;Europe — plus ancienne que le premier coll&egrave;ge d&rsquo;Oxford. Le point culminant est la <strong>Biblioth&egrave;que Joanina</strong>, un chef-d&rsquo;&oelig;uvre baroque abritant 60 000 livres du XVIe au XVIIIe si&egrave;cle, avec une colonie de chauves-souris qui prot&egrave;gent les manuscrits en mangeant les insectes la nuit. Pr&eacute;voyez 2&ndash;3 heures pour le complexe universitaire, puis descendez vers les berges du Mondego pour d&eacute;jeuner. Consultez notre <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guide du Centre du Portugal</a> pour plus d&rsquo;informations.</p>
+
+      <p class="text-sm text-muted italic">&#9888;&#65039; Les horaires et les prix sont approximatifs et peuvent changer. Consultez toujours le site officiel du monument avant votre visite, surtout les jours f&eacute;ri&eacute;s.</p>
+
+      <h2 class="mt-8 mb-3">Plages, Plages Fluviales et Nature</h2>
+      <p>Le littoral du Centre du Portugal s&rsquo;&eacute;tend sur plus de 100 km et attire bien moins de monde que l&rsquo;Algarve. Depuis la Casa dos Duques, la plage de sable la plus proche — <strong>Praia da Leirosa</strong> — est &agrave; 37 minutes en voiture. <strong>Praia do Osso da Baleia</strong> (38 min) se trouve dans la municipalit&eacute; de Pombal elle-m&ecirc;me.</p>
+
+      <p>Pour une journ&eacute;e compl&egrave;te, <strong>Figueira da Foz</strong> (47 min) propose une plage urbaine de 2 km, un casino historique et des restaurants de fruits de mer le long de la promenade. <strong>Nazar&eacute;</strong> (65 min) est mondialement c&eacute;l&egrave;bre pour ses vagues g&eacute;antes atteignant 30 m&egrave;tres &agrave; Praia do Norte — m&ecirc;me si vous visitez en &eacute;t&eacute; quand la mer est calme, les vues depuis le Sitio valent le d&eacute;placement.</p>
+
+      <p>Dans l&rsquo;int&eacute;rieur des terres, les <strong>plages fluviales (praias fluviais)</strong> du Centre du Portugal offrent des baignades en eau douce entour&eacute;es de for&ecirc;t et de formations rocheuses. <strong>Praia Fluvial do Mosteiro</strong> (50 min) se trouve dans une vall&eacute;e tranquille pr&egrave;s de Pedr&oacute;g&atilde;o Grande, tandis que <strong>Penedo Furado</strong> (60 min) dispose de piscines naturelles avec cascade et un acc&egrave;s facile par des sentiers. <strong>Les plages fluviales sont saisonni&egrave;res — g&eacute;n&eacute;ralement de juin &agrave; septembre</strong>, lorsque les niveaux d&rsquo;eau sont plus bas et plus s&ucirc;rs pour la baignade. En dehors de ces mois, elles peuvent &ecirc;tre inaccessibles ou sans surveillance. Consultez notre <a href="/fr/plages/" class="text-terracotta-500 hover:text-terracotta-600 underline">guide des plages</a> pour plus d&rsquo;options et les conditions actuelles.</p>
+
+      <h2 class="mt-8 mb-3">Pourquoi S&eacute;journer &agrave; la Casa dos Duques&nbsp;?</h2>
+      <p>La <a href="/fr/la-maison/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> est bien plus qu&rsquo;un simple endroit o&ugrave; dormir — c&rsquo;est une destination en soi. Cette maison de 90 ans m&eacute;ticuleusement r&eacute;nov&eacute;e dans le paisible village historique d&rsquo;Abiul offre&nbsp;:</p>
+
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>4 chambres</strong> pouvant accueillir 8 personnes (6 adultes + 2 enfants + 1 b&eacute;b&eacute;)</li>
+        <li><strong>Piscine de 8 m&egrave;tres</strong> et jardin de 450 m&sup2; avec coins d&eacute;tente et barbecue</li>
+        <li><strong>Caract&egrave;re d&rsquo;origine pr&eacute;serv&eacute;</strong> — murs en pierre, sols en terre cuite, hauts plafonds, chemin&eacute;e</li>
+        <li><strong>Cuisine enti&egrave;rement &eacute;quip&eacute;e</strong> et commodit&eacute;s modernes dont le WiFi</li>
+        <li><strong>Guest Favorite</strong> sur Airbnb, not&eacute; <strong>4,97/5</strong></li>
+      </ul>
+
+      <p>Que vous recherchiez une retraite familiale paisible, une base pour explorer la riche histoire du Portugal ou simplement un bel endroit pour vous d&eacute;tendre au bord de la piscine — <a href="/fr/reservation/" class="text-terracotta-500 hover:text-terracotta-600 underline">r&eacute;servez la Casa dos Duques</a> pour un s&eacute;jour inoubliable.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources&nbsp;: Wikipedia (EN/PT) pour les faits historiques sur Abiul et Pombal&nbsp;; OpenStreetMap et OSRM pour les temps de trajet&nbsp;; sites officiels des monuments (mosteirobatalha.pt, mosteiroalcobaca.pt, conventocristo.pt, visit.uc.pt) pour les horaires et les prix en juillet 2026. Toutes les distances, dur&eacute;es et prix sont approximatifs — v&eacute;rifiez toujours les sites officiels avant votre visite, car les horaires changent selon la saison et les jours f&eacute;ri&eacute;s.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Pr&ecirc;t &agrave; d&eacute;couvrir le Centre du Portugal&nbsp;?"
+    subtitle="R&eacute;servez votre s&eacute;jour &agrave; la Casa dos Duques — votre base id&eacute;ale pour l&rsquo;exploration"
+    primaryCta={{ label: 'R&eacute;servez votre s&eacute;jour', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

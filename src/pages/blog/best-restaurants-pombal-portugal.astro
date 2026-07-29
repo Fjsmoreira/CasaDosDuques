@@ -1,122 +1,203 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTASection from '../../components/CTASection.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/best-restaurants-pombal-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Best Restaurants in Pombal, Portugal — A Local\'s Guide to Dining',
+      description: 'Discover the best restaurants in Pombal, Portugal. From Casa das Gatas\' matured meats to O Pote do Leitão\'s famous roast suckling pig, plus the new Café da Xénia for brunch — with distances from Casa dos Duques.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-06-01',
+      dateModified: '2026-07-29',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Best Restaurants in Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Best Restaurants in Pombal, Portugal — A Local's Guide to Dining"
-  description="Discover the best restaurants in Pombal, Portugal. From Casa das Gatas' matured meats to O Pote do Leitão's famous roast suckling pig, explore our curated guide to dining in Pombal."
+  description="Discover the best restaurants in Pombal, Portugal. From Casa das Gatas' matured meats to O Pote do Leitão's famous roast suckling pig, plus the new Café da Xénia for brunch — with distances from Casa dos Duques."
   canonical="/blog/best-restaurants-pombal-portugal/"
+  schema={schema}
 >
   <article class="max-w-3xl mx-auto px-4 py-12">
     <div class="mb-8">
-      <div class="flex items-center gap-2 text-sm text-slate-warm mb-4">
-        <span class="bg-olive-100 text-olive-700 px-3 py-1 rounded">Food & Dining</span>
-        <span>June 2026</span>
-        <span>· 6 min read</span>
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Food &amp; Dining</span>
+        <span>July 2026</span>
+        <span>&middot; 8 min read</span>
       </div>
-      <h1 class="text-4xl font-bold text-olive-800 leading-tight mb-4">Best Restaurants in Pombal, Portugal — A Local's Guide to Dining</h1>
-      <p class="text-lg text-slate-warm">Pombal is a hidden gem for food lovers. From matured steaks to the iconic leitão, here are the best places to eat in and around Pombal, Central Portugal.</p>
+      <h1 class="leading-tight mb-4">Best Restaurants in Pombal, Portugal — A Local&rsquo;s Guide to Dining</h1>
+      <p class="text-lg text-muted font-body">Pombal&rsquo;s food scene goes far beyond its famous leit&atilde;o. From the region&rsquo;s best brunch at Caf&eacute; da X&eacute;nia to matured-meat specialists and traditional tascas — here&rsquo;s where to eat in and around Pombal, all within a short drive of Casa dos Duques.</p>
     </div>
 
-    <div class="text-slate-warm leading-relaxed space-y-4">
-      <p>Pombal, a historic town in the heart of Central Portugal, is known for its imposing Templar castle and its famous <strong>Leitão da Boa Vida</strong> (roast suckling pig). But beyond the castle walls, Pombal's food scene is thriving — from modern restaurants serving matured meats to traditional tascas with homestyle cooking.</p>
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Pombal is best known for its 12th-century <a href="/guide/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Knights Templar castle</a> and its famous <strong>Leit&atilde;o da Boa Vida</strong> (roast suckling pig). But beyond the castle walls, the town&rsquo;s food scene has quietly become one of the best reasons to visit Central Portugal — starting with Caf&eacute; da X&eacute;nia, a contemporary brunch and workshop space unlike anything else in the area, through to modern restaurants serving matured meats and traditional tascas with homestyle cooking.</p>
 
-      <p>Whether you're staying at <strong><a href="/" class="text-terracotta-600 hover:underline">Casa dos Duques</a></strong> in nearby Abiul or just passing through the region, here's our curated guide to the best restaurants in Pombal.</p>
+      <p>Every restaurant listed here is within a 16-minute drive of <strong><a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> in Abiul. Distances and driving times are included for each one, so you can plan your meals as easily as your day trips.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">1. Casa das Gatas</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Portuguese, Matured Meats, Petiscos</p>
-        <p class="text-sm"><strong>Location:</strong> Rua do Louriçal, Bairro Agorreta, Pombal</p>
-        <p class="text-sm"><strong>Web:</strong> <a href="https://www.casadasgatas.com" class="text-terracotta-600 hover:underline">casadasgatas.com</a></p>
+      <h2 class="mt-8 mb-3">1. Caf&eacute; da X&eacute;nia — Brunch, Workshops &amp; Tastings</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 16 min drive</p>
+        <p><strong>Cuisine:</strong> Brunch, Caf&eacute;, Seasonal Portuguese</p>
+        <p><strong>Location:</strong> Pombal</p>
+        <p><strong>Price:</strong> &euro;&euro; (moderate)</p>
+        <p><strong>Hours:</strong> Mon&ndash;Fri 8:00&ndash;19:00, Sat&ndash;Sun &amp; Holidays 9:30&ndash;20:00</p>
+        <p><strong>Web:</strong> <a href="https://www.cafedaxenia.pt" class="text-terracotta-500 hover:text-terracotta-600 underline">cafedaxenia.pt</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/cafedaxenia/" class="text-terracotta-500 hover:text-terracotta-600 underline">@cafedaxenia</a></p>
       </div>
-      <p>Casa das Gatas is a stunning restaurant and bar set in a beautifully restored 20th-century building in the Agorreta neighbourhood. The name comes from the two sisters ("gatas") who originally ran the guesthouse and restaurant here.</p>
-      <p>Today, it's known for its <strong>matured meats</strong> — the star of the menu. Alongside the meats, you'll find a tempting selection of petiscos (sharing plates), fish dishes, and homemade desserts. Casa das Gatas prides itself on using natural products from the region — Queijos de Sicó, local olive oil, and carefully selected Portuguese wines from every region of the country. The bar and terrace area is perfect for pre-dinner drinks with petiscos.</p>
-      <p><a href="https://www.casadasgatas.com/pt" class="text-terracotta-600 hover:underline">Visit website →</a></p>
+      <p>Caf&eacute; da X&eacute;nia is unlike anything else in the Pombal area. Inspired by the ancient Greek concept of <em>xen&iacute;a</em> (&xi;&epsilon;&nu;&#943;&alpha;) — the sacred art of hospitality — this caf&eacute; was built around the idea that how you welcome someone matters as much as what you serve them.</p>
+      <p>The kitchen focuses on <strong>contemporary brunch</strong> with seasonal, locally sourced ingredients. Think artisanal lemonades, natural juices and detox blends, house-made cocktails (try the Spritz da X&eacute;nia or the Margarita de Frutos Vermelhos), and a full coffee and tea programme. Vegan options are clearly marked throughout the menu.</p>
+      <p>Beyond the food, Caf&eacute; da X&eacute;nia runs <strong>workshops, guided tastings, live music events, and private dining experiences</strong>. There&rsquo;s even a loyalty programme (&ldquo;Amigos da X&eacute;nia&rdquo;) and a dedicated business room for meetings. It&rsquo;s the kind of place where you can linger over a golden latte, join a tasting of their house-made citrus liqueurs, or book a private celebration.</p>
+      <p>For guests at Casa dos Duques, it&rsquo;s the ideal brunch or afternoon stop — especially if you&rsquo;re looking for something lighter and more contemporary between heavier Portuguese meals.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">2. Vintage</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Portuguese</p>
-        <p class="text-sm"><strong>Location:</strong> Rua Alexandre Herculano, 5, 3100-494 Pombal</p>
-        <p class="text-sm"><strong>Phone:</strong> 236 244 033</p>
-        <p class="text-sm"><strong>Facebook:</strong> <a href="https://pt-pt.facebook.com/179158845469057/" class="text-terracotta-600 hover:underline">Restaurante Vintage</a></p>
+      <OptimizedImage src="/images/blog/cafe-da-xenia.jpg" alt="Café da Xénia in Pombal — contemporary brunch café interior with warm lighting, bar area, and seating" class="w-full my-6" loading="lazy" width={800} height={600} sizes="(max-width: 896px) 100vw, 896px" />
+
+      <h2 class="mt-8 mb-3">2. Casa das Gatas</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 10 min drive</p>
+        <p><strong>Cuisine:</strong> Portuguese, Matured Meats, Petiscos</p>
+        <p><strong>Location:</strong> Rua do Louri&ccedil;al, Bairro Agorreta, Pombal</p>
+        <p><strong>Price:</strong> &euro;&euro; (moderate)</p>
+        <p><strong>Web:</strong> <a href="https://www.casadasgatas.com" class="text-terracotta-500 hover:text-terracotta-600 underline">casadasgatas.com</a></p>
       </div>
-      <p>A well-loved local spot in the centre of Pombal, Vintage serves traditional Portuguese fare in a warm and welcoming setting. It's the kind of place where locals go for a reliable meal — well-prepared, generously portioned, and full of flavour. A great option for lunch after visiting the Pombal Castle.</p>
-      <p><a href="https://pt-pt.facebook.com/179158845469057/" class="text-terracotta-600 hover:underline">Visit Facebook Page →</a></p>
+      <p>Casa das Gatas is a beautifully restored 20th-century building in the Agorreta neighbourhood. The name comes from the two sisters (&ldquo;gatas&rdquo;) who originally ran the guesthouse and restaurant here — and today it&rsquo;s one of Pombal&rsquo;s most distinctive dining experiences.</p>
+      <p>The kitchen is known for its <strong>matured meats</strong> — the star of the menu. Alongside these, you&rsquo;ll find a tempting selection of petiscos (sharing plates), fresh fish dishes, and homemade desserts. Casa das Gatas prides itself on using natural products from the region: Queijos de Sic&oacute;, local olive oil, and carefully selected Portuguese wines from every region of the country. The bar and terrace area is perfect for pre-dinner drinks with petiscos.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">3. O Pote do Leitão</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Portuguese, Leitão (Roast Suckling Pig)</p>
-        <p class="text-sm"><strong>Location:</strong> Estrada do Louriçal, 46, 3100-899 Pombal</p>
-        <p class="text-sm"><strong>Hours:</strong> Tue–Sat 12:00–15:00 / 20:00–22:00, Sun 12:00–15:00 (Closed Mon)</p>
+      <h2 class="mt-8 mb-3">3. Vintage</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 10 min drive</p>
+        <p><strong>Cuisine:</strong> Portuguese</p>
+        <p><strong>Location:</strong> Rua Alexandre Herculano, 5, 3100-494 Pombal</p>
+        <p><strong>Price:</strong> &euro;&euro; (moderate)</p>
+        <p><strong>Phone:</strong> 236 244 033</p>
+        <p><strong>Hours:</strong> Mon&ndash;Sat 12:00&ndash;15:00 / 19:00&ndash;22:00 (Closed Sun)</p>
       </div>
-      <p>If you're in Pombal, you can't leave without trying leitão — and O Pote do Leitão is one of the best places to do it. The name says it all: this cosy restaurant specialises in roast suckling pig with perfectly crispy skin and tender, flavourful meat. Rated 5 stars on review platforms, it also has free Wi-Fi and accepts reservations.</p>
+      <p>A well-loved local spot in the centre of Pombal, Vintage serves traditional Portuguese fare in a warm and welcoming setting. It&rsquo;s the kind of place where locals go for a reliable meal — well-prepared, generously portioned, and full of flavour. A great option for lunch after visiting the <a href="/guide/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Pombal Castle</a>.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">4. Restaurante Os Pedros</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Portuguese, Seafood, Naco na Pedra</p>
-        <p class="text-sm"><strong>Location:</strong> Travasso, Estrada Nacional 1, 3100-371 Pombal</p>
-        <p class="text-sm"><strong>Phone:</strong> 236 218 189</p>
-        <p class="text-sm"><strong>Hours:</strong> Tue–Sun 9:00–23:00 (Closed Mon)</p>
-        <p class="text-sm"><strong>Web:</strong> <a href="https://www.restaurantepedros.com" class="text-terracotta-600 hover:underline">restaurantepedros.com</a></p>
+      <h2 class="mt-8 mb-3">4. O Pote do Leit&atilde;o</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 12 min drive</p>
+        <p><strong>Cuisine:</strong> Portuguese, Leit&atilde;o (Roast Suckling Pig)</p>
+        <p><strong>Location:</strong> Estrada do Louri&ccedil;al, 46, 3100-899 Pombal</p>
+        <p><strong>Price:</strong> &euro;&euro; (moderate)</p>
+        <p><strong>Hours:</strong> Tue&ndash;Sat 12:00&ndash;15:00 / 20:00&ndash;22:00, Sun 12:00&ndash;15:00 (Closed Mon)</p>
+        <p><strong>Reservations:</strong> Recommended on weekends</p>
       </div>
-      <p>A classic in Pombal's dining scene. Os Pedros is famous for its <strong>Naco na Pedra</strong> and <strong>Picanha na Pedra</strong> — sizzling stone-grilled steaks served at your table. Many locals consider these the best dishes in the region. The menu also features fresh seafood and traditional Portuguese homestyle cooking.</p>
-      <p><a href="https://www.restaurantepedros.com" class="text-terracotta-600 hover:underline">Visit website →</a></p>
+      <p>If you&rsquo;re in Pombal, you can&rsquo;t leave without trying leit&atilde;o — and O Pote do Leit&atilde;o is one of the best places to do it. The name says it all: this cosy restaurant specialises in roast suckling pig with perfectly crispy skin and tender, flavourful meat. Free Wi-Fi and reservations accepted. A genuine local favourite.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">5. O Manjar do Marquês</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Portuguese, Grocery, Petiscos</p>
-        <p class="text-sm"><strong>Location:</strong> Estrada Nacional, 1, 3100-000 Pombal</p>
-        <p class="text-sm"><strong>Hours:</strong> Mon–Tue & Thu–Sat 9:00–23:30 (Closed Wed)</p>
+      <h2 class="mt-8 mb-3">5. Restaurante Os Pedros</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 12 min drive</p>
+        <p><strong>Cuisine:</strong> Portuguese, Seafood, Naco na Pedra</p>
+        <p><strong>Location:</strong> Travasso, Estrada Nacional 1, 3100-371 Pombal</p>
+        <p><strong>Price:</strong> &euro;&euro; (moderate)</p>
+        <p><strong>Phone:</strong> 236 218 189</p>
+        <p><strong>Hours:</strong> Tue&ndash;Sun 9:00&ndash;23:00 (Closed Mon)</p>
       </div>
-      <p>Set in a building with beautiful wooden architecture, O Manjar do Marquês is a charming spot serving Portuguese comfort food. Try the crunchy <strong>codfish cakes</strong> (bolinhos de bacalhau), breaded pork steak, fresh mixed salads, and deep-fried hake fillet. Good for families, groups, and outdoor seating.</p>
+      <p>A classic in Pombal&rsquo;s dining scene. Os Pedros is famous for its <strong>Naco na Pedra</strong> and <strong>Picanha na Pedra</strong> — sizzling stone-grilled steaks served at your table. Many locals point to these as the best steaks in the region. The menu also features fresh seafood and traditional Portuguese homestyle cooking.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">6. Dom Lagar</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Portuguese, Seafood</p>
-        <p class="text-sm"><strong>Location:</strong> Venda da Cruz (near Pombal)</p>
+      <h2 class="mt-8 mb-3">6. O Manjar do Marqu&ecirc;s</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 10 min drive</p>
+        <p><strong>Cuisine:</strong> Portuguese, Grocery, Petiscos</p>
+        <p><strong>Location:</strong> Estrada Nacional, 1, 3100-000 Pombal</p>
+        <p><strong>Price:</strong> &euro; (affordable)</p>
+        <p><strong>Hours:</strong> Mon&ndash;Tue &amp; Thu&ndash;Sat 9:00&ndash;23:30 (Closed Wed)</p>
       </div>
-      <p>One of the highest-rated restaurants near Pombal, Dom Lagar serves excellent traditional Portuguese cuisine and seafood. Known for its relaxed atmosphere and generous portions, it's well worth the short drive from the town centre.</p>
+      <p>Set in a building with beautiful wooden architecture, O Manjar do Marqu&ecirc;s is a charming spot serving Portuguese comfort food. Try the crunchy <strong>codfish cakes</strong> (bolinhos de bacalhau), breaded pork steak, fresh mixed salads, and deep-fried hake fillet. Good for families, groups, and outdoor seating in warmer months.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">7. Restaurante Ponte Romana</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Traditional Portuguese</p>
-        <p class="text-sm"><strong>Location:</strong> Near the Roman Bridge, Pombal</p>
+      <h2 class="mt-8 mb-3">7. Dom Lagar</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 12 min drive</p>
+        <p><strong>Cuisine:</strong> Portuguese, Seafood</p>
+        <p><strong>Location:</strong> Venda da Cruz (near Pombal)</p>
+        <p><strong>Price:</strong> &euro;&euro; (moderate)</p>
       </div>
-      <p>Located near the historic Roman bridge, this local favourite serves honest, home-style Portuguese cooking at affordable prices. Popular with locals for lunch.</p>
+      <p>One of the highest-rated restaurants near Pombal, Dom Lagar serves excellent traditional Portuguese cuisine and seafood. Known for its relaxed atmosphere and generous portions, it&rsquo;s well worth the short drive from the town centre.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">8. Restaurante Solar do Bacalhau</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Bacalhau (Codfish), Portuguese</p>
-        <p class="text-sm"><strong>Location:</strong> Pombal / Leiria region</p>
+      <h2 class="mt-8 mb-3">8. Restaurante Ponte Romana</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 10 min drive</p>
+        <p><strong>Cuisine:</strong> Traditional Portuguese</p>
+        <p><strong>Location:</strong> Near the Roman Bridge, Pombal</p>
+        <p><strong>Price:</strong> &euro; (affordable)</p>
       </div>
-      <p>As the name suggests, this restaurant specialises in <strong>bacalhau</strong> — Portugal's beloved salted codfish. Multiple preparations, all made the traditional way. A must for codfish lovers.</p>
+      <p>Located near the historic Roman bridge, this local favourite serves honest, home-style Portuguese cooking at affordable prices. Popular with locals for lunch — arrive early if you want a table.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">9. O Burgo</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Portuguese</p>
-        <p class="text-sm"><strong>Location:</strong> Pombal</p>
+      <h2 class="mt-8 mb-3">9. Restaurante Solar do Bacalhau</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 10 min drive</p>
+        <p><strong>Cuisine:</strong> Bacalhau (Codfish), Portuguese</p>
+        <p><strong>Location:</strong> Pombal</p>
+        <p><strong>Price:</strong> &euro;&euro; (moderate)</p>
       </div>
-      <p>A well-regarded local restaurant serving quality Portuguese food at fair prices. Simple, reliable, and popular with those who appreciate good homestyle meals.</p>
+      <p>As the name suggests, this restaurant specialises in <strong>bacalhau</strong> — Portugal&rsquo;s beloved salted codfish. Multiple preparations, all made the traditional way. A must for codfish lovers visiting the region.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">10. Zé Manel dos Ossos</h2>
-      <div class="bg-warm-sand/30 rounded-lg p-4 mb-4">
-        <p class="text-sm"><strong>Cuisine:</strong> Petiscos, Portuguese</p>
-        <p class="text-sm"><strong>Location:</strong> Pombal</p>
+      <h2 class="mt-8 mb-3">10. O Burgo</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 10 min drive</p>
+        <p><strong>Cuisine:</strong> Portuguese</p>
+        <p><strong>Location:</strong> Pombal</p>
+        <p><strong>Price:</strong> &euro; (affordable)</p>
       </div>
-      <p>Perfect for a casual evening out. Zé Manel dos Ossos is known for its petiscos (sharing plates) and relaxed, informal atmosphere. Ideal for groups who want to sample several small dishes over a glass of wine.</p>
+      <p>A well-regarded local restaurant serving quality Portuguese food at fair prices. Simple, reliable, and popular with those who appreciate good homestyle meals without fuss.</p>
 
-      <h2 class="text-2xl font-semibold text-olive-700 mt-8 mb-3">Tips for Dining in Pombal</h2>
+      <h2 class="mt-8 mb-3">11. Z&eacute; Manel dos Ossos</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Distance from Casa dos Duques:</strong> 10 min drive</p>
+        <p><strong>Cuisine:</strong> Petiscos, Portuguese</p>
+        <p><strong>Location:</strong> Pombal</p>
+        <p><strong>Price:</strong> &euro; (affordable)</p>
+      </div>
+      <p>Perfect for a casual evening out. Z&eacute; Manel dos Ossos is known for its petiscos (sharing plates) and relaxed, informal atmosphere. Ideal for groups who want to sample several small dishes over a glass of wine.</p>
+
+      <h2 class="mt-8 mb-3">Eating in Abiul — Walking Distance</h2>
+      <p>You don&rsquo;t need to drive to Pombal for a good meal. Abiul itself has two excellent options:</p>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Casa dos Bispos</strong> — Regional Portuguese cuisine, 137 m from the house (2 min walk).</p>
+        <p><strong>&#128205; Quinta das Vinhas</strong> — 3 min drive, traditional dishes in a countryside setting.</p>
+      </div>
+
+      <h2 class="mt-8 mb-3">Tips for Dining in Pombal</h2>
       <ul class="list-disc pl-6 space-y-2">
-        <li><strong>Leitão</strong> — Pombal's most famous dish. Don't leave without trying it.</li>
-        <li><strong>Bacalhau</strong> — Every restaurant has its own version.</li>
-        <li><strong>Reservations</strong> — Recommended on weekends, especially for popular spots.</li>
-        <li><strong>Hours</strong> — Lunch runs 12:00–15:00, dinner 19:00–22:00. Many close Sunday evenings or Mondays.</li>
+        <li><strong>Leit&atilde;o</strong> — Pombal&rsquo;s most famous dish. Don&rsquo;t leave without trying it. O Pote do Leit&atilde;o is our pick.</li>
+        <li><strong>Bacalhau</strong> — Every restaurant has its own version. Solar do Bacalhau specialises in it.</li>
+        <li><strong>Reservations</strong> — Recommended on weekends, especially for Casa das Gatas and O Pote do Leit&atilde;o.</li>
+        <li><strong>Meal times</strong> — Lunch runs 12:00&ndash;15:00, dinner 19:00&ndash;22:00. Many restaurants close Sunday evenings or all day Monday. Plan ahead.</li>
+        <li><strong>Seasonal note</strong> — August is peak holiday season; book ahead. Some smaller tascas may close for part of August or over Christmas/New Year.</li>
       </ul>
 
-      <p class="mt-8">Whether you're visiting for the history, the nature, or the food — Pombal's dining scene will not disappoint. Many of these restaurants are just a short drive from <strong><a href="/" class="text-terracotta-600 hover:underline">Casa dos Duques</a></strong> in Abiul, making it easy to explore the region's best flavours during your stay.</p>
+      <p class="mt-8">Whether you&rsquo;re visiting for the history, the nature, or the food — Pombal&rsquo;s dining scene delivers. Every restaurant in this guide is a short drive from <strong><a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> in Abiul, making it easy to explore the region&rsquo;s best flavours during your stay.</p>
 
-      <p class="text-sm text-slate-warm italic mt-8">Bon appétit! 🍷</p>
+      <p class="mt-4">Planning to explore beyond Pombal? Read our guide to <a href="/blog/discover-abiul-pombal-central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">discovering Abiul and Central Portugal</a>, or browse <a href="/things-to-do/" class="text-terracotta-500 hover:text-terracotta-600 underline">things to do near Pombal</a> for day-trip ideas between meals. Have a question about any of these spots? <a href="/contact/" class="text-terracotta-500 hover:text-terracotta-600 underline">Drop us a line</a> — we&rsquo;re happy to share more tips.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources: Restaurant websites and official pages for hours, addresses, and menus. Driving times estimated via Google Maps from Casa dos Duques (Rua D. Afonso Henriques n 9, Abiul 3100-012). Café da Xénia information from <a href="https://www.cafedaxenia.pt" class="text-terracotta-500 hover:text-terracotta-600 underline">cafedaxenia.pt</a>. Always check current opening hours before visiting — hours may change seasonally or on holidays.</p>
     </div>
   </article>
+
+  <CTASection
+    title="Stay with us and taste the region"
+    subtitle="Book Casa dos Duques — every restaurant in this guide is within 16 minutes of your door"
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
+    variant="terracotta"
+  />
 </BaseLayout>

@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test:links": "node scripts/check-site.mjs"
+    "test:links": "node scripts/check-site.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@astrojs/react": "4.3.0",
@@ -19,5 +20,8 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwindcss": "4.3.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3"
   }
 }

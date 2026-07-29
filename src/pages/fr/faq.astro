@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const faqs = [
+  {
+    question: "Quels sont les horaires d'arrivée et de départ\u00a0?",
+    answer: "L'arrivée se fait à partir de 16\u00a0h\u00a000 et le départ avant 11\u00a0h\u00a000. Une arrivée anticipée ou un départ tardif peut être possible sur demande — veuillez nous contacter à l'avance."
+  },
+  {
+    question: "Combien de personnes peuvent séjourner\u00a0?",
+    answer: "La maison peut accueillir jusqu'à 8 personnes dans 4 chambres (6 adultes maximum, plus 2 enfants et 1 bébé). Nous avons un lit double par chambre et un lit superposé dans la chambre des enfants."
+  },
+  {
+    question: "La piscine est-elle ouverte toute l'année\u00a0?",
+    answer: "La piscine de 8\u00a0m est généralement disponible de mai à septembre, selon les conditions météorologiques. La piscine n'a ni portail ni verrou — les enfants doivent être surveillés en permanence."
+  },
+  {
+    question: "Y a-t-il un parking\u00a0?",
+    answer: "Oui, un parking gratuit est disponible sur place."
+  },
+  {
+    question: "Les animaux sont-ils acceptés\u00a0?",
+    answer: "Veuillez nous contacter pour discuter de la possibilité d'amener vos animaux. Nous pouvons accepter des animaux bien élevés au cas par cas."
+  },
+  {
+    question: "Y a-t-il le WiFi\u00a0?",
+    answer: "Oui, le WiFi haut débit gratuit est disponible dans toute la maison."
+  },
+  {
+    question: "Qu'y a-t-il à proximité\u00a0?",
+    answer: "La maison se trouve dans le paisible village historique d'Abiul. À quelques pas, vous trouverez un café, une mini-épicerie, une pharmacie et un restaurant. Pombal (avec ses supermarchés, restaurants et son château) est à 10 minutes en voiture. Les plages sont à 35-40 minutes."
+  },
+  {
+    question: "À quelle distance se trouve la plage la plus proche\u00a0?",
+    answer: "La plage la plus proche est Praia da Leirosa (37\u00a0min), suivie de Praia do Osso da Baleia (38\u00a0min) dans la municipalité de Pombal. Figueira da Foz (47\u00a0min) et Nazaré (65\u00a0min) sont des destinations populaires pour une excursion d'une journée."
+  },
+  {
+    question: "La maison est-elle adaptée aux personnes à mobilité réduite\u00a0?",
+    answer: "La maison présente des caractéristiques traditionnelles telles que des escaliers et des surfaces inégales qui peuvent ne pas convenir aux personnes à mobilité réduite. Veuillez nous contacter pour discuter de vos besoins spécifiques."
+  },
+  {
+    question: "Y a-t-il la climatisation\u00a0?",
+    answer: "Non, la maison n'a pas de climatisation. Les murs épais en pierre gardent la maison naturellement fraîche en été. Des ventilateurs sont disponibles dans les chambres."
+  }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title="Questions Fréquentes — Casa dos Duques, Abiul, Pombal"
+  description="FAQ sur la maison de vacances Casa dos Duques\u00a0: horaires d'arrivée/départ, piscine, parking, WiFi, attractions à proximité et plus encore. Tout ce que vous devez savoir avant votre séjour."
+  canonical="/fr/faq/"
+  locale="fr"
+  schema={schema}
+>
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-wood-800 mb-4">Questions Fréquentes</h1>
+    <p class="text-muted mb-8">Tout ce que vous devez savoir sur votre séjour à la Casa dos Duques.</p>
+
+    <div class="space-y-4 mb-10">
+      {
+        faqs.map((faq, i) => (
+          <details class="bg-white border border-stone-300 overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-wood-800 hover:text-terracotta-600 transition-colors list-none flex justify-between items-center">
+              <span>{faq.question}</span>
+              <span class="text-terracotta-500 text-xl transition-transform duration-200 group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-4 text-muted leading-relaxed border-t border-stone-300 pt-3">
+              {faq.answer}
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+
+  <CTASection
+    title="Encore des Questions\u00a0?"
+    subtitle="Nous sommes là pour vous aider — contactez-nous"
+    primaryCta={{ label: 'Nous Contacter', href: '/fr/contact/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

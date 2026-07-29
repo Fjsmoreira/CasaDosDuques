@@ -15,21 +15,21 @@ const isActive = (path: string) => {
 };
 ---
 
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-sand">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-stone-200">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
     <a href={rootPath} class="text-lg font-bold tracking-tight text-terracotta-500 hover:text-terracotta-600 transition-colors">
       {SITE_CONFIG.name}
     </a>
-    
+
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-1">
       {navLinks.map(link => (
         <a
           href={link.path}
-          class={`px-3 py-2 text-sm rounded-full transition-colors ${
+          class={`px-3 py-2 text-sm transition-colors ${
             isActive(link.path)
-              ? 'text-olive-900 font-semibold bg-olive-50'
-              : 'text-olive-700 hover:text-olive-900 hover:bg-olive-50'
+              ? 'text-wood-800 font-semibold bg-stone-100'
+              : 'text-wood-600 hover:text-wood-800 hover:bg-stone-100'
           }`}
         >
           {link.label}
@@ -38,9 +38,9 @@ const isActive = (path: string) => {
     </div>
 
     <!-- Shared language selector + mobile nav toggle -->
-    <div class="flex items-center gap-2 ml-3 pl-3 border-l border-warm-sand">
+    <div class="flex items-center gap-2 ml-3 pl-3 border-l border-stone-200">
       <LanguageSwitcher />
-      <button id="menu-toggle" class="md:hidden p-2 text-slate-warm rounded-full hover:bg-olive-50" aria-label="Menu">
+      <button id="menu-toggle" class="md:hidden p-2 text-muted hover:text-wood-800" aria-label="Menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -49,17 +49,17 @@ const isActive = (path: string) => {
       </button>
     </div>
   </nav>
-  
+
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-warm-sand">
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-200">
     <div class="px-4 py-2 space-y-1">
       {navLinks.map(link => (
         <a
           href={link.path}
-          class={`block px-3 py-2 text-sm rounded-full ${
+          class={`block px-3 py-2 text-sm ${
             isActive(link.path)
-              ? 'text-olive-900 font-semibold bg-olive-50'
-              : 'text-olive-700 hover:text-olive-900'
+              ? 'text-wood-800 font-semibold bg-stone-100'
+              : 'text-wood-600 hover:text-wood-800'
           }`}
         >
           {link.label}

@@ -2,72 +2,125 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTASection from '../components/CTASection.astro';
 import { SITE_CONFIG } from '../data/site-config.ts';
+
+const reviews = [
+  {
+    author: 'Ana & Miguel',
+    datePublished: '2025-09-15',
+    reviewBody: 'An absolutely stunning house. Every detail has been thought of. The garden and pool are incredible, and the location is perfect for exploring central Portugal. We\'ll definitely be back.',
+    ratingValue: 5,
+  },
+  {
+    author: 'Thomas & Sarah',
+    datePublished: '2025-08-20',
+    reviewBody: 'Casa dos Duques exceeded our expectations. The house is beautiful — a perfect blend of rustic charm and modern comfort. The pool and garden are wonderful for families. Fernando and Isabelle were excellent hosts.',
+    ratingValue: 5,
+  },
+  {
+    author: 'Mark & Lisa',
+    datePublished: '2025-07-10',
+    reviewBody: 'We spent a magical week here. The location is ideal — quiet and peaceful, yet close to everything. We visited Tomar, Batalha, and Nazaré as day trips. The house itself is gorgeous, and the garden is paradise.',
+    ratingValue: 5,
+  },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: reviews.map((r, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: r.author },
+      datePublished: r.datePublished,
+      reviewBody: r.reviewBody,
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: r.ratingValue,
+        bestRating: 5,
+      },
+      itemReviewed: {
+        '@type': 'VacationRental',
+        name: SITE_CONFIG.name,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: SITE_CONFIG.address.town,
+          addressRegion: SITE_CONFIG.address.district,
+          addressCountry: 'PT',
+        },
+      },
+    },
+  })),
+};
 ---
 
 <BaseLayout
   title="Guest Reviews — Casa dos Duques, Abiul, Pombal | Rated 4.97/5"
   description="Read what guests say about Casa dos Duques. Rated 4.97/5 on Airbnb with Guest Favorite status. See why visitors love this beautifully restored holiday home in Abiul."
   canonical="/reviews/"
+  schema={schema}
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-olive-800 mb-4">Guest Reviews</h1>
-    <div class="flex items-center gap-3 mb-8">
-      <span class="text-3xl text-yellow-500">★</span>
-      <span class="text-2xl font-bold text-olive-800">{SITE_CONFIG.rating}</span>
-      <span class="text-slate-warm">· Guest Favorite · 30+ reviews</span>
+    <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">Reviews</p>
+    <h1 class="mb-4">What guests say</h1>
+    <div class="flex items-center gap-3 mb-10">
+      <span class="text-2xl text-terracotta-500">★</span>
+      <span class="text-2xl font-medium text-wood-800">{SITE_CONFIG.rating}</span>
+      <span class="text-muted font-body">· Guest Favorite · 30+ reviews</span>
     </div>
 
     <div class="space-y-6 mb-10">
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+      <div class="bg-white border border-stone-200 p-6">
         <div class="flex justify-between items-start mb-3">
           <div>
-            <h3 class="font-semibold text-olive-800">Ana & Miguel</h3>
-            <p class="text-xs text-slate-warm">September 2025</p>
+            <h3 class="text-base">Ana &amp; Miguel</h3>
+            <p class="text-xs text-muted font-body">September 2025</p>
           </div>
-          <div class="flex items-center gap-1 text-sm text-yellow-500">
+          <div class="flex items-center gap-1 text-sm text-terracotta-500">
             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
           </div>
         </div>
-        <p class="text-slate-warm italic">"An absolutely stunning house! Every detail has been thought of. The garden and pool are incredible, and the location is perfect for exploring central Portugal. We'll definitely be back."</p>
+        <p class="text-muted font-body leading-relaxed">&ldquo;An absolutely stunning house. Every detail has been thought of. The garden and pool are incredible, and the location is perfect for exploring central Portugal. We&rsquo;ll definitely be back.&rdquo;</p>
       </div>
 
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+      <div class="bg-white border border-stone-200 p-6">
         <div class="flex justify-between items-start mb-3">
           <div>
-            <h3 class="font-semibold text-olive-800">Thomas & Sarah</h3>
-            <p class="text-xs text-slate-warm">August 2025</p>
+            <h3 class="text-base">Thomas &amp; Sarah</h3>
+            <p class="text-xs text-muted font-body">August 2025</p>
           </div>
-          <div class="flex items-center gap-1 text-sm text-yellow-500">
+          <div class="flex items-center gap-1 text-sm text-terracotta-500">
             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
           </div>
         </div>
-        <p class="text-slate-warm italic">"Casa dos Duques exceeded our expectations. The house is beautiful — a perfect blend of rustic charm and modern comfort. The pool and garden are wonderful for families. Fernando and Isabelle were excellent hosts."</p>
+        <p class="text-muted font-body leading-relaxed">&ldquo;Casa dos Duques exceeded our expectations. The house is beautiful — a perfect blend of rustic charm and modern comfort. The pool and garden are wonderful for families. Fernando and Isabelle were excellent hosts.&rdquo;</p>
       </div>
 
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
+      <div class="bg-white border border-stone-200 p-6">
         <div class="flex justify-between items-start mb-3">
           <div>
-            <h3 class="font-semibold text-olive-800">Mark & Lisa</h3>
-            <p class="text-xs text-slate-warm">July 2025</p>
+            <h3 class="text-base">Mark &amp; Lisa</h3>
+            <p class="text-xs text-muted font-body">July 2025</p>
           </div>
-          <div class="flex items-center gap-1 text-sm text-yellow-500">
+          <div class="flex items-center gap-1 text-sm text-terracotta-500">
             <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
           </div>
         </div>
-        <p class="text-slate-warm italic">"We spent a magical week here. The location is ideal — quiet and peaceful, yet close to everything. We visited Tomar, Batalha, and Nazaré as day trips. The house itself is gorgeous, and the garden is paradise."</p>
+        <p class="text-muted font-body leading-relaxed">&ldquo;We spent a magical week here. The location is ideal — quiet and peaceful, yet close to everything. We visited Tomar, Batalha, and Nazar&eacute; as day trips. The house itself is gorgeous, and the garden is paradise.&rdquo;</p>
       </div>
     </div>
 
-    <div class="text-center text-sm text-slate-warm mb-8">
+    <div class="text-center text-sm text-muted font-body mb-10">
       <p>All reviews shown with permission from Airbnb guests.</p>
-      <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="text-terracotta-600 hover:underline">See all reviews on Airbnb →</a>
+      <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="text-terracotta-500 hover:text-terracotta-600 font-semibold">See all reviews on Airbnb &rarr;</a>
     </div>
   </div>
 
   <CTASection
-    title="Join Our Happy Guests"
+    title="Join our happy guests"
     subtitle="Book your stay at Casa dos Duques"
-    primaryCta={{ label: 'Check Availability', href: '/booking/' }}
+    primaryCta={{ label: 'Check availability', href: '/booking/' }}
     variant="terracotta"
   />
 </BaseLayout>

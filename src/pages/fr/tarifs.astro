@@ -11,29 +11,29 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
   canonical="/fr/tarifs/"
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-olive-800 mb-6">Tarifs & Disponibilité</h1>
-    <p class="text-slate-warm mb-8">
+    <h1 class="text-4xl font-bold text-wood-800 mb-6">Tarifs & Disponibilité</h1>
+    <p class="text-muted mb-8">
       Pour connaître les tarifs et la disponibilité actuels, veuillez nous contacter directement ou consulter notre annonce Airbnb.
       Nous proposons des tarifs compétitifs pour cette belle maison de vacances de 8 personnes.
     </p>
 
-    <div class="bg-warm-cream rounded-xl p-8 mb-8 text-center">
-      <p class="text-lg text-slate-warm mb-4">
+    <div class="bg-wall-100 p-8 mb-8 text-center">
+      <p class="text-lg text-muted mb-4">
         Pour les prix et disponibilités les plus récents :
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/fr/reservation/" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+        <a href="/fr/reservation/" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 transition-colors">
           Contactez-nous pour les Tarifs
         </a>
-        <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-8 py-3 rounded-lg transition-colors">
+        <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-8 py-3 transition-colors">
           Voir sur Airbnb
         </a>
       </div>
     </div>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Ce qui est Inclus</h2>
-      <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-warm">
+      <h2 class="text-2xl font-semibold text-wood-700 mb-4">Ce qui est Inclus</h2>
+      <ul class="grid sm:grid-cols-2 gap-3 text-sm text-muted">
         <li class="flex items-center gap-2">✓ 4 chambres / 5 lits / 3 salles de bain</li>
         <li class="flex items-center gap-2">✓ Jusqu'à 8 personnes</li>
         <li class="flex items-center gap-2">✓ Piscine de 8m (mai-sept.)</li>
@@ -52,6 +52,6 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
     title="Prêt à Réserver ?"
     subtitle="Contactez-nous pour les tarifs et disponibilités actuels"
     primaryCta={{ label: 'Demander un Devis', href: '/fr/reservation/' }}
-    variant="olive"
+    variant="wood"
   />
 </BaseLayout>

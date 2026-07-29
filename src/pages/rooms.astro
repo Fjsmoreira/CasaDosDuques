@@ -1,78 +1,136 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CTASection from '../components/CTASection.astro';
+import OptimizedImage from '../components/OptimizedImage.astro';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@type': 'Product',
+        name: "Kids' Room — Bunk Bed",
+        description: 'A cozy room with a bunk bed, perfect for children or extra guests.',
+        category: 'Bedroom',
+        accommodationCapacity: { '@type': 'QuantitativeValue', value: 2 },
+        image: 'https://casadosduques.pt/images/airbnb/a972d33d-086b-46ea-a63d-934ec57827ff.jpeg',
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      item: {
+        '@type': 'Product',
+        name: 'Double Room 1',
+        description: 'Comfortable double bedroom with traditional character.',
+        category: 'Bedroom',
+        accommodationCapacity: { '@type': 'QuantitativeValue', value: 2 },
+        image: 'https://casadosduques.pt/images/airbnb/c1eb8904-37f7-4f82-99e7-cd539bafd98a.jpeg',
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      item: {
+        '@type': 'Product',
+        name: 'Double Room 2',
+        description: 'Spacious double bedroom with views of the garden.',
+        category: 'Bedroom',
+        accommodationCapacity: { '@type': 'QuantitativeValue', value: 2 },
+        image: 'https://casadosduques.pt/images/airbnb/6cbce955-d2e0-480c-b318-7eb5e027eb85.jpeg',
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      item: {
+        '@type': 'Product',
+        name: 'Master Suite with Ensuite',
+        description: 'Master bedroom with ensuite bathroom featuring a bath. The most private room in the house.',
+        category: 'Bedroom',
+        accommodationCapacity: { '@type': 'QuantitativeValue', value: 2 },
+        image: 'https://casadosduques.pt/images/airbnb/ba9a905b-2d7b-4741-ac8f-ceafe2288cf6.jpeg',
+      },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title="Bedrooms — Sleeping Up to 8 Guests in Comfort | Casa dos Duques"
   description="4 bedrooms, 5 beds, 3 bathrooms at Casa dos Duques. One master ensuite, one kids' bunk room, and two double bedrooms. Sleeps up to 6 adults + 2 children + 1 baby."
   canonical="/rooms/"
+  schema={schema}
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-olive-800 mb-4">Bedrooms — Sleeping Up to 8 Guests in Comfort</h1>
-    <p class="text-slate-warm mb-8">4 bedrooms · 5 beds · 3 bathrooms · Sleeps up to 8 guests (6 adults + 2 children + 1 baby)</p>
-    
+    <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">The rooms</p>
+    <h1 class="mb-4">Bedrooms — sleeping up to 8 guests</h1>
+    <p class="text-muted font-body mb-10">4 bedrooms · 5 beds · 3 bathrooms · Sleeps up to 8 guests (6 adults + 2 children + 1 baby)</p>
+
     <div class="grid md:grid-cols-2 gap-6 mb-12">
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
-        <img src="/images/airbnb/a972d33d-086b-46ea-a63d-934ec57827ff.jpeg" alt="Kids' bunk bed room" class="h-48 w-full object-cover" loading="lazy" />
+      <div class="bg-white border border-stone-200 overflow-hidden">
+        <OptimizedImage src="/images/airbnb/a972d33d-086b-46ea-a63d-934ec57827ff.jpeg" alt="Kids' bunk bed room" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 100vw, 50vw" />
         <div class="p-6">
-          <h2 class="text-xl font-semibold text-olive-800 mb-2">Bedroom 1 — Kids' Room</h2>
-          <p class="text-sm text-slate-warm mb-3">1 bunk bed · Sleeps 2</p>
-          <p class="text-sm text-slate-warm">A cozy room with a bunk bed, perfect for children or extra guests.</p>
+          <h3 class="mb-1">Bedroom 1 — Kids&rsquo; Room</h3>
+          <p class="text-sm text-muted mb-3 font-body">1 bunk bed · Sleeps 2</p>
+          <p class="text-sm text-muted font-body">A cozy room with a bunk bed, perfect for children or extra guests.</p>
         </div>
       </div>
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
-        <img src="/images/airbnb/c1eb8904-37f7-4f82-99e7-cd539bafd98a.jpeg" alt="Double bedroom with traditional character" class="h-48 w-full object-cover" loading="lazy" />
+      <div class="bg-white border border-stone-200 overflow-hidden">
+        <OptimizedImage src="/images/airbnb/c1eb8904-37f7-4f82-99e7-cd539bafd98a.jpeg" alt="Double bedroom with traditional character" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 100vw, 50vw" />
         <div class="p-6">
-          <h2 class="text-xl font-semibold text-olive-800 mb-2">Bedroom 2 — Double Room</h2>
-          <p class="text-sm text-slate-warm mb-3">1 double bed · Sleeps 2</p>
-          <p class="text-sm text-slate-warm">Comfortable double bedroom with traditional character.</p>
+          <h3 class="mb-1">Bedroom 2 — Double Room</h3>
+          <p class="text-sm text-muted mb-3 font-body">1 double bed · Sleeps 2</p>
+          <p class="text-sm text-muted font-body">Comfortable double bedroom with traditional character.</p>
         </div>
       </div>
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
-        <img src="/images/airbnb/6cbce955-d2e0-480c-b318-7eb5e027eb85.jpeg" alt="Spacious double bedroom with garden views" class="h-48 w-full object-cover" loading="lazy" />
+      <div class="bg-white border border-stone-200 overflow-hidden">
+        <OptimizedImage src="/images/airbnb/6cbce955-d2e0-480c-b318-7eb5e027eb85.jpeg" alt="Spacious double bedroom with garden views" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 100vw, 50vw" />
         <div class="p-6">
-          <h2 class="text-xl font-semibold text-olive-800 mb-2">Bedroom 3 — Double Room</h2>
-          <p class="text-sm text-slate-warm mb-3">1 double bed · Sleeps 2</p>
-          <p class="text-sm text-slate-warm">Spacious double bedroom with views of the garden.</p>
+          <h3 class="mb-1">Bedroom 3 — Double Room</h3>
+          <p class="text-sm text-muted mb-3 font-body">1 double bed · Sleeps 2</p>
+          <p class="text-sm text-muted font-body">Spacious double bedroom with views of the garden.</p>
         </div>
       </div>
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden">
-        <img src="/images/airbnb/ba9a905b-2d7b-4741-ac8f-ceafe2288cf6.jpeg" alt="Master ensuite bedroom" class="h-48 w-full object-cover" loading="lazy" />
+      <div class="bg-white border border-stone-200 overflow-hidden">
+        <OptimizedImage src="/images/airbnb/ba9a905b-2d7b-4741-ac8f-ceafe2288cf6.jpeg" alt="Master ensuite bedroom" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 100vw, 50vw" />
         <div class="p-6">
-          <h2 class="text-xl font-semibold text-olive-800 mb-2">Bedroom 4 — Master Suite</h2>
-          <p class="text-sm text-slate-warm mb-3">1 double bed · Ensuite bathroom · Sleeps 2</p>
-          <p class="text-sm text-slate-warm">Master bedroom with ensuite bathroom featuring a bath. The most private room in the house.</p>
+          <h3 class="mb-1">Bedroom 4 — Master Suite</h3>
+          <p class="text-sm text-muted mb-3 font-body">1 double bed · Ensuite bathroom · Sleeps 2</p>
+          <p class="text-sm text-muted font-body">Master bedroom with ensuite bathroom featuring a bath. The most private room in the house.</p>
         </div>
       </div>
     </div>
 
-    <section class="bg-warm-cream rounded-xl p-6 mb-12">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Bathrooms</h2>
-      <ul class="space-y-2 text-slate-warm">
-        <li>🛁 Ensuite bathroom (Bedroom 4) — bath</li>
-        <li>🚿 Shared bathroom 1 — shower</li>
-        <li>🚿 Shared bathroom 2 — shower</li>
+    <section class="bg-stone-100 p-6 mb-12">
+      <h2 class="mb-4">Bathrooms</h2>
+      <ul class="space-y-2 text-muted font-body text-sm">
+        <li>Ensuite bathroom (Bedroom 4) — bath</li>
+        <li>Shared bathroom 1 — shower</li>
+        <li>Shared bathroom 2 — shower</li>
       </ul>
     </section>
 
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-6">Bedroom Gallery</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="/images/airbnb/a972d33d-086b-46ea-a63d-934ec57827ff.jpeg" alt="Casa dos Duques bedroom interior" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
-        <img src="/images/airbnb/c1eb8904-37f7-4f82-99e7-cd539bafd98a.jpeg" alt="Casa dos Duques bedroom interior" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
-        <img src="/images/airbnb/6cbce955-d2e0-480c-b318-7eb5e027eb85.jpeg" alt="Casa dos Duques bedroom interior" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
-        <img src="/images/airbnb/ba9a905b-2d7b-4741-ac8f-ceafe2288cf6.jpeg" alt="Casa dos Duques bedroom interior" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
-        <img src="/images/airbnb/04be686a-a4fe-484c-be4e-590aa81cf11a.jpeg" alt="Casa dos Duques bedroom interior" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
-        <img src="/images/airbnb/1b5f5cec-a4ff-402a-b6a8-ac852df5f7a3.jpeg" alt="Casa dos Duques bedroom interior" class="rounded-lg h-48 w-full object-cover" loading="lazy" />
+      <h2 class="mb-6">Bedroom Gallery</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <OptimizedImage src="/images/airbnb/a972d33d-086b-46ea-a63d-934ec57827ff.jpeg" alt="Casa dos Duques bedroom interior" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 33vw" />
+        <OptimizedImage src="/images/airbnb/c1eb8904-37f7-4f82-99e7-cd539bafd98a.jpeg" alt="Casa dos Duques bedroom interior" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 33vw" />
+        <OptimizedImage src="/images/airbnb/6cbce955-d2e0-480c-b318-7eb5e027eb85.jpeg" alt="Casa dos Duques bedroom interior" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 33vw" />
+        <OptimizedImage src="/images/airbnb/ba9a905b-2d7b-4741-ac8f-ceafe2288cf6.jpeg" alt="Casa dos Duques bedroom interior" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 33vw" />
+        <OptimizedImage src="/images/airbnb/04be686a-a4fe-484c-be4e-590aa81cf11a.jpeg" alt="Casa dos Duques bedroom interior" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 33vw" />
+        <OptimizedImage src="/images/airbnb/1b5f5cec-a4ff-402a-b6a8-ac852df5f7a3.jpeg" alt="Casa dos Duques bedroom interior" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 33vw" />
       </div>
     </section>
   </div>
 
   <CTASection
-    title="Ready to Book?"
+    title="Ready to book?"
     subtitle="Check availability for your preferred room configuration"
-    primaryCta={{ label: 'Check Availability', href: '/booking/' }}
+    primaryCta={{ label: 'Check availability', href: '/booking/' }}
     variant="terracotta"
   />
 </BaseLayout>

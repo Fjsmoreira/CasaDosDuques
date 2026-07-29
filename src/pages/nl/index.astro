@@ -2,26 +2,232 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import CTASection from '../../components/CTASection.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
 import { SITE_CONFIG } from '../../data/site-config.ts';
+import { buildVacationRentalSchema } from '../../lib/schema';
+
+const description =
+  'Een gerenoveerd vakantiehuis uit 1930 in Abiul, Pombal. Geschikt voor 8 gasten, 4 slaapkamers, zwembad, 450m² tuin. Centraal Portugal.';
+const schema = buildVacationRentalSchema('nl', description);
 ---
 
 <BaseLayout
   title="Casa dos Duques | Vakantiehuis in Abiul, Pombal, Centraal Portugal"
-  description="Een gerenoveerd vakantiehuis uit 1930 in Abiul, Pombal. Geschikt voor 8 gasten, 4 slaapkamers, zwembad, 450m² tuin. Centraal Portugal."
+  description={description}
+  canonical="/nl/"
   locale="nl"
+  schema={schema}
 >
+
   <Hero
     title="Casa dos Duques"
     subtitle="Uw Vakantiehuis in Centraal Portugal"
-    tagline="8 gasten · 4 slaapkamers · Zwembad · 450m² tuin"
-    primaryCta={{ label: 'Beschikbaarheid & Boeken', href: '/nl/boeking/' }}
-    secondaryCta={{ label: 'Ontdek het Huis', href: '/nl/huis/' }}
+    primaryCta={{ label: 'Beschikbaarheid bekijken', href: '/nl/boeking/' }}
+    secondaryCta={{ label: 'Ontdek het huis', href: '/nl/huis/' }}
     image="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg"
   />
+
+  <!-- Quick facts bar -->
+  <div class="bg-white border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-muted font-body">
+        <span class="flex items-center gap-2">
+          <span class="text-terracotta-500 text-lg leading-none">★</span>
+          <span class="font-semibold text-wood-800">{SITE_CONFIG.rating}</span>
+          Guest Favorite · {SITE_CONFIG.reviewCount} reviews
+        </span>
+        <span>8 gasten</span>
+        <span class="hidden sm:inline">·</span>
+        <span>4 slaapkamers</span>
+        <span class="hidden sm:inline">·</span>
+        <span>5 bedden</span>
+        <span class="hidden sm:inline">·</span>
+        <span>3 badkamers</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Zwembad</span>
+        <span class="hidden sm:inline">·</span>
+        <span>450 m² tuin</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo tour -->
+  <section class="bg-white pb-2">
+    <div class="max-w-6xl mx-auto px-4 pt-8">
+      <div class="grid grid-cols-4 grid-rows-2 gap-2 max-h-[480px]">
+        <div class="col-span-2 row-span-2">
+          <a href="/nl/tuin/">
+            <OptimizedImage src="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg" alt="Zwembad en tuin bij Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="eager" width={800} height={600} sizes="50vw" />
+          </a>
+        </div>
+        <div class="col-span-1 row-span-1">
+          <a href="/nl/slaapkamers/">
+            <OptimizedImage src="/images/airbnb/c1eb8904-37f7-4f82-99e7-cd539bafd98a.jpeg" alt="Slaapkamer bij Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" width={400} height={300} sizes="25vw" />
+          </a>
+        </div>
+        <div class="col-span-1 row-span-1">
+          <a href="/nl/huis/">
+            <OptimizedImage src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Casa dos Duques buitenkant" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" width={400} height={300} sizes="25vw" />
+          </a>
+        </div>
+        <div class="col-span-1 row-span-1">
+          <a href="/nl/tuin/">
+            <OptimizedImage src="/images/airbnb/16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg" alt="Zwembad" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" width={400} height={300} sizes="25vw" />
+          </a>
+        </div>
+        <div class="col-span-1 row-span-1 relative">
+          <a href="/nl/slaapkamers/">
+            <OptimizedImage src="/images/airbnb/1a43a296-ac44-498b-86ee-c004d600177c.jpeg" alt="Woonkamer bij Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" width={400} height={300} sizes="25vw" />
+            <span class="absolute bottom-2 right-2 bg-white px-3 py-1.5 text-xs font-semibold text-wood-800">Alle foto&rsquo;s</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Het Huis -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <div class="flex flex-col md:flex-row gap-10 items-center">
+        <div class="md:w-1/2">
+          <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">Het huis</p>
+          <h2 class="mb-5">Een 90 jaar oud huis, met liefde gerestaureerd</h2>
+          <div class="font-body text-muted leading-relaxed space-y-4">
+            <p>
+              Casa dos Duques staat al meer dan 90 jaar in het hart van Abiul. Dikke stenen muren,
+              originele terracotta vloeren, hoge plafonds en zichtbare houten balken — elk detail
+              vertelt het verhaal van traditioneel Portugees vakmanschap.
+            </p>
+            <p>
+              Het huis is gerestaureerd met diep respect voor het oorspronkelijke karakter.
+              Er is plaats voor acht gasten in vier slaapkamers, met drie badkamers, een volledig
+              uitgeruste keuken en een gezellige woonkamer met open haard.
+            </p>
+            <p class="text-sm text-wood-600">
+              4 slaapkamers &ensp;·&ensp; 5 bedden &ensp;·&ensp; 3 badkamers &ensp;·&ensp; 8 gasten
+              &ensp;·&ensp; 10 min naar Pombal &ensp;·&ensp; 35–40 min naar stranden
+            </p>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <OptimizedImage src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Casa dos Duques buitenkant" class="w-full h-80 md:h-96 object-cover" loading="lazy" width={800} height={600} sizes="(max-width: 768px) 100vw, 50vw" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-4"><hr class="border-terracotta-200" /></div>
+
+  <!-- Waarom gasten ervan houden -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 text-center font-body">Waarom gasten ervan houden</p>
+      <h2 class="mb-10 text-center">Drie dingen die deze plek bijzonder maken</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center md:text-left">
+          <div class="text-terracotta-500 text-4xl font-light mb-4">&mdash;</div>
+          <h3 class="text-xl mb-3">Zwembad &amp; Tuin</h3>
+          <p class="text-muted font-body text-sm leading-relaxed">
+            8-meter zwembad, 450 m&sup2; tuin met lounges, barbecue-terras — uw priv&eacute; buitenparadijs in de Portugese zon.
+          </p>
+          <a href="/nl/tuin/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-3 font-body">Bekijk de tuin &rarr;</a>
+        </div>
+        <div class="text-center md:text-left">
+          <div class="text-terracotta-500 text-4xl font-light mb-4">&mdash;</div>
+          <h3 class="text-xl mb-3">Met Ziel Gerestaureerd</h3>
+          <p class="text-muted font-body text-sm leading-relaxed">
+            Originele stenen muren, terracotta vloeren, hoge plafonds, houten balken — een zorgvuldige restauratie die de 90-jarige geschiedenis eert.
+          </p>
+          <a href="/nl/huis/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-3 font-body">Het volledige verhaal &rarr;</a>
+        </div>
+        <div class="text-center md:text-left">
+          <div class="text-terracotta-500 text-4xl font-light mb-4">&mdash;</div>
+          <h3 class="text-xl mb-3">Centrale Ligging</h3>
+          <p class="text-muted font-body text-sm leading-relaxed">
+            10 minuten naar Pombal, 30 naar Batalha en Leiria, 35–40 naar stranden. Vier UNESCO-werelderfgoedlocaties binnen 35 minuten rijden.
+          </p>
+          <a href="/nl/locatie/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-3 font-body">Verken de omgeving &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tuin galerij -->
+  <section class="bg-stone-100">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 text-center font-body">Buiten</p>
+      <h2 class="mb-8 text-center">De Tuin &amp; het Zwembad</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
+        <OptimizedImage src="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg" alt="Tuin" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 25vw" />
+        <OptimizedImage src="/images/airbnb/16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg" alt="Zwembad" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 25vw" />
+        <OptimizedImage src="/images/airbnb/1e2a954f-adf1-4b6a-8df9-1e23ff619dc4.jpeg" alt="Tuin en terras" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 25vw" />
+        <OptimizedImage src="/images/airbnb/fbe29248-4838-4933-8a45-8cb4fa287fbf.jpeg" alt="Terras" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 25vw" />
+      </div>
+      <div class="text-center mt-6">
+        <a href="/nl/tuin/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold font-body">Bekijk de tuin &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ontdek Centraal Portugal -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 text-center font-body">Ontdek</p>
+      <h2 class="mb-10 text-center">Centraal Portugal binnen handbereik</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="/nl/activiteiten/" class="block bg-stone-100 hover:bg-stone-200 transition p-5 group">
+          <h3 class="text-base mb-1 group-hover:text-terracotta-500 transition-colors">Tomar</h3>
+          <p class="text-xs text-muted font-body">Convent van Christus · UNESCO</p>
+          <p class="text-xs text-terracotta-500 font-semibold mt-2 font-body">40 min</p>
+        </a>
+        <a href="/nl/activiteiten/" class="block bg-stone-100 hover:bg-stone-200 transition p-5 group">
+          <h3 class="text-base mb-1 group-hover:text-terracotta-500 transition-colors">Batalha</h3>
+          <p class="text-xs text-muted font-body">Gotisch Klooster · UNESCO</p>
+          <p class="text-xs text-terracotta-500 font-semibold mt-2 font-body">30 min</p>
+        </a>
+        <a href="/nl/stranden/" class="block bg-stone-100 hover:bg-stone-200 transition p-5 group">
+          <h3 class="text-base mb-1 group-hover:text-terracotta-500 transition-colors">Nazar&eacute;</h3>
+          <p class="text-xs text-muted font-body">Grote golven &amp; visgerechten</p>
+          <p class="text-xs text-terracotta-500 font-semibold mt-2 font-body">65 min</p>
+        </a>
+        <a href="/nl/daguitstapjes/" class="block bg-stone-100 hover:bg-stone-200 transition p-5 group">
+          <h3 class="text-base mb-1 group-hover:text-terracotta-500 transition-colors">Coimbra</h3>
+          <p class="text-xs text-muted font-body">Universiteitsstad · UNESCO</p>
+          <p class="text-xs text-terracotta-500 font-semibold mt-2 font-body">50 min</p>
+        </a>
+      </div>
+      <div class="text-center mt-6">
+        <a href="/nl/activiteiten/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold font-body">Alle activiteiten &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-4"><hr class="border-terracotta-200" /></div>
+
+  <!-- Review -->
+  <section class="bg-white">
+    <div class="max-w-3xl mx-auto px-4 py-16 md:py-20 text-center">
+      <div class="flex items-center justify-center gap-1 text-terracotta-500 mb-5">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <blockquote class="text-xl md:text-2xl text-wood-700 leading-relaxed mb-5">
+        &ldquo;Een absoluut prachtig huis! Aan elk detail is gedacht.
+        De tuin en het zwembad zijn ongelooflijk, en de locatie is perfect
+        om Centraal Portugal te verkennen.&rdquo;
+      </blockquote>
+      <p class="text-sm text-muted font-body mb-6">Ana &amp; Miguel, september 2025</p>
+      <div class="flex items-center justify-center gap-2 text-sm font-body">
+        <span class="font-semibold text-wood-800">{SITE_CONFIG.rating}</span>
+        <span class="text-muted">· Guest Favorite · {SITE_CONFIG.reviewCount} reviews</span>
+      </div>
+      <a href="/nl/reviews/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-4 font-body">Lees alle reviews &rarr;</a>
+    </div>
+  </section>
+
   <CTASection
-    title="Klaar om te Boeken?"
-    subtitle="AL 128717/AL — Gelicenseerd Lokaal Verblijf in Abiul, Pombal"
-    primaryCta={{ label: 'Boek Nu', href: '/nl/boeking/' }}
+    title="Klaar om te boeken?"
+    subtitle="Gelicenseerd lokaal verblijf in Abiul, Pombal"
+    primaryCta={{ label: 'Boek direct bij ons', href: '/nl/boeking/' }}
     secondaryCta={{ label: 'Bekijk op Airbnb', href: SITE_CONFIG.airbnbUrl }}
     variant="terracotta"
   />

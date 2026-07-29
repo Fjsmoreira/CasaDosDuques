@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const faqs = [
+  {
+    question: "Wat zijn de check-in en check-out tijden?",
+    answer: "Check-in is vanaf 16:00 en check-out is vóór 11:00. Vroegere check-in of latere check-out is soms mogelijk op aanvraag — neem van tevoren contact met ons op."
+  },
+  {
+    question: "Hoeveel gasten kunnen er verblijven?",
+    answer: "Het huis biedt plaats aan maximaal 8 gasten, verdeeld over 4 slaapkamers (maximaal 6 volwassenen, plus 2 kinderen en 1 baby). Elke kamer heeft een tweepersoonsbed, en de kinderkamer heeft een stapelbed."
+  },
+  {
+    question: "Is het zwembad het hele jaar open?",
+    answer: "Het zwembad van 8 meter is doorgaans beschikbaar van mei tot en met september, afhankelijk van het weer. Het zwembad heeft geen hek of slot — kinderen moeten altijd onder toezicht zijn."
+  },
+  {
+    question: "Is er parkeergelegenheid?",
+    answer: "Ja, er is gratis parkeergelegenheid bij de woning."
+  },
+  {
+    question: "Zijn huisdieren toegestaan?",
+    answer: "Neem contact met ons op om het meenemen van huisdieren te bespreken. We kunnen braaf huisdieren mogelijk per geval toestaan."
+  },
+  {
+    question: "Is er WiFi?",
+    answer: "Ja, er is gratis snelle WiFi beschikbaar in het hele huis."
+  },
+  {
+    question: "Wat is er in de buurt?",
+    answer: "Het huis staat in het rustige historische dorp Abiul. Op loopafstand vind je een café, mini-supermarkt, apotheek en restaurant. Pombal (met supermarkten, restaurants en het kasteel) ligt op 10 minuten rijden. Stranden zijn 35-40 minuten rijden."
+  },
+  {
+    question: "Hoe ver is het dichtstbijzijnde strand?",
+    answer: "Het dichtstbijzijnde strand is Praia da Leirosa (37 min), gevolgd door Praia do Osso da Baleia (38 min) in de gemeente Pombal. Figueira da Foz (47 min) en Nazaré (65 min) zijn populaire bestemmingen voor een dagje uit."
+  },
+  {
+    question: "Is het huis geschikt voor mensen met beperkte mobiliteit?",
+    answer: "Het huis heeft traditionele kenmerken zoals trappen en oneffen oppervlakken die mogelijk niet geschikt zijn voor gasten met mobiliteitsproblemen. Neem contact met ons op om je specifieke behoeften te bespreken."
+  },
+  {
+    question: "Is er airconditioning?",
+    answer: "Nee, het huis heeft geen airconditioning. De dikke stenen muren houden het huis van nature koel in de zomer. Ventilatoren zijn beschikbaar in de slaapkamers."
+  }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title="Veelgestelde Vragen — Casa dos Duques, Abiul, Pombal"
+  description="Veelgestelde vragen over Casa dos Duques vakantiehuis: check-in/out tijden, zwembad, parkeren, WiFi, bezienswaardigheden in de buurt en meer. Alles wat je moet weten voor je verblijf."
+  canonical="/nl/faq/"
+  locale="nl"
+  schema={schema}
+>
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-wood-800 mb-4">Veelgestelde Vragen</h1>
+    <p class="text-muted mb-8">Alles wat je moet weten over je verblijf bij Casa dos Duques.</p>
+
+    <div class="space-y-4 mb-10">
+      {
+        faqs.map((faq, i) => (
+          <details class="bg-white border border-stone-300 overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-wood-800 hover:text-terracotta-600 transition-colors list-none flex justify-between items-center">
+              <span>{faq.question}</span>
+              <span class="text-terracotta-500 text-xl transition-transform duration-200 group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-4 text-muted leading-relaxed border-t border-stone-300 pt-3">
+              {faq.answer}
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+
+  <CTASection
+    title="Nog Vragen?"
+    subtitle="We helpen je graag — neem contact met ons op"
+    primaryCta={{ label: 'Neem contact op', href: '/nl/contact/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

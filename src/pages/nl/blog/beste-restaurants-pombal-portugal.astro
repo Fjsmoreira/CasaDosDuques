@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/nl/blog/beste-restaurants-pombal-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Beste Restaurants in Pombal, Portugal — Een Lokale Gids om Goed te Eten',
+      description: 'Ontdek de beste restaurants in Pombal. Van de gerijpte vleesgerechten bij Casa das Gatas tot de beroemde speenvarken van O Pote do Leitão, plus het nieuwe Café da Xénia voor brunch — met afstanden vanaf Casa dos Duques.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-06-01',
+      dateModified: '2026-07-29',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/nl/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Beste Restaurants in Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Beste Restaurants in Pombal, Portugal — Een Lokale Gids om Goed te Eten"
+  description="Ontdek de beste restaurants in Pombal. Van de gerijpte vleesgerechten bij Casa das Gatas tot de beroemde speenvarken van O Pote do Leitão, plus het nieuwe Café da Xénia voor brunch — met afstanden vanaf Casa dos Duques."
+  canonical="/nl/blog/beste-restaurants-pombal-portugal/"
+  locale="nl"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Eten &amp; Drinken</span>
+        <span>Juli 2026</span>
+        <span>&middot; 8 min lezen</span>
+      </div>
+      <h1 class="leading-tight mb-4">Beste Restaurants in Pombal, Portugal — Een Lokale Gids om Goed te Eten</h1>
+      <p class="text-lg text-muted font-body">De eetcultuur van Pombal gaat veel verder dan de beroemde leit&atilde;o. Van de beste brunch in de regio bij Caf&eacute; da X&eacute;nia tot specialisten in gerijpt vlees en traditionele tascas — hier vind je waar je kunt eten in en rond Pombal, allemaal op korte rijafstand van Casa dos Duques.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Pombal staat vooral bekend om zijn 12e-eeuwse <a href="/guide/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">tempelierskasteel</a> en zijn beroemde <strong>Leit&atilde;o da Boa Vida</strong> (geroosterd speenvarken). Maar achter de kasteelmuren is de eetcultuur van de stad uitgegroeid tot een van de beste redenen om Centraal-Portugal te bezoeken — te beginnen bij Caf&eacute; da X&eacute;nia, een eigentijdse brunch- en workshopruimte zoals je die nergens anders in de buurt vindt, tot moderne restaurants met gerijpt vlees en traditionele tascas met huisgemaakte gerechten.</p>
+
+      <p>Elk restaurant in deze gids ligt binnen 16 minuten rijden van <strong><a href="/nl/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> in Abiul. Afstanden en reistijden staan bij elk restaurant vermeld, zodat je je maaltijden net zo makkelijk kunt plannen als je daguitstappen.</p>
+
+      <h2 class="mt-8 mb-3">1. Caf&eacute; da X&eacute;nia — Brunch, Workshops &amp; Proeverijen</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 16 min rijden</p>
+        <p><strong>Keuken:</strong> Brunch, Caf&eacute;, Seizoensgebonden Portugees</p>
+        <p><strong>Locatie:</strong> Pombal</p>
+        <p><strong>Prijs:</strong> &euro;&euro; (gemiddeld)</p>
+        <p><strong>Openingstijden:</strong> Ma&ndash;Vr 8:00&ndash;19:00, Za&ndash;Zo &amp; Feestdagen 9:30&ndash;20:00</p>
+        <p><strong>Web:</strong> <a href="https://www.cafedaxenia.pt" class="text-terracotta-500 hover:text-terracotta-600 underline">cafedaxenia.pt</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/cafedaxenia/" class="text-terracotta-500 hover:text-terracotta-600 underline">@cafedaxenia</a></p>
+      </div>
+      <p>Caf&eacute; da X&eacute;nia is anders dan al het andere in de buurt van Pombal. Ge&iuml;nspireerd door het oude Griekse concept <em>xen&iacute;a</em> (&xi;&epsilon;&nu;&#943;&alpha;) — de heilige kunst van gastvrijheid — is dit caf&eacute; gebouwd rond het idee dat hoe je iemand ontvangt net zo belangrijk is als wat je serveert.</p>
+      <p>De keuken richt zich op <strong>eigentijdse brunch</strong> met seizoensgebonden, lokaal ingekochte ingredi&euml;nten. Denk aan ambachtelijke limonades, natuurlijke sappen en detox-melanges, huisgemaakte cocktails (probeer de Spritz da X&eacute;nia of de Margarita de Frutos Vermelhos) en een volledig koffie- en theeprogramma. Veganistische opties staan duidelijk aangegeven op de menukaart.</p>
+      <p>Naast het eten organiseert Caf&eacute; da X&eacute;nia <strong>workshops, geleide proeverijen, livemuziek en priv&eacute;-diners</strong>. Er is zelfs een loyaliteitsprogramma (&ldquo;Amigos da X&eacute;nia&rdquo;) en een speciale business room voor vergaderingen. Het is het soort plek waar je kunt blijven hangen met een golden latte, een proeverij van hun huisgemaakte citruslikeuren kunt meemaken of een eigen feest kunt organiseren.</p>
+      <p>Voor gasten van Casa dos Duques is dit de ideale brunch- of middagstop — vooral als je tussen de stevige Portugese maaltijden door iets lichters en eigentijds zoekt.</p>
+
+      <OptimizedImage src="/images/blog/cafe-da-xenia.jpg" alt="Café da Xénia in Pombal — eigentijds brunchcafé-interieur met warme verlichting, bar en zitgedeelte" class="w-full my-6" loading="lazy" width={800} height={600} sizes="(max-width: 896px) 100vw, 896px" />
+
+      <h2 class="mt-8 mb-3">2. Casa das Gatas</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 10 min rijden</p>
+        <p><strong>Keuken:</strong> Portugees, Gerijpt Vlees, Petiscos</p>
+        <p><strong>Locatie:</strong> Rua do Louri&ccedil;al, Bairro Agorreta, Pombal</p>
+        <p><strong>Prijs:</strong> &euro;&euro; (gemiddeld)</p>
+        <p><strong>Web:</strong> <a href="https://www.casadasgatas.com" class="text-terracotta-500 hover:text-terracotta-600 underline">casadasgatas.com</a></p>
+      </div>
+      <p>Casa das Gatas is een prachtig gerestaureerd 20e-eeuws pand in de wijk Agorreta. De naam komt van de twee zussen (&ldquo;gatas&rdquo;) die hier oorspronkelijk het pension en restaurant runden — en vandaag is het een van de meest onderscheidende eetervaringen van Pombal.</p>
+      <p>De keuken staat bekend om zijn <strong>gerijpte vlees</strong> — de ster van het menu. Daarnaast vind je er een verleidelijke selectie petiscos (deelgerechtjes), verse visgerechten en huisgemaakte desserts. Casa das Gatas is trots op het gebruik van natuurlijke producten uit de regio: Queijos de Sic&oacute;, lokale olijfolie en zorgvuldig geselecteerde Portugese wijnen uit alle regio&rsquo;s van het land. De bar en het terras zijn perfect voor een drankje voor het eten met petiscos.</p>
+
+      <h2 class="mt-8 mb-3">3. Vintage</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 10 min rijden</p>
+        <p><strong>Keuken:</strong> Portugees</p>
+        <p><strong>Locatie:</strong> Rua Alexandre Herculano, 5, 3100-494 Pombal</p>
+        <p><strong>Prijs:</strong> &euro;&euro; (gemiddeld)</p>
+        <p><strong>Telefoon:</strong> 236 244 033</p>
+        <p><strong>Openingstijden:</strong> Ma&ndash;Za 12:00&ndash;15:00 / 19:00&ndash;22:00 (Gesloten op Zo)</p>
+      </div>
+      <p>Een geliefde lokale plek in het centrum van Pombal. Vintage serveert traditionele Portugese gerechten in een warme en gastvrije sfeer. Het is het soort plek waar de locals komen voor een betrouwbare maaltijd — goed bereid, royaal geportioneerd en vol van smaak. Een uitstekende optie voor de lunch na een bezoek aan het <a href="/guide/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Kasteel van Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">4. O Pote do Leit&atilde;o</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 12 min rijden</p>
+        <p><strong>Keuken:</strong> Portugees, Leit&atilde;o (Geroosterd Speenvarken)</p>
+        <p><strong>Locatie:</strong> Estrada do Louri&ccedil;al, 46, 3100-899 Pombal</p>
+        <p><strong>Prijs:</strong> &euro;&euro; (gemiddeld)</p>
+        <p><strong>Openingstijden:</strong> Di&ndash;Za 12:00&ndash;15:00 / 20:00&ndash;22:00, Zo 12:00&ndash;15:00 (Ma gesloten)</p>
+        <p><strong>Reserveren:</strong> Aanbevolen in het weekend</p>
+      </div>
+      <p>Als je in Pombal bent, kun je niet vertrekken zonder leit&atilde;o te proeven — en O Pote do Leit&atilde;o is een van de beste plekken om dat te doen. De naam zegt het al: dit knusse restaurant is gespecialiseerd in geroosterd speenvarken met een perfect knapperige huid en mals, smaakvol vlees. Gratis wifi en reserveren mogelijk. Een echte lokale favoriet.</p>
+
+      <h2 class="mt-8 mb-3">5. Restaurante Os Pedros</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 12 min rijden</p>
+        <p><strong>Keuken:</strong> Portugees, Vis, Naco na Pedra</p>
+        <p><strong>Locatie:</strong> Travasso, Estrada Nacional 1, 3100-371 Pombal</p>
+        <p><strong>Prijs:</strong> &euro;&euro; (gemiddeld)</p>
+        <p><strong>Telefoon:</strong> 236 218 189</p>
+        <p><strong>Openingstijden:</strong> Di&ndash;Zo 9:00&ndash;23:00 (Ma gesloten)</p>
+      </div>
+      <p>Een klassieker in de eetcultuur van Pombal. Os Pedros is beroemd om zijn <strong>Naco na Pedra</strong> en <strong>Picanha na Pedra</strong> — sissende steaks geserveerd op een hete steen aan je tafel. Veel locals beschouwen dit als de beste steaks in de regio. Het menu bevat ook verse vis en traditionele Portugese huisgemaakte gerechten.</p>
+
+      <h2 class="mt-8 mb-3">6. O Manjar do Marqu&ecirc;s</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 10 min rijden</p>
+        <p><strong>Keuken:</strong> Portugees, Kruidenier, Petiscos</p>
+        <p><strong>Locatie:</strong> Estrada Nacional, 1, 3100-000 Pombal</p>
+        <p><strong>Prijs:</strong> &euro; (betaalbaar)</p>
+        <p><strong>Openingstijden:</strong> Ma&ndash;Di &amp; Do&ndash;Za 9:00&ndash;23:30 (Wo gesloten)</p>
+      </div>
+      <p>Gevestigd in een pand met prachtige houten architectuur, is O Manjar do Marqu&ecirc;s een charmante plek die Portugees comfort food serveert. Probeer de knapperige <strong>kabeljauwkroketjes</strong> (bolinhos de bacalhau), gepaneerde varkenssteak, verse gemengde salades en gefrituurde heekfilet. Geschikt voor gezinnen, groepen en terraszitten in de warmere maanden.</p>
+
+      <h2 class="mt-8 mb-3">7. Dom Lagar</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 12 min rijden</p>
+        <p><strong>Keuken:</strong> Portugees, Vis</p>
+        <p><strong>Locatie:</strong> Venda da Cruz (bij Pombal)</p>
+        <p><strong>Prijs:</strong> &euro;&euro; (gemiddeld)</p>
+      </div>
+      <p>Een van de best beoordeelde restaurants bij Pombal. Dom Lagar serveert uitstekende traditionele Portugese keuken en visgerechten. Bekend om de ontspannen sfeer en royale porties — zeker de korte rit vanuit het stadscentrum waard.</p>
+
+      <h2 class="mt-8 mb-3">8. Restaurante Ponte Romana</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 10 min rijden</p>
+        <p><strong>Keuken:</strong> Traditioneel Portugees</p>
+        <p><strong>Locatie:</strong> Bij de Romeinse Brug, Pombal</p>
+        <p><strong>Prijs:</strong> &euro; (betaalbaar)</p>
+      </div>
+      <p>Gelegen bij de historische Romeinse brug serveert deze lokale favoriet eerlijke, huisgemaakte Portugese gerechten tegen betaalbare prijzen. Populair bij de locals voor de lunch — kom op tijd als je een tafeltje wilt.</p>
+
+      <h2 class="mt-8 mb-3">9. Restaurante Solar do Bacalhau</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 10 min rijden</p>
+        <p><strong>Keuken:</strong> Bacalhau (Kabeljauw), Portugees</p>
+        <p><strong>Locatie:</strong> Pombal</p>
+        <p><strong>Prijs:</strong> &euro;&euro; (gemiddeld)</p>
+      </div>
+      <p>Zoals de naam al zegt, is dit restaurant gespecialiseerd in <strong>bacalhau</strong> — de geliefde gezouten kabeljauw van Portugal. Meerdere bereidingen, allemaal op de traditionele manier gemaakt. Een must voor kabeljauwliefhebbers die de regio bezoeken.</p>
+
+      <h2 class="mt-8 mb-3">10. O Burgo</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 10 min rijden</p>
+        <p><strong>Keuken:</strong> Portugees</p>
+        <p><strong>Locatie:</strong> Pombal</p>
+        <p><strong>Prijs:</strong> &euro; (betaalbaar)</p>
+      </div>
+      <p>Een gewaardeerd lokaal restaurant dat kwalitatief Portugees eten serveert tegen eerlijke prijzen. Eenvoudig, betrouwbaar en populair bij degenen die van goede huisgemaakte maaltijden houden zonder poespas.</p>
+
+      <h2 class="mt-8 mb-3">11. Z&eacute; Manel dos Ossos</h2>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Afstand vanaf Casa dos Duques:</strong> 10 min rijden</p>
+        <p><strong>Keuken:</strong> Petiscos, Portugees</p>
+        <p><strong>Locatie:</strong> Pombal</p>
+        <p><strong>Prijs:</strong> &euro; (betaalbaar)</p>
+      </div>
+      <p>Perfect voor een informele avond uit. Z&eacute; Manel dos Ossos staat bekend om zijn petiscos (deelgerechtjes) en ontspannen sfeer. Ideaal voor groepen die meerdere kleine gerechtjes willen proeven met een glas wijn.</p>
+
+      <h2 class="mt-8 mb-3">Eten in Abiul — Op Loopafstand</h2>
+      <p>Je hoeft niet naar Pombal te rijden voor een goede maaltijd. Abiul zelf heeft twee uitstekende opties:</p>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Casa dos Bispos</strong> — Regionale Portugese keuken, 137 m van het huis (2 min lopen).</p>
+        <p><strong>&#128205; Quinta das Vinhas</strong> — 3 min rijden, traditionele gerechten in een landelijke omgeving.</p>
+      </div>
+
+      <h2 class="mt-8 mb-3">Tips voor Eten in Pombal</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Leit&atilde;o</strong> — Het beroemdste gerecht van Pombal. Vertrek niet zonder het te proeven. Onze keuze: O Pote do Leit&atilde;o.</li>
+        <li><strong>Bacalhau</strong> — Elk restaurant heeft zijn eigen versie. Solar do Bacalhau is erin gespecialiseerd.</li>
+        <li><strong>Reserveren</strong> — Aanbevolen in het weekend, vooral bij Casa das Gatas en O Pote do Leit&atilde;o.</li>
+        <li><strong>Maaltijden</strong> — Lunch van 12:00 tot 15:00, diner van 19:00 tot 22:00. Veel restaurants sluiten op zondagavond of de hele maandag. Plan vooruit.</li>
+        <li><strong>Seizoensinfo</strong> — Augustus is het hoogseizoen; reserveer van tevoren. Sommige kleinere tascas kunnen een deel van augustus of rond Kerst/Oud &amp; Nieuw gesloten zijn.</li>
+      </ul>
+
+      <p class="mt-8">Of je nu komt voor de geschiedenis, de natuur of het eten — de eetcultuur van Pombal stelt niet teleur. Elk restaurant in deze gids ligt op korte rijafstand van <strong><a href="/nl/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> in Abiul, waardoor je makkelijk de beste smaken van de regio kunt ontdekken tijdens je verblijf.</p>
+
+      <p class="mt-4">Van plan om verder te verkennen dan Pombal? Lees onze gids over <a href="/nl/blog/ontdek-abiul-pombal-centraal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">het ontdekken van Abiul en Centraal-Portugal</a>, of bekijk <a href="/nl/activiteiten/" class="text-terracotta-500 hover:text-terracotta-600 underline">wat te doen bij Pombal</a> voor daguitstap-idee&euml;n tussen de maaltijden door. Vragen over een van deze plekken? <a href="/nl/contact/" class="text-terracotta-500 hover:text-terracotta-600 underline">Stuur ons een berichtje</a> — we delen graag meer tips.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Bronnen: Restaurantwebsites en offici&euml;le pagina&rsquo;s voor openingstijden, adressen en menu&rsquo;s. Reistijden geschat via Google Maps vanaf Casa dos Duques (Rua D. Afonso Henriques n 9, Abiul 3100-012). Caf&eacute; da X&eacute;nia informatie van <a href="https://www.cafedaxenia.pt" class="text-terracotta-500 hover:text-terracotta-600 underline">cafedaxenia.pt</a>. Controleer altijd de actuele openingstijden voor je bezoek — tijden kunnen seizoensgebonden of op feestdagen wijzigen.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Verblijf bij ons en proef de regio"
+    subtitle="Boek Casa dos Duques — elk restaurant in deze gids ligt binnen 16 minuten van je deur"
+    primaryCta={{ label: 'Boek je verblijf', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

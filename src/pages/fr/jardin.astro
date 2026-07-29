@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTASection from '../../components/CTASection.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
 import { exteriorPhotos, poolGardenPhotos } from '../../data/photo-manifest';
 
 ---
@@ -13,8 +14,8 @@ import { exteriorPhotos, poolGardenPhotos } from '../../data/photo-manifest';
 >
   <!-- Hero Section -->
   <div class="max-w-6xl mx-auto px-4 pt-12 pb-6">
-    <h1 class="text-4xl md:text-5xl font-bold text-olive-800 mb-4">450 m² de Jardin & Piscine — Galerie Photos</h1>
-    <p class="text-lg text-slate-warm leading-relaxed max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-bold text-wood-800 mb-4">450 m² de Jardin & Piscine — Galerie Photos</h1>
+    <p class="text-lg text-muted leading-relaxed max-w-3xl">
       Explorez chaque recoin de Casa dos Duques à travers notre collection complète de photographies.
       De la piscine baignée de soleil et du jardin luxuriant à l'extérieur charmant — découvrez les espaces extérieurs avant votre arrivée.
     </p>
@@ -25,18 +26,20 @@ import { exteriorPhotos, poolGardenPhotos } from '../../data/photo-manifest';
 
     <!-- Pool & Garden -->
     <section class="mb-16" id="pool-garden">
-      <h2 class="text-3xl font-bold text-olive-700 mb-2 flex items-center gap-3">
+      <h2 class="text-3xl font-bold text-wood-700 mb-2 flex items-center gap-3">
         <span class="text-3xl">🌿</span> Piscine &amp; Jardin
       </h2>
-      <p class="text-slate-warm mb-6 ml-1">Le cœur de votre retraite en plein air — piscine, espaces de détente et verdure luxuriante</p>
+      <p class="text-muted mb-6 ml-1">Le cœur de votre retraite en plein air — piscine, espaces de détente et verdure luxuriante</p>
       <div class="gallery-grid columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
         {
           poolGardenPhotos.map((photo) => (
-            <img
+            <OptimizedImage
               src={photo.src}
               alt={photo.alt}
-              class="gallery-thumb w-full rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer object-cover break-inside-avoid"
+              class="gallery-thumb w-full hover:shadow-xl transition-all duration-300 cursor-pointer object-cover"
+              pictureClass="w-full break-inside-avoid"
               loading="lazy"
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
             />
           ))
         }
@@ -45,18 +48,20 @@ import { exteriorPhotos, poolGardenPhotos } from '../../data/photo-manifest';
 
     <!-- House Exterior -->
     <section class="mb-16" id="house-exterior">
-      <h2 class="text-3xl font-bold text-olive-700 mb-2 flex items-center gap-3">
+      <h2 class="text-3xl font-bold text-wood-700 mb-2 flex items-center gap-3">
         <span class="text-3xl">🏡</span> Extérieur de la Maison
       </h2>
-      <p class="text-slate-warm mb-6 ml-1">La façade charmante et les alentours de Casa dos Duques</p>
+      <p class="text-muted mb-6 ml-1">La façade charmante et les alentours de Casa dos Duques</p>
       <div class="gallery-grid columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
         {
           exteriorPhotos.map((photo) => (
-            <img
+            <OptimizedImage
               src={photo.src}
               alt={photo.alt}
-              class="gallery-thumb w-full rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer object-cover break-inside-avoid"
+              class="gallery-thumb w-full hover:shadow-xl transition-all duration-300 cursor-pointer object-cover"
+              pictureClass="w-full break-inside-avoid"
               loading="lazy"
+              sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
             />
           ))
         }
@@ -68,17 +73,17 @@ import { exteriorPhotos, poolGardenPhotos } from '../../data/photo-manifest';
 
   <!-- Lightbox Overlay -->
   <div id="lightbox" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4">
-    <button id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white text-4xl z-10 w-12 h-12 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 transition-colors">&times;</button>
-    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl z-10 w-12 h-12 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 transition-colors">&#8249;</button>
-    <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl" alt="Vue agrandie" />
-    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl z-10 w-12 h-12 flex items-center justify-center rounded-full bg-black/30 hover:bg-black/50 transition-colors">&#8250;</button>
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white/80 hover:text-white text-4xl z-10 w-12 h-12 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-colors">&times;</button>
+    <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl z-10 w-12 h-12 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-colors">&#8249;</button>
+    <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] object-contain shadow-2xl" alt="Vue agrandie" />
+    <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white text-5xl z-10 w-12 h-12 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-colors">&#8250;</button>
   </div>
 
   <CTASection
     title="Vivez le Jardin"
     subtitle="Réservez votre séjour et profitez de votre paradis privé en plein air"
     primaryCta={{ label: 'Voir Disponibilités', href: '/fr/reservation/' }}
-    variant="olive"
+    variant="wood"
   />
 </BaseLayout>
 
@@ -171,9 +176,13 @@ import { exteriorPhotos, poolGardenPhotos } from '../../data/photo-manifest';
   .gallery-grid {
     column-gap: 1rem;
   }
-  .gallery-grid > img {
+  .gallery-grid > picture {
     margin-bottom: 1rem;
     display: block;
+  }
+  .gallery-grid > picture > img {
+    display: block;
+    width: 100%;
   }
   @media (max-width: 639px) {
     .gallery-grid {

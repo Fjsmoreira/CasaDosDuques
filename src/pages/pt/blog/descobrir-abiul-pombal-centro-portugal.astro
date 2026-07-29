@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/descobrir-abiul-pombal-centro-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Descobrir Abiul e Pombal — O Seu Guia do Centro de Portugal a Partir da Casa dos Duques',
+      description: 'Descubra Abiul e Pombal no Centro de Portugal: história medieval desde 1167, castelo templário, 4 locais UNESCO a 30-50 min, praias atlânticas, praias fluviais e a Casa dos Duques — a sua base para explorar tudo.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-06-01',
+      dateModified: '2026-07-29',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Descobrir Abiul e Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Descobrir Abiul e Pombal — O Seu Guia do Centro de Portugal a Partir da Casa dos Duques"
+  description="Descubra Abiul e Pombal no Centro de Portugal: história medieval desde 1167, castelo templário, 4 locais UNESCO a 30-50 min, praias atlânticas, praias fluviais e a Casa dos Duques — a sua base para explorar tudo."
+  canonical="/pt/blog/descobrir-abiul-pombal-centro-portugal/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Centro de Portugal</span>
+        <span>Julho 2026</span>
+        <span>&middot; 7 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">Descobrir Abiul e Pombal — O Seu Guia do Centro de Portugal a Partir da Casa dos Duques</h1>
+      <p class="text-lg text-muted font-body">Entre os mosteiros UNESCO da Batalha e de Alcoba&ccedil;a, numa regi&atilde;o que a maioria dos viajantes desconhece, ficam a hist&oacute;rica vila de Abiul e a sua vizinha maior, Pombal — e podem muito bem ser a melhor base no Centro de Portugal.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Quando se pensa em Portugal, vem-nos &agrave; cabe&ccedil;a as praias do Algarve, as ruas de Lisboa ou as caves de vinho do Porto. Mas quem conhece bem o pa&iacute;s vai direto ao Centro de Portugal — uma regi&atilde;o onde se pode visitar um castelo templ&aacute;rio do s&eacute;culo XII de manh&atilde;, almo&ccedil;ar leit&atilde;o numa tasca familiar e nadar numa praia fluvial com cascata &agrave; tarde.</p>
+
+      <p>No centro desta regi&atilde;o extraordin&aacute;ria fica <strong>Abiul</strong>, uma vila hist&oacute;rica no concelho de <strong>Pombal</strong>, e a casa da <strong><a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong> — uma casa de f&eacute;rias de 90 anos lindamente restaurada que serve de base perfeita para explora&ccedil;&atilde;o.</p>
+
+      <h2 class="mt-8 mb-3">Uma Vila com Heran&ccedil;a Real</h2>
+      <p>Abiul recebeu o seu primeiro foral em <strong>1167 do Rei Afonso Henriques</strong>, o que a torna uma das povoa&ccedil;&otilde;es documentadas mais antigas da regi&atilde;o de Pombal. Percorra as suas ruas estreitas e sentir&aacute; o peso dos s&eacute;culos — na arquitetura tradicional, na pra&ccedil;a de touros hist&oacute;rica (considerada a mais antiga de Portugal) e nas tradi&ccedil;&otilde;es que perduram, como a anual <strong>Festa do Bodo</strong>, um festival com origem num voto medieval contra a peste. <a href="/pt/guia/abiul/" class="text-terracotta-500 hover:text-terracotta-600 underline">Leia o nosso guia completo de Abiul</a> para mais detalhes hist&oacute;ricos.</p>
+
+      <h2 class="mt-8 mb-3">Pombal — Castelo, Hist&oacute;ria e Vida Quotidiana</h2>
+      <p>Apenas a 10 minutos de carro de Abiul, <a href="/pt/guia/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Pombal</a> &eacute; uma cidade animada dominada pelo seu <strong>castelo templ&aacute;rio do s&eacute;culo XII</strong>. O castelo oferece vistas panor&acirc;micas sobre a paisagem envolvente e &eacute; uma visita obrigat&oacute;ria durante qualquer estadia na regi&atilde;o. Pombal deu tamb&eacute;m o nome ao <strong>Marqu&ecirc;s de Pombal</strong>, o famoso primeiro-ministro portugu&ecirc;s do s&eacute;culo XVIII que reconstruiu Lisboa ap&oacute;s o devastador terramoto de 1755.</p>
+
+      <p>A cidade oferece excelentes servi&ccedil;os: supermercados (Aldi, Dias), uma grande variedade de restaurantes — desde grelhados portugueses a cozinha chinesa — bancos e farm&aacute;cias. Para recomenda&ccedil;&otilde;es de restaurantes, veja o nosso <a href="/pt/blog/melhores-restaurantes-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia dos melhores restaurantes em Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">Locais UNESCO a Curta Dist&acirc;ncia</h2>
+      <p>Quatro locais classificados como Patrim&oacute;nio Mundial da UNESCO ficam a 30&ndash;50 minutos de carro da Casa dos Duques. Aqui est&aacute; o que precisa de saber para planear as suas visitas:</p>
+
+      <h3 class="mt-6 mb-2">Mosteiro da Batalha</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 30 min de carro</p>
+        <p><strong>&#128205; Localiza&ccedil;&atilde;o:</strong> Largo Infante Dom Henrique, Batalha</p>
+        <p><strong>&#127902; UNESCO desde:</strong> 1983</p>
+        <p><strong>&#128338; Hor&aacute;rio:</strong> Diariamente 9:00&ndash;18:00 (abr&ndash;set at&eacute; 18:30). Encerrado 1 jan, Domingo de P&aacute;scoa, 1 mai, 25 dez.</p>
+        <p><strong>&#128176; Pre&ccedil;o:</strong> 6 &euro; (geral). Bilhetes combinados dispon&iacute;veis com Alcoba&ccedil;a e Tomar.</p>
+        <p><strong>&#128118; Adequado para fam&iacute;lias:</strong> Sim — espa&ccedil;os amplos, sem escadas na nave principal.</p>
+      </div>
+      <p>Uma obra-prima g&oacute;tica constru&iacute;da para comemorar a vit&oacute;ria de Portugal na Batalha de Aljubarrota em 1385. O destaque s&atilde;o as <strong>Capelas Imperfeitas</strong> — um mausol&eacute;u octogonal ao ar livre com cantaria intricada que nunca foi terminado. Reserve 1&ndash;1,5 horas.</p>
+
+      <h3 class="mt-6 mb-2">Mosteiro de Alcoba&ccedil;a</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 35 min de carro</p>
+        <p><strong>&#128205; Localiza&ccedil;&atilde;o:</strong> Pra&ccedil;a 25 de Abril, Alcoba&ccedil;a</p>
+        <p><strong>&#127902; UNESCO desde:</strong> 1989</p>
+        <p><strong>&#128338; Hor&aacute;rio:</strong> Diariamente 9:00&ndash;18:00 (abr&ndash;set at&eacute; 19:00). Encerrado 1 jan, Domingo de P&aacute;scoa, 1 mai, 25 dez.</p>
+        <p><strong>&#128176; Pre&ccedil;o:</strong> 6 &euro; (geral). Bilhete combinado com Batalha e Tomar: 15 &euro;.</p>
+        <p><strong>&#128118; Adequado para fam&iacute;lias:</strong> Sim — nave ampla, f&aacute;cil de percorrer.</p>
+      </div>
+      <p>Uma abadia cisterciense fundada em 1153, este &eacute; um dos maiores mosteiros g&oacute;ticos medievais da Europa. N&atilde;o perca os <strong>t&uacute;mulos de D. Pedro I e D. In&ecirc;s de Castro</strong> — frente a frente para que, segundo a lenda, a primeira coisa que vejam no Dia do Ju&iacute;zo seja um ao outro. Planeie 1&ndash;1,5 horas. Combina bem com a Nazar&eacute; (a 30 min) para um almo&ccedil;o de marisco junto ao mar.</p>
+
+      <h3 class="mt-6 mb-2">Tomar — Convento de Cristo</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 40 min de carro</p>
+        <p><strong>&#128205; Localiza&ccedil;&atilde;o:</strong> Colina do Castelo, Tomar</p>
+        <p><strong>&#127902; UNESCO desde:</strong> 1983</p>
+        <p><strong>&#128338; Hor&aacute;rio:</strong> Diariamente 9:00&ndash;17:30 (jun&ndash;set at&eacute; 18:30). Encerrado 1 jan, Domingo de P&aacute;scoa, 1 mai, 25 dez.</p>
+        <p><strong>&#128176; Pre&ccedil;o:</strong> 6 &euro; (geral). Bilhete combinado com Batalha e Alcoba&ccedil;a: 15 &euro;.</p>
+        <p><strong>&#128118; Adequado para fam&iacute;lias:</strong> Com supervis&atilde;o — escadas &iacute;ngremes em algumas &aacute;reas, mas a Charola principal &eacute; acess&iacute;vel.</p>
+      </div>
+      <p>Uma fortaleza-mosteiro dos Cavaleiros Templ&aacute;rios que serviu de sede portuguesa da ordem. A <strong>Janela Manuelina</strong> na fachada ocidental — um festival de cordas esculpidas em pedra, corais e motivos mar&iacute;timos — &eacute; um dos detalhes mais fotografados da arquitetura portuguesa. A Charola octogonal (a igreja redonda original dos Templ&aacute;rios) n&atilde;o se parece com mais nada em Portugal. Reserve 2 horas; o local &eacute; maior do que parece.</p>
+
+      <h3 class="mt-6 mb-2">Universidade de Coimbra</h3>
+      <div class="bg-stone-100 p-4 mb-4 text-sm">
+        <p><strong>&#128205; Dist&acirc;ncia da Casa dos Duques:</strong> 50 min de carro</p>
+        <p><strong>&#128205; Localiza&ccedil;&atilde;o:</strong> Pa&ccedil;o das Escolas, Coimbra</p>
+        <p><strong>&#127902; UNESCO desde:</strong> 2013</p>
+        <p><strong>&#128338; Hor&aacute;rio:</strong> Diariamente 9:00&ndash;17:00 (abr&ndash;set at&eacute; 19:30). Alguns edif&iacute;cios fecham durante &eacute;pocas de exames — verifique com anteced&ecirc;ncia.</p>
+        <p><strong>&#128176; Pre&ccedil;o:</strong> 12,50 &euro; (bilhete completo: Biblioteca Joanina + Pal&aacute;cio Real + Capela + Torre). Bilhetes individuais dispon&iacute;veis.</p>
+        <p><strong>&#128118; Adequado para fam&iacute;lias:</strong> Sim — a subida &agrave; torre &eacute; &iacute;ngreme mas opcional. Acessibilidade limitada para carrinhos de beb&eacute; nos edif&iacute;cios hist&oacute;ricos.</p>
+      </div>
+      <p>Fundada em 1290, Coimbra &eacute; uma das universidades mais antigas da Europa — mais velha do que a primeira faculdade de Oxford. O destaque &eacute; a <strong>Biblioteca Joanina</strong>, uma obra-prima barroca que alberga 60.000 livros dos s&eacute;culos XVI a XVIII, com uma col&oacute;nia de morcegos residentes que protegem os manuscritos comendo insetos durante a noite. Reserve 2&ndash;3 horas para o complexo universit&aacute;rio e depois des&ccedil;a para a marginal do Mondego para almo&ccedil;ar. Veja o nosso <a href="/pt/guia/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia do Centro de Portugal</a> para mais informa&ccedil;&otilde;es.</p>
+
+      <p class="text-sm text-muted italic">&#9888;&#65039; Hor&aacute;rios e pre&ccedil;os s&atilde;o aproximados e podem mudar. Consulte sempre o site oficial do monumento antes de visitar, especialmente em feriados.</p>
+
+      <h2 class="mt-8 mb-3">Praias, Praias Fluviais e Natureza</h2>
+      <p>O litoral do Centro de Portugal estende-se por mais de 100 km e atrai muito menos gente do que o Algarve. A partir da Casa dos Duques, a praia de areia mais pr&oacute;xima — a <strong>Praia da Leirosa</strong> — fica a 37 minutos de carro. A <strong>Praia do Osso da Baleia</strong> (38 min) pertence ao pr&oacute;prio concelho de Pombal.</p>
+
+      <p>Para um dia completo, a <strong>Figueira da Foz</strong> (47 min) tem uma praia urbana de 2 km, um casino hist&oacute;rico e restaurantes de marisco ao longo da marginal. A <strong>Nazar&eacute;</strong> (65 min) &eacute; conhecida mundialmente pelas ondas gigantes que atingem 30 m na Praia do Norte — mesmo que visite no ver&atilde;o, com o mar calmo, as vistas do S&iacute;tio justificam a viagem.</p>
+
+      <p>No interior, as <strong>praias fluviais</strong> do Centro de Portugal oferecem banhos de &aacute;gua doce rodeados de floresta e forma&ccedil;&otilde;es rochosas. A <strong>Praia Fluvial do Mosteiro</strong> (50 min) situa-se num vale tranquilo perto de Pedr&oacute;g&atilde;o Grande, enquanto o <strong>Penedo Furado</strong> (60 min) tem piscinas naturais com cascata e acesso f&aacute;cil por trilhos. <strong>As praias fluviais s&atilde;o sazonais — tipicamente de junho a setembro</strong>, quando os n&iacute;veis de &aacute;gua s&atilde;o mais baixos e seguros para nadar. Fora destes meses podem estar inacess&iacute;veis ou sem vigil&acirc;ncia. Veja o nosso <a href="/pt/praias/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia de praias</a> para mais op&ccedil;&otilde;es e condi&ccedil;&otilde;es atuais.</p>
+
+      <h2 class="mt-8 mb-3">Porqu&ecirc; Ficar na Casa dos Duques?</h2>
+      <p>A <a href="/pt/a-casa/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> &eacute; mais do que um s&iacute;tio para dormir — &eacute; um destino em si mesma. Esta casa de 90 anos meticulosamente renovada na tranquila vila hist&oacute;rica de Abiul oferece:</p>
+
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>4 quartos</strong> com capacidade para 8 h&oacute;spedes (6 adultos + 2 crian&ccedil;as + 1 beb&eacute;)</li>
+        <li><strong>Piscina de 8 metros</strong> e jardim de 450 m&sup2; com zonas de estar e churrasqueira</li>
+        <li><strong>Car&aacute;cter original preservado</strong> — paredes de pedra, soalho de terracota, tetos altos, lareira</li>
+        <li><strong>Cozinha totalmente equipada</strong> e comodidades modernas incluindo Wi-Fi</li>
+        <li><strong>Guest Favorite</strong> no Airbnb, classificado com <strong>4,97/5</strong></li>
+      </ul>
+
+      <p>Quer procure um retiro familiar tranquilo, uma base para explorar a rica hist&oacute;ria de Portugal ou simplesmente um lugar bonito para relaxar junto &agrave; piscina — <a href="/pt/reserva/" class="text-terracotta-500 hover:text-terracotta-600 underline">reserve a Casa dos Duques</a> para uma estadia inesquec&iacute;vel.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Wikipedia (EN/PT) para factos hist&oacute;ricos sobre Abiul e Pombal; OpenStreetMap e OSRM para tempos de viagem; sites oficiais dos monumentos (mosteirobatalha.pt, mosteiroalcobaca.pt, conventocristo.pt, visit.uc.pt) para hor&aacute;rios e pre&ccedil;os em julho de 2026. Todas as dist&acirc;ncias, tempos e pre&ccedil;os s&atilde;o aproximados — verifique sempre os sites oficiais antes de visitar, pois os hor&aacute;rios mudam sazonalmente e em feriados.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Pronto para descobrir o Centro de Portugal?"
+    subtitle="Reserve a sua estadia na Casa dos Duques — a sua base perfeita para explora&ccedil;&atilde;o"
+    primaryCta={{ label: 'Reserve a sua estadia', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

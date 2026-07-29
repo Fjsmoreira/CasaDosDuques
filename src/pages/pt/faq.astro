@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const faqs = [
+  {
+    question: "Quais são os horários de check-in e check-out?",
+    answer: "O check-in é a partir das 16:00 e o check-out é até às 11:00. Check-in antecipado ou check-out tardio podem estar disponíveis mediante pedido — por favor contacte-nos com antecedência."
+  },
+  {
+    question: "Quantos hóspedes podem ficar?",
+    answer: "A casa dorme até 8 hóspedes em 4 quartos (máximo 6 adultos, mais 2 crianças e 1 bebé). Temos uma cama de casal por quarto mais um beliche no quarto das crianças."
+  },
+  {
+    question: "A piscina está aberta todo o ano?",
+    answer: "A piscina de 8m está normalmente disponível de maio a setembro, dependendo das condições climatéricas. A piscina não tem portão nem fechadura — as crianças devem ser sempre supervisionadas."
+  },
+  {
+    question: "Há estacionamento disponível?",
+    answer: "Sim, há estacionamento gratuito no local da propriedade."
+  },
+  {
+    question: "São permitidos animais de estimação?",
+    answer: "Por favor contacte-nos para discutir a possibilidade de trazer animais. Poderemos aceitar animais bem-educados caso a caso."
+  },
+  {
+    question: "Há WiFi?",
+    answer: "Sim, WiFi gratuito de alta velocidade está disponível em toda a casa."
+  },
+  {
+    question: "O que há nas proximidades?",
+    answer: "A casa fica na tranquila vila histórica de Abiul. A poucos passos encontrará um café, mini-mercado, farmácia e restaurante. Pombal (com supermercados, restaurantes e o castelo) fica a 10 minutos de carro. As praias estão a 35-40 minutos."
+  },
+  {
+    question: "A que distância fica a praia mais próxima?",
+    answer: "A praia mais próxima é a Praia da Leirosa (37 min), seguida da Praia do Osso da Baleia (38 min) no concelho de Pombal. A Figueira da Foz (47 min) e a Nazaré (65 min) são destinos populares para passeios de um dia."
+  },
+  {
+    question: "A casa é adequada para pessoas com mobilidade reduzida?",
+    answer: "A casa tem características tradicionais como escadas e superfícies irregulares que podem não ser adequadas para hóspedes com mobilidade reduzida. Por favor contacte-nos para discutir as suas necessidades específicas."
+  },
+  {
+    question: "Há ar condicionado?",
+    answer: "Não, a casa não tem ar condicionado. As espessas paredes de pedra mantêm a casa naturalmente fresca no verão. Ventoinhas estão disponíveis nos quartos."
+  }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title="Perguntas Frequentes — Casa dos Duques, Abiul, Pombal"
+  description="FAQs sobre a Casa dos Duques: horários de check-in/out, piscina, estacionamento, WiFi, atrações próximas e muito mais. Tudo o que precisa de saber antes da sua estadia."
+  canonical="/pt/faq/"
+  locale="pt"
+  schema={schema}
+>
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-wood-800 mb-4">Perguntas Frequentes</h1>
+    <p class="text-muted mb-8">Tudo o que precisa de saber sobre a sua estadia na Casa dos Duques.</p>
+
+    <div class="space-y-4 mb-10">
+      {
+        faqs.map((faq, i) => (
+          <details class="bg-white border border-stone-300 overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-wood-800 hover:text-terracotta-600 transition-colors list-none flex justify-between items-center">
+              <span>{faq.question}</span>
+              <span class="text-terracotta-500 text-xl transition-transform duration-200 group-open:rotate-45">+</span>
+            </summary>
+            <div class="px-6 pb-4 text-muted leading-relaxed border-t border-stone-300 pt-3">
+              {faq.answer}
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+
+  <CTASection
+    title="Ainda Tem Dúvidas?"
+    subtitle="Estamos aqui para ajudar — entre em contacto connosco"
+    primaryCta={{ label: 'Contactar', href: '/pt/contato/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

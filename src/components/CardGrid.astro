@@ -1,4 +1,6 @@
 ---
+import OptimizedImage from './OptimizedImage.astro';
+
 interface Card {
   icon?: string;
   title: string;
@@ -21,17 +23,17 @@ const gridCols = {
 };
 ---
 
-<div class={`grid grid-cols-1 ${gridCols[columns]} gap-6`}>
+<div class={`grid grid-cols-1 ${gridCols[columns]} gap-5`}>
   {cards.map(card => (
-    <div class={`bg-white rounded-2xl border border-warm-sand hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)] transition-shadow ${variant === 'compact' ? 'p-4' : 'p-6'}`}>
+    <div class={`bg-white border border-stone-200 hover:border-stone-400 hover:shadow-sm transition ${variant === 'compact' ? 'p-4' : 'p-6'}`}>
       {card.image && (
-        <img src={card.image} alt="" class="w-full h-48 object-cover rounded-lg mb-4" loading="lazy" />
+        <OptimizedImage src={card.image} alt="" class="w-full h-48 object-cover mb-4" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 100vw, 33vw" />
       )}
-      {card.icon && <div class="text-2xl mb-3 grayscale">{card.icon}</div>}
-      <h3 class={`font-semibold text-olive-800 ${variant === 'compact' ? 'text-sm' : 'text-lg'} mb-2`}>
+      {card.icon && <div class="text-2xl mb-3">{card.icon}</div>}
+      <h3 class={`font-medium text-wood-800 ${variant === 'compact' ? 'text-sm' : 'text-xl'} mb-2`}>
         {card.href ? <a href={card.href} class="hover:text-terracotta-500 transition-colors">{card.title}</a> : card.title}
       </h3>
-      <p class={`text-slate-warm ${variant === 'compact' ? 'text-xs' : 'text-sm'} leading-relaxed`}>{card.description}</p>
+      <p class={`text-muted font-body ${variant === 'compact' ? 'text-xs' : 'text-sm'} leading-relaxed`}>{card.description}</p>
     </div>
   ))}
 </div>

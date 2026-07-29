@@ -12,7 +12,7 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
   locale="pt"
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-olive-800 mb-6">Onde Estamos — Abiul, Pombal, Centro de Portugal</h1>
+    <h1 class="text-4xl font-bold text-wood-800 mb-6">Onde Estamos — Abiul, Pombal, Centro de Portugal</h1>
     
     <MapSection
       lat={SITE_CONFIG.coordinates.lat}
@@ -24,18 +24,18 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
     />
 
     <div class="grid md:grid-cols-2 gap-6 mb-10">
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
-        <h2 class="font-semibold text-lg text-olive-800 mb-3">📍 Factos Rápidos</h2>
-        <ul class="space-y-2 text-sm text-slate-warm">
+      <div class="bg-white border border-stone-300 p-6">
+        <h2 class="font-semibold text-lg text-wood-800 mb-3">Factos Rápidos</h2>
+        <ul class="space-y-2 text-sm text-muted">
           <li><strong>Vila:</strong> {SITE_CONFIG.address.town}, {SITE_CONFIG.address.district}</li>
           <li><strong>Distrito:</strong> {SITE_CONFIG.address.region}</li>
           <li><strong>Região:</strong> Centro de Portugal</li>
           <li><strong>Registo AL:</strong> {SITE_CONFIG.alRegistration}</li>
         </ul>
       </div>
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
-        <h2 class="font-semibold text-lg text-olive-800 mb-3">🚗 Tempos de Carro</h2>
-        <ul class="space-y-2 text-sm text-slate-warm">
+      <div class="bg-white border border-stone-300 p-6">
+        <h2 class="font-semibold text-lg text-wood-800 mb-3">Tempos de Carro</h2>
+        <ul class="space-y-2 text-sm text-muted">
           <li><strong>Pombal:</strong> 10 min</li>
           <li><strong>Leiria:</strong> 25 min</li>
           <li><strong>Batalha (UNESCO):</strong> 25 min</li>
@@ -47,13 +47,13 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
     </div>
 
     <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Sobre Abiul</h2>
-      <p class="text-slate-warm leading-relaxed mb-3">
+      <h2 class="text-2xl font-semibold text-wood-700 mb-4">Sobre Abiul</h2>
+      <p class="text-muted leading-relaxed mb-3">
         Abiul é uma vila histórica no concelho de Pombal, com uma rica história que remonta a 
         1167, quando recebeu o seu primeiro foral real. Esteve historicamente ligada à poderosa 
         Casa de Aveiro e alberga aquela que é considerada a praça de touros mais antiga de Portugal.
       </p>
-      <p class="text-slate-warm leading-relaxed">
+      <p class="text-muted leading-relaxed">
         Hoje, Abiul é uma vila tranquila com um forte sentido de comunidade. O supermercado, 
         farmácia, cafés e restaurantes nas proximidades estão a poucos minutos a pé da casa.
       </p>
@@ -61,20 +61,20 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
     </section>
 
     <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Sobre Pombal</h2>
-      <p class="text-slate-warm leading-relaxed mb-3">
+      <h2 class="text-2xl font-semibold text-wood-700 mb-4">Sobre Pombal</h2>
+      <p class="text-muted leading-relaxed mb-3">
         A apenas 10 minutos da casa, Pombal é uma cidade encantadora dominada pelo seu castelo 
         medieval dos Cavaleiros Templários. A cidade oferece excelentes compras (supermercados Aldi, Dias), 
         uma vasta seleção de restaurantes, bancos e todos os serviços essenciais.
       </p>
-      <p class="text-slate-warm leading-relaxed">
+      <p class="text-muted leading-relaxed">
         Pombal deu o nome ao Marquês de Pombal, o famoso primeiro-ministro português do século XVIII.
       </p>
     </section>
 
     <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Centro de Portugal</h2>
-      <p class="text-slate-warm leading-relaxed mb-3">
+      <h2 class="text-2xl font-semibold text-wood-700 mb-4">Centro de Portugal</h2>
+      <p class="text-muted leading-relaxed mb-3">
         A Casa dos Duques está perfeitamente posicionada para explorar o melhor do Centro de Portugal. 
         Quatro Patrimónios Mundiais da UNESCO estão a 30 minutos de carro: Mosteiro da Batalha, 
         Mosteiro de Alcobaça, Convento de Cristo em Tomar e a Universidade de Coimbra.

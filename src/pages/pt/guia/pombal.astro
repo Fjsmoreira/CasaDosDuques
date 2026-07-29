@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Guia de Pombal — Castelo, Restaurantes e Tudo o Que Precisa"
+  description="Guia completo de Pombal: castelo medieval dos Templários, ligação ao Marquês de Pombal, melhores restaurantes, supermercados e serviços — a apenas 10 min da Casa dos Duques."
+  canonical="/pt/guia/pombal/"
+  locale="pt"
+>
+  <div class="max-w-4xl mx-auto px-4 py-12">
+    <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">Guia</p>
+    <h1 class="mb-6">Pombal — Castelo, Cultura e Conveniência</h1>
+
+    <section class="mb-10">
+      <h2 class="mb-4">Castelo de Pombal</h2>
+      <div class="font-body text-muted leading-relaxed space-y-3">
+        <p>
+          Dominando o horizonte da cidade, o Castelo de Pombal é uma magnífica fortaleza medieval
+          construída pelos Cavaleiros Templários no século XII. Fez parte de uma linha defensiva
+          que protegia a região de Coimbra-Leiria durante a Reconquista. O castelo oferece vistas
+          panorâmicas da paisagem envolvente e é uma visita obrigatória durante a sua estadia.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="mb-4">Marqu&ecirc;s de Pombal</h2>
+      <div class="font-body text-muted leading-relaxed space-y-3">
+        <p>
+          A cidade deu o nome a Sebasti&atilde;o Jos&eacute; de Carvalho e Melo, o 1.&ordm; Marqu&ecirc;s de Pombal,
+          o poderoso primeiro-ministro do s&eacute;culo XVIII que reconstruiu Lisboa ap&oacute;s o
+          devastador terramoto de 1755. O seu legado est&aacute; profundamente ligado a esta regi&atilde;o
+          e ao famoso processo dos T&aacute;voras.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="mb-4">Comer em Pombal</h2>
+      <p class="text-muted font-body mb-4">A 10 minutos de carro da Casa dos Duques, Pombal oferece excelentes op&ccedil;&otilde;es gastron&oacute;micas:</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <div class="bg-white border border-stone-200 p-3 text-sm">
+          <span class="font-semibold text-wood-800">Churrasqueira O Tapa</span>
+          <span class="text-muted block font-body">Grelhados regionais &middot; +351 236 213 581</span>
+        </div>
+        <div class="bg-white border border-stone-200 p-3 text-sm">
+          <span class="font-semibold text-wood-800">Vintage</span>
+          <span class="text-muted block font-body">Cozinha regional &middot; +351 236 244 033</span>
+        </div>
+        <div class="bg-white border border-stone-200 p-3 text-sm">
+          <span class="font-semibold text-wood-800">Mr Pizza</span>
+          <span class="text-muted block font-body">Pizza &middot; Seg&ndash;S&aacute;b 12:00&ndash;23:00 &middot; +351 236 244 333</span>
+        </div>
+        <div class="bg-white border border-stone-200 p-3 text-sm">
+          <span class="font-semibold text-wood-800">Taberna Pombalina</span>
+          <span class="text-muted block font-body">Regional &middot; Dom&ndash;Sex 08:30&ndash;20:00 &middot; +351 236 094 360</span>
+        </div>
+        <div class="bg-white border border-stone-200 p-3 text-sm">
+          <span class="font-semibold text-wood-800">Big Shanghai</span>
+          <span class="text-muted block font-body">Chin&ecirc;s &middot; +351 236 207 846</span>
+        </div>
+        <div class="bg-white border border-stone-200 p-3 text-sm">
+          <span class="font-semibold text-wood-800">Rei dos Frangos</span>
+          <span class="text-muted block font-body">Frango grelhado</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="mb-4">Compras e Servi&ccedil;os</h2>
+      <ul class="space-y-2 text-sm text-muted font-body">
+        <li><strong class="text-wood-800">Aldi</strong> — Supermercado, diariamente 08:00&ndash;21:00</li>
+        <li><strong class="text-wood-800">Dias</strong> — Supermercado</li>
+        <li><strong class="text-wood-800">V&aacute;rios ATMs</strong> — SIBS Multibanco, Cr&eacute;dito Agr&iacute;cola, Santander</li>
+      </ul>
+    </section>
+  </div>
+
+  <CTASection
+    title="Descubra Pombal a partir da Casa dos Duques"
+    subtitle="A apenas 10 minutos — reserve a sua estadia e explore"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    secondaryCta={{ label: 'O que fazer', href: '/pt/o-que-fazer/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

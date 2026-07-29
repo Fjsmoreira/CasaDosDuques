@@ -1,24 +1,63 @@
 ---
+import { buildSrcSet, buildWebpSrcSet } from '../lib/images';
+
 export interface Props {
   src: string;
   alt: string;
   width?: number;
   height?: number;
   class?: string;
+  /** Classes applied to the wrapping <picture> element (useful for masonry/grid layout). */
+  pictureClass?: string;
   loading?: 'lazy' | 'eager';
-  aspectRatio?: string;
+  fetchpriority?: 'high' | 'low' | 'auto';
+  /** Responsive sizes attribute (e.g. "100vw" or "(max-width: 768px) 100vw, 50vw") */
+  sizes?: string;
 }
 
-const { src, alt, width, height, loading = 'lazy', aspectRatio } = Astro.props;
+const {
+  src,
+  alt,
+  width,
+  height,
+  pictureClass,
+  loading = 'lazy',
+  fetchpriority = 'auto',
+  sizes = '100vw',
+} = Astro.props;
+
+const isJpeg = /\.(jpe?g)$/i.test(src);
+const srcSet = isJpeg ? buildSrcSet(src) : null;
+const webpSrcSet = isJpeg ? buildWebpSrcSet(src) : null;
 ---
 
-<img
-  src={src}
-  alt={alt}
-  {width}
-  {height}
-  {loading}
-  decoding="async"
-  class={Astro.props.class}
-  style={aspectRatio ? { aspectRatio } : undefined}
-/>
+{
+  isJpeg && srcSet ? (
+    <picture class={pictureClass}>
+      <source srcset={webpSrcSet} type="image/webp" sizes={sizes} />
+      <source srcset={srcSet} type="image/jpeg" sizes={sizes} />
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={loading}
+        fetchpriority={fetchpriority}
+        decoding="async"
+        sizes={sizes}
+        class={Astro.props.class}
+      />
+    </picture>
+  ) : (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={loading}
+      fetchpriority={fetchpriority}
+      decoding="async"
+      class={Astro.props.class}
+    />
+  )
+}

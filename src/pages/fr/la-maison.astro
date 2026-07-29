@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CTASection from '../../components/CTASection.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
 import { SITE_CONFIG } from '../../data/site-config.ts';
 ---
 
@@ -11,47 +12,47 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
   canonical="/fr/la-maison/"
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-olive-800 mb-6">Casa dos Duques — Une Maison de Vacances Rénovée de 90 Ans à Abiul</h1>
+    <h1 class="text-4xl font-bold text-wood-800 mb-6">Casa dos Duques — Une Maison de Vacances Rénovée de 90 Ans à Abiul</h1>
     
-    <img src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Extérieur de Casa dos Duques" class="w-full rounded-xl mb-8 h-96 object-cover" loading="eager" />
+    <OptimizedImage src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Extérieur de Casa dos Duques" class="w-full mb-8 h-96 object-cover" loading="eager" fetchpriority="high" width={800} height={600} sizes="(max-width: 896px) 100vw, 896px" />
 
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">L'Histoire de la Maison</h2>
-      <p class="text-slate-warm leading-relaxed mb-4">
+      <h2 class="text-2xl font-semibold text-wood-700 mb-4">L'Histoire de la Maison</h2>
+      <p class="text-muted leading-relaxed mb-4">
         Casa dos Duques se dresse au cœur d'Abiul depuis plus de 90 ans. Construite à une époque où 
         l'artisanat primait, la maison a été témoin du rythme paisible de la vie dans cette 
         ville historique — de sa charte royale de 1167 à nos jours.
       </p>
-      <p class="text-slate-warm leading-relaxed mb-4">
+      <p class="text-muted leading-relaxed mb-4">
         Après des années de planification minutieuse, la maison a été méticuleusement rénovée avec un profond respect 
         pour son caractère d'origine. Chaque décision a été prise pour préserver ce qui la rend spéciale : 
         les murs en pierre épaisse qui gardent la maison fraîche en été, les hauts plafonds qui lui confèrent une 
         sensation d'espace, les carreaux de terre cuite d'origine, et la structure en bois apparente qui 
         raconte l'histoire de la construction traditionnelle portugaise.
       </p>
-      <p class="text-slate-warm leading-relaxed">
+      <p class="text-muted leading-relaxed">
         Le résultat est une maison de vacances qui semble à la fois intemporelle et confortable — un espace 
         chaleureux et accueillant où amis et famille peuvent se retrouver, se détendre et créer des souvenirs.
       </p>
     </section>
 
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Espaces de Vie</h2>
+      <h2 class="text-2xl font-semibold text-wood-700 mb-4">Espaces de Vie</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-warm-cream rounded-xl p-6">
-          <h3 class="font-semibold text-lg text-olive-800 mb-2">🛋️ Salon</h3>
-          <p class="text-slate-warm text-sm leading-relaxed">Un salon cosy avec une cheminée, parfait pour les soirées plus fraîches. Sièges confortables, éclairage chaleureux et atmosphère détendue.</p>
+        <div class="bg-wall-100 p-6">
+          <h3 class="font-semibold text-lg text-wood-800 mb-2">Salon</h3>
+          <p class="text-muted text-sm leading-relaxed">Un salon cosy avec une cheminée, parfait pour les soirées plus fraîches. Sièges confortables, éclairage chaleureux et atmosphère détendue.</p>
         </div>
-        <div class="bg-warm-cream rounded-xl p-6">
-          <h3 class="font-semibold text-lg text-olive-800 mb-2">🍳 Cuisine & Salle à Manger</h3>
-          <p class="text-slate-warm text-sm leading-relaxed">Cuisine entièrement équipée avec four, réfrigérateur, machine Nespresso, bouilloire, micro-ondes et tous les ustensiles. Espace repas pour les repas en commun.</p>
+        <div class="bg-wall-100 p-6">
+          <h3 class="font-semibold text-lg text-wood-800 mb-2">Cuisine & Salle à Manger</h3>
+          <p class="text-muted text-sm leading-relaxed">Cuisine entièrement équipée avec four, réfrigérateur, machine Nespresso, bouilloire, micro-ondes et tous les ustensiles. Espace repas pour les repas en commun.</p>
         </div>
       </div>
     </section>
 
     <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Détails de la Rénovation</h2>
-      <ul class="space-y-3 text-slate-warm">
+      <h2 class="text-2xl font-semibold text-wood-700 mb-4">Détails de la Rénovation</h2>
+      <ul class="space-y-3 text-muted">
         <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Hauts plafonds préservés dans toute la maison</li>
         <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Murs en pierre d'origine soigneusement restaurés</li>
         <li class="flex gap-3"><span class="text-terracotta-500">✦</span> Carreaux de sol en terre cuite rouge traditionnelle conservés</li>
@@ -66,6 +67,6 @@ import { SITE_CONFIG } from '../../data/site-config.ts';
     subtitle="Réservez votre séjour et découvrez le charme de cette maison de vacances magnifiquement restaurée"
     primaryCta={{ label: 'Voir Disponibilités', href: '/fr/reservation/' }}
     secondaryCta={{ label: 'Voir les Chambres', href: '/fr/chambres/' }}
-    variant="olive"
+    variant="wood"
   />
 </BaseLayout>

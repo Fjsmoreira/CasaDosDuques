@@ -21,43 +21,103 @@ const alText: Record<string, string> = {
 
 const privacyPath = ROUTE_GROUPS.privacy[locale];
 const contactPath = ROUTE_GROUPS.contact[locale];
+
+const exploreHeading: Record<string, string> = {
+  en: 'Explore',
+  pt: 'Explorar',
+  nl: 'Ontdekken',
+  fr: 'Explorer',
+};
+
+const guideLabels: Record<string, Record<string, string>> = {
+  en: {
+    guideAbiul: 'Abiul Guide',
+    guidePombal: 'Pombal Guide',
+    guideCentralPortugal: 'Central Portugal',
+    faq: 'FAQ',
+  },
+  pt: {
+    guideAbiul: 'Guia de Abiul',
+    guidePombal: 'Guia de Pombal',
+    guideCentralPortugal: 'Centro de Portugal',
+    faq: 'FAQ',
+  },
+  nl: {
+    guideAbiul: 'Abiul Gids',
+    guidePombal: 'Pombal Gids',
+    guideCentralPortugal: 'Centraal Portugal',
+    faq: 'FAQ',
+  },
+  fr: {
+    guideAbiul: 'Guide d\'Abiul',
+    guidePombal: 'Guide de Pombal',
+    guideCentralPortugal: 'Centre du Portugal',
+    faq: 'FAQ',
+  },
+};
+
+const exploreKeys = ['guideAbiul', 'guidePombal', 'guideCentralPortugal', 'faq'] as const;
+// Fall back to EN guide pages when the current locale has no translated version
+const exploreLinks = exploreKeys
+  .map((key) => {
+    const href = ROUTE_GROUPS[key][locale] ?? ROUTE_GROUPS[key]['en'];
+    if (!href) return null;
+    const label = guideLabels[locale]?.[key] ?? guideLabels.en?.[key] ?? key;
+    return { label, href };
+  })
+  .filter((link): link is { label: string; href: string } => link !== null);
+if (locale === 'en') exploreLinks.push({ label: 'Blog', href: '/blog/' });
+
+const footerCols = 'md:grid-cols-4';
 ---
 
-<footer class="bg-olive-50 text-olive-900 border-t border-warm-sand">
+<footer class="bg-wood-800 text-white">
   <div class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class={`grid grid-cols-1 ${footerCols} gap-8`}>
       <div>
-        <h3 class="font-bold text-lg mb-3">{SITE_CONFIG.name}</h3>
-        <p class="text-slate-warm text-sm leading-relaxed">
+        <h3 class="text-lg mb-3 text-white">{SITE_CONFIG.name}</h3>
+        <p class="text-white/60 text-sm leading-relaxed font-body">
           {SITE_CONFIG.address.street}<br />
           {SITE_CONFIG.address.town}, {SITE_CONFIG.address.postcode}<br />
           {SITE_CONFIG.address.district}, {SITE_CONFIG.address.country}
         </p>
-        <p class="mt-2 text-slate-warm text-sm">{alText[locale] || alText.en} — {SITE_CONFIG.alRegistration}</p>
+        <p class="mt-2 text-white/50 text-sm font-body">{alText[locale] || alText.en} — {SITE_CONFIG.alRegistration}</p>
       </div>
       <div>
-        <h3 class="font-bold text-lg mb-3">{locale === 'en' ? 'Contact' : locale === 'pt' ? 'Contactos' : locale === 'nl' ? 'Contact' : 'Contact'}</h3>
-        <p class="text-slate-warm text-sm">
-          <a href={`mailto:${SITE_CONFIG.contact.email}`} class="hover:text-terracotta-500 transition-colors">{SITE_CONFIG.contact.email}</a>
+        <h3 class="text-lg mb-3 text-white">{locale === 'en' ? 'Contact' : locale === 'pt' ? 'Contactos' : locale === 'nl' ? 'Contact' : 'Contact'}</h3>
+        <p class="text-white/60 text-sm font-body">
+          <a href={`mailto:${SITE_CONFIG.contact.email}`} class="hover:text-terracotta-300 transition-colors">{SITE_CONFIG.contact.email}</a>
         </p>
-        <p class="text-slate-warm text-sm mt-1">{SITE_CONFIG.contact.phone}</p>
+        <p class="text-white/60 text-sm mt-1 font-body">{SITE_CONFIG.contact.phone}</p>
       </div>
       <div>
-        <h3 class="font-bold text-lg mb-3">{locale === 'en' ? 'Links' : locale === 'pt' ? 'Links' : locale === 'nl' ? 'Links' : 'Liens'}</h3>
-        <nav class="space-y-2 text-sm">
-          <a href={privacyPath} class="block text-slate-warm hover:text-terracotta-500 transition-colors">
+        <h3 class="text-lg mb-3 text-white">{locale === 'en' ? 'Links' : locale === 'pt' ? 'Links' : locale === 'nl' ? 'Links' : 'Liens'}</h3>
+        <nav class="space-y-2 text-sm font-body">
+          <a href={privacyPath} class="block text-white/60 hover:text-terracotta-300 transition-colors">
             {locale === 'en' ? 'Privacy Policy' : locale === 'pt' ? 'Política de Privacidade' : locale === 'nl' ? 'Privacybeleid' : 'Politique de Confidentialité'}
           </a>
-          <a href={contactPath} class="block text-slate-warm hover:text-terracotta-500 transition-colors">
+          <a href={contactPath} class="block text-white/60 hover:text-terracotta-300 transition-colors">
             {locale === 'en' ? 'Contact' : locale === 'pt' ? 'Contactos' : locale === 'nl' ? 'Contact' : 'Contact'}
           </a>
-          <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="block text-slate-warm hover:text-terracotta-500 transition-colors">
+          <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="block text-white/60 hover:text-terracotta-300 transition-colors">
             Airbnb
           </a>
         </nav>
       </div>
+      {exploreLinks.length > 0 && (
+        <div>
+          <h3 class="text-lg mb-3 text-white">{exploreHeading[locale] || exploreHeading.en}</h3>
+          <nav class="space-y-2 text-sm font-body">
+            {exploreLinks.map(link => (
+              <a href={link.href} class="block text-white/60 hover:text-terracotta-300 transition-colors">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </div>
-    <div class="border-t border-warm-sand mt-8 pt-6 text-center text-slate-warm text-sm">
+    <div class="border-t border-white/10 mt-8 pt-6 text-center text-white/40 text-sm font-body">
       &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. {t[locale] || t.en}
     </div>
   </div>

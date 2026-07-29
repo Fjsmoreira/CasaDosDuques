@@ -7,12 +7,13 @@ import { SITE_CONFIG } from '../data/site-config.ts';
 
 <BaseLayout
   title="Location — Casa dos Duques in Abiul, Pombal, Central Portugal"
-  description="Find Casa dos Duques in the historic town of Abiul, Pombal district. 10 min to Pombal, 25 min to Batalha/Leiria, 35 min to beaches. Lisbon 1.5h, Porto 1.5h."
+  description="Find Casa dos Duques in the historic town of Abiul, Pombal district. 10 min to Pombal, 30 min to Batalha/Leiria, 35 min to beaches. Lisbon 1.5h, Porto 1.5h."
   canonical="/location/"
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-olive-800 mb-6">Where We Are — Abiul, Pombal, Central Portugal</h1>
-    
+    <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">Location</p>
+    <h1 class="mb-6">Where we are — Abiul, Pombal</h1>
+
     <MapSection
       lat={SITE_CONFIG.coordinates.lat}
       lng={SITE_CONFIG.coordinates.lng}
@@ -22,71 +23,75 @@ import { SITE_CONFIG } from '../data/site-config.ts';
       height="h-[300px] md:h-[400px]"
     />
 
-    <div class="grid md:grid-cols-2 gap-6 mb-10">
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
-        <h2 class="font-semibold text-lg text-olive-800 mb-3">📍 Quick Facts</h2>
-        <ul class="space-y-2 text-sm text-slate-warm">
-          <li><strong>Town:</strong> {SITE_CONFIG.address.town}, {SITE_CONFIG.address.district}</li>
-          <li><strong>District:</strong> {SITE_CONFIG.address.region}</li>
-          <li><strong>Region:</strong> Centro de Portugal</li>
-          <li><strong>AL Registration:</strong> {SITE_CONFIG.alRegistration}</li>
+    <div class="grid md:grid-cols-2 gap-6 mt-10 mb-10">
+      <div class="bg-white border border-stone-200 p-6">
+        <h3 class="mb-3">Quick Facts</h3>
+        <ul class="space-y-2 text-sm text-muted font-body">
+          <li><strong class="text-wood-800">Town:</strong> {SITE_CONFIG.address.town}, {SITE_CONFIG.address.district}</li>
+          <li><strong class="text-wood-800">District:</strong> {SITE_CONFIG.address.region}</li>
+          <li><strong class="text-wood-800">Region:</strong> Centro de Portugal</li>
+          <li><strong class="text-wood-800">AL Registration:</strong> {SITE_CONFIG.alRegistration}</li>
         </ul>
       </div>
-      <div class="bg-white rounded-xl shadow-sm border border-warm-sand p-6">
-        <h2 class="font-semibold text-lg text-olive-800 mb-3">🚗 Driving Times</h2>
-        <ul class="space-y-2 text-sm text-slate-warm">
-          <li><strong>Pombal:</strong> 10 min</li>
-          <li><strong>Leiria:</strong> 25 min</li>
-          <li><strong>Batalha (UNESCO):</strong> 25 min</li>
-          <li><strong>Beaches:</strong> 35-40 min</li>
-          <li><strong>Lisbon:</strong> ~1.5 h (172 km)</li>
-          <li><strong>Porto:</strong> ~1.5 h (180 km)</li>
+      <div class="bg-white border border-stone-200 p-6">
+        <h3 class="mb-3">Driving Times</h3>
+        <ul class="space-y-2 text-sm text-muted font-body">
+          <li><strong class="text-wood-800">Pombal:</strong> 10 min</li>
+          <li><strong class="text-wood-800">Leiria:</strong> 25 min</li>
+          <li><strong class="text-wood-800">Batalha (UNESCO):</strong> 30 min</li>
+          <li><strong class="text-wood-800">Beaches:</strong> 35–40 min</li>
+          <li><strong class="text-wood-800">Lisbon:</strong> ~1.5 h (172 km)</li>
+          <li><strong class="text-wood-800">Porto:</strong> ~1.5 h (180 km)</li>
         </ul>
       </div>
     </div>
 
     <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">About Abiul</h2>
-      <p class="text-slate-warm leading-relaxed mb-3">
-        Abiul is a historic town in the Pombal municipality, with a rich history dating back to 
-        1167 when it received its first royal charter. It was historically linked to the powerful 
-        House of Aveiro and is home to what is believed to be the oldest bullring in Portugal.
-      </p>
-      <p class="text-slate-warm leading-relaxed">
-        Today, Abiul is a peaceful town with a strong sense of community. The nearby supermarket, 
-        pharmacy, cafes, and restaurants are all within walking distance from the house.
-      </p>
-      <a href="/guide/abiul/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold mt-3">Read the Abiul Guide →</a>
+      <h2 class="mb-4">About Abiul</h2>
+      <div class="font-body text-muted leading-relaxed space-y-3">
+        <p>
+          Abiul is a historic town in the Pombal municipality, with a rich history dating back to
+          1167 when it received its first royal charter. It was historically linked to the powerful
+          House of Aveiro and is home to what is believed to be the oldest bullring in Portugal.
+        </p>
+        <p>
+          Today, Abiul is a peaceful town with a strong sense of community. The nearby supermarket,
+          pharmacy, cafes, and restaurants are all within walking distance from the house.
+        </p>
+      </div>
+      <a href="/guide/abiul/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-4 font-body">Read the Abiul Guide &rarr;</a>
     </section>
 
     <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">About Pombal</h2>
-      <p class="text-slate-warm leading-relaxed mb-3">
-        Just 10 minutes from the house, Pombal is a charming town dominated by its medieval 
-        Knights Templar castle. The town offers excellent shopping (Aldi, Dias supermarkets), 
-        a wide selection of restaurants, banks, and all essential services.
-      </p>
-      <p class="text-slate-warm leading-relaxed">
-        Pombal gave its name to the Marquês de Pombal, Portugal's famous 18th-century prime minister.
-      </p>
-      <a href="/guide/pombal/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold mt-3">Read the Pombal Guide →</a>
+      <h2 class="mb-4">About Pombal</h2>
+      <div class="font-body text-muted leading-relaxed space-y-3">
+        <p>
+          Just 10 minutes from the house, Pombal is a charming town dominated by its medieval
+          Knights Templar castle. The town offers excellent shopping (Aldi, Dias supermarkets),
+          a wide selection of restaurants, banks, and all essential services.
+        </p>
+        <p>
+          Pombal gave its name to the Marqu&ecirc;s de Pombal, Portugal&rsquo;s famous 18th-century prime minister.
+        </p>
+      </div>
+      <a href="/guide/pombal/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-4 font-body">Read the Pombal Guide &rarr;</a>
     </section>
 
     <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">Central Portugal Hub</h2>
-      <p class="text-slate-warm leading-relaxed mb-3">
-        Casa dos Duques is perfectly positioned to explore the best of Central Portugal. 
-        Four UNESCO World Heritage sites are within a 30-minute drive: Batalha Monastery, 
-        Alcobaça Monastery, the Convent of Christ in Tomar, and the University of Coimbra.
+      <h2 class="mb-4">Central Portugal Hub</h2>
+      <p class="font-body text-muted leading-relaxed mb-3">
+        Casa dos Duques is perfectly positioned to explore the best of Central Portugal.
+        Four UNESCO World Heritage sites are within a 35-minute drive: Batalha Monastery,
+        Alcoba&ccedil;a Monastery, the Convent of Christ in Tomar, and the University of Coimbra.
       </p>
-      <a href="/guide/central-portugal/" class="inline-block text-terracotta-600 hover:text-terracotta-700 font-semibold mt-3">Explore Central Portugal →</a>
+      <a href="/guide/central-portugal/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold font-body">Explore Central Portugal &rarr;</a>
     </section>
   </div>
 
   <CTASection
-    title="Perfectly Located for Discovery"
+    title="Perfectly located for discovery"
     subtitle="Book your stay and explore the best of Central Portugal from Casa dos Duques"
-    primaryCta={{ label: 'Book Your Stay', href: '/booking/' }}
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
     variant="terracotta"
   />
 </BaseLayout>

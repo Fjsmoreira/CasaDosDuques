@@ -1,4 +1,6 @@
 ---
+import OptimizedImage from './OptimizedImage.astro';
+
 export interface Props {
   title: string;
   subtitle?: string;
@@ -6,7 +8,6 @@ export interface Props {
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   image?: string;
-  overlay?: boolean;
 }
 
 const {
@@ -16,48 +17,53 @@ const {
   primaryCta,
   secondaryCta,
   image = '/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
-  overlay = true,
 } = Astro.props;
 ---
 
-<section class="relative h-[64vh] min-h-[520px] flex items-center justify-center overflow-hidden bg-white">
+<section class="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
   <div class="absolute inset-0">
-    <img
+    <OptimizedImage
       src={image}
-      alt=""
+      alt="Casa dos Duques — holiday home with pool and garden in Abiul, Central Portugal"
       class="w-full h-full object-cover"
       loading="eager"
-      decoding="async"
+      fetchpriority="high"
+      width={1200}
+      height={800}
     />
-    {overlay && <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/45" />}
+    <!-- Subtle gradient only at the bottom third for text legibility -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-transparent" />
   </div>
-  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4 leading-tight">
-      {title}
-    </h1>
-    {subtitle && (
-      <p class="text-xl md:text-2xl text-white/90 mb-3">{subtitle}</p>
-    )}
-    {tagline && (
-      <p class="text-base md:text-lg text-white/80 mb-8 max-w-2xl mx-auto">{tagline}</p>
-    )}
-    <div class="flex flex-wrap gap-4 justify-center">
-      {primaryCta && (
-        <a
-          href={primaryCta.href}
-          class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-full transition-colors text-base shadow-lg shadow-black/10"
-        >
-          {primaryCta.label}
-        </a>
+
+  <div class="relative z-10 w-full max-w-6xl mx-auto px-4 pb-12 md:pb-16">
+    <div class="max-w-2xl">
+      <h1 class="text-white mb-3 leading-none">
+        {title}
+      </h1>
+      {subtitle && (
+        <p class="text-lg md:text-xl text-white/85 font-body mb-4">{subtitle}</p>
       )}
-      {secondaryCta && (
-        <a
-          href={secondaryCta.href}
-          class="inline-block bg-white hover:bg-olive-50 text-olive-900 font-semibold px-8 py-3 rounded-full border border-white transition-colors text-base shadow-lg shadow-black/10"
-        >
-          {secondaryCta.label}
-        </a>
+      {tagline && (
+        <p class="text-sm md:text-base text-white/70 font-body mb-6">{tagline}</p>
       )}
+      <div class="flex flex-wrap gap-4">
+        {primaryCta && (
+          <a
+            href={primaryCta.href}
+            class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-7 py-3 text-sm transition-colors"
+          >
+            {primaryCta.label}
+          </a>
+        )}
+        {secondaryCta && (
+          <a
+            href={secondaryCta.href}
+            class="inline-block bg-white/15 hover:bg-white/25 backdrop-blur-sm text-white font-semibold px-7 py-3 text-sm border border-white/30 transition-colors"
+          >
+            {secondaryCta.label}
+          </a>
+        )}
+      </div>
     </div>
   </div>
 </section>

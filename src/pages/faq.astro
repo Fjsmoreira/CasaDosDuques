@@ -45,26 +45,39 @@ const faqs = [
     answer: "No, the house does not have air conditioning. The thick stone walls keep the house naturally cool in summer. Fans are available in the bedrooms."
   }
 ];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <BaseLayout
   title="Frequently Asked Questions — Casa dos Duques, Abiul, Pombal"
   description="FAQs about Casa dos Duques holiday home: check-in/out times, pool, parking, WiFi, nearby attractions, and more. Everything you need to know before your stay."
   canonical="/faq/"
+  schema={schema}
 >
   <div class="max-w-3xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-olive-800 mb-4">Frequently Asked Questions</h1>
-    <p class="text-slate-warm mb-8">Everything you need to know about your stay at Casa dos Duques.</p>
+    <h1 class="text-4xl font-bold text-wood-800 mb-4">Frequently Asked Questions</h1>
+    <p class="text-muted mb-8">Everything you need to know about your stay at Casa dos Duques.</p>
 
     <div class="space-y-4 mb-10">
       {
         faqs.map((faq, i) => (
-          <details class="bg-white rounded-xl shadow-sm border border-warm-sand overflow-hidden group">
-            <summary class="px-6 py-4 cursor-pointer font-semibold text-olive-800 hover:text-terracotta-600 transition-colors list-none flex justify-between items-center">
+          <details class="bg-white border border-stone-300 overflow-hidden group">
+            <summary class="px-6 py-4 cursor-pointer font-semibold text-wood-800 hover:text-terracotta-600 transition-colors list-none flex justify-between items-center">
               <span>{faq.question}</span>
               <span class="text-terracotta-500 text-xl transition-transform duration-200 group-open:rotate-45">+</span>
             </summary>
-            <div class="px-6 pb-4 text-slate-warm leading-relaxed border-t border-warm-sand pt-3">
+            <div class="px-6 pb-4 text-muted leading-relaxed border-t border-stone-300 pt-3">
               {faq.answer}
             </div>
           </details>

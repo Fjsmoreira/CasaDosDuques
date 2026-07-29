@@ -2,26 +2,232 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import CTASection from '../../components/CTASection.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
 import { SITE_CONFIG } from '../../data/site-config.ts';
+import { buildVacationRentalSchema } from '../../lib/schema';
+
+const description =
+  "Maison de vacances rénovée de 90 ans à Abiul, Pombal. Jusqu'à 8 personnes, 4 chambres, piscine, jardin de 450m². Centre du Portugal.";
+const schema = buildVacationRentalSchema('fr', description);
 ---
 
 <BaseLayout
   title="Casa dos Duques | Maison de Vacances à Abiul, Pombal, Centre du Portugal"
-  description="Maison de vacances rénovée de 90 ans à Abiul, Pombal. Jusqu'à 8 personnes, 4 chambres, piscine, jardin de 450m². Centre du Portugal."
+  description={description}
+  canonical="/fr/"
   locale="fr"
+  schema={schema}
 >
+
   <Hero
     title="Casa dos Duques"
     subtitle="Votre Maison de Vacances au Centre du Portugal"
-    tagline="8 personnes · 4 chambres · Piscine · Jardin 450m²"
-    primaryCta={{ label: 'Voir Disponibilités & Réserver', href: '/fr/reservation/' }}
-    secondaryCta={{ label: 'Découvrir la Maison', href: '/fr/la-maison/' }}
+    primaryCta={{ label: 'Voir disponibilit&eacute;s', href: '/fr/reservation/' }}
+    secondaryCta={{ label: 'D&eacute;couvrir la maison', href: '/fr/la-maison/' }}
     image="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg"
   />
+
+  <!-- Quick facts bar -->
+  <div class="bg-white border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-muted font-body">
+        <span class="flex items-center gap-2">
+          <span class="text-terracotta-500 text-lg leading-none">★</span>
+          <span class="font-semibold text-wood-800">{SITE_CONFIG.rating}</span>
+          Guest Favorite · {SITE_CONFIG.reviewCount} avis
+        </span>
+        <span>8 personnes</span>
+        <span class="hidden sm:inline">·</span>
+        <span>4 chambres</span>
+        <span class="hidden sm:inline">·</span>
+        <span>5 lits</span>
+        <span class="hidden sm:inline">·</span>
+        <span>3 salles de bain</span>
+        <span class="hidden sm:inline">·</span>
+        <span>Piscine</span>
+        <span class="hidden sm:inline">·</span>
+        <span>450 m² jardin</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photo tour -->
+  <section class="bg-white pb-2">
+    <div class="max-w-6xl mx-auto px-4 pt-8">
+      <div class="grid grid-cols-4 grid-rows-2 gap-2 max-h-[480px]">
+        <div class="col-span-2 row-span-2">
+          <a href="/fr/jardin/">
+            <OptimizedImage src="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg" alt="Piscine et jardin à Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="eager" width={800} height={600} sizes="50vw" />
+          </a>
+        </div>
+        <div class="col-span-1 row-span-1">
+          <a href="/fr/chambres/">
+            <OptimizedImage src="/images/airbnb/c1eb8904-37f7-4f82-99e7-cd539bafd98a.jpeg" alt="Chambre à Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" width={400} height={300} sizes="25vw" />
+          </a>
+        </div>
+        <div class="col-span-1 row-span-1">
+          <a href="/fr/la-maison/">
+            <OptimizedImage src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Extérieur de Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" width={400} height={300} sizes="25vw" />
+          </a>
+        </div>
+        <div class="col-span-1 row-span-1">
+          <a href="/fr/jardin/">
+            <OptimizedImage src="/images/airbnb/16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg" alt="Piscine" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" width={400} height={300} sizes="25vw" />
+          </a>
+        </div>
+        <div class="col-span-1 row-span-1 relative">
+          <a href="/fr/chambres/">
+            <OptimizedImage src="/images/airbnb/1a43a296-ac44-498b-86ee-c004d600177c.jpeg" alt="Salon à Casa dos Duques" class="h-full w-full object-cover hover:brightness-95 transition" loading="lazy" width={400} height={300} sizes="25vw" />
+            <span class="absolute bottom-2 right-2 bg-white px-3 py-1.5 text-xs font-semibold text-wood-800">Toutes les photos</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- La Maison -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <div class="flex flex-col md:flex-row gap-10 items-center">
+        <div class="md:w-1/2">
+          <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">La maison</p>
+          <h2 class="mb-5">Une maison de 90 ans restaur&eacute;e avec &acirc;me</h2>
+          <div class="font-body text-muted leading-relaxed space-y-4">
+            <p>
+              Casa dos Duques se dresse au c&oelig;ur d&rsquo;Abiul depuis plus de 90 ans. Murs en pierre
+              &eacute;pais, sols en terre cuite d&rsquo;origine, hauts plafonds et poutres en bois
+              apparentes — chaque d&eacute;tail raconte l&rsquo;histoire de l&rsquo;artisanat portugais traditionnel.
+            </p>
+            <p>
+              Restaur&eacute;e dans le plus grand respect de son caract&egrave;re d&rsquo;origine, la maison
+              accueille huit personnes dans quatre chambres, avec trois salles de bain, une cuisine
+              enti&egrave;rement &eacute;quip&eacute;e et un salon chaleureux avec chemin&eacute;e.
+            </p>
+            <p class="text-sm text-wood-600">
+              4 chambres &ensp;·&ensp; 5 lits &ensp;·&ensp; 3 salles de bain &ensp;·&ensp; 8 personnes
+              &ensp;·&ensp; 10 min de Pombal &ensp;·&ensp; 35–40 min des plages
+            </p>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <OptimizedImage src="/images/airbnb/d5facc44-501a-445c-8eb4-94cf90e682dc.jpeg" alt="Extérieur de Casa dos Duques" class="w-full h-80 md:h-96 object-cover" loading="lazy" width={800} height={600} sizes="(max-width: 768px) 100vw, 50vw" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-4"><hr class="border-terracotta-200" /></div>
+
+  <!-- Pourquoi les clients adorent -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 text-center font-body">Pourquoi les clients adorent</p>
+      <h2 class="mb-10 text-center">Trois choses qui rendent cet endroit sp&eacute;cial</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center md:text-left">
+          <div class="text-terracotta-500 text-4xl font-light mb-4">&mdash;</div>
+          <h3 class="text-xl mb-3">Piscine &amp; Jardin</h3>
+          <p class="text-muted font-body text-sm leading-relaxed">
+            Piscine de 8 m&egrave;tres, jardin de 450 m&sup2; avec coins d&eacute;tente, terrasse barbecue — votre paradis priv&eacute; en plein air sous le soleil portugais.
+          </p>
+          <a href="/fr/jardin/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-3 font-body">Voir le jardin &rarr;</a>
+        </div>
+        <div class="text-center md:text-left">
+          <div class="text-terracotta-500 text-4xl font-light mb-4">&mdash;</div>
+          <h3 class="text-xl mb-3">Restaur&eacute;e avec &Acirc;me</h3>
+          <p class="text-muted font-body text-sm leading-relaxed">
+            Murs en pierre d&rsquo;origine, sols en terre cuite, hauts plafonds, poutres en bois — une restauration soign&eacute;e qui honore l&rsquo;histoire de 90 ans de la maison.
+          </p>
+          <a href="/fr/la-maison/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-3 font-body">L&rsquo;histoire compl&egrave;te &rarr;</a>
+        </div>
+        <div class="text-center md:text-left">
+          <div class="text-terracotta-500 text-4xl font-light mb-4">&mdash;</div>
+          <h3 class="text-xl mb-3">Emplacement Central</h3>
+          <p class="text-muted font-body text-sm leading-relaxed">
+            10 minutes de Pombal, 30 de Batalha et Leiria, 35–40 des plages. Quatre sites UNESCO &agrave; moins de 35 minutes en voiture.
+          </p>
+          <a href="/fr/emplacement/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-3 font-body">Explorer la r&eacute;gion &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jardin galerie -->
+  <section class="bg-stone-100">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 text-center font-body">Ext&eacute;rieur</p>
+      <h2 class="mb-8 text-center">Le Jardin &amp; la Piscine</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto">
+        <OptimizedImage src="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg" alt="Jardin" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 25vw" />
+        <OptimizedImage src="/images/airbnb/16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg" alt="Piscine" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 25vw" />
+        <OptimizedImage src="/images/airbnb/1e2a954f-adf1-4b6a-8df9-1e23ff619dc4.jpeg" alt="Jardin et terrasse" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 25vw" />
+        <OptimizedImage src="/images/airbnb/fbe29248-4838-4933-8a45-8cb4fa287fbf.jpeg" alt="Terrasse" class="h-48 w-full object-cover" loading="lazy" width={400} height={300} sizes="(max-width: 768px) 50vw, 25vw" />
+      </div>
+      <div class="text-center mt-6">
+        <a href="/fr/jardin/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold font-body">Voir le jardin &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Découvrir -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+      <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 text-center font-body">D&eacute;couvrir</p>
+      <h2 class="mb-10 text-center">Le Centre du Portugal &agrave; votre porte</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="/fr/activites/" class="block bg-stone-100 hover:bg-stone-200 transition p-5 group">
+          <h3 class="text-base mb-1 group-hover:text-terracotta-500 transition-colors">Tomar</h3>
+          <p class="text-xs text-muted font-body">Couvent du Christ · UNESCO</p>
+          <p class="text-xs text-terracotta-500 font-semibold mt-2 font-body">40 min</p>
+        </a>
+        <a href="/fr/activites/" class="block bg-stone-100 hover:bg-stone-200 transition p-5 group">
+          <h3 class="text-base mb-1 group-hover:text-terracotta-500 transition-colors">Batalha</h3>
+          <p class="text-xs text-muted font-body">Monast&egrave;re Gothique · UNESCO</p>
+          <p class="text-xs text-terracotta-500 font-semibold mt-2 font-body">30 min</p>
+        </a>
+        <a href="/fr/plages/" class="block bg-stone-100 hover:bg-stone-200 transition p-5 group">
+          <h3 class="text-base mb-1 group-hover:text-terracotta-500 transition-colors">Nazar&eacute;</h3>
+          <p class="text-xs text-muted font-body">Vagues g&eacute;antes &amp; fruits de mer</p>
+          <p class="text-xs text-terracotta-500 font-semibold mt-2 font-body">65 min</p>
+        </a>
+        <a href="/fr/excursions/" class="block bg-stone-100 hover:bg-stone-200 transition p-5 group">
+          <h3 class="text-base mb-1 group-hover:text-terracotta-500 transition-colors">Coimbra</h3>
+          <p class="text-xs text-muted font-body">Ville Universitaire · UNESCO</p>
+          <p class="text-xs text-terracotta-500 font-semibold mt-2 font-body">50 min</p>
+        </a>
+      </div>
+      <div class="text-center mt-6">
+        <a href="/fr/activites/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold font-body">Toutes les activit&eacute;s &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto px-4"><hr class="border-terracotta-200" /></div>
+
+  <!-- Avis -->
+  <section class="bg-white">
+    <div class="max-w-3xl mx-auto px-4 py-16 md:py-20 text-center">
+      <div class="flex items-center justify-center gap-1 text-terracotta-500 mb-5">
+        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      </div>
+      <blockquote class="text-xl md:text-2xl text-wood-700 leading-relaxed mb-5">
+        &ldquo;Une maison absolument magnifique ! Chaque d&eacute;tail a &eacute;t&eacute; pens&eacute;.
+        Le jardin et la piscine sont incroyables, et l&rsquo;emplacement est parfait
+        pour explorer le centre du Portugal.&rdquo;
+      </blockquote>
+      <p class="text-sm text-muted font-body mb-6">Ana &amp; Miguel, septembre 2025</p>
+      <div class="flex items-center justify-center gap-2 text-sm font-body">
+        <span class="font-semibold text-wood-800">{SITE_CONFIG.rating}</span>
+        <span class="text-muted">· Guest Favorite · {SITE_CONFIG.reviewCount} avis</span>
+      </div>
+      <a href="/fr/avis/" class="inline-block text-sm text-terracotta-500 hover:text-terracotta-600 font-semibold mt-4 font-body">Lire tous les avis &rarr;</a>
+    </div>
+  </section>
+
   <CTASection
-    title="Prêt à Réserver?"
-    subtitle="AL 128717/AL — Hébergement Local Agréé à Abiul, Pombal"
-    primaryCta={{ label: 'Réserver', href: '/fr/reservation/' }}
+    title="Pr&ecirc;t &agrave; r&eacute;server ?"
+    subtitle="H&eacute;bergement local agr&eacute;&eacute; &agrave; Abiul, Pombal"
+    primaryCta={{ label: 'R&eacute;server directement', href: '/fr/reservation/' }}
     secondaryCta={{ label: 'Voir sur Airbnb', href: SITE_CONFIG.airbnbUrl }}
     variant="terracotta"
   />

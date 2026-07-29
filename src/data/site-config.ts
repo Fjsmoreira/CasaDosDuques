@@ -51,6 +51,7 @@ export const NAV_LINKS: Record<string, Array<{ label: string; path: string }>> =
     { label: 'Jardim', path: '/pt/jardim/' },
     { label: 'Preços', path: '/pt/precos/' },
     { label: 'Contacto', path: '/pt/contato/' },
+    { label: 'Blogue', path: '/pt/blog/' },
   ],
   nl: [
     { label: 'Home', path: '/nl/' },
@@ -61,6 +62,7 @@ export const NAV_LINKS: Record<string, Array<{ label: string; path: string }>> =
     { label: 'Tuin', path: '/nl/tuin/' },
     { label: 'Tarieven', path: '/nl/tarieven/' },
     { label: 'Contact', path: '/nl/contact/' },
+    { label: 'Blog', path: '/nl/blog/' },
   ],
   fr: [
     { label: 'Accueil', path: '/fr/' },
@@ -71,6 +73,7 @@ export const NAV_LINKS: Record<string, Array<{ label: string; path: string }>> =
     { label: 'Jardin', path: '/fr/jardin/' },
     { label: 'Tarifs', path: '/fr/tarifs/' },
     { label: 'Contact', path: '/fr/contact/' },
+    { label: 'Blog', path: '/fr/blog/' },
   ],
 };
 

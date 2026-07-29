@@ -10,47 +10,48 @@ import { SITE_CONFIG } from '../data/site-config.ts';
   canonical="/rates/"
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-olive-800 mb-6">Rates & Availability</h1>
-    <p class="text-slate-warm mb-8">
+    <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">Rates</p>
+    <h1 class="mb-6">Rates &amp; Availability</h1>
+    <p class="text-muted font-body mb-10">
       For current rates and availability, please contact us directly or check our Airbnb listing.
       We offer competitive rates for this beautiful 8-guest holiday home.
     </p>
 
-    <div class="bg-warm-cream rounded-xl p-8 mb-8 text-center">
-      <p class="text-lg text-slate-warm mb-4">
+    <div class="bg-stone-100 p-8 mb-10 text-center">
+      <p class="text-muted font-body mb-4">
         For the most up-to-date pricing and availability:
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/booking/" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+        <a href="/booking/" class="inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 text-sm transition-colors">
           Contact Us for Rates
         </a>
-        <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-8 py-3 rounded-lg transition-colors">
+        <a href={SITE_CONFIG.airbnbUrl} target="_blank" rel="noopener noreferrer" class="inline-block bg-white border border-terracotta-300 text-terracotta-600 hover:bg-terracotta-50 font-semibold px-8 py-3 text-sm transition-colors">
           Check on Airbnb
         </a>
       </div>
     </div>
 
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold text-olive-700 mb-4">What's Included</h2>
-      <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-warm">
-        <li class="flex items-center gap-2">✓ 4 bedrooms / 5 beds / 3 bathrooms</li>
-        <li class="flex items-center gap-2">✓ Sleeps up to 8 guests</li>
-        <li class="flex items-center gap-2">✓ 8m swimming pool (May-Sep)</li>
-        <li class="flex items-center gap-2">✓ 450m garden with lounge areas</li>
-        <li class="flex items-center gap-2">✓ BBQ & outdoor terrace</li>
-        <li class="flex items-center gap-2">✓ Fully equipped kitchen</li>
-        <li class="flex items-center gap-2">✓ Bed linen & towels</li>
-        <li class="flex items-center gap-2">✓ Free WiFi & parking</li>
-        <li class="flex items-center gap-2">✓ Fireplace</li>
-        <li class="flex items-center gap-2">✓ AL 128717/AL — Licensed accommodation</li>
+    <section class="mb-10">
+      <h2 class="mb-4">What&rsquo;s Included</h2>
+      <ul class="grid sm:grid-cols-2 gap-3 text-sm text-muted font-body">
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> 4 bedrooms / 5 beds / 3 bathrooms</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> Sleeps up to 8 guests</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> 8m swimming pool (May–Sep)</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> 450m garden with lounge areas</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> BBQ &amp; outdoor terrace</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> Fully equipped kitchen</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> Bed linen &amp; towels</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> Free WiFi &amp; parking</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> Fireplace</li>
+        <li class="flex items-center gap-2"><span class="text-terracotta-500">&mdash;</span> AL 128717/AL — Licensed accommodation</li>
       </ul>
     </section>
   </div>
 
   <CTASection
-    title="Ready to Book?"
+    title="Ready to book?"
     subtitle="Contact us for current rates and availability"
-    primaryCta={{ label: 'Enquire Now', href: '/booking/' }}
-    variant="olive"
+    primaryCta={{ label: 'Enquire now', href: '/booking/' }}
+    variant="wood"
   />
 </BaseLayout>

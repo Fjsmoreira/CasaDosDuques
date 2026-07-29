@@ -13,11 +13,18 @@ export type RouteKey =
   | 'booking'
   | 'reviews'
   | 'contact'
-  | 'privacy';
+  | 'privacy'
+  | 'guideAbiul'
+  | 'guidePombal'
+  | 'guideCentralPortugal'
+  | 'faq'
+  | 'blogIndex'
+  | 'blogAbiulPombal'
+  | 'blogRestaurantsPombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
-export const ROUTE_GROUPS: Record<RouteKey, Record<LocaleCode, string>> = {
+export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>> = {
   home: {
     en: '/',
     pt: '/pt/',
@@ -102,6 +109,43 @@ export const ROUTE_GROUPS: Record<RouteKey, Record<LocaleCode, string>> = {
     nl: '/nl/privacy/',
     fr: '/fr/confidentialite/',
   },
+  // Partial-coverage routes — only locales with actual translated content
+  guideAbiul: {
+    en: '/guide/abiul/',
+    pt: '/pt/guia/abiul/',
+  },
+  guidePombal: {
+    en: '/guide/pombal/',
+    pt: '/pt/guia/pombal/',
+  },
+  guideCentralPortugal: {
+    en: '/guide/central-portugal/',
+    pt: '/pt/guia/central-portugal/',
+  },
+  faq: {
+    en: '/faq/',
+    pt: '/pt/faq/',
+    nl: '/nl/faq/',
+    fr: '/fr/faq/',
+  },
+  blogIndex: {
+    en: '/blog/',
+    pt: '/pt/blog/',
+    nl: '/nl/blog/',
+    fr: '/fr/blog/',
+  },
+  blogAbiulPombal: {
+    en: '/blog/discover-abiul-pombal-central-portugal/',
+    pt: '/pt/blog/descobrir-abiul-pombal-centro-portugal/',
+    nl: '/nl/blog/ontdek-abiul-pombal-centraal-portugal/',
+    fr: '/fr/blog/decouvrir-abiul-pombal-centre-portugal/',
+  },
+  blogRestaurantsPombal: {
+    en: '/blog/best-restaurants-pombal-portugal/',
+    pt: '/pt/blog/melhores-restaurantes-pombal-portugal/',
+    nl: '/nl/blog/beste-restaurants-pombal-portugal/',
+    fr: '/fr/blog/meilleurs-restaurants-pombal-portugal/',
+  },
 };
 
 const normalizePath = (path: string) => {
@@ -125,9 +169,11 @@ export const getRouteKeyFromPath = (path: string): RouteKey | undefined => {
 
 export const getLocalizedPath = (path: string, targetLocale: LocaleCode): string => {
   const routeKey = getRouteKeyFromPath(path);
-  if (routeKey) return ROUTE_GROUPS[routeKey][targetLocale];
+  if (routeKey) {
+    const localized = ROUTE_GROUPS[routeKey][targetLocale];
+    if (localized) return localized;
+  }
 
-  // Unknown pages do not have translated equivalents. Send language-switch clicks
-  // to the locale homepage instead of inventing 404 paths such as /nl/blog/.
-  return ROUTE_GROUPS.home[targetLocale];
+  // Unknown pages or pages without this locale — fall back to locale homepage.
+  return ROUTE_GROUPS.home[targetLocale]!;
 };
