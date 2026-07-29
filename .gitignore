@@ -17,6 +17,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# contact form leads (local only)
+data/leads.json
+
 # macOS-specific files
 .DS_Store
 

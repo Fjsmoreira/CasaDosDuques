@@ -1,26 +1,79 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import MapSection from '../../components/MapSection.astro';
+import ContactForm from '../../components/ContactForm.astro';
 import { SITE_CONFIG } from '../../data/site-config.ts';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact Casa dos Duques',
+  url: 'https://casadosduques.pt/nl/contact/',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: SITE_CONFIG.contact.email,
+    telephone: SITE_CONFIG.contact.phone,
+    contactType: 'reservation',
+  },
+  location: {
+    '@type': 'Place',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: SITE_CONFIG.address.street,
+      addressLocality: SITE_CONFIG.address.town,
+      postalCode: SITE_CONFIG.address.postcode,
+      addressRegion: SITE_CONFIG.address.district,
+      addressCountry: 'PT',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: SITE_CONFIG.coordinates.lat,
+      longitude: SITE_CONFIG.coordinates.lng,
+    },
+  },
+};
 ---
 
 <BaseLayout
   title="Contact — Casa dos Duques, Abiul, Pombal"
-  description="Neem contact op met Fernando & Isabelle bij Casa dos Duques."
+  description="Neem contact op met Fernando & Isabelle bij Casa dos Duques. E-mail, telefoon, WhatsApp of stuur een bericht. We kijken ernaar uit je te verwelkomen in Abiul, Pombal."
   canonical="/nl/contact/"
   locale="nl"
+  schema={schema}
 >
   <div class="max-w-4xl mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-wood-800 mb-6">Contact</h1>
-    <div class="space-y-4">
-      <div class="bg-wall-100 p-5">
-        <h3 class="font-semibold text-wood-800 mb-1">Email</h3>
-        <a href="mailto:fernando@casadosduques.pt" class="text-terracotta-600 hover:underline">fernando@casadosduques.pt</a>
+    <p class="text-xs font-semibold text-terracotta-500 tracking-widest uppercase mb-3 font-body">Contact</p>
+    <h1 class="mb-6">Neem Contact Op</h1>
+    <p class="text-muted font-body mb-10">
+      We horen graag van je. Of je nu een vraag hebt, de beschikbaarheid wilt checken,
+      of klaar bent om te boeken &mdash; neem contact op en we reageren snel.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="space-y-4">
+        <div class="bg-stone-100 p-5">
+          <h3 class="mb-1">E-mail</h3>
+          <a href="mailto:{SITE_CONFIG.contact.email}" class="text-terracotta-500 hover:text-terracotta-600 text-sm font-body">{SITE_CONFIG.contact.email}</a>
+        </div>
+        <div class="bg-stone-100 p-5">
+          <h3 class="mb-1">Telefoon / WhatsApp</h3>
+          <p class="text-muted text-sm font-body">{SITE_CONFIG.contact.phone}</p>
+        </div>
+        <div class="bg-stone-100 p-5">
+          <h3 class="mb-1">Adres</h3>
+          <p class="text-sm text-muted font-body">
+            {SITE_CONFIG.address.street}<br />
+            {SITE_CONFIG.address.town}, {SITE_CONFIG.address.postcode}<br />
+            {SITE_CONFIG.address.district}, {SITE_CONFIG.address.country}
+          </p>
+        </div>
+        <div class="bg-stone-100 p-5">
+          <h3 class="mb-1">AL Registratie</h3>
+          <p class="text-sm text-muted font-body">{SITE_CONFIG.alRegistration} &mdash; Gelicenseerd Lokaal Verblijf</p>
+        </div>
       </div>
-      <div class="bg-wall-100 p-5">
-        <h3 class="font-semibold text-wood-800 mb-1">Telefoon / WhatsApp</h3>
-        <p class="text-muted">{SITE_CONFIG.contact.phone}</p>
-      </div>
+
+      <ContactForm locale="nl" />
     </div>
 
     <MapSection

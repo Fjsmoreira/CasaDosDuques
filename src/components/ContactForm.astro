@@ -1,0 +1,288 @@
+---
+/**
+ * ContactForm — Reusable contact form for all locales.
+ *
+ * POSTs to /api/contact (Express server on port 3000, proxied by nginx).
+ * Uses fetch for in-page submission with success/error feedback.
+ * Includes honeypot spam protection.
+ */
+
+export interface Props {
+  locale?: 'en' | 'pt' | 'nl' | 'fr';
+}
+
+const locale = Astro.props.locale || 'en';
+
+const t: Record<string, {
+  heading: string;
+  nameLabel: string;
+  emailLabel: string;
+  phoneLabel: string;
+  phoneOptional: string;
+  checkInLabel: string;
+  checkOutLabel: string;
+  guestsLabel: string;
+  guestsOptions: string;
+  messageLabel: string;
+  submitLabel: string;
+  sendingLabel: string;
+  successTitle: string;
+  successMessage: string;
+  errorTitle: string;
+  errorMessage: string;
+  privacyNote: string;
+}> = {
+  en: {
+    heading: 'Send a Message',
+    nameLabel: 'Name',
+    emailLabel: 'Email',
+    phoneLabel: 'Phone (WhatsApp)',
+    phoneOptional: 'optional',
+    checkInLabel: 'Check-in date',
+    checkOutLabel: 'Check-out date',
+    guestsLabel: 'Guests',
+    guestsOptions: 'Select...|1 guest|2 guests|3 guests|4 guests|5 guests|6 guests|7 guests|8 guests',
+    messageLabel: 'Your message',
+    submitLabel: 'Send Message',
+    sendingLabel: 'Sending...',
+    successTitle: 'Message sent! Thank you.',
+    successMessage: 'We\'ll get back to you shortly — usually within a few hours. For anything urgent, WhatsApp us at +31 631 683 221.',
+    errorTitle: 'Something went wrong',
+    errorMessage: 'Please try again or email us directly at fernando@casadosduques.pt.',
+    privacyNote: 'Your details are only used to respond to your inquiry. No spam, ever.',
+  },
+  pt: {
+    heading: 'Enviar Mensagem',
+    nameLabel: 'Nome',
+    emailLabel: 'Email',
+    phoneLabel: 'Telefone (WhatsApp)',
+    phoneOptional: 'opcional',
+    checkInLabel: 'Data de check-in',
+    checkOutLabel: 'Data de check-out',
+    guestsLabel: 'Hóspedes',
+    guestsOptions: 'Selecionar...|1 hóspede|2 hóspedes|3 hóspedes|4 hóspedes|5 hóspedes|6 hóspedes|7 hóspedes|8 hóspedes',
+    messageLabel: 'A sua mensagem',
+    submitLabel: 'Enviar Mensagem',
+    sendingLabel: 'A enviar...',
+    successTitle: 'Mensagem enviada! Obrigado.',
+    successMessage: 'Responderemos em breve — normalmente dentro de algumas horas. Para algo urgente, contacte-nos por WhatsApp: +31 631 683 221.',
+    errorTitle: 'Algo correu mal',
+    errorMessage: 'Por favor tente novamente ou envie-nos um email para fernando@casadosduques.pt.',
+    privacyNote: 'Os seus dados são usados apenas para responder à sua mensagem. Nada de spam.',
+  },
+  nl: {
+    heading: 'Stuur een Bericht',
+    nameLabel: 'Naam',
+    emailLabel: 'E-mail',
+    phoneLabel: 'Telefoon (WhatsApp)',
+    phoneOptional: 'optioneel',
+    checkInLabel: 'Aankomstdatum',
+    checkOutLabel: 'Vertrekdatum',
+    guestsLabel: 'Gasten',
+    guestsOptions: 'Selecteer...|1 gast|2 gasten|3 gasten|4 gasten|5 gasten|6 gasten|7 gasten|8 gasten',
+    messageLabel: 'Je bericht',
+    submitLabel: 'Verstuur Bericht',
+    sendingLabel: 'Versturen...',
+    successTitle: 'Bericht verzonden! Bedankt.',
+    successMessage: 'We reageren meestal binnen een paar uur. Voor dringende zaken, WhatsApp ons op +31 631 683 221.',
+    errorTitle: 'Er is iets misgegaan',
+    errorMessage: 'Probeer het opnieuw of stuur ons een e-mail op fernando@casadosduques.pt.',
+    privacyNote: 'Je gegevens worden alleen gebruikt om op je bericht te reageren. Geen spam.',
+  },
+  fr: {
+    heading: 'Envoyer un Message',
+    nameLabel: 'Nom',
+    emailLabel: 'E-mail',
+    phoneLabel: 'Téléphone (WhatsApp)',
+    phoneOptional: 'optionnel',
+    checkInLabel: 'Date d\'arrivée',
+    checkOutLabel: 'Date de départ',
+    guestsLabel: 'Voyageurs',
+    guestsOptions: 'Sélectionner...|1 voyageur|2 voyageurs|3 voyageurs|4 voyageurs|5 voyageurs|6 voyageurs|7 voyageurs|8 voyageurs',
+    messageLabel: 'Votre message',
+    submitLabel: 'Envoyer le Message',
+    sendingLabel: 'Envoi en cours...',
+    successTitle: 'Message envoyé ! Merci.',
+    successMessage: 'Nous vous répondrons rapidement — généralement dans les quelques heures. Pour toute urgence, contactez-nous par WhatsApp au +31 631 683 221.',
+    errorTitle: 'Une erreur est survenue',
+    errorMessage: 'Veuillez réessayer ou nous envoyer un e-mail à fernando@casadosduques.pt.',
+    privacyNote: 'Vos informations sont uniquement utilisées pour répondre à votre demande. Pas de spam.',
+  },
+};
+
+const text = t[locale] || t.en;
+const guestOptions = text.guestsOptions.split('|');
+const formId = `contact-form-${locale}`;
+---
+
+<div class="bg-white border border-stone-200 p-6">
+  <h2 class="mb-4">{text.heading}</h2>
+
+  <!-- Success message (hidden by default) -->
+  <div id={`${formId}-success`} class="hidden bg-green-50 border border-green-200 p-4 mb-4">
+    <p class="font-semibold text-green-800 mb-1">{text.successTitle}</p>
+    <p class="text-green-700 text-sm font-body">{text.successMessage}</p>
+  </div>
+
+  <!-- Error message (hidden by default) -->
+  <div id={`${formId}-error`} class="hidden bg-red-50 border border-red-200 p-4 mb-4">
+    <p class="font-semibold text-red-800 mb-1">{text.errorTitle}</p>
+    <p class="text-red-700 text-sm font-body">{text.errorMessage}</p>
+  </div>
+
+  <form id={formId} class="space-y-4">
+    <!-- Honeypot: invisible to humans, catches bots -->
+    <div aria-hidden="true" style="position:absolute;left:-9999px;">
+      <label for={`${formId}-website`}>Website</label>
+      <input type="text" id={`${formId}-website`} name="_website" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-wood-800 mb-1 font-body" for={`${formId}-name`}>
+          {text.nameLabel} <span class="text-terracotta-500">*</span>
+        </label>
+        <input
+          type="text"
+          id={`${formId}-name`}
+          name="name"
+          required
+          class="w-full px-4 py-2 border border-stone-300 bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none text-sm font-body"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-wood-800 mb-1 font-body" for={`${formId}-email`}>
+          {text.emailLabel} <span class="text-terracotta-500">*</span>
+        </label>
+        <input
+          type="email"
+          id={`${formId}-email`}
+          name="email"
+          required
+          class="w-full px-4 py-2 border border-stone-300 bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none text-sm font-body"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-wood-800 mb-1 font-body" for={`${formId}-phone`}>
+        {text.phoneLabel} <span class="text-muted font-normal">({text.phoneOptional})</span>
+      </label>
+      <input
+        type="tel"
+        id={`${formId}-phone`}
+        name="phone"
+        class="w-full px-4 py-2 border border-stone-300 bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none text-sm font-body"
+      />
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div>
+        <label class="block text-sm font-medium text-wood-800 mb-1 font-body" for={`${formId}-checkin`}>
+          {text.checkInLabel}
+        </label>
+        <input
+          type="date"
+          id={`${formId}-checkin`}
+          name="checkin"
+          class="w-full px-4 py-2 border border-stone-300 bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none text-sm font-body"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-wood-800 mb-1 font-body" for={`${formId}-checkout`}>
+          {text.checkOutLabel}
+        </label>
+        <input
+          type="date"
+          id={`${formId}-checkout`}
+          name="checkout"
+          class="w-full px-4 py-2 border border-stone-300 bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none text-sm font-body"
+        />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-wood-800 mb-1 font-body" for={`${formId}-guests`}>
+          {text.guestsLabel}
+        </label>
+        <select
+          id={`${formId}-guests`}
+          name="guests"
+          class="w-full px-4 py-2 border border-stone-300 bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none text-sm font-body text-muted"
+        >
+          {guestOptions.map((opt, i) => (
+            <option value={i === 0 ? '' : String(i)} disabled={i === 0} selected={i === 0}>
+              {opt}
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-wood-800 mb-1 font-body" for={`${formId}-message`}>
+        {text.messageLabel} <span class="text-terracotta-500">*</span>
+      </label>
+      <textarea
+        id={`${formId}-message`}
+        name="message"
+        rows="5"
+        required
+        class="w-full px-4 py-2 border border-stone-300 bg-white focus:border-terracotta-400 focus:ring-1 focus:ring-terracotta-400 outline-none text-sm font-body"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      id={`${formId}-submit`}
+      class="bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold px-8 py-3 text-sm transition-colors w-full"
+    >
+      {text.submitLabel}
+    </button>
+
+    <p class="text-xs text-muted font-body text-center">{text.privacyNote}</p>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('{formId}') as HTMLFormElement | null;
+  const successEl = document.getElementById('{formId}-success');
+  const errorEl = document.getElementById('{formId}-error');
+  const submitBtn = document.getElementById('{formId}-submit') as HTMLButtonElement | null;
+
+  if (form && submitBtn) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      successEl?.classList.add('hidden');
+      errorEl?.classList.add('hidden');
+
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = '{text.sendingLabel}';
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+        formData.append('language', '{locale}');
+
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: new URLSearchParams(formData as any).toString(),
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        });
+
+        if (response.ok) {
+          form.reset();
+          successEl?.classList.remove('hidden');
+          successEl?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          throw new Error('Server returned ' + response.status);
+        }
+      } catch (err) {
+        errorEl?.classList.remove('hidden');
+        errorEl?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+</script>
