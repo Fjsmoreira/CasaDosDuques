@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
+  <defs>
+    <style>
+      .mark { fill: #c2673a; }
+      .text { fill: #4a3728; font-family: Georgia, 'Times New Roman', serif; }
+      .accent { fill: none; stroke: #c2673a; stroke-width: 1.2; }
+    </style>
+  </defs>
+
+  <!-- Icon: elegant CDD monogram inside a circular tile -->
+  <g transform="translate(55,30)">
+    <!-- Outer circle (tile shape) -->
+    <circle cx="45" cy="55" r="42" class="mark" opacity="0.12"/>
+    <circle cx="45" cy="55" r="36" class="accent"/>
+    <!-- Inner decorative dots — Portuguese tile motif -->
+    <circle cx="45" cy="19" r="1.5" class="mark" opacity="0.5"/>
+    <circle cx="45" cy="91" r="1.5" class="mark" opacity="0.5"/>
+    <circle cx="9" cy="55" r="1.5" class="mark" opacity="0.5"/>
+    <circle cx="81" cy="55" r="1.5" class="mark" opacity="0.5"/>
+    <!-- CDD monogram -->
+    <text x="45" y="63" text-anchor="middle" font-size="32" font-weight="bold" letter-spacing="6" class="mark">CDD</text>
+  </g>
+
+  <!-- Wordmark -->
+  <text class="text" x="150" y="68" font-size="36" font-weight="bold" letter-spacing="1.5">Casa dos Duques</text>
+  <!-- Subtitle -->
+  <text x="150" y="96" font-size="13" fill="#8b7355" letter-spacing="3">HOLIDAY HOME · CENTRAL PORTUGAL</text>
+
+  <line x1="150" y1="112" x2="150" y2="52" stroke="#c2673a" stroke-width="0.5" opacity="0.3"/>
+</svg>

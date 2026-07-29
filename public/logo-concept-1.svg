@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
+  <defs>
+    <style>
+      .mark { fill: #c2673a; }
+      .text { fill: #4a3728; font-family: Georgia, 'Times New Roman', serif; }
+    </style>
+  </defs>
+
+  <!-- Icon: stylized Portuguese house arch + tile detail -->
+  <g transform="translate(30,20)">
+    <!-- Roof shape — traditional Portuguese terracotta roof -->
+    <path class="mark" d="M45,8 L80,40 L10,40 Z"/>
+    <!-- Wall / facade -->
+    <rect class="mark" x="18" y="40" width="54" height="50" rx="1"/>
+    <!-- Door arch -->
+    <path d="M35,90 L35,65 A10,10 0 0,1 55,65 L55,90 Z" fill="#f8f5f0"/>
+    <!-- Window left -->
+    <rect x="22" y="50" width="8" height="10" rx="2" fill="#f8f5f0"/>
+    <!-- Window right -->
+    <rect x="60" y="50" width="8" height="10" rx="2" fill="#f8f5f0"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text class="text" x="145" y="72" font-size="38" font-weight="bold" letter-spacing="2">Casa dos Duques</text>
+  <!-- Tagline -->
+  <text class="mark" x="148" y="100" font-size="14" font-style="italic" letter-spacing="4">ABIUL · POMBAL · PORTUGAL</text>
+
+  <!-- Thin decorative rule -->
+  <line x1="148" y1="115" x2="480" y2="115" stroke="#c2673a" stroke-width="0.5" opacity="0.4"/>
+</svg>

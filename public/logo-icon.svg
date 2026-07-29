@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .mark { fill: #c2673a; }
+      .bg { fill: #f8f5f0; }
+    </style>
+  </defs>
+  <!-- Diamond tile -->
+  <rect x="10" y="6" width="80" height="88" rx="4" class="bg" stroke="#c2673a" stroke-width="2"/>
+  <!-- Quarter lines -->
+  <line x1="50" y1="14" x2="50" y2="86" stroke="#c2673a" stroke-width="0.7" opacity="0.25"/>
+  <line x1="18" y1="50" x2="82" y2="50" stroke="#c2673a" stroke-width="0.7" opacity="0.25"/>
+  <!-- Corner dots -->
+  <circle cx="22" cy="18" r="3.5" class="mark" opacity="0.5"/>
+  <circle cx="78" cy="18" r="3.5" class="mark" opacity="0.5"/>
+  <circle cx="22" cy="82" r="3.5" class="mark" opacity="0.5"/>
+  <circle cx="78" cy="82" r="3.5" class="mark" opacity="0.5"/>
+  <!-- Center dot -->
+  <circle cx="50" cy="50" r="5" class="mark"/>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160">
+  <defs>
+    <style>
+      .mark { fill: #c2673a; }
+      .text { fill: #4a3728; font-family: Georgia, 'Times New Roman', serif; }
+      .gold { fill: #8b7355; }
+    </style>
+  </defs>
+
+  <!-- Icon: Portuguese azulejo (tile) inspired diamond -->
+  <g transform="translate(40,18)">
+    <!-- Diamond tile shape -->
+    <rect x="8" y="8" width="68" height="84" rx="3" fill="#f8f5f0" stroke="#c2673a" stroke-width="1.5"/>
+    <!-- Inner diamond pattern (quartered) -->
+    <line x1="42" y1="16" x2="42" y2="84" stroke="#c2673a" stroke-width="0.5" opacity="0.3"/>
+    <line x1="16" y1="50" x2="68" y2="50" stroke="#c2673a" stroke-width="0.5" opacity="0.3"/>
+    <!-- Corner flourishes -->
+    <circle cx="18" cy="18" r="3" class="mark" opacity="0.5"/>
+    <circle cx="66" cy="18" r="3" class="mark" opacity="0.5"/>
+    <circle cx="18" cy="82" r="3" class="mark" opacity="0.5"/>
+    <circle cx="66" cy="82" r="3" class="mark" opacity="0.5"/>
+    <!-- Center dot -->
+    <circle cx="42" cy="50" r="4" class="mark"/>
+  </g>
+
+  <!-- Wordmark — stacked layout -->
+  <text class="text" x="140" y="52" font-size="34" font-weight="bold" letter-spacing="2">Casa dos Duques</text>
+  <text class="gold" x="143" y="80" font-size="12" letter-spacing="5" font-style="italic">YOUR HOME IN CENTRAL PORTUGAL</text>
+
+  <!-- Thin rule -->
+  <line x1="140" y1="96" x2="480" y2="96" stroke="#c2673a" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Small detail: since 2016 or est. note -->
+  <text x="380" y="122" font-size="9" fill="#a49684" letter-spacing="2">ALOJAMENTO LOCAL</text>
+</svg>
