@@ -16,7 +16,8 @@ const PROPERTY_IMAGES = [
   '/images/airbnb/1a43a296-ac44-498b-86ee-c004d600177c.jpeg', // living space
   '/images/airbnb/1e2a954f-adf1-4b6a-8df9-1e23ff619dc4.jpeg', // backyard & garden
   '/images/airbnb/fbe29248-4838-4933-8a45-8cb4fa287fbf.jpeg', // barbecue terrace
-  '/images/airbnb/12a0aa1f-692f-4fe2-ad23-0a52059ce32c.jpeg', // interior detail
+  '/images/airbnb/12a0aa1f-692f-4fe2-ad23-0a52059ce32c.jpeg', // pool detail
+  '/images/airbnb/574169fe-28ed-4cf5-a856-fe60fe2e2d92.jpeg', // full bathroom
 ];
 
 /**
@@ -52,13 +53,9 @@ export function buildVacationRentalSchema(
   return {
     '@context': 'https://schema.org',
     '@type': 'VacationRental',
-    additionalType: 'https://schema.org/House',
+    additionalType: 'House',
     '@id': pageUrl,
-    identifier: {
-      '@type': 'PropertyValue',
-      propertyID: 'AL',
-      value: SITE_CONFIG.alRegistration,
-    },
+    identifier: SITE_CONFIG.alRegistration,
     name: SITE_CONFIG.name,
     description,
     url: pageUrl,
@@ -77,21 +74,27 @@ export function buildVacationRentalSchema(
       latitude: SITE_CONFIG.coordinates.lat,
       longitude: SITE_CONFIG.coordinates.lng,
     },
-    numberOfBedrooms: 4,
-    numberOfBathroomsTotal: 3,
-    occupancy: { '@type': 'QuantitativeValue', value: 8 },
-    containsPlace: [
-      { '@type': 'Place', name: 'Private swimming pool' },
-      { '@type': 'Place', name: 'Garden', description: '450 m² garden with lounge areas' },
-      { '@type': 'Place', name: 'Barbecue terrace' },
-    ],
-    amenityFeature: [
-      { '@type': 'LocationFeatureSpecification', name: 'Swimming pool', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'Garden', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'Free parking', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'WiFi', value: true },
-      { '@type': 'LocationFeatureSpecification', name: 'Kitchen', value: true },
-    ],
+    containsPlace: {
+      '@type': 'Accommodation',
+      additionalType: 'EntirePlace',
+      bed: [
+        { '@type': 'BedDetails', numberOfBeds: 2, typeOfBed: 'Single' },
+        { '@type': 'BedDetails', numberOfBeds: 1, typeOfBed: 'Double' },
+        { '@type': 'BedDetails', numberOfBeds: 1, typeOfBed: 'Double' },
+        { '@type': 'BedDetails', numberOfBeds: 1, typeOfBed: 'Double' },
+      ],
+      occupancy: { '@type': 'QuantitativeValue', value: 8 },
+      numberOfBedrooms: 4,
+      numberOfBathroomsTotal: 3,
+      amenityFeature: [
+        { '@type': 'LocationFeatureSpecification', name: 'pool', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'poolType', value: 'Outdoor' },
+        { '@type': 'LocationFeatureSpecification', name: 'wifi', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'kitchen', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'parkingType', value: 'Free' },
+        { '@type': 'LocationFeatureSpecification', name: 'outdoorGrill', value: true },
+      ],
+    },
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: SITE_CONFIG.rating,
