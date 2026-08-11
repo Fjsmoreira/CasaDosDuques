@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/nl/blog/vakantiehuis-centraal-portugal-rust-natuur/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Vakantiehuis in Centraal-Portugal: Rust, Natuur en Buiten de Bosbrandzones',
+      description: 'Waarom Nederlandse gezinnen kiezen voor een vakantiehuis in Centraal-Portugal: rust, natuur, zwembad en tuin — in een regio die in de zomer van 2026 buiten de kritieke bosbrandzones lag.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-11',
+      dateModified: '2026-08-11',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/nl/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Vakantiehuis in Centraal-Portugal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Vakantiehuis in Centraal-Portugal: Rust, Natuur en Buiten de Bosbrandzones — Casa dos Duques"
+  description="Rust, natuur, zwembad en een grote tuin: waarom Nederlandse gezinnen kiezen voor Centraal-Portugal — een regio die in de zomer van 2026 buiten de kritieke bosbrandzones lag. Praktisch en eerlijk advies."
+  canonical="/nl/blog/vakantiehuis-centraal-portugal-rust-natuur/"
+  locale="nl"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Centraal-Portugal</span>
+        <span>Augustus 2026</span>
+        <span>&middot; 6 min lezen</span>
+      </div>
+      <h1 class="leading-tight mb-4">Vakantiehuis in Centraal-Portugal: Rust, Natuur en Buiten de Bosbrandzones</h1>
+      <p class="text-lg text-muted font-body">Nederlandse gezinnen ontdekken steeds vaker het binnenland van Portugal: rust, ruimte, natuur en een zwembad om de hoek. Eerlijk antwoord op de vraag die in 2026 extra telt &mdash; hoe zit het met de bosbranden?</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Wie aan Portugal denkt, ziet vaak de Algarve voor zich. Maar wie op zoek is naar <strong>rust, natuur en ruimte</strong>, vindt dat in Centraal-Portugal: een regio van glooiende heuvels, kurkeikenbossen, rivierstranden met watervallen en historische dorpjes waar de tijd lijkt stil te staan. En met een huis met zwembad en tuin als uitvalsbasis wordt het de ideale vakantie voor het hele gezin.</p>
+
+      <h2 class="mt-8 mb-3">Rust en Natuur rond Pombal</h2>
+      <p>In het hart van deze regio ligt <strong>Abiul</strong>, een historisch stadje in de gemeente <strong>Pombal</strong> &mdash; de thuisbasis van <strong><a href="/nl/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong>, een prachtig gerestaureerd vakantiehuis met een <strong>8 meter lang zwembad</strong> en een tuin van 450 m&sup2; met lounges en barbecue.</p>
+      <p>Geen massatoerisme, geen file naar het strand: hier zwem je &rsquo;s ochtends baantjes in het zwembad, lunch je onder de kurkeiken en rij je &rsquo;s middags naar een van de <a href="/nl/stranden/" class="text-terracotta-500 hover:text-terracotta-600 underline">stranden of rivierstranden</a> op 35&ndash;50 minuten. Voor wie houdt van wandelen, kastelen en UNESCO-kloosters: alles ligt binnen een uurtje rijden &mdash; zie onze <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">gids voor Centraal-Portugal</a>.</p>
+
+      <h2 class="mt-8 mb-3">Eerlijk over Bosbranden</h2>
+      <p>In de zomer van 2026 waren er bosbranden in delen van Portugal &mdash; ook Nederlandse media besteedden er aandacht aan, en sommige reizigers zagen zelfs annuleringen in gebieden die helemaal niet getroffen waren. Daarom even helder:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Bosbranden in Portugal concentreren zich <strong>niet overal</strong>; ze raken specifieke gebieden, meestal in het binnenland van de regio&rsquo;s waar het langdurig droog en heet is.</li>
+        <li>De regio rond <strong>Pombal en Abiul lag in de zomer van 2026 buiten de kritieke zones</strong>. Dat kan echter per periode verschillen &mdash; controleer daarom altijd de actuele situatie voor vertrek.</li>
+        <li>Betrouwbare bronnen: <strong>IPMA</strong> (ipma.pt, hitte- en brandrisico), de <strong>ANEPC</strong>/Prote&ccedil;&atilde;o Civil (protecaocivil.pt) en het lokale nieuws. Bij extreme risico&rsquo;s gelden er toegangsbeperkingen voor bossen &mdash; check dit ter plaatse of bij uw verhuurder.</li>
+        <li>Ons huis en de directe omgeving: steenachtig dorp, ruime tuin en een zwembad &mdash; en bij vragen over de actuele situatie staan we als verhuurders altijd voor u klaar.</li>
+      </ul>
+      <p class="text-sm text-muted italic">Dit is geen garantie tegen natuurrisico&rsquo;s, maar een eerlijk beeld: informeer uzelf goed en geniet met een gerust hart van al het moois dat deze regio biedt.</p>
+
+      <h2 class="mt-8 mb-3">Daguitstappen vanuit Casa dos Duques</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>UNESCO-kloosters</strong> &mdash; Batalha (30 min), Alcoba&ccedil;a (35 min), Convento de Cristo in Tomar (40 min) en de universiteit van Coimbra (50 min)</li>
+        <li><strong>Kastelen</strong> &mdash; het tempelierskasteel van Pombal (10 min) en kasteel van Leiria (25 min)</li>
+        <li><strong>Stranden</strong> &mdash; Praia da Leirosa (37 min), Figueira da Foz (47 min) en Nazar&eacute; (65 min) voor de beroemde golven</li>
+        <li><strong>Rivierstranden</strong> &mdash; Praia Fluvial do Mosteiro (50 min) en de watervallen van Penedo Furado (60 min), seizoensgebonden juni&ndash;september</li>
+        <li><strong>Dorpjes &amp; natuur</strong> &mdash; wandelen in de Serra da Lous&atilde; en de schistdorpen; meer in onze <a href="/nl/daguitstapjes/" class="text-terracotta-500 hover:text-terracotta-600 underline">daguitstappen-pagina</a></li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Waarom een Vakantiehuis?</h2>
+      <p>Een vakantiehuis biedt wat een hotel niet kan: <strong>eigen ritme, eigen zwembad, eigen tuin</strong>. &rsquo;s Ochtends vers brood uit Abiul, overdag eropuit, &rsquo;s avonds barbecue&euml;n onder de sterrenhemel. Casa dos Duques slaapt tot 8 gasten (6 volwassenen + 2 kinderen + 1 baby) in 4 slaapkamers &mdash; ideaal voor (groot)families die samen vakantie willen vieren.</p>
+      <p>Benieuwd naar de praktische kant? Lees ook ons verhaal over <a href="/nl/blog/vakantiehuis-kopen-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">het kopen van een vakantiehuis in Pombal</a> en ontdek <a href="/nl/blog/ontdek-abiul-pombal-centraal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Abiul en Pombal</a> in onze gids.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Bronnen: Dinheiro Vivo en Nederlandse media (augustus 2026) over branden en annuleringen in niet-getroffen gebieden; IPMA/ANEPC voor risico-indicatoren. Alle afstanden en rijtijden zijn indicatief (OpenStreetMap/OSRM). Controleer altijd de actuele situatie via offici&euml;le kanalen voor vertrek.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Klaar voor rust, natuur en zwembad?"
+    subtitle="Boek Casa dos Duques — uw thuis in Centraal-Portugal"
+    primaryCta={{ label: 'Boek uw verblijf', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

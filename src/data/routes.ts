@@ -20,7 +20,10 @@ export type RouteKey =
   | 'faq'
   | 'blogIndex'
   | 'blogAbiulPombal'
-  | 'blogRestaurantsPombal';
+  | 'blogRestaurantsPombal'
+  | 'blogBuyingHome'
+  | 'blogAdventurePark'
+  | 'blogVakantiehuisRust';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -145,6 +148,18 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
     pt: '/pt/blog/melhores-restaurantes-pombal-portugal/',
     nl: '/nl/blog/beste-restaurants-pombal-portugal/',
     fr: '/fr/blog/meilleurs-restaurants-pombal-portugal/',
+  },
+  blogBuyingHome: {
+    en: '/blog/buying-vacation-home-pombal-portugal/',
+    pt: '/pt/blog/comprar-casa-ferias-pombal-portugal/',
+    nl: '/nl/blog/vakantiehuis-kopen-pombal-portugal/',
+    fr: '/fr/blog/acheter-maison-vacances-pombal-portugal/',
+  },
+  blogAdventurePark: {
+    en: '/blog/adventure-park-castanheira-de-pera-central-portugal/',
+  },
+  blogVakantiehuisRust: {
+    nl: '/nl/blog/vakantiehuis-centraal-portugal-rust-natuur/',
   },
 };
 

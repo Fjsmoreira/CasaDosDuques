@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/adventure-park-castanheira-de-pera-central-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'New for 2026: A €12 Million Adventure Park in Castanheira de Pera — and More Reasons to Explore Central Portugal',
+      description: 'A €12 million adventure park is announced for Castanheira de Pera, around 45 minutes from Pombal. What it means for family day trips in Central Portugal — and why the region is being called "Portugal without the crowds".',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-11',
+      dateModified: '2026-08-11',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Adventure Park Castanheira de Pera', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="New for 2026: A €12 Million Adventure Park in Castanheira de Pera — and More Reasons to Explore Central Portugal"
+  description="A €12 million adventure park is announced for Castanheira de Pera, ~45 minutes from Pombal. What it means for family day trips — and why Central Portugal is 'Portugal without the crowds'."
+  canonical="/blog/adventure-park-castanheira-de-pera-central-portugal/"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Central Portugal</span>
+        <span>August 2026</span>
+        <span>&middot; 5 min read</span>
+      </div>
+      <h1 class="leading-tight mb-4">New for 2026: A &euro;12 Million Adventure Park in Castanheira de Pera &mdash; and More Reasons to Explore Central Portugal</h1>
+      <p class="text-lg text-muted font-body">Central Portugal is quietly becoming one of Europe&rsquo;s most exciting &ldquo;off the beaten track&rdquo; destinations &mdash; and a &euro;12 million adventure park planned for Castanheira de Pera, around 45 minutes from Pombal, is set to give families one more reason to come.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>When travel writers look for the next great European escape, they keep landing on the same answer: Central Portugal. A 2026 feature in <em>The Portugal News</em> called the region &ldquo;Portugal Without the Crowds&rdquo; &mdash; and for good reason. Here you can tour a 12th-century Templar castle in the morning, swim at a river beach with a waterfall in the afternoon, and have a UNESCO monastery almost to yourself. Now the region is adding a brand-new family attraction to the mix.</p>
+
+      <h2 class="mt-8 mb-3">A &euro;12 Million Adventure Park for Castanheira de Pera</h2>
+      <p>In August 2026, <em>Portugal Resident</em> reported plans for a major new adventure park in <strong>Castanheira de Pera</strong> &mdash; a municipality in the Leiria district, nestled in the forested hills of the Serra da Lous&atilde;. The &euro;12 million project is set to bring a new-scale outdoor attraction to a region already known for its river beaches and nature trails.</p>
+      <p>Castanheira de Pera sits roughly <strong>45 minutes by car from Pombal</strong> &mdash; comfortably within a day-trip radius from <strong><a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a></strong>. Details such as the opening date and the exact range of attractions were still being finalised at the time of the announcement, so it&rsquo;s worth following <em>Portugal Resident</em> and the official Castanheira de Pera tourism channels for updates.</p>
+
+      <h2 class="mt-8 mb-3">Why It Matters for Your Holiday Base</h2>
+      <p>A new adventure park changes the holiday calculus for families. Suddenly, &ldquo;a quiet house in the countryside&rdquo; also means a <strong>day out with climbing walls, ziplines or forest trails</strong> &mdash; without driving to a coastal resort. It joins an already rich list of things to do within an hour of Casa dos Duques:</p>
+
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>4 UNESCO World Heritage sites</strong> &mdash; Batalha Monastery, Alcoba&ccedil;a Monastery, the Convent of Christ in Tomar, and Coimbra University, all within 30&ndash;50 minutes. See our <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Central Portugal guide</a>.</li>
+        <li><strong>Atlantic beaches</strong> &mdash; Praia da Leirosa (37 min) and Figueira da Foz (47 min) with its 2 km city beach; Nazar&eacute; (65 min) for the famous big waves. More in our <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">beaches guide</a>.</li>
+        <li><strong>River beaches</strong> &mdash; Praia Fluvial do Mosteiro (50 min) and the spectacular Penedo Furado waterfalls (60 min), open roughly June to September.</li>
+        <li><strong>Castles &amp; Roman ruins</strong> &mdash; Pombal&rsquo;s Templar castle (10 min), Leiria Castle (25 min), and the Roman town of Con&iacute;mbriga (35 min).</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Why Stay at Casa dos Duques?</h2>
+      <p><a href="/the-house/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> is the ideal base for this kind of holiday: a quiet, characterful house in the historic town of Abiul, from which every day trip above is a relaxed drive away &mdash; and where the &ldquo;rest days&rdquo; are just as good as the adventures:</p>
+
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>4 bedrooms</strong> sleeping up to 8 guests (6 adults + 2 children + 1 baby)</li>
+        <li><strong>8-metre swimming pool</strong> and 450 m&sup2; garden with lounge areas and barbecue</li>
+        <li><strong>Original character preserved</strong> &mdash; stone walls, terracotta floors, high ceilings, fireplace</li>
+        <li><strong>Fully equipped kitchen</strong> and modern amenities including WiFi</li>
+        <li><strong>Guest Favorite</strong> on Airbnb, rated <strong>4.97/5</strong></li>
+      </ul>
+
+      <p>Between the new adventure park, the UNESCO sites, the beaches and the quiet countryside, Central Portugal is shaping up to be the smart family choice for 2026 and beyond. <a href="/booking/" class="text-terracotta-500 hover:text-terracotta-600 underline">Book Casa dos Duques</a> and be there when it all opens.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources: Portugal Resident (August 2026) for the Castanheira de Pera adventure park announcement; The Portugal News (2026) for the &ldquo;Portugal Without the Crowds&rdquo; feature. Project details such as opening dates and attractions were being finalised at the time of writing &mdash; always check official Castanheira de Pera tourism channels for updates. Distances and drive times are approximate, based on OpenStreetMap/OSRM.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Ready to explore Central Portugal?"
+    subtitle="Book your stay at Casa dos Duques — your perfect base for exploration"
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
