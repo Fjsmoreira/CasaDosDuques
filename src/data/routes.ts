@@ -23,7 +23,10 @@ export type RouteKey =
   | 'blogRestaurantsPombal'
   | 'blogBuyingHome'
   | 'blogAdventurePark'
-  | 'blogVakantiehuisRust';
+  | 'blogVakantiehuisRust'
+  | 'blogHotSprings'
+  | 'blogQueVisiter'
+  | 'blogPatrimonioVale';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -160,6 +163,15 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogVakantiehuisRust: {
     nl: '/nl/blog/vakantiehuis-centraal-portugal-rust-natuur/',
+  },
+  blogHotSprings: {
+    en: '/blog/hot-springs-thermal-spas-near-pombal-central-portugal/',
+  },
+  blogQueVisiter: {
+    fr: '/fr/blog/que-visiter-autour-de-pombal/',
+  },
+  blogPatrimonioVale: {
+    pt: '/pt/blog/pombal-investe-patrimonio-aldeia-do-vale/',
   },
 };
 

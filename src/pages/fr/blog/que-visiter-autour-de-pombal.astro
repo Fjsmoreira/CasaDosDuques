@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/que-visiter-autour-de-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Que visiter autour de Pombal : plages, thermes et villages authentiques',
+      description: 'Plages de l\'Atlantique à 30-45 minutes, thermes, châteaux templiers et villages authentiques : tout ce qu\'il y a à voir autour de Pombal, dans le Centre du Portugal, depuis la Casa dos Duques.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-12',
+      dateModified: '2026-08-12',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Que visiter autour de Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Que visiter autour de Pombal : plages, thermes et villages authentiques"
+  description="Plages de l'Atlantique à 30-45 min, thermes, châteaux templiers et villages authentiques : tout ce qu'il y a à voir autour de Pombal dans le Centre du Portugal."
+  canonical="/fr/blog/que-visiter-autour-de-pombal/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Excursions</span>
+        <span>Ao&ucirc;t 2026</span>
+        <span>&middot; 7 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">Que visiter autour de Pombal&nbsp;: plages, thermes et villages authentiques</h1>
+      <p class="text-lg text-muted font-body">Oc&eacute;an &agrave; moins d&rsquo;une heure, monast&egrave;res UNESCO, ch&acirc;teaux templiers, thermes et villages de schiste&nbsp;: la r&eacute;gion de Pombal concentre une vari&eacute;t&eacute; rare dans le Centre du Portugal. Voici notre s&eacute;lection d&rsquo;excursions depuis la <a href="/fr/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> &agrave; Abiul.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Beaucoup de voyageurs imaginent le Portugal comme Lisbonne, Porto et l&rsquo;Algarve. Mais le Centre du Portugal est l&rsquo;endroit o&ugrave; l&rsquo;on trouve tout &mdash; sans la foule&nbsp;: des plages oc&eacute;aniques sauvages, quatre sites class&eacute;s au patrimoine mondial de l&rsquo;UNESCO, des ch&acirc;teaux m&eacute;di&eacute;vaux, des stations thermales et des villages o&ugrave; le temps semble s&rsquo;&ecirc;tre arr&ecirc;t&eacute;. Et tout est &agrave; moins de deux heures de Pombal.</p>
+
+      <h2 class="mt-8 mb-3">Les plages de l&rsquo;Atlantique &agrave; 30&ndash;45 minutes</h2>
+      <p>Depuis Abiul, vous pouvez vous baigner dans l&rsquo;oc&eacute;an en moins d&rsquo;une heure. La <strong>Praia da Leirosa</strong> (&agrave; environ 35 minutes) est une grande plage sauvage, pris&eacute;e des surfeurs, avec un front de mer r&eacute;cemment r&eacute;am&eacute;nag&eacute;. <strong>Figueira da Foz</strong> (&agrave; environ 45 minutes) offre 2 km de plage urbaine, une promenade anim&eacute;e et de tr&egrave;s bons restaurants de poisson. Pour les plus beaux paysages, <strong>Nazar&eacute;</strong> (&agrave; environ 1 heure) est c&eacute;l&egrave;bre pour ses vagues g&eacute;antes et son cap spectaculaire. Voir notre <a href="/fr/plages/" class="text-terracotta-500 hover:text-terracotta-600 underline">guide des plages</a> pour le d&eacute;tail.</p>
+
+      <h2 class="mt-8 mb-3">Les thermes &mdash; la tradition portugaise du bien-&ecirc;tre</h2>
+      <p>Le Portugal est l&rsquo;un des grands pays europ&eacute;ens du thermalisme, et la r&eacute;gion de Pombal est particuli&egrave;rement bien plac&eacute;e&nbsp;:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Termas de Monte Real</strong> (pr&egrave;s de Leiria, &agrave; environ 40 minutes)&nbsp;: le complexe thermal complet le plus proche &mdash; h&ocirc;tel, piscines int&eacute;rieure et ext&eacute;rieure, circuit spa. Id&eacute;al pour une demi-journ&eacute;e, avec le <strong>ch&acirc;teau de Leiria</strong> sur le chemin du retour.</li>
+        <li><strong>Termas da Amieira</strong> (entre Soure et Penela, &agrave; environ 50 minutes)&nbsp;: une petite station thermale tranquille, au c&oelig;ur des for&ecirc;ts, loin de tout.</li>
+        <li><strong>S&atilde;o Pedro do Sul</strong> (dans le district de Viseu, &agrave; environ 2 heures)&nbsp;: la ville thermale la plus c&eacute;l&egrave;bre du Portugal, avec ses bains romains fouill&eacute;s et ses sources &agrave; pr&egrave;s de 68&nbsp;&deg;C. Vaut le d&eacute;placement pour les passionn&eacute;s.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Ch&acirc;teaux, monast&egrave;res et villages authentiques</h2>
+      <p>Le patrimoine est partout. Le <strong>ch&acirc;teau templier de Pombal</strong> est &agrave; 10 minutes d&rsquo;Abiul&nbsp;; celui de <strong>Leiria</strong> &agrave; 25 minutes&nbsp;; la ville romaine de <strong>Con&iacute;mbriga</strong> &agrave; 35 minutes. Quatre sites UNESCO sont &agrave; moins d&rsquo;une heure&nbsp;: les monast&egrave;res de <strong>Batalha</strong> et d&rsquo;<strong>Alcoba&ccedil;a</strong>, le couvent du Christ &agrave; <strong>Tomar</strong> et l&rsquo;universit&eacute; de <strong>Coimbra</strong>.</p>
+      <p>Et pour l&rsquo;esprit le plus authentique de la r&eacute;gion, visitez les <strong>villages traditionnels</strong>&nbsp;: <strong>Abiul</strong> lui-m&ecirc;me, avec son patrimoine m&eacute;di&eacute;val et ses ar&egrave;nes historiques (voir notre <a href="/guide/abiul/" class="text-terracotta-500 hover:text-terracotta-600 underline">guide d&rsquo;Abiul</a>), ou les villages perch&eacute;s de la <strong>Serra da Lous&atilde;</strong> comme Talasnal et Casal Novo, hameaux de schiste restaur&eacute;s qui semblent suspendus dans la montagne.</p>
+
+      <h2 class="mt-8 mb-3">Notre conseil pour organiser vos journ&eacute;es</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Une journ&eacute;e &laquo;&nbsp;plage&nbsp;&raquo;</strong>&nbsp;: Leirosa le matin, d&eacute;jeuner de poisson &agrave; Figueira da Foz, retour par le ch&acirc;teau de Leiria.</li>
+        <li><strong>Une journ&eacute;e &laquo;&nbsp;UNESCO&nbsp;&raquo;</strong>&nbsp;: Batalha et Alcoba&ccedil;a le matin, Tomar ou Coimbra l&rsquo;apr&egrave;s-midi.</li>
+        <li><strong>Une journ&eacute;e &laquo;&nbsp;nature&nbsp;&raquo;</strong>&nbsp;: thermes de Monte Real ou d&rsquo;Amieira, puis plage fluviale avec cascade &agrave; la mi-journ&eacute;e.</li>
+        <li><strong>Une journ&eacute;e &laquo;&nbsp;villages&nbsp;&raquo;</strong>&nbsp;: les hameaux de la Lous&atilde; le matin, retour par Penela et son ch&acirc;teau.</li>
+      </ul>
+
+      <p>La Casa dos Duques est la base id&eacute;ale pour toutes ces excursions&nbsp;: une maison de caract&egrave;re avec piscine et jardin dans le village historique d&rsquo;Abiul, o&ugrave; les jours &laquo;&nbsp;repos&nbsp;&raquo; sont aussi agr&eacute;ables que les journ&eacute;es d&rsquo;aventure. <a href="/fr/reservation/" class="text-terracotta-500 hover:text-terracotta-600 underline">R&eacute;servez votre s&eacute;jour</a> et explorez le Centre du Portugal &agrave; votre rythme.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources&nbsp;: informations v&eacute;rifi&eacute;es sur les sites officiels des thermes de Monte Real et des offices de tourisme locaux (2026). Temps de trajet approximatifs calcul&eacute;s depuis Abiul (Casa dos Duques) via OpenStreetMap/OSRM. Toujours v&eacute;rifier les horaires et la disponibilit&eacute; des traitements aupr&egrave;s de chaque &eacute;tablissement avant de vous d&eacute;placer.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Pr&ecirc;t &agrave; explorer le Centre du Portugal&nbsp;?"
+    subtitle="R&eacute;servez votre s&eacute;jour &agrave; la Casa dos Duques &mdash; votre base id&eacute;ale pour tout explorer"
+    primaryCta={{ label: 'R&eacute;server', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

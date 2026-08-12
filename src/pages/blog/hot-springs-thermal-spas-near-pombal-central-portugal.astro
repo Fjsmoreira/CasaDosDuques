@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/hot-springs-thermal-spas-near-pombal-central-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Hot Springs and Thermal Spas Near Pombal, Central Portugal — Day Trip Guide',
+      description: 'The best thermal spas within easy reach of Pombal and Casa dos Duques: Monte Real\'s historic spa (~40 min), Termas da Amieira and São Pedro do Sul — what to expect and how to plan your day.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-12',
+      dateModified: '2026-08-12',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Hot Springs Near Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Hot Springs and Thermal Spas Near Pombal, Central Portugal — Day Trip Guide"
+  description="The best thermal spas within easy reach of Pombal: Monte Real (~40 min), Termas da Amieira (~50 min) and São Pedro do Sul. What to expect and how to plan your day trip."
+  canonical="/blog/hot-springs-thermal-spas-near-pombal-central-portugal/"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Day Trips</span>
+        <span>August 2026</span>
+        <span>&middot; 6 min read</span>
+      </div>
+      <h1 class="leading-tight mb-4">Hot Springs and Thermal Spas Near Pombal, Central Portugal</h1>
+      <p class="text-lg text-muted font-body">Portugal is one of Europe&rsquo;s great thermal-bath countries, and the good news for guests at <a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> is that three of its most interesting spa towns sit within a comfortable day-trip radius of Abiul. Here&rsquo;s what to expect at each one.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Thermal tourism has been part of Portuguese life for over two thousand years &mdash; the Romans built bathhouses at several of the country&rsquo;s mineral springs, and the tradition of the <em>termas</em> (spa town) survives to this day. In 2026, international travel features keep putting Portuguese spas in the spotlight, and the region around Pombal is especially well placed: you can enjoy a proper thermal day &mdash; treatments, mineral pools, a long lunch &mdash; and still be back at the house in time for dinner.</p>
+
+      <h2 class="mt-8 mb-3">1. Termas de Monte Real &mdash; the closest, ~40 minutes</h2>
+      <p>The <strong>Termas de Monte Real</strong>, in the village of Monte Real just outside Leiria, is the nearest full thermal complex to Pombal &mdash; roughly <strong>40 minutes by car</strong> from Abiul. Its mineral waters, rich in sodium and iodine, have been used for balneotherapy since the 19th century, and the site today is a modern resort: a hotel with around 100 rooms, indoor and outdoor pools, a full spa circuit and a restaurant.</p>
+      <p>Monte Real works brilliantly as a half-day escape: book a thermal circuit or massage in the morning, have lunch in Leiria on the way back, and visit the <strong>Castelo de Leiria</strong> (25 minutes from the house, on the same route) or the <strong>Mosteiro de Santa Maria de Alcoba&ccedil;a</strong> (a UNESCO site, about 40 minutes from Monte Real) to round out the day.</p>
+
+      <h2 class="mt-8 mb-3">2. Termas da Amieira &mdash; a countryside classic, ~50 minutes</h2>
+      <p>Set among the forests of the region between Soure and Penela &mdash; about <strong>50 minutes from Abiul</strong> &mdash; the <strong>Termas da Amieira</strong> is a smaller, quieter thermal station with a long local tradition. Its mineral waters have been used for thermal treatments for generations, and the calm, green setting feels a world away from the coast. It is exactly the kind of unpretentious, genuinely local place that Central Portugal specialises in.</p>
+      <p>Pair a visit here with the <strong>Castelo de Penela</strong> (about 15 minutes away) or a swim at one of the <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">river beaches</a> of the region, and you have the classic Central Portugal day: forest, history and warm water.</p>
+
+      <h2 class="mt-8 mb-3">3. S&atilde;o Pedro do Sul &mdash; Portugal&rsquo;s most famous thermal town, ~2 hours</h2>
+      <p>If you want the full thermal experience, <strong>S&atilde;o Pedro do Sul</strong>, in the Viseu district, is Portugal&rsquo;s best-known spa town &mdash; about <strong>2 hours from Abiul</strong>, which still makes it a very doable day trip. The town&rsquo;s hot springs (among the hottest in Europe, emerging at around 68&deg;C) have been used since Roman times; you can visit the excavated <strong>Roman baths</strong> right in the centre, then book into the modern thermal complex, whose two main facilities sit on opposite banks of the river Vouga.</p>
+      <p>S&atilde;o Pedro do Sul is also a lovely small town in its own right &mdash; a riverside promenade, a historic bridge, and several good restaurants serving the region&rsquo;s <em>cozido</em> and mountain hams. For guests who love thermal culture, it&rsquo;s worth the drive.</p>
+
+      <h2 class="mt-8 mb-3">Practical tips for a thermal day trip</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Book ahead in high season</strong> &mdash; thermal circuits and treatments fill up fast in July and August; reserve online before you go.</li>
+        <li><strong>Bring swimwear and a towel</strong> &mdash; most complexes provide robes and lockers, but check each spa&rsquo;s own guidance.</li>
+        <li><strong>Allow a full morning or afternoon</strong> &mdash; a thermal visit is a relaxed, unhurried experience; treat it as the main event of the day.</li>
+        <li><strong>Check each spa&rsquo;s medical indications</strong> &mdash; thermal waters have specific properties and contra-indications; if you have health conditions, ask your doctor or the spa&rsquo;s medical team first.</li>
+      </ul>
+
+      <p>All three spas are within the <a href="/day-trips/" class="text-terracotta-500 hover:text-terracotta-600 underline">day-trip radius</a> we list for guests of Casa dos Duques, alongside the beaches, the UNESCO monasteries and the castles. After a day soaking in mineral water, there&rsquo;s nothing better than coming back to the house&rsquo;s own pool and garden. <a href="/booking/" class="text-terracotta-500 hover:text-terracotta-600 underline">Book your stay</a> and make the termas part of your itinerary.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources: Termas de Monte Real (official site, 2026); Termas da Amieira and S&atilde;o Pedro do Sul information verified via their official channels and local tourism authorities. Drive times are approximate, calculated from Casa dos Duques (Abiul) using OpenStreetMap/OSRM routing: Monte Real ~40 min, Amieira ~50 min, S&atilde;o Pedro do Sul ~2 h. Always confirm opening hours and treatment availability directly with each spa before travelling.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Make thermal baths part of your Central Portugal holiday"
+    subtitle="Stay at Casa dos Duques — your base for spas, beaches and castles"
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

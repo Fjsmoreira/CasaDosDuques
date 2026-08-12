@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/pombal-investe-patrimonio-aldeia-do-vale/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Pombal investe no património: ORU vai incentivar proprietários a recuperar a Aldeia do Vale',
+      description: 'A Câmara de Pombal avançou com uma Operação de Reabilitação Urbana para a Aldeia do Vale, na Serra de Sicó — recuperar património construído, qualificar o espaço público e dinamizar a economia local, preservando as características históricas.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-12',
+      dateModified: '2026-08-12',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Pombal investe no património', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Pombal investe no património: ORU vai incentivar proprietários a recuperar a Aldeia do Vale"
+  description="A Câmara de Pombal avançou com uma Operação de Reabilitação Urbana para a Aldeia do Vale, na Serra de Sicó — recuperar património, qualificar o espaço público e dinamizar a economia local."
+  canonical="/pt/blog/pombal-investe-patrimonio-aldeia-do-vale/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Património</span>
+        <span>Agosto 2026</span>
+        <span>&middot; 5 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">Pombal investe no património: ORU vai incentivar proprietários a recuperar a Aldeia do Vale</h1>
+      <p class="text-lg text-muted font-body">O concelho de Pombal continua a apostar no património rural: a nova Operação de Reabilitação Urbana (ORU) da Aldeia do Vale, na Serra de Sicó, pretende incentivar os privados a recuperar o património construído e a dinamizar a aldeia &mdash; uma boa notícia para quem procura turismo autêntico no Centro de Portugal.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>No final de julho de 2026, a <strong>Câmara Municipal de Pombal</strong> discutiu em reunião o projeto da <strong>Operação de Reabilitação Urbana (ORU) da Aldeia do Vale</strong>, segundo noticiou a <em>Região de Leiria</em>. O objetivo central, tal como descrito pela autarquia, é &ldquo;promover a recuperação do património construído, a qualificação do espaço público e a dinamização socioeconómica, enquanto as suas características históricas são preservadas&rdquo; &mdash; com o foco declarado em <strong>incentivar os proprietários privados a recuperar a aldeia</strong>.</p>
+
+      <h2 class="mt-8 mb-3">Uma aldeia na Serra de Sicó</h2>
+      <p>A <strong>Aldeia do Vale</strong> fica na <strong>Serra de Sicó</strong>, a curta distância de carro de Pombal e a menos de meia hora de <a href="/pt/guia/abiul/" class="text-terracotta-500 hover:text-terracotta-600 underline">Abiul</a>, onde se encontra a <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>. A serra, entre Pombal, Ansião e Alvaiázere, é conhecida pelas suas aldeias tradicionais de pedra calcária, pelas grutas e pela paisagem rural quase intocada &mdash; exatamente o tipo de território que o turismo de interior procura.</p>
+      <p>O investimento na reabilitação do património construído do concelho tem vindo a crescer, e a ORU da Aldeia do Vale insere-se nessa estratégia: em vez de apenas obras públicas, o modelo aposta em <strong>incentivar os privados</strong> &mdash; proprietários de casas antigas, muitas delas devolutas &mdash; a investir na sua recupera&ccedil;&atilde;o, com o apoio do enquadramento municipal. É um caminho que já deu resultados noutras aldeias do Centro de Portugal e que costuma trazer nova vida a espaços que pareciam condenados.</p>
+
+      <h2 class="mt-8 mb-3">O que significa para quem visita (ou procura casa) na região</h2>
+      <p>Para quem escolhe o Centro de Portugal para f&eacute;rias &mdash; ou est&aacute; a considerar comprar uma casa de f&eacute;rias, como explicamos no nosso <a href="/pt/blog/comprar-casa-ferias-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia pr&aacute;tico de compra</a> &mdash; este tipo de investimento &eacute; um bom sinal: aldeias recuperadas significam <strong>mais oferta de alojamento local, mais restaura&ccedil;&atilde;o e mais vida</strong> fora dos centros urbanos, sem perder a autenticidade que atrai quem foge das multid&otilde;es.</p>
+      <p>Vale a pena incluir a Aldeia do Vale e a Serra de Sicó num <a href="/pt/passeios/" class="text-terracotta-500 hover:text-terracotta-600 underline">roteiro de um dia</a> a partir de Abiul: a serra combina bem com o castelo de Pombal, as praias fluviais da regi&atilde;o e os mosteiros UNESCO da Batalha e de Alcoba&ccedil;a, todos a menos de uma hora de carro.</p>
+
+      <h2 class="mt-8 mb-3">Nota de fonte</h2>
+      <p>Os detalhes do projeto (montantes exatos e calend&aacute;rio de execu&ccedil;&atilde;o) ainda estavam a ser finalizados no momento da not&iacute;cia; a <em>Regi&atilde;o de Leiria</em> e o <em>Jornal de Leiria</em> (agosto de 2026) reportaram o avan&ccedil;o da ORU e os valores associados &agrave; reabilita&ccedil;&atilde;o do centro hist&oacute;rico e das aldeias do concelho. Para informa&ccedil;&atilde;o oficial, acompanhe os canais da <a href="https://www.cm-pombal.pt" target="_blank" rel="noopener noreferrer" class="text-terracotta-500 hover:text-terracotta-600 underline">Câmara Municipal de Pombal</a>.</p>
+
+      <p>A <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>, em Abiul, &eacute; o ponto de partida ideal para conhecer esta regi&atilde;o em transforma&ccedil;&atilde;o &mdash; uma casa de car&aacute;ter com piscina e jardim, a poucos minutos de Pombal e da Serra de Sicó. <a href="/pt/reserva/" class="text-terracotta-500 hover:text-terracotta-600 underline">Reserve a sua estadia</a> e venha descobrir o património do Centro de Portugal enquanto ele se renova.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Região de Leiria (agosto de 2026) — projeto da ORU da Aldeia do Vale discutido na reunião de Câmara de 30 de julho de 2026; Jornal de Leiria (agosto de 2026) — reabilitação da aldeia mais antiga do concelho. Detalhes de execução e montantes ainda em finalização à data da notícia &mdash; confirmar sempre junto da Câmara Municipal de Pombal. Distâncias e tempos de viagem aproximados, calculados via OpenStreetMap/OSRM.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Venha conhecer o património do Centro de Portugal"
+    subtitle="Reserve a sua estadia na Casa dos Duques — a base ideal para explorar Pombal e a Serra de Sicó"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
