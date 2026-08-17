@@ -26,7 +26,10 @@ export type RouteKey =
   | 'blogVakantiehuisRust'
   | 'blogHotSprings'
   | 'blogQueVisiter'
-  | 'blogPatrimonioVale';
+  | 'blogPatrimonioVale'
+  | 'blogPraiasPombal'
+  | 'blogRoadTripCar'
+  | 'blogHerfstvakantie';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -172,6 +175,15 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogPatrimonioVale: {
     pt: '/pt/blog/pombal-investe-patrimonio-aldeia-do-vale/',
+  },
+  blogPraiasPombal: {
+    pt: '/pt/blog/praias-perto-de-pombal-urso-osso-baleia-pedrogao/',
+  },
+  blogRoadTripCar: {
+    en: '/blog/central-portugal-road-trip-by-car-ev/',
+  },
+  blogHerfstvakantie: {
+    nl: '/nl/blog/herfstvakantie-centraal-portugal-najaar/',
   },
 };
 

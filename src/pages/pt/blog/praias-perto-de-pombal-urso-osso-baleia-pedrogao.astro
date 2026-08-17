@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/praias-perto-de-pombal-urso-osso-baleia-pedrogao/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Praias perto de Pombal: Praia do Urso, Osso da Baleia e Pedrógão (30–45 min)',
+      description: 'As melhores praias a 30–45 minutos de Pombal e da Casa dos Duques: Praia do Urso (cada vez mais perto de ser zona balnear), Osso da Baleia e Pedrógão — o que esperar e como chegar.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-17',
+      dateModified: '2026-08-17',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Praias perto de Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Praias perto de Pombal: Praia do Urso, Osso da Baleia e Pedrógão (30–45 min)"
+  description="As melhores praias a 30–45 minutos de Pombal: Praia do Urso (cada vez mais perto de ser zona balnear), Osso da Baleia e Pedrógão. O que esperar e como chegar."
+  canonical="/pt/blog/praias-perto-de-pombal-urso-osso-baleia-pedrogao/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Praias</span>
+        <span>Agosto 2026</span>
+        <span>&middot; 6 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">Praias perto de Pombal: Praia do Urso, Osso da Baleia e Pedrógão</h1>
+      <p class="text-lg text-muted font-body">O litoral entre Leiria e Pombal esteve nas notícias em agosto de 2026: a <strong>Praia do Urso</strong> deu mais um passo para se tornar zona balnear oficial. Para os hóspedes da <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>, isto é apenas mais um motivo para conhecer as praias a 30&ndash;45 minutos de Abiul &mdash; praias de areia, pouco movimentadas e com mar de ondas.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">A notícia: Praia do Urso mais perto de ser zona balnear</h2>
+      <p>A <strong>Praia do Urso</strong>, no troço de costa entre a Praia de Pedrógão (Leiria) e a Praia do Osso da Baleia (Pombal), avançou em meados de agosto de 2026 no processo para se tornar <strong>zona balnear oficial</strong> &mdash; segundo noticiaram a <em>Região de Leiria</em>, o <em>Diário de Leiria</em> e o <em>Pombal Jornal</em>. O processo inclui também a perspetiva de <strong>novos acessos</strong> à praia, que hoje se fazem por caminhos de terra batida.</p>
+      <p>O que muda na prática? Uma zona balnear oficial significa vigilância, apoios de praia e sinalização &mdash; acessos mais seguros e confortáveis para famílias. Até lá, a praia mantém o seu carácter selvagem: areia larga, mar Atlântico e pouca gente mesmo em agosto.</p>
+
+      <h2 class="mt-8 mb-3">As três praias a 30&ndash;45 minutos de Abiul</h2>
+      <p>Todas as praias desta zona ficam a <strong>menos de 50 minutos de carro</strong> da Casa dos Duques &mdash; distâncias medidas por estrada a partir de Abiul:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Praia do Urso</strong> &mdash; a cerca de 40&ndash;45 minutos. A mais selvagem das três: areia ampla, dunas e o mar aberto do Atlântico. Ideal para quem procura espaço e sossego.</li>
+        <li><strong>Praia do Osso da Baleia</strong> &mdash; a cerca de 38 minutos. Já no concelho de Pombal, é a praia de eleição dos pombalenses: areal extenso, cafés e um ambiente de verão familiar.</li>
+        <li><strong>Praia de Pedrógão</strong> &mdash; a cerca de 44 minutos. Uma das maiores praias da região, com areal muito largo, vigilância na época balnear e boa oferta de restaurantes de peixe.</li>
+      </ul>
+      <p>Se preferir mar mais calmo, a <strong>Figueira da Foz</strong> fica a cerca de 45&ndash;50 minutos e tem praias urbanas de areia fina; para ondas grandes e surf, <strong>Nazaré</strong> fica a pouco mais de uma hora. Para um mergulho em água doce, veja a nossa página de <a href="/pt/praias/" class="text-terracotta-500 hover:text-terracotta-600 underline">praias fluviais e costeiras</a> da região.</p>
+
+      <h2 class="mt-8 mb-3">Dicas práticas para um dia de praia</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Leve chapéu de sol e água</strong> &mdash; a Praia do Urso não tem apoios fixos; abasteça-se antes de sair.</li>
+        <li><strong>Atenção ao mar</strong> &mdash; a costa oeste tem corrente e ondulação; respeite a sinalização e os nadadores-salvadores onde existirem.</li>
+        <li><strong>Combine com um passeio</strong> &mdash; o caminho costeiro entre Pedrógão e o Osso da Baleia é bonito a pé; e a <a href="/pt/guia/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia de Pombal</a> tem sugestões de castelo, museus e restaurantes para o regresso.</li>
+        <li><strong>Almoce peixe fresco</strong> &mdash; Pedrógão e o Osso da Baleia têm restaurantes de marisco e peixe grelhado muito procurados na época.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Praia + interior: o melhor dos dois mundos</h2>
+      <p>A grande vantagem de ficar na <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> é combinar o dia de praia com o interior: de manhã na areia, à tarde um mergulho na piscina e um jantar no <a href="/pt/blog/melhores-restaurantes-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">melhor restaurante de Pombal</a>. A zona de Abiul e da Serra de Sicó está a 10&ndash;15 minutos do centro de Pombal, e o <a href="/pt/passeios/" class="text-terracotta-500 hover:text-terracotta-600 underline">roteiro de passeios</a> da região inclui castelos, mosteiros UNESCO e praias fluviais para os dias mais quentes.</p>
+      <p>Setembro é, aliás, um dos melhores meses: o mar continua quente, as praias ficam quase vazias e as noites são amenas. Reserve a sua estadia na <a href="/pt/reserva/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> e descubra o litoral do Centro de Portugal.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Região de Leiria (15/08/2026) &mdash; &ldquo;Praia do Urso mais próxima de se tornar zona balnear e de reforçar oferta em Pombal&rdquo;; Diário de Leiria (15/08/2026) &mdash; integração na rede de praias do litoral português; Pombal Jornal (15/08/2026) &mdash; novos acessos. O processo de zona balnear estava em curso à data da publicação; confirme o estado atual junto da Câmara Municipal de Pombal ou de Leiria. Distâncias e tempos de viagem aproximados, calculados via OpenStreetMap/OSRM a partir de Abiul.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Mar à porta, piscina em casa"
+    subtitle="Reserve a sua estadia na Casa dos Duques — a base ideal para praias e interior"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

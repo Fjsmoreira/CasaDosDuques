@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/central-portugal-road-trip-by-car-ev/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Central Portugal by Car (or EV): A Quiet-Countryside Road Trip from Pombal',
+      description: 'A road trip through Central Portugal by car or EV, based in Pombal: Coimbra, Fátima, the Bussaco forest and the coast — with the new fast-charging corridor that makes electric driving easy in 2026.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-17',
+      dateModified: '2026-08-17',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Central Portugal Road Trip', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Central Portugal by Car (or EV): A Quiet-Countryside Road Trip from Pombal"
+  description="A road trip through Central Portugal by car or EV from Pombal: Coimbra, Fátima, the Bussaco forest and the Atlantic coast. Distances, charging and a practical itinerary."
+  canonical="/blog/central-portugal-road-trip-by-car-ev/"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Road Trip</span>
+        <span>August 2026</span>
+        <span>&middot; 7 min read</span>
+      </div>
+      <h1 class="leading-tight mb-4">Central Portugal by Car (or EV): A Quiet-Countryside Road Trip from Pombal</h1>
+      <p class="text-lg text-muted font-body">Mainstream travel media keep pointing to Central Portugal as the alternative to the Algarve crowds &mdash; and in 2026 there&rsquo;s a new reason to explore it by electric car: <a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Galp completed a fast-charging corridor across Portugal</a> this summer. Here&rsquo;s a practical road-trip plan based in Pombal, with real drive times from our front door in Abiul.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <p>Central Portugal is a region made for driving: smooth motorways, quiet country roads through cork-oak hills, and a concentration of UNESCO sites, medieval castles and Atlantic beaches that most visitors never expect. TNT Magazine&rsquo;s &ldquo;Portugal Without the Crowds&rdquo; and Yahoo&rsquo;s feature on Central Portugal&rsquo;s medieval heart, both published this year, are only the latest validation of what locals have always known &mdash; this is the interior worth exploring.</p>
+
+      <h2 class="mt-8 mb-3">Why an EV now works here</h2>
+      <p>In June 2026, <strong>Galp completed its fast-charging corridor across Portugal</strong> &mdash; reported by <em>electrive.com</em> and <em>The Portugal News</em>. That means the main routes linking the north, centre and south of the country now have reliable high-power charging at motorway services. For a trip based in Pombal, the practical reality is simple:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Charge at the motorway services</strong> &mdash; on the A1 (Lisbon&ndash;Porto) and A8 (Leiria&ndash;Lisbon) corridors, fast chargers are now the norm at the big service areas.</li>
+        <li><strong>Most day trips need no charging</strong> &mdash; Coimbra, Fátima, Batalha and the beaches are all under 60 minutes from Pombal; a full battery covers several days of sightseeing.</li>
+        <li><strong>Plan ahead for rural legs</strong> &mdash; for the Bussaco forest and the schist villages, use a public charger in the nearest town; apps like the national <em>Mobi.E</em> network map show live availability.</li>
+      </ul>
+      <p>Always confirm your own car&rsquo;s range and the latest charger status before travelling &mdash; infrastructure is expanding fast, but availability can vary.</p>
+
+      <h2 class="mt-8 mb-3">A three-day loop from Pombal</h2>
+      <p>All distances below are real road drives measured from <strong>Abiul</strong> (where <a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> sits, 10 minutes from Pombal&rsquo;s castle) using OpenStreetMap routing.</p>
+
+      <h3 class="mt-6 mb-2">Day 1 &mdash; Pombal, Batalha and Alcobaça (all within 35 min)</h3>
+      <p>Start with the <strong>Castelo de Pombal</strong> (10 min) &mdash; a 12th-century Templar castle above the town. Then the two great Gothic monasteries: <strong>Mosteiro da Batalha</strong> (~30 min) and <strong>Mosteiro de Alcobaça</strong> (~35 min), both UNESCO World Heritage and both easily combined in one day. Back at the house, you&rsquo;ll have time for the pool.</p>
+
+      <h3 class="mt-6 mb-2">Day 2 &mdash; Coimbra and the Bussaco forest (~45 min and ~65 min)</h3>
+      <p><strong>Coimbra</strong> (~45 min) is one of Europe&rsquo;s great university cities: the Joanina Library, the Sé Velha and the views from the University&rsquo;s clock tower. For a completely different mood, continue to the <strong>Mata Nacional do Buçaco</strong> (~65 min), a walled 17th-century forest of exotic trees with the fairytale Palace Hotel at its heart &mdash; one of the most atmospheric forest drives in Portugal. Our <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Central Portugal guide</a> has the full detail on both.</p>
+
+      <h3 class="mt-6 mb-2">Day 3 &mdash; Fátima and the coast</h3>
+      <p><strong>Fátima</strong> (~45 min) is the region&rsquo;s most-visited sanctuary and a profound stop for many travellers. Afterwards, take the A8 towards the coast: the beaches at <strong>Praia do Osso da Baleia</strong> (~38 min from Abiul), <strong>Figueira da Foz</strong> (~47 min) or <strong>Nazaré</strong> (~65 min) for the famous waves. Our <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">beaches page</a> covers the options, and the <a href="/day-trips/" class="text-terracotta-500 hover:text-terracotta-600 underline">day-trips radius</a> shows what fits in a single afternoon.</p>
+
+      <h2 class="mt-8 mb-3">Practical notes</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Tolls</strong> &mdash; the A1/A8 are toll motorways; payment by card or Via Verde (electronic tag) at the gantries. Non-toll routes exist but are slower.</li>
+        <li><strong>Parking</strong> &mdash; Coimbra and Fátima have well-signposted parking; in Coimbra&rsquo;s historic centre, park at the riverside lots and walk up.</li>
+        <li><strong>Speed and cameras</strong> &mdash; motorways 120 km/h, national roads 90/100 km/h; speed cameras are common on the A1.</li>
+        <li><strong>Combine with the termas</strong> &mdash; the thermal spas of Monte Real (~40 min) and São Pedro do Sul fit neatly into the same loop; see our <a href="/blog/hot-springs-thermal-spas-near-pombal-central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">hot springs guide</a>.</li>
+      </ul>
+
+      <p>Base yourself at <a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> and every leg of this loop becomes a day trip &mdash; with the pool, the garden and a barbecue waiting when you return. <a href="/booking/" class="text-terracotta-500 hover:text-terracotta-600 underline">Book your stay</a> and plan the drive of a lifetime through Central Portugal.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources: electrive.com (13/06/2026) and The Portugal News (11/06/2026) &mdash; Galp completes fast-charging corridor across Portugal; TNT Magazine &ldquo;Portugal Without the Crowds&rdquo; and Yahoo Travel &ldquo;Central Portugal&rsquo;s Medieval Heart&rdquo; (2026) &mdash; travel features on the region. Drive times approximate, calculated from Casa dos Duques (Abiul) via OpenStreetMap/OSRM. Charging availability varies &mdash; always verify live status via the Mobi.E network or your car&rsquo;s navigation before travelling.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Your base for the Central Portugal road trip"
+    subtitle="Stay at Casa dos Duques — pool, garden and every route within an hour"
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
