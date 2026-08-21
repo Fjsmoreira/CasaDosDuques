@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/echapper-a-la-foule-portugal-centre-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Échapper à la foule au Portugal : pourquoi le Centre (et Pombal) vaut l\'Algarve',
+      description: 'Plages à 40 minutes, quatre sites UNESCO à moins d\'une heure, prix doux et zéro embouteillage : le Centre du Portugal offre tout ce que l\'Algarve promet — sans la foule.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Échapper à la foule au Portugal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Échapper à la foule au Portugal : pourquoi le Centre (et Pombal) vaut l\'Algarve"
+  description="Plages à 40 min, 4 sites UNESCO à moins d\'une heure, prix doux et tranquillité : la région de Pombal, alternative au surtourisme de l\'Algarve et de Lisbonne."
+  canonical="/fr/blog/echapper-a-la-foule-portugal-centre-pombal/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Voyage</span>
+        <span>Août 2026</span>
+        <span>&middot; 6 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">Échapper à la foule au Portugal : pourquoi le Centre (et Pombal) vaut l&rsquo;Algarve</h1>
+      <p class="text-lg text-muted font-body">En 2026, les médias francophones l&rsquo;ont répété : le Portugal doit &laquo;&nbsp;rester attractif sans devenir victime de son succès&nbsp;&raquo; (Portugal.fr), et l&rsquo;intérieur reçoit des investissements records pour attirer les visiteurs (Euronews). La bonne nouvelle : <strong>le Centre du Portugal offre l&rsquo;essentiel de l&rsquo;Algarve &mdash; plages, soleil, gastronomie &mdash; sans les foules</strong>. Et Pombal en est le camp de base idéal.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Ce que le Centre a que l&rsquo;Algarve n&rsquo;a plus</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Des plages atlantiques à 35&ndash;45 minutes</strong> &mdash; Osso da Baleia, Pedrógão, Praia do Urso ou Figueira da Foz : de larges étendues de sable où poser sa serviette sans jouer des coudes, même en août.</li>
+        <li><strong>Quatre sites UNESCO à moins d&rsquo;une heure</strong> &mdash; Batalha (48 min), Alcobaça (1h), Tomar et le Convento de Cristo (40 min), le monastère du Christ et Coimbra (50 min).</li>
+        <li><strong>Des prix de 2019</strong> &mdash; restaurants, locations et activités coûtent 30&ndash;50 % de moins que sur la côte sud en haute saison.</li>
+        <li><strong>Zéro embouteillage</strong> &mdash; pas d&rsquo;autoroute saturée, pas de parking payant à 20 €, pas de files devant les monuments.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Le &laquo;&nbsp;crowd-free&nbsp;&raquo; est devenu un argument officiel</h2>
+      <p>L&rsquo;Idealista listait en juin ses &laquo;&nbsp;9 destinations portugaises pour échapper à la foule&nbsp;&raquo; ; Portugal.fr a consacré un article au défi du surtourisme ; Euronews a relayé le programme de <strong>11 millions d&rsquo;euros pour l&rsquo;intérieur</strong> du pays. La tendance est structurelle : les voyageurs francophones cherchent des alternatives à l&rsquo;Algarve et à Lisbonne, et la région qui entoure Pombal coche toutes les cases &mdash; y compris la <strong>sécurité</strong>, comme nous l&rsquo;expliquons dans notre article sur les <a href="/fr/blog/feux-de-foret-portugal-centre-rassurance/" class="text-terracotta-500 hover:text-terracotta-600 underline">feux de forêt et la région du Centre</a>.</p>
+
+      <h2 class="mt-8 mb-3">Pombal : un camp de base entre mer et patrimoine</h2>
+      <p>La <a href="/fr/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> est une maison de campagne à <strong>Abiul, à 10 minutes de Pombal</strong> : piscine, jardin de 450 m&sup2;, quatre chambres et un calme absolu. Depuis la maison, tout se joue à moins d&rsquo;une heure :</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Castelo de Pombal</strong> &mdash; 10 min &mdash; la forteresse templière et son puits de 64 mètres.</li>
+        <li><strong>Plages</strong> &mdash; 35&ndash;45 min &mdash; notre page <a href="/fr/plages/" class="text-terracotta-500 hover:text-terracotta-600 underline">plages et rivières</a> détaille les meilleures options.</li>
+        <li><strong>Tomar, Batalha, Fátima, Coimbra</strong> &mdash; 40&ndash;55 min &mdash; le patrimoine du Centre en une semaine sans changer de maison.</li>
+        <li><strong>Les villages de schiste du Zêzere</strong> &mdash; 30&ndash;60 min &mdash; l&rsquo;intérieur authentique, thème de notre guide du <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Centre du Portugal</a>.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Et les journées plage, alors ?</h2>
+      <p>Le vrai luxe du Centre, c&rsquo;est de pouvoir <strong>combiner</strong> : une matinée à la plage de l&rsquo;Atlantique, un après-midi à la piscine de la maison et une soirée au restaurant sans réservation. L&rsquo;Algarve s&rsquo;arrête à la plage ; le Centre continue vers les montagnes, les rivières et mille ans d&rsquo;histoire. Pour l&rsquo;organisation, notre article <a href="/fr/blog/que-visiter-autour-de-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">que visiter autour de Pombal</a> propose des itinéraires jour par jour.</p>
+
+      <p>Si vous hésitez entre le sud et le centre du Portugal, la réponse de 2026 est simple : <strong>l&rsquo;Algarve est une destination, le Centre est une région à vivre</strong>. <a href="/fr/reservation/" class="text-terracotta-500 hover:text-terracotta-600 underline">Réservez votre séjour à la Casa dos Duques</a> et venez vérifier par vous-même.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources : Idealista (30/06/2026) &mdash; &laquo;&nbsp;9 destinations portugaises pour échapper à la foule&nbsp;&raquo; ; Portugal.fr (02/06/2026) &mdash; le défi du surtourisme ; Euronews (21/04/2026) &mdash; 11 M&euro; pour l&rsquo;intérieur du pays. Distances et temps de trajet approximatifs, calculés via OpenStreetMap/OSRM depuis Abiul.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Le Portugal sans la foule existe"
+    subtitle="Camp de base calme avec piscine, à 40 minutes des plages et des sites UNESCO"
+    primaryCta={{ label: 'Réserver', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

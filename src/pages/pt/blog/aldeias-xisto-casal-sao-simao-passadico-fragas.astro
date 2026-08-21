@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/aldeias-xisto-casal-sao-simao-passadico-fragas/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Aldeias do Xisto perto de Pombal: Casal de São Simão e o Passadiço das Fragas',
+      description: 'Casal de São Simão, a aldeia do xisto de uma rua só, e o Passadiço das Fragas sobre o Zêzere: a 30 minutos da Casa dos Duques, uma das novidades do Turismo Centro de Portugal.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Aldeias do Xisto: Casal de São Simão', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Aldeias do Xisto perto de Pombal: Casal de São Simão e o Passadiço das Fragas"
+  description="A aldeia do xisto de uma rua só, a praia fluvial das Fragas de São Simão e o passadiço sobre o Zêzere: o passeio de 30 minutos que o Turismo Centro de Portugal está a promover."
+  canonical="/pt/blog/aldeias-xisto-casal-sao-simao-passadico-fragas/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Aldeias do Xisto</span>
+        <span>Agosto 2026</span>
+        <span>&middot; 6 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">Aldeias do Xisto perto de Pombal: Casal de São Simão e o Passadiço das Fragas</h1>
+      <p class="text-lg text-muted font-body">Em agosto de 2026, o Turismo Centro de Portugal destacou uma aldeia que &ldquo;cabe numa única rua&rdquo;: <strong>Casal de São Simão</strong>, no concelho de Figueiró dos Vinhos. Fica a <strong>30 minutos da Casa dos Duques</strong> e é o ponto de partida do <strong>Passadiço das Fragas</strong>, suspenso sobre o rio Zêzere.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Uma aldeia do xisto que cabe numa rua</h2>
+      <p><strong>Casal de São Simão</strong> é uma das 12 aldeias da <strong>Rede Aldeias do Xisto</strong> &mdash; e a mais pequena delas: um punhado de casas de xisto e xisto-argamassa alinhadas ao longo de uma única rua, aninhadas na margem do Zêzere. É exatamente essa escala que a torna encantadora: não há monumento, há uma aldeia inteira que é o monumento, com as suas eiras, o forno comunitário e as ruas de pedra onde o tempo passa devagar.</p>
+      <p>O destaque dado pelo Turismo do Centro em agosto de 2026 &mdash; e a passagem da <strong>Volta a Portugal</strong> por Figueiró dos Vinhos a 9 de agosto &mdash; puseram a região no mapa nacional. Para os hóspedes da <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>, é mais um motivo para um passeio de meio dia.</p>
+
+      <h2 class="mt-8 mb-3">O Passadiço das Fragas e a praia fluvial</h2>
+      <p>O <strong>Passadiço das Fragas</strong> é o percurso pedestre que liga o miradouro à aldeia, <strong>atravessando a Praia Fluvial das Fragas de São Simão</strong> junto ao Zêzere &mdash; passadiços de madeira sobre a água, entre as fragas de xisto que dão nome ao lugar. É um passeio curto e acessível, perfeito para famílias, que ganha uma dimensão extra no outono: as cores do xisto e da vegetação ribeirinha refletidas no rio.</p>
+      <p>O Município de Figueiró dos Vinhos está, aliás, a <strong>ampliar a oferta</strong> com um novo passadiço na zona da <strong>Ermida de São Simão</strong>, financiado pelo CENTRO2020 no âmbito do PROVERE &mdash; Rede das Aldeias do Xisto. O conjunto vai interligar miradouro, passadiços, percurso pedestre e aldeia num único circuito.</p>
+
+      <h2 class="mt-8 mb-3">Como chegar a partir de Abiul</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Casal de São Simão</strong> &mdash; cerca de <strong>28 km, 30&ndash;35 minutos</strong> de carro desde Abiul, pela IC8 em direção a Figueiró dos Vinhos e depois pelas estradas municipais até à aldeia.</li>
+        <li><strong>Figueiró dos Vinhos</strong> (vila-mãe, com restaurantes e comércio) &mdash; cerca de 35 km, 40 minutos.</li>
+        <li>A <strong>Ermida de São Simão</strong> &mdash; cerca de 27 km, 25 minutos &mdash; é a alternativa de acesso pela margem do rio.</li>
+      </ul>
+      <p>O percurso combina bem com uma manhã na <strong>praia fluvial</strong> (água doce e calma, ideal para crianças) e um almoço em Figueiró dos Vinhos antes de regressar. Veja mais ideias de passeios no nosso <a href="/pt/passeios/" class="text-terracotta-500 hover:text-terracotta-600 underline">roteiro de passeios</a>.</p>
+
+      <h2 class="mt-8 mb-3">Outras aldeias do xisto à distância de um dia</h2>
+      <p>A rede Aldeias do Xisto estende-se pela região Centro &mdash; e várias ficam ao alcance de um dia a partir de Pombal: <strong>Pedrógão Pequeno</strong> e <strong>Fajão</strong> (Serra da Lousã, ~50&ndash;60 min), <strong>Água Formosa</strong> (perto de Vila de Rei, ~1h) ou as aldeias do <strong>Zêzere</strong> a caminho da Sertã. Todas partilham o mesmo xisto, o mesmo rio e a mesma paz &mdash; como descrevemos na nossa <a href="/pt/guia/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia do Centro de Portugal</a> e na página de <a href="/pt/o-que-fazer/" class="text-terracotta-500 hover:text-terracotta-600 underline">coisas para fazer</a>.</p>
+
+      <h2 class="mt-8 mb-3">Quando ir</h2>
+      <p>O outono é a melhor estação: temperaturas amenas para caminhar, o Zêzere em tons dourados e as aldeias quase só para si. Setembro e outubro são também os meses em que a região está mais bonita para fotografias &mdash; e em que a <a href="/pt/reserva/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> está disponível por preços de meia estação.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Notícias de Coimbra (20/08/2026) &mdash; &ldquo;Conheça a aldeia do Centro que cabe numa única rua&rdquo;, com destaque para Casal de São Simão e o Passadiço das Fragas (Turismo Centro de Portugal); Notícias de Coimbra &mdash; &ldquo;Percurso das Fragas de São Simão vai ser ampliado&rdquo; (novo passadiço na Ermida de São Simão, CENTRO2020/PROVERE &mdash; Rede das Aldeias do Xisto, ADXTUR). Distâncias e tempos de viagem aproximados, calculados via OpenStreetMap/OSRM a partir de Abiul. Confirme horários e estado do percurso junto do Posto de Turismo de Figueiró dos Vinhos antes da visita.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="A uma rua do xisto, a 30 minutos do rio"
+    subtitle="Use a Casa dos Duques como base para descobrir as aldeias do xisto do Zêzere"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

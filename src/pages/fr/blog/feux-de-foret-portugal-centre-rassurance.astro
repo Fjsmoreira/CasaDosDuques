@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/feux-de-foret-portugal-centre-rassurance/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Feux de forêt au Portugal : ce qu\'il faut savoir avant de réserver dans le Centre',
+      description: 'Les incendies de l\'été 2026 ont touché surtout le nord et une partie de l\'intérieur. La région de Pombal et le littoral centre ne sont pas dans les zones affectées : ce qu\'il faut vérifier, et comment réserver en toute confiance.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Feux de forêt au Portugal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Feux de forêt au Portugal : ce qu\'il faut savoir avant de réserver dans le Centre"
+  description="Été 2026 : les incendies ont frappé surtout le nord et l\'intérieur. La région de Pombal n\'est pas dans les zones touchées — voici comment vérifier et réserver l\'esprit tranquille."
+  canonical="/fr/blog/feux-de-foret-portugal-centre-rassurance/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Sécurité</span>
+        <span>Août 2026</span>
+        <span>&middot; 6 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">Feux de forêt au Portugal : ce qu&rsquo;il faut savoir avant de réserver dans le Centre</h1>
+      <p class="text-lg text-muted font-body">Chaque été, les images d&rsquo;incendies au Portugal inquiètent les voyageurs francophones &mdash; et l&rsquo;été 2026 n&rsquo;a pas fait exception. Mais le Portugal est un pays de contrastes régionaux forts : <strong>les foyers de cet été se sont concentrés dans le nord et une partie de l&rsquo;intérieur</strong>, loin de la région de Pombal. Voici les faits, et comment vérifier par vous-même.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Où ont eu lieu les incendies de l&rsquo;été 2026</h2>
+      <p>Selon les bilans publiés en juillet, <strong>4 592 incendies ont consommé 30 155 hectares</strong> dans le pays. Les foyers les plus graves ont été localisés dans le <strong>nord et le centre-nord intérieur</strong> : <strong>Vouzela</strong> (D&atilde;o-Laf&otilde;es, le foyer le plus important de la vague de chaleur), <strong>Guarda</strong>, <strong>Arouca</strong>, ou encore <strong>Torre de Moncorvo</strong> et <strong>Carrazeda de Ansi&atilde;es</strong> dans le Tr&aacute;s-os-Montes.</p>
+      <p>La région qui entoure <strong>Pombal et Abiul</strong> &mdash; le littoral centre, l&rsquo;axe de l&rsquo;IC8 entre Leiria et l&rsquo;intérieur &mdash; <strong>ne figure pas parmi les zones affectées</strong> par les foyers de cet été. C&rsquo;est une différence de plusieurs centaines de kilomètres : Vouzela est à environ 150 km au nord-est de Pombal, la Guarda à près de 200 km.</p>
+
+      <h2 class="mt-8 mb-3">Pourquoi la région de Pombal est comparativement moins exposée</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Influence atlantique</strong> &mdash; l&rsquo;humidité venue de l&rsquo;océan tempère la végétation et l&rsquo;atmosphère une bonne partie de l&rsquo;année.</li>
+        <li><strong>Mosaïque agricole</strong> &mdash; vignes, oliveraies, cultures et pâturages fractionnent le territoire, ce qui limite la propagation des grands feux, contrairement aux massifs forestiers continus du nord et du centre intérieur.</li>
+        <li><strong>Relief modéré</strong> &mdash; la Serra de Sicó et les collines autour d&rsquo;Abiul n&rsquo;atteignent pas les 600 mètres, loin des massifs escarpés les plus sensibles.</li>
+      </ul>
+      <p>Attention, nuance importante : le <strong>risque d&rsquo;incendie</strong> (le fameux « perigo de inc&ecirc;ndio » de l&rsquo;IPMA) peut être élevé dans tout le pays en été, y compris autour de Pombal les jours de canicule &mdash; <strong>mais un niveau de risque élevé n&rsquo;est pas un incendie en cours</strong>. En août 2026, l&rsquo;alerte maximale couvrait des dizaines de municipalités de l&rsquo;intérieur nord et centre ; les feux actifs, eux, se situaient ailleurs.</p>
+
+      <h2 class="mt-8 mb-3">Comment vérifier la situation en temps réel</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>IPMA</strong> (institut météo portugais) &mdash; carte quotidienne du risque d&rsquo;incendie : <em>ipma.pt</em></li>
+        <li><strong>FOGOS.ICNF.pt</strong> &mdash; la carte officielle des incendies actifs, mise à jour en continu par la protection civile.</li>
+        <li><strong>117</strong> &mdash; le numéro vert de la protection civile portugaise pour signaler un départ de feu.</li>
+      </ul>
+      <p>En pratique, une vérification de deux minutes la veille de votre départ suffit à lever tous les doutes.</p>
+
+      <h2 class="mt-8 mb-3">Et si un incendie se déclare pendant mon séjour ?</h2>
+      <p>Les cas de remboursement pour annulation liée aux incendies ont fait l&rsquo;objet d&rsquo;articles très relayés en Belgique et en France cet été (RTL.be, MSN). Les règles sont simples : <strong>seuls les voyageurs se trouvant dans une zone effectivement sinistrée</strong> peuvent prétendre à une annulation sans frais, et la plupart des plateformes de location exigent une déclaration officielle. Notre conseil : choisissez une propriété avec <strong>annulation flexible</strong> (la nôtre en propose), renseignez-vous sur la <a href="/fr/blog/que-visiter-autour-de-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">région avant de réserver</a> et vérifiez la carte des feux la veille du départ &mdash; dans la très grande majorité des cas, tout se passe sans incident.</p>
+
+      <h2 class="mt-8 mb-3">L&rsquo;automne : la saison qui rassure</h2>
+      <p>Dès septembre, les températures baissent, les pluies reviennent et <strong>la saison des feux s&rsquo;éteint progressivement</strong> dans tout le pays. L&rsquo;arrière-saison est d&rsquo;ailleurs la meilleure période pour découvrir le Centre : plages vides, forêts dans leurs couleurs d&rsquo;automne et monuments sans file d&rsquo;attente, comme nous le racontons dans notre article sur <a href="/fr/blog/arriere-saison-portugal-septembre-octobre-centre/" class="text-terracotta-500 hover:text-terracotta-600 underline">septembre et octobre dans le Centre</a>.</p>
+
+      <p>En résumé : oui, le Portugal a connu des incendies cet été &mdash; mais la région de Pombal, où se trouve la <a href="/fr/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>, n&rsquo;en fait pas partie. Renseignez-vous, vérifiez, et venez : l&rsquo;intérieur du Centre reste l&rsquo;une des régions les plus calmes et les plus sûres du pays &mdash; à découvrir aussi dans notre article <a href="/fr/blog/echapper-a-la-foule-portugal-centre-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Échapper à la foule au Portugal</a>.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources : bilans nationaux juillet 2026 (4 592 incendies / 30 155 ha ; foyers de Vouzela, Guarda, Arouca, Torre de Moncorvo, Carrazeda de Ansi&atilde;es) via RTP et P&uacute;blico (15&ndash;19/08/2026) ; RTL.be (27/07/2026) et MSN France &mdash; remboursements en zones sinistrées ; IPMA &mdash; cartes de risque. La situation des feux évolue chaque année et chaque semaine : consultez toujours fogos.icnf.pt avant votre départ. Distances approximatives via OpenStreetMap/OSRM.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Réservez l\'esprit tranquille"
+    subtitle="Maison au calme dans le Centre, avec annulation flexible — vérifiez, réservez, respirez"
+    primaryCta={{ label: 'Réserver', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

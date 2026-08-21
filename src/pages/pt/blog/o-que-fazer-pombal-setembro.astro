@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/o-que-fazer-pombal-setembro/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'O que fazer em Pombal em setembro: roteiro de fim de verão',
+      description: 'Setembro é dos melhores meses para ficar em Pombal: praias quase vazias, piscina ainda quente, castelo, museus e a Serra de Sicó. Roteiro de fim de verão a partir da Casa dos Duques.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'O que fazer em Pombal em setembro', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="O que fazer em Pombal em setembro: roteiro de fim de verão"
+  description="Praias quase vazias, piscina ainda quente, castelo, museus e Serra de Sicó: roteiro de setembro em Pombal, a partir da Casa dos Duques."
+  canonical="/pt/blog/o-que-fazer-pombal-setembro/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Dicas Locais</span>
+        <span>Agosto 2026</span>
+        <span>&middot; 5 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">O que fazer em Pombal em setembro: roteiro de fim de verão</h1>
+      <p class="text-lg text-muted font-body">Setembro é, para nós, o mês mais subvalorizado do ano na região de Pombal: o mar continua quente, as praias esvaziam, a piscina da <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> continua utilizável e o castelo e os museus ficam para si. Eis o nosso roteiro de fim de verão.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">De manhã: o castelo e o centro de Pombal</h2>
+      <p>Comece pelo <strong>Castelo de Pombal</strong>, a 10 minutos de carro de Abiul. A fortaleza templária do século XII domina a cidade e o seu <strong>poço de 64 metros</strong> &mdash; escavado na rocha &mdash; é uma das curiosidades mais comentadas do castelo. O centro histórico desce até ao rio Arunca: vale a pena a Rua do Comércio, a <strong>Igreja Matriz de São Martinho</strong> e uma paragem no <strong>Museu Municipal</strong> para perceber a história do concelho, do Paleolítico ao século XX.</p>
+      <p>Para almoçar, siga o nosso guia dos <a href="/pt/blog/melhores-restaurantes-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">melhores restaurantes de Pombal</a> &mdash; do leitão da casa ao peixe fresco, tudo a menos de 15 minutos da casa.</p>
+
+      <h2 class="mt-8 mb-3">À tarde: praia ou rio, sem multidões</h2>
+      <p>Setembro é a altura perfeita para as praias que descrevemos no nosso artigo sobre o <a href="/pt/blog/praias-perto-de-pombal-urso-osso-baleia-pedrogao/" class="text-terracotta-500 hover:text-terracotta-600 underline">litoral entre Pombal e Leiria</a>: <strong>Praia do Osso da Baleia, Pedrógão ou Praia do Urso</strong> ficam a 35&ndash;45 minutos e, em setembro, têm areia de sobra e estacionamento fácil. O mar do Atlântico está no seu ponto mais quente do ano &mdash; a água acumula calor durante todo o verão.</p>
+      <p>Prefere água doce? As <a href="/pt/praias/" class="text-terracotta-500 hover:text-terracotta-600 underline">praias fluviais da região</a> (nomeadamente as do Zêzere e da Serra de Sicó) estão tranquilíssimas em setembro, com a água ainda morna &mdash; e a paisagem já a começar a vestir as cores do outono.</p>
+
+      <h2 class="mt-8 mb-3">Ao fim da tarde: Serra de Sicó e Aldeia do Vale</h2>
+      <p>A <strong>Serra de Sicó</strong>, a 15&ndash;20 minutos de Abiul, é o melhor cenário para o fim de tarde de setembro: luz dourada, calcário a desenhar o horizonte e trilhos tranquilos. Vale a pena a subida ao miradouro e uma visita à <strong>Aldeia do Vale</strong>, na freguesia de Santiago de Litém &mdash; a aldeia em recuperação através da Operação de Reabilitação Urbana da Câmara de Pombal, que escrevemos no artigo sobre o <a href="/pt/blog/pombal-investe-patrimonio-aldeia-do-vale/" class="text-terracotta-500 hover:text-terracotta-600 underline">investimento no património da aldeia</a>.</p>
+
+      <h2 class="mt-8 mb-3">À noite: programação e jantar sem pressa</h2>
+      <p>Setembro mantém parte da <strong>programação cultural de verão</strong> &mdash; cinema ao ar livre, festas de aldeia e eventos no Expocentro &mdash; mas sem as multidões de agosto. É também o mês em que os restaurantes de Pombal voltam ao ritmo normal: jantar sem reserva de véspera e mesas com vista para o castelo iluminado.</p>
+
+      <h2 class="mt-8 mb-3">E se tiver 2&ndash;3 dias?</h2>
+      <p>Estenda o roteiro: <strong>Tomar e o Convento de Cristo</strong> (40 min), o <strong>Castelo de Leiria</strong> (35 min), <strong>Coimbra</strong> (50 min) ou as <strong>praias de São Pedro de Moel e Nazaré</strong> (1h) &mdash; tudo sugerido na nossa <a href="/pt/guia/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia de Pombal</a> e no <a href="/pt/passeios/" class="text-terracotta-500 hover:text-terracotta-600 underline">roteiro de passeios</a> da região. Setembro é, aliás, o mês ideal para estes passeios: monumentos sem filas e estradas sem trânsito.</p>
+
+      <p>Resumindo: setembro junta o melhor do verão (mar, piscina, luz) com o melhor do outono (sossego, cores, preços). <a href="/pt/reserva/" class="text-terracotta-500 hover:text-terracotta-600 underline">Reserve a sua estadia na Casa dos Duques</a> e venha ver o fim de verão no Centro de Portugal.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Distâncias e tempos de viagem aproximados, calculados via OpenStreetMap/OSRM a partir de Abiul. Programação cultural de setembro sujeita a confirmação junto da Câmara Municipal de Pombal e do Expocentro; horários de museus e castelo variam com a época do ano.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Setembro: o melhor segredo da região"
+    subtitle="Piscina quente, praias vazias e património sem filas — reserve setembro na Casa dos Duques"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

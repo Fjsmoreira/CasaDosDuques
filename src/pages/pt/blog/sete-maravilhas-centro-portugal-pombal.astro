@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/sete-maravilhas-centro-portugal-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'As Novas 7 Maravilhas do Centro de Portugal (e como visitá-las a partir de Pombal)',
+      description: 'Castelo de Leiria, Convento de Cristo, Palace Hotel da Curia, Centum Cellas, Museu do Azeite, Aqueduto da Usseira e Jardim do Paço: os sete patrimónios eleitos na Curia e como os visitar a partir de Pombal.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Novas 7 Maravilhas do Centro', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="As Novas 7 Maravilhas do Centro de Portugal: como visitá-las a partir de Pombal"
+  description="Castelo de Leiria, Convento de Cristo, Palace Hotel da Curia e mais: os 7 patrimónios do Centro eleitos na Curia em agosto de 2026, com distâncias reais a partir de Pombal."
+  canonical="/pt/blog/sete-maravilhas-centro-portugal-pombal/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Património</span>
+        <span>Agosto 2026</span>
+        <span>&middot; 6 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">As Novas 7 Maravilhas do Centro de Portugal: como visitá-las a partir de Pombal</h1>
+      <p class="text-lg text-muted font-body">A 15 de agosto de 2026, no Parque das Termas da Curia e com transmissão na TVI, o público elegeu os <strong>sete patrimónios da Região Centro</strong> que seguem para a Meia-Final Nacional das Novas 7 Maravilhas de Portugal. Dois deles ficam a <strong>35&ndash;40 minutos da Casa dos Duques</strong> &mdash; e os restantes fazem ótimos passeios de um dia.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">O que são as Novas 7 Maravilhas de Portugal?</h2>
+      <p>A edição de 2026 é dedicada ao <strong>património construído</strong> e registou 629 candidaturas em todo o país &mdash; 163 só na Região Centro. Depois de uma final regional disputada na Curia (Anadia), ficaram apurados os sete finalistas do Centro, escolhidos por votação do público num processo auditado pela PwC. A <strong>Meia-Final Nacional realiza-se a 5 de setembro</strong>, com votação pública ainda em curso &mdash; ou seja, este é o momento exato para conhecer estes locais e, se quiser, votar.</p>
+
+      <h2 class="mt-8 mb-3">Os 7 finalistas do Centro e a que distância ficam de Abiul</h2>
+      <p>Medimos todas as distâncias por estrada a partir da <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>, em Abiul:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Castelo de Leiria</strong> &mdash; <strong>36 km, cerca de 35 minutos</strong>. Vencedor da final regional e um dos castelos mais emblemáticos do país, sobre o rio Lis.</li>
+        <li><strong>Convento de Cristo, Tomar</strong> &mdash; <strong>40 km, cerca de 40 minutos</strong>. Património Mundial da UNESCO e obra-prima dos Templários.</li>
+        <li><strong>Palace Hotel da Curia, Anadia</strong> &mdash; 81 km, cerca de 1 hora. O grande hotel de estilo art déco do Parque das Termas, palco da final regional.</li>
+        <li><strong>Aqueduto da Usseira, Óbidos</strong> &mdash; 112 km, cerca de 1h20. O aqueduto de 5,5 km que abasteceu as termas das Caldas da Rainha.</li>
+        <li><strong>Museu do Azeite de Bobadela, Oliveira do Hospital</strong> &mdash; 129 km, cerca de 1h45. O azeite da Beira Serra em modo museu vivo.</li>
+        <li><strong>Jardim do Paço Episcopal, Castelo Branco</strong> &mdash; 143 km, cerca de 2 horas. Os famosos canteiros barrocos e a escadaria dos apóstolos.</li>
+        <li><strong>Centum Cellas, Belmonte</strong> &mdash; 196 km, cerca de 2 horas. A enigmática torre romana que intriga há séculos.</li>
+      </ul>
+      <p>Estes dois primeiros &mdash; Leiria e Tomar &mdash; estão à distância de uma <a href="/pt/passeios/" class="text-terracotta-500 hover:text-terracotta-600 underline">manhã de passeio</a>; os restantes pedem um dia inteiro (ou dois), mas todos são perfeitamente viáveis a partir de Pombal.</p>
+
+      <h2 class="mt-8 mb-3">O passeio dos 35 minutos: Castelo de Leiria</h2>
+      <p>O castelo do século XII, mandado reconstruir por D. Dinis, domina a cidade a partir do monte. O recinto com as suas <strong>casas setecentistas encostadas às muralhas</strong> é único em Portugal &mdash; um verdadeiro bairro medieval dentro do castelo. Ao fim da tarde, o miradouro tem uma das melhores vistas sobre o vale do Lis. Combine com um passeio pelo centro histórico e prove a tradicional <em>morgadinha de Leiria</em> numa das confeitarias da cidade.</p>
+
+      <h2 class="mt-8 mb-3">O passeio dos 40 minutos: Convento de Cristo em Tomar</h2>
+      <p>Fundado pelos Templários no século XII, o Convento de Cristo é <strong>Património Mundial da UNESCO</strong> e uma das maiores obras da arquitetura portuguesa. A <strong>janela do Capítulo</strong>, de Diogo de Arruda, é considerada uma obra-prima do manuelino &mdash; vale a viagem só por ela. Em Tomar, aproveite também o centro histórico junto ao rio Nabão e, se for dia 5 de setembro, lembre-se de que o voto conta: a votação da Meia-Final Nacional está em curso.</p>
+
+      <h2 class="mt-8 mb-3">Para um dia inteiro: os restantes finalistas</h2>
+      <p>Se tem um dia livre, organize-se assim: <strong>Curia (81 km)</strong> combina perfeitamente com a <strong>Mata do Buçaco</strong> e a vila termal do <strong>Luso</strong>, a poucos minutos &mdash; um roteiro que descrevemos em detalhe no nosso artigo sobre a <a href="/blog/bussaco-forest-luso-day-trip-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">floresta do Buçaco</a>. <strong>Óbidos e o Aqueduto da Usseira (1h20)</strong> pedem um dia na estrada do litoral &mdash; e pode estender até às Caldas da Rainha. <strong>Bobadela, Castelo Branco e Belmonte</strong> estão a 2 horas &mdash; ideais para um fim de semana longo ou para quem quer conhecer a Beira Interior a fundo, como sugere a nossa <a href="/pt/guia/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia do Centro de Portugal</a>.</p>
+
+      <h2 class="mt-8 mb-3">Porque é que isto importa para as suas férias</h2>
+      <p>O buzz mediático das 7 Maravilhas está a levar visitantes para o interior &mdash; exatamente o posicionamento da <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>: ficar no Centro sossegado e usar a casa como base para descobrir o património da região. Dois dos sete finalistas a menos de 40 minutos, três a menos de 1h30 e os restantes num dia de estrada &mdash; poucos pontos do país oferecem tanta concentração de património a esta distância. Veja o <a href="/pt/o-que-fazer/" class="text-terracotta-500 hover:text-terracotta-600 underline">que fazer na região</a> e planeie a sua ronda das maravilhas.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Bairrada Informação (15/08/2026) &mdash; eleição na Curia dos sete patrimónios do Centro; Diário de Leiria (16/08/2026) &mdash; Castelo de Leiria vence final regional; Médio Tejo (16/08/2026) &mdash; Convento de Cristo apurado; Rádio Clube da Covilhã (17/08/2026) &mdash; Centum Cellas na meia-final; Notícias de Coimbra (15/08/2026) &mdash; lista dos apurados; reconquista.pt (18/08/2026) &mdash; Jardim do Paço e Centum Cellas; terranova.pt (18/08/2026) &mdash; Palace Hotel da Curia. A votação da Meia-Final Nacional decorre até 05/09/2026. Distâncias e tempos de viagem aproximados, calculados via OpenStreetMap/OSRM a partir de Abiul.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="No centro das 7 Maravilhas"
+    subtitle="Fique na Casa dos Duques e descubra o património do Centro a partir de uma base sossegada"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/arriere-saison-portugal-septembre-octobre-centre/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'L\'arrière-saison au Portugal : septembre et octobre dans le Centre, entre plages calmes et forêts dorées',
+      description: 'Mer encore chaude, plages vides, forêts aux couleurs d\'automne et vendanges : septembre et octobre sont la meilleure période pour découvrir le Centre du Portugal.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Arrière-saison dans le Centre', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="L\'arrière-saison au Portugal : septembre et octobre dans le Centre"
+  description="Septembre et octobre dans le Centre du Portugal : mer chaude, plages vides, forêts dorées et vendanges. Pourquoi l\'arrière-saison est la meilleure période."
+  canonical="/fr/blog/arriere-saison-portugal-septembre-octobre-centre/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Arrière-saison</span>
+        <span>Août 2026</span>
+        <span>&middot; 6 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">L&rsquo;arrière-saison au Portugal : septembre et octobre dans le Centre, entre plages calmes et forêts dorées</h1>
+      <p class="text-lg text-muted font-body">Les réservations de septembre&ndash;octobre se font maintenant &mdash; et c&rsquo;est un excellent calcul : après un été record, <strong>le tourisme portugais ralentit en septembre</strong> (Portugal.fr), les plages se vident et les forêts du Centre se parent d&rsquo;or. Voici pourquoi l&rsquo;arrière-saison est la meilleure période pour la région de Pombal.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Septembre : l&rsquo;été sans la foule</h2>
+      <p>En septembre, la température de l&rsquo;air reste autour de <strong>25&ndash;28 &deg;C en journée</strong> dans la région de Pombal &mdash; et l&rsquo;océan Atlantique, qui a accumulé la chaleur tout l&rsquo;été, est à son <strong>maximum annuel</strong>. C&rsquo;est le paradoxe favori de l&rsquo;arrière-saison : l&rsquo;eau est plus chaude en septembre qu&rsquo;en juillet, mais les plages sont vides. Les <a href="/fr/plages/" class="text-terracotta-500 hover:text-terracotta-600 underline">plages et rivières</a> autour de Pombal &mdash; Osso da Baleia, Pedrógão, Figueira da Foz, ou les plages fluviales du Zêzere &mdash; sont à 35&ndash;50 minutes de la maison.</p>
+
+      <h2 class="mt-8 mb-3">Octobre : les forêts dorées et les vendanges</h2>
+      <p>Octobre est le mois le plus photogénique du Centre. La <strong>Mata Nacional do Buçaco</strong>, à une heure de Pombal, vire au roux, à l&rsquo;ocre et au bronze &mdash; c&rsquo;est la plus belle forêt d&rsquo;automne du Portugal (notre guide complet est en anglais : <a href="/blog/bussaco-forest-luso-day-trip-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Bussaco Forest &amp; Luso</a>). Les journées restent douces (20&ndash;23 &deg;C), les nuits fraîchissent &mdash; idéal pour les balades.</p>
+      <p>Octobre, c&rsquo;est aussi la <strong>saison des vendanges et des olives</strong> : les domaines autour de Pombal ouvrent leurs portes, les marchés regorgent de châtaignes, de figues et du premier vin nouveau. La gastronomie locale &mdash; que nous détaillons dans notre article sur les <a href="/fr/blog/meilleurs-restaurants-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">meilleurs restaurants de Pombal</a> &mdash; atteint son sommet annuel.</p>
+
+      <h2 class="mt-8 mb-3">Les monuments sans file d&rsquo;attente</h2>
+      <p>Tomar et le Convento de Cristo (40 min), le Castelo de Leiria (35 min), Batalha et Alcobaça (48 min&ndash;1h), Coimbra (50 min) : en arrière-saison, ces sites retrouvent leur rythme tranquille. Fini les cars de tourisme et les files d&rsquo;attente de 40 minutes &mdash; il reste le patrimoine, la lumière et le temps de regarder. Le buzz des <strong>7 Maravilhas du Centre</strong> (Castelo de Leiria et Convento de Cristo parmi les finalistes) donne d&rsquo;ailleurs une raison de plus de les voir avant tout le monde : lire notre article <a href="/pt/blog/sete-maravilhas-centro-portugal-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">sur les 7 Merveilles du Centre</a> (en portugais).</p>
+
+      <h2 class="mt-8 mb-3">La piscine reste utilisable</h2>
+      <p>Contrairement à ce qu&rsquo;on imagine, la <strong>piscine de la Casa dos Duques reste tout à fait utilisable en septembre</strong> et une bonne partie d&rsquo;octobre : l&rsquo;eau, chauffée par des semaines de soleil, est souvent plus agréable qu&rsquo;en juin. Les enfants français et belges qui n&rsquo;ont pas nagé depuis août retrouvent l&rsquo;eau dans le jardin de la maison &mdash; un luxe que l&rsquo;hiver européen ne permet pas.</p>
+
+      <h2 class="mt-8 mb-3">Conseils pratiques pour l&rsquo;arrière-saison</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Vêtements</strong> &mdash; tenues d&rsquo;été le jour, une veste ou un pull pour les soirées (il fait 12&ndash;15 &deg;C après le coucher du soleil).</li>
+        <li><strong>Réservation</strong> &mdash; septembre est encore très demandé par les voyageurs avisés ; réservez tôt pour les meilleures dates, comme nous le suggérons dans notre article <a href="/fr/blog/echapper-a-la-foule-portugal-centre-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Échapper à la foule</a>.</li>
+        <li><strong>Feux de forêt</strong> &mdash; la saison s&rsquo;éteint en septembre ; pour tout savoir sur ce sujet, lisez notre <a href="/fr/blog/feux-de-foret-portugal-centre-rassurance/" class="text-terracotta-500 hover:text-terracotta-600 underline">article de réassurance</a>.</li>
+        <li><strong>Voyage</strong> &mdash; les vols et la location de voiture sont moins chers qu&rsquo;en juillet&ndash;août, et l&rsquo;autoroute A1 est fluide.</li>
+      </ul>
+
+      <p>En résumé : l&rsquo;arrière-saison réunit l&rsquo;eau la plus chaude de l&rsquo;année, les plus belles couleurs, les monuments vides et les prix d&rsquo;hors-saison. <a href="/fr/reservation/" class="text-terracotta-500 hover:text-terracotta-600 underline">Réservez septembre ou octobre à la Casa dos Duques</a> &mdash; et découvrez pourquoi les habitués du Portugal ne partent plus qu&rsquo;à cette période.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources : Portugal.fr (18/08/2026) &mdash; ralentissement du tourisme en septembre ; moyennes climatiques de la région de Pombal (températures indicatives de l&rsquo;air et de la mer). Distances et temps de trajet approximatifs, calculés via OpenStreetMap/OSRM depuis Abiul. Vérifiez toujours les prévisions avant de partir.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Septembre–octobre : le secret du Centre"
+    subtitle="Mer chaude, forêts dorées et monuments vides — l\'arrière-saison à la Casa dos Duques"
+    primaryCta={{ label: 'Réserver', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

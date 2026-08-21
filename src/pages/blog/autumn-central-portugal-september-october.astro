@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/autumn-central-portugal-september-october/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Autumn in Central Portugal: why September–October is the quietest (and best) time to visit',
+      description: 'The sea is warmest in September, the forests turn gold in October and the monuments empty out: why autumn is the best season to visit Central Portugal, around Pombal.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Autumn in Central Portugal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Autumn in Central Portugal: why September–October is the quietest (and best) time"
+  description="September–October in Central Portugal: the warmest sea of the year, empty beaches, golden forests and empty monuments. The quietest — and best — season to visit."
+  canonical="/blog/autumn-central-portugal-september-october/"
+  locale="en"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Autumn</span>
+        <span>August 2026</span>
+        <span>&middot; 6 min read</span>
+      </div>
+      <h1 class="leading-tight mb-4">Autumn in Central Portugal: why September&ndash;October is the quietest (and best) time to visit</h1>
+      <p class="text-lg text-muted font-body">Everyone fights for July and August &mdash; but the people who know Central Portugal book <strong>September and October</strong>. The Atlantic is at its warmest of the year, the beaches empty out, the forests turn gold and the UNESCO monuments lose their queues. Here is the case for autumn, from our base near Pombal.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">September: summer without the crowds</h2>
+      <p>In September, daytime temperatures in the Pombal region still reach <strong>25&ndash;28 &deg;C</strong> &mdash; and the ocean, which has absorbed heat all summer, is at its <strong>annual maximum</strong>. That is autumn&rsquo;s favourite paradox: the water is warmer in September than in July, yet the <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">beaches</a> are half empty. Osso da Baleia, Pedrógão, Praia do Urso or the river beaches of the Zêzere are all within 35&ndash;50 minutes of the house &mdash; with parking, space and peace.</p>
+
+      <h2 class="mt-8 mb-3">October: golden forests and harvest time</h2>
+      <p>October is the most photogenic month of the year in Central Portugal. The <strong>Mata Nacional do Buçaco</strong>, an hour away, turns russet, ochre and bronze &mdash; the finest autumn forest in the country (see our dedicated guide: <a href="/blog/bussaco-forest-luso-day-trip-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Bussaco Forest &amp; Luso day trip</a>). Days stay mild (20&ndash;23 &deg;C), evenings turn crisp &mdash; perfect walking weather.</p>
+      <p>October is also <strong>harvest season</strong>: grapes, olives and chestnuts. Estates around Pombal open their doors, markets fill with figs and the first new wine, and the region&rsquo;s kitchens &mdash; covered in our guide to the <a href="/blog/best-restaurants-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">best restaurants in Pombal</a> &mdash; reach their annual peak.</p>
+
+      <h2 class="mt-8 mb-3">Monuments without the queues</h2>
+      <p>Tomar and the Convento de Cristo (40 min), Leiria Castle (35 min), Batalha and Alcobaça (48 min&ndash;1h), Coimbra (50 min): in autumn these sites return to their natural rhythm. No coach parties, no 40-minute lines &mdash; just the patrimony, the light and the time to look. The 2026 <strong>&ldquo;New 7 Wonders of Portugal&rdquo;</strong> campaign has put Leiria Castle and the Convento de Cristo among the regional finalists, which makes this the perfect moment to see them before the crowds find them again.</p>
+
+      <h2 class="mt-8 mb-3">The pool stays open</h2>
+      <p>Contrary to what you might expect, the <strong>swimming pool at <a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> remains perfectly usable through September</strong> and much of October &mdash; the water, warmed by weeks of sun, is often more pleasant than in June. Kids who haven&rsquo;t swum since August get one last season in the garden, and the <a href="/garden/" class="text-terracotta-500 hover:text-terracotta-600 underline">garden</a> stays green well into November.</p>
+
+      <h2 class="mt-8 mb-3">Practical tips for the autumn</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Clothing</strong> &mdash; summer clothes by day, a jacket or fleece for the evenings (12&ndash;15 &deg;C after sunset).</li>
+        <li><strong>Booking</strong> &mdash; September is increasingly requested by savvy travellers; book early for the best dates.</li>
+        <li><strong>Driving</strong> &mdash; flights and car hire are cheaper than in July&ndash;August, and the A1 motorway is fluid; see our <a href="/blog/central-portugal-road-trip-by-car-ev/" class="text-terracotta-500 hover:text-terracotta-600 underline">road-trip guide</a> for routes.</li>
+        <li><strong>Day trips</strong> &mdash; all our suggested <a href="/day-trips/" class="text-terracotta-500 hover:text-terracotta-600 underline">day trips</a> and the <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Central Portugal guide</a> work even better in the shoulder season.</li>
+      </ul>
+
+      <p>In short: autumn in Central Portugal combines the warmest sea of the year, the best colours, empty monuments and off-season prices. <a href="/booking/" class="text-terracotta-500 hover:text-terracotta-600 underline">Book September or October at Casa dos Duques</a> &mdash; and find out why the people who know Portugal only come in the shoulder seasons.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources: climate averages for the Pombal region (indicative air and sea temperatures); Portugal.fr (18/08/2026) &mdash; tourism slowdown in September. All distances and drive times are approximate (OpenStreetMap/OSRM, from Abiul). Always check forecasts before travelling.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Autumn is the new summer"
+    subtitle="Warm sea, golden forests and empty monuments — book the shoulder season at Casa dos Duques"
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

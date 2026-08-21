@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/bussaco-forest-luso-day-trip-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Bussaco Forest & Luso: a tranquil day trip from Pombal',
+      description: 'A walled royal forest with 250+ exotic species, a fairy-tale palace hotel and a thermal village at its feet: why the Mata do Buçaco and Luso are the quietest day trip from Pombal.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Bussaco Forest & Luso day trip', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Bussaco Forest & Luso: a tranquil day trip from Pombal"
+  description="The Mata Nacional do Buçaco — a walled forest of 250+ species with a neo-Manueline palace — and the thermal village of Luso are an hour from Pombal. Our day-trip guide."
+  canonical="/blog/bussaco-forest-luso-day-trip-pombal/"
+  locale="en"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Day Trips</span>
+        <span>August 2026</span>
+        <span>&middot; 6 min read</span>
+      </div>
+      <h1 class="leading-tight mb-4">Bussaco Forest &amp; Luso: a tranquil day trip from Pombal</h1>
+      <p class="text-lg text-muted font-body">Rick Steves called the region &ldquo;tranquil&rdquo;; portugoal.net called Luso and Buçaco &ldquo;hidden gems&rdquo;. Both are right. The <strong>Mata Nacional do Buçaco</strong> &mdash; a walled royal forest with more than 250 exotic tree species and a fairy-tale palace &mdash; plus the thermal village of <strong>Luso</strong> at its feet, make one of the best quiet day trips from our base near Pombal.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">A forest with walls</h2>
+      <p>The Buçaco forest is unlike anywhere else in Portugal: since the 17th century, the Discalced Carmelite monks who founded the Convento de Santa Cruz <strong>walled off the hillside and planted trees from every continent</strong> &mdash; cedars of Lebanon, redwoods, eucalyptus, araucarias and hundreds more, in a landscape that climbs to over 500 metres. Walking the shaded paths of the Mata feels like strolling through a botanical garden that became a mountain. Look out for the <strong>Via Sacra</strong>, a series of chapels along the forest paths, and climb to the <strong>Cruz Alta</strong> viewpoint for one of the widest views in central Portugal.</p>
+
+      <h2 class="mt-8 mb-3">The Palace Hotel: a neo-Manueline fantasy</h2>
+      <p>In the heart of the forest stands the <strong>Palace Hotel do Buçaco</strong>, built in the early 1900s for the last Portuguese royal family &mdash; never quite used by them, but magnificent all the same: neo-Manueline windows, azulejo panels telling the story of the Portuguese discoveries, and a location straight out of a fairy tale. Even if you don&rsquo;t stay, it&rsquo;s worth stopping for coffee or lunch on the terrace &mdash; one of the most atmospheric hotel terraces in Portugal. (Check current opening and entrance arrangements before you go &mdash; the forest charges a small entry fee, and hours vary by season.)</p>
+
+      <h2 class="mt-8 mb-3">Luso: water, springs and a slow afternoon</h2>
+      <p>At the foot of the forest lies <strong>Luso</strong>, a village that owes its existence to water: the famous <strong>&ldquo;Água de Luso&rdquo;</strong> is bottled here, and the <strong>thermal springs</strong> have drawn visitors since the 19th century. The village is small, calm and perfect for a slow afternoon: a walk in the park around the spring, a glass of the local water straight from the fonte, and a late lunch of grilled fish in one of the family restaurants. In the autumn the park is at its most beautiful, with the forest above turning gold &mdash; the ideal season for this trip.</p>
+
+      <h2 class="mt-8 mb-3">Getting there from Abiul</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Distance</strong> &mdash; about <strong>85&ndash;90 km, roughly 1 hour</strong> by car from the Casa dos Duques, heading north via the IC8 and the national roads towards Mealhada. Signposting for the Mata is good once you reach the region.</li>
+        <li><strong>Combine</strong> &mdash; the trip pairs naturally with <strong>Curia</strong> (10 minutes away), whose art-déco Palace Hotel is one of the 2026 &ldquo;New 7 Wonders of Portugal&rdquo; regional finalists, or with a detour to <strong>Mealhada</strong> for the famous roasted suckling pig.</li>
+        <li><strong>Timing</strong> &mdash; leave after breakfast, walk the forest in the morning, lunch in Luso or at the Palace, and be home in Abiul by late afternoon.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Why it fits the &ldquo;quiet interior&rdquo; promise</h2>
+      <p>Buçaco and Luso are everything our <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Central Portugal guide</a> promises: remarkable, walkable, and still off the main tourist radar compared with the coast. It&rsquo;s also the perfect addition to the <a href="/blog/central-portugal-road-trip-by-car-ev/" class="text-terracotta-500 hover:text-terracotta-600 underline">Central Portugal road trip</a> (Buçaco is one of its overnight stops) or to a week of <a href="/day-trips/" class="text-terracotta-500 hover:text-terracotta-600 underline">day trips</a> from the house &mdash; half a day of forest, half a day of village, and the <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">beaches</a> within reach for the return journey.</p>
+
+      <p>If you only do one &ldquo;hidden gem&rdquo; trip from Pombal, make it Buçaco and Luso: a walled forest, a palace and a village of water, all an hour from your quiet countryside base. <a href="/booking/" class="text-terracotta-500 hover:text-terracotta-600 underline">Book your stay at Casa dos Duques</a> and plan your tranquil day out.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources: Rick Steves via Baltimore Sun (12/08/2026) &mdash; &ldquo;Tranquil Tomar&rdquo;; portugoal.net (11/08/2026) &mdash; &ldquo;hidden tourist gems: nature, water and warfare in Luso and Buçaco&rdquo;. All distances and drive times are approximate (OpenStreetMap/OSRM, from Abiul). The forest charges an entry fee and opening hours vary &mdash; check the official site of the Mata Nacional do Buçaco / Turismo de Mealhada before visiting.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="A day of forest, palace and springs"
+    subtitle="Buçaco and Luso are an hour from your quiet base in Central Portugal"
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

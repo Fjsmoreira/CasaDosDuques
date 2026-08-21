@@ -29,7 +29,17 @@ export type RouteKey =
   | 'blogPatrimonioVale'
   | 'blogPraiasPombal'
   | 'blogRoadTripCar'
-  | 'blogHerfstvakantie';
+  | 'blogHerfstvakantie'
+  | 'blogSeteMaravilhas'
+  | 'blogOQueFazerPombal'
+  | 'blogAldeiasXisto'
+  | 'blogAstroturismo'
+  | 'blogFeuxForet'
+  | 'blogEchapperFoule'
+  | 'blogArriereSaison'
+  | 'blogWinterzon'
+  | 'blogAutumnCentral'
+  | 'blogBussaco';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -184,6 +194,36 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogHerfstvakantie: {
     nl: '/nl/blog/herfstvakantie-centraal-portugal-najaar/',
+  },
+  blogSeteMaravilhas: {
+    pt: '/pt/blog/sete-maravilhas-centro-portugal-pombal/',
+  },
+  blogOQueFazerPombal: {
+    pt: '/pt/blog/o-que-fazer-pombal-setembro/',
+  },
+  blogAldeiasXisto: {
+    pt: '/pt/blog/aldeias-xisto-casal-sao-simao-passadico-fragas/',
+  },
+  blogAstroturismo: {
+    pt: '/pt/blog/astroturismo-onde-ver-estrelas-centro-portugal/',
+  },
+  blogFeuxForet: {
+    fr: '/fr/blog/feux-de-foret-portugal-centre-rassurance/',
+  },
+  blogEchapperFoule: {
+    fr: '/fr/blog/echapper-a-la-foule-portugal-centre-pombal/',
+  },
+  blogArriereSaison: {
+    fr: '/fr/blog/arriere-saison-portugal-septembre-octobre-centre/',
+  },
+  blogWinterzon: {
+    nl: '/nl/blog/winterzon-centraal-portugal-december/',
+  },
+  blogAutumnCentral: {
+    en: '/blog/autumn-central-portugal-september-october/',
+  },
+  blogBussaco: {
+    en: '/blog/bussaco-forest-luso-day-trip-pombal/',
   },
 };
 

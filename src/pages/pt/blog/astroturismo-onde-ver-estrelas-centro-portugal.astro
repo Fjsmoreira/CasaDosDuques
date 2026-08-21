@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/astroturismo-onde-ver-estrelas-centro-portugal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Onde ver as estrelas no Centro de Portugal: astroturismo perto de Pombal',
+      description: 'O eclipse de agosto de 2026 pôs o astroturismo português nos media — e o interior de Pombal é um dos melhores sítios para ver o céu escuro. Guia de stargazing a partir de Abiul.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-08-21',
+      dateModified: '2026-08-21',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Astroturismo no Centro de Portugal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Onde ver as estrelas no Centro de Portugal: astroturismo perto de Pombal"
+  description="Céu escuro a 10 minutos de Pombal: guia de astroturismo na Serra de Sicó e em Abiul, com dicas práticas para ver a Via Láctea e as estrelas."
+  canonical="/pt/blog/astroturismo-onde-ver-estrelas-centro-portugal/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Astroturismo</span>
+        <span>Agosto 2026</span>
+        <span>&middot; 5 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">Onde ver as estrelas no Centro de Portugal: astroturismo perto de Pombal</h1>
+      <p class="text-lg text-muted font-body">O eclipse solar de 12 de agosto de 2026 trouxe o astroturismo português para os media &mdash; e o <em>Expresso</em> e a imprensa internacional confirmaram o que quem vive no interior já sabe: <strong>Portugal rural tem um dos céus mais escuros da Europa</strong>. A região de Abiul e da Serra de Sicó está entre os melhores pontos para o ver.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Porque é que o interior de Pombal é bom para ver estrelas</h2>
+      <p>A qualidade do céu noturno depende sobretudo da <strong>poluição luminosa</strong>. As grandes cidades do litoral &mdash; Lisboa, Porto, Coimbra &mdash; criam um halo de luz que apaga as estrelas a dezenas de quilómetros. Abiul, a 10 minutos de Pombal mas longe dos grandes centros urbanos, tem <strong>poluição luminosa baixa</strong>: a partir do jardim da <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> já se vê a olho nu muito mais do que na cidade.</p>
+      <p>E a <strong>Serra de Sicó</strong> &mdash; a 20&ndash;25 minutos &mdash; é o ponto de excelência da região: altitudes de 400&ndash;600 metros, poucas povoações e zero indústria. No topo da serra, numa noite sem lua, a <strong>Via Láctea é visível a olho nu</strong> em todo o seu esplendor.</p>
+
+      <h2 class="mt-8 mb-3">Os melhores pontos a partir de Abiul</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Jardim da Casa dos Duques</strong> &mdash; a forma mais simples de começar: deite-se numa toalha no relvado e espere os olhos adaptarem-se (15&ndash;20 minutos sem luzes). Ideal para famílias com crianças.</li>
+        <li><strong>Serra de Sicó / Alvaiázere</strong> &mdash; cerca de 20 km, 25 minutos. O miradouro da serra tem horizonte aberto a sul e oeste &mdash; o melhor ponto da região para a Via Láctea no verão.</li>
+        <li><strong>Alqueidão da Serra</strong> &mdash; a norte de Porto de Mós, ~30 minutos. Já na orla do Maciço Calcário Estremenho, com céu escuro e vistas sobre o vale.</li>
+        <li><strong>Vale do Zêzere (Pedrógão Grande, Castanheira de Pera)</strong> &mdash; 35&ndash;50 minutos. As margens do rio e as barragens têm céus muito escuros; a zona é também conhecida pelo silêncio absoluto à noite.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Quando ir: a agenda do céu</h2>
+      <p>O astroturismo não depende só da estação &mdash; depende da <strong>lua</strong>:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Lua nova</strong> (as ~10 noites por mês sem lua no céu) &mdash; céu mais escuro, Via Láctea visível entre maio e setembro.</li>
+        <li><strong>Verão</strong> &mdash; Via Láctea no seu auge, noites curtas e amenas.</li>
+        <li><strong>Outono e inverno</strong> &mdash; céus mais transparentes e secos; Órion, as Plêiades e os planetas dominam; noites mais frias, leve agasalho.</li>
+        <li><strong>Chuvas de estrelas</strong> &mdash; Perseidas (agosto), Geminídeas (dezembro) e Líridas (abril) são as mais espetaculares do hemisfério norte.</li>
+      </ul>
+      <p>Use uma app de astronomia (Stellarium, Sky Map ou Star Walk) para saber o que está visível em cada noite &mdash; e lembre-se: <strong>o olho precisa de 15&ndash;20 minutos no escuro</strong> para ver o máximo de estrelas. Luz vermelha (ou o modo noturno do telemóvel) preserva a visão noturna.</p>
+
+      <h2 class="mt-8 mb-3">O que levar</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Toalha ou manta de piquenique (e cadeiras baixas, se preferir)</li>
+        <li>Agasalho &mdash; as noites arrefecem depressa no interior</li>
+        <li>Luz vermelha ou telemóvel em modo noturno</li>
+        <li>Binóculos &mdash; transformam as Plêiades e a Lua em espetáculos</li>
+        <li>Termo com café ou chá &mdash; stargazing é uma atividade lenta, e é isso que a torna boa</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Astroturismo: um setor em crescimento</h2>
+      <p>O eclipse de agosto de 2026 deu visibilidade a um setor que cresce todo o ano: o <em>Expresso</em> noticiou que o <strong>turismo das estrelas</strong> continua a atrair visitantes muito depois do evento, e Portugal é já referenciado internacionalmente como destino de céu escuro. Para quem fica na <a href="/pt/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>, a boa notícia é que não precisa de ir a lado nenhum especial: o céu de Abiul e da Serra de Sicó está à distância de um passeio noturno &mdash; como os que sugerimos no nosso <a href="/pt/passeios/" class="text-terracotta-500 hover:text-terracotta-600 underline">roteiro de passeios</a> e na <a href="/pt/guia/abiul/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia de Abiul</a>.</p>
+
+      <p>Escolha uma noite de lua nova, leve uma manta e descubra porque é que o interior do Centro de Portugal está a tornar-se destino de astroturismo. <a href="/pt/reserva/" class="text-terracotta-500 hover:text-terracotta-600 underline">Reserve a sua estadia</a> e olhe para cima.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Expresso (12/08/2026) &mdash; &ldquo;Eclipse solar dura apenas horas, mas turismo das estrelas cresce todo o ano em Portugal&rdquo;; Portugal Resident FR (12/08/2026) &mdash; setor astroturístico em crescimento. Distâncias e tempos de viagem aproximados, calculados via OpenStreetMap/OSRM a partir de Abiul. Calendário lunar e visibilidade: verifique apps de astronomia ou o Observatório Astronómico de Lisboa na data da visita.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Céu escuro, sem hora de ponta"
+    subtitle="Durma na Casa dos Duques e veja a Via Láctea a 10 minutos de casa"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
