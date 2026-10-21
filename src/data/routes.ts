@@ -39,7 +39,8 @@ export type RouteKey =
   | 'blogArriereSaison'
   | 'blogWinterzon'
   | 'blogAutumnCentral'
-  | 'blogBussaco';
+  | 'blogBussaco'
+  | 'blogWandelenPombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -224,6 +225,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogBussaco: {
     en: '/blog/bussaco-forest-luso-day-trip-pombal/',
+  },
+  blogWandelenPombal: {
+    nl: '/nl/blog/wandelen-rond-pombal-sico-zezere-dal/',
   },
 };
 
