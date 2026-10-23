@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/obidos-nazare-alcobaca-day-trip-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Óbidos, Nazaré and Alcobaça in one day: the Silver Coast loop from Pombal',
+      description:
+        'A realistic one-day loop from Abiul, Pombal: 244 km and about three hours of driving to see the Alcobaça Monastery, the giant waves of Nazaré and the walled town of Óbidos.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-10-23',
+      dateModified: '2026-10-23',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Óbidos, Nazaré and Alcobaça in one day', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Óbidos, Nazaré and Alcobaça in one day: the Silver Coast loop from Pombal"
+  description="Alcobaça, Nazaré and Óbidos in a single day from Abiul (Pombal): 244 km, about 3 hours of driving, real drive times, where to park and what to see in each town."
+  canonical="/blog/obidos-nazare-alcobaca-day-trip-pombal/"
+  locale="en"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Day Trips</span>
+        <span>October 2026</span>
+        <span>&middot; 7 min read</span>
+      </div>
+      <h1 class="leading-tight mb-4">Óbidos, Nazaré and Alcobaça in one day: the Silver Coast loop from Pombal</h1>
+      <p class="text-lg text-muted font-body">
+        Yes, it fits in a day &mdash; and comfortably. From Abiul the full loop is <strong>244 km with about
+        3 hours of driving</strong>: <strong>83 km (65 min)</strong> to Alcobaça, <strong>14 km (15 min)</strong> on to
+        Nazaré, <strong>40 km (32 min)</strong> to Óbidos, then <strong>107 km (75 min)</strong> home. Leave at 9am and
+        you are back at the pool by 7pm, with three of the most distinctive places in Central Portugal behind you.
+      </p>
+    </div>
+
+    <OptimizedImage src="/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg" alt="Casa dos Duques, the whitewashed holiday home with a private pool and lawn in Abiul, Pombal" class="w-full my-6" loading="lazy" width={1200} height={800} sizes="(max-width: 896px) 100vw, 896px" />
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Why these three, in this order</h2>
+      <p>
+        The three towns sit in a neat line on the <strong>Costa de Prata</strong>, and the order matters. Alcobaça opens
+        early and is the quietest of the three in the morning. Nazaré is 15 minutes further west and is best at
+        midday, when the light hits the cliff and the seafood restaurants along the beach are open. Óbidos is the
+        perfect late afternoon &mdash; golden stone, walls to walk, and a last coffee before the motorway home.
+        Driving the other way round puts you in Óbidos at 10am with the coach parties.
+      </p>
+      <p>
+        The route uses the <strong>A1</strong> south towards Leiria, then the <strong>A8</strong> west to the coast, and
+        returns the same way. Both are tolled motorways, so a toll transponder or a rental car with an electronic
+        toll device saves time at the barriers. Our <a href="/blog/central-portugal-road-trip-by-car-ev/" class="text-terracotta-500 hover:text-terracotta-600 underline">road-trip guide</a>
+        covers the same corridor in more detail, including charging stops if you are driving an EV.
+      </p>
+
+      <h2 class="mt-8 mb-3">Stop 1 &mdash; Alcobaça: the first Gothic church in Portugal</h2>
+      <p>
+        The <strong>Mosteiro de Santa Maria de Alcobaça</strong> was founded in 1153 by Afonso Henriques, the first king
+        of Portugal, and handed to the Cistercian order. Construction of the church began in 1178 and was only
+        completed in 1252 &mdash; which is why it reads as the earliest truly Gothic architecture in the country:
+        soaring, bare, and built for acoustics and silence rather than decoration. UNESCO listed it in 1989.
+      </p>
+      <p>
+        Do not miss the two tombs facing each other across the transept: <strong>King Pedro I and Inês de Castro</strong>.
+        Inês was murdered on the orders of Pedro's father, and the story of the crowned corpse &mdash; the queen who was
+        exhumed and enthroned after death &mdash; is the most told tale in Portugal. Also look for the medieval
+        kitchen, lined with 18th-century azulejo tiles and built unusually tall so that the smoke from whole roasting
+        animals had somewhere to go.
+      </p>
+      <p>
+        Opening times and ticket prices change with the season and with religious holidays, so check the monastery's
+        official page before you travel. Allow 60&ndash;90 minutes for the church, the cloisters and the kitchen, and
+        leave time for a coffee in the monastery square.
+      </p>
+
+      <h2 class="mt-8 mb-3">Stop 2 &mdash; Nazaré: a canyon, a funicular and the biggest waves in the world</h2>
+      <p>
+        Nazaré's waves are not a marketing story. Just offshore runs the <strong>Nazaré Canyon</strong>, the largest
+        submarine canyon in Europe: roughly <strong>230 km long and 5,000 m deep</strong>. It behaves like a funnel,
+        accelerating and concentrating Atlantic swell so that waves break at heights found nowhere else on the
+        planet. The world record for the largest wave ever surfed &mdash; 26.2 m, in 2020 &mdash; was set here.
+      </p>
+      <p>
+        The town is split in two. <strong>Praia</strong>, at sea level, is the fishing quarter: restaurants, the beach,
+        and the north end where the big-wave show happens. Above it, <strong>Sítio</strong> sits on the cliff, with the
+        sanctuary of Nossa Senhora da Nazaré and the famous viewpoint over the beach. The two are linked by the
+        <strong>Nazaré Funicular</strong>, a short, steep ride that saves you the drive up &mdash; and gives you the
+        best photograph of the day.
+      </p>
+      <p>
+        <strong>When to come for the waves:</strong> the giant swells belong to the Atlantic winter, roughly
+        <strong>October to March</strong>. That is also when the cliff at Praia do Norte is busiest with photographers
+        and the beach is closed to swimmers. In summer the same beach is a normal, family-friendly Atlantic beach
+        &mdash; cold water, strong currents, lifeguards in season. If you want to combine waves with a swim, go in
+        September: warm sea, and the first big swell of the season often arrives late in the month.
+      </p>
+
+      <h2 class="mt-8 mb-3">Stop 3 &mdash; Óbidos: a town inside its own walls</h2>
+      <p>
+        Óbidos is small enough to cross in fifteen minutes and interesting enough to keep you for three hours. The
+        whole historic centre sits inside a ring of <strong>medieval walls</strong>, remodelled under King Dinis I, with
+        the castle keep added in the 14th century. For centuries the town was given to Portuguese queens as a wedding
+        gift, which is why it is still called the <em>Vila das Rainhas</em> &mdash; the town of the queens.
+      </p>
+      <p>
+        You can walk the <strong>wall walk</strong> above the rooftops. It is free, unforgettable, and genuinely
+        exposed: there is a handrail in places and a sheer drop in others, so it is not the walk for small children or
+        anyone uneasy with heights. Inside, the main street runs from the Porta da Vila gate to the castle, lined with
+        <strong>bookshops</strong> &mdash; Óbidos has built a second identity as Portugal's literary town, with shops in
+        former churches and a literary festival each year. Order a <em>ginjinha</em>, the sour-cherry liqueur served in a
+        chocolate cup, from one of the little counters near the gate.
+      </p>
+      <p>
+        <strong>Winter bonus:</strong> from <strong>27 November 2026 to 3 January 2027</strong> Óbidos holds its
+        <em>Vila Natal</em> Christmas village &mdash; the medieval streets filled with lights, an ice rink, markets
+        and family shows. It is the busiest Óbidos gets all year, and the reason to arrive early or stay
+        late rather than pass through at midday.
+      </p>
+
+      <h2 class="mt-8 mb-3">The winter version of this day</h2>
+      <p>
+        Between November and March the loop becomes a different trip, and honestly a better one for adults. Alcobaça's
+        cloisters empty out, Nazaré puts on its big-wave theatre, and Óbidos glows. You will drive the same 244 km but
+        stop more often, because parking is easy and nothing has a queue. Bring a windproof layer for the cliff at
+        Nazaré &mdash; the wind there is not a breeze &mdash; and check the surf forecast the night before if the waves
+        are the point of the trip.
+      </p>
+
+      <h2 class="mt-8 mb-3">Practical notes</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Parking</strong> &mdash; in Óbidos use the car parks outside the walls and walk in; the streets inside are pedestrian in practice and one-way in theory. In Nazaré, park at Sítio for the view or along the seafront at Praia.</li>
+        <li><strong>Lunch</strong> &mdash; Nazaré is the place for it: grilled fish and seafood, a two-minute walk from the sand. Book on summer weekends and during Vila Natal.</li>
+        <li><strong>Timing</strong> &mdash; Alcobaça 09:45&ndash;11:15, Nazaré 11:30&ndash;15:00 (lunch included), Óbidos 15:30&ndash;18:00, home by 19:15.</li>
+        <li><strong>With children</strong> &mdash; swap the Óbidos wall walk for the castle exterior and the playground, and add the funicular at Nazaré; it is the highlight for most kids.</li>
+        <li><strong>Tolls and fuel</strong> &mdash; both motorways are tolled; fill up before leaving Pombal, where fuel is cheaper than on the A8 service areas.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Where to base it</h2>
+      <p>
+        The reason this day works is the base. <a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a>
+        sits in Abiul, 11 minutes from Pombal and a few minutes from the A1 &mdash; close enough to reach the coast and
+        the monuments before the crowds, far enough that you come back to a garden, a pool and total silence instead of
+        a hotel corridor. If you are planning several days of this, our
+        <a href="/day-trips/" class="text-terracotta-500 hover:text-terracotta-600 underline">day trips page</a> lists every
+        destination within an hour with real drive times, and the
+        <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Central Portugal guide</a>
+        puts them in context. For a shorter coastal day, start with
+        <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">the beaches closest to the house</a>.
+      </p>
+      <p>
+        One warning: three towns in one day is a tasting menu, not a meal. If you have the time, split the loop in two
+        and give Óbidos an evening of its own &mdash; the town is at its best after the day-trippers have gone and the
+        walls turn gold.
+      </p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">
+        Sources: Óbidos Vila Natal official site (dates 27/11/2026&ndash;03/01/2027); Mosteiro de Alcobaça history and
+        UNESCO listing (1989); Nazaré Canyon dimensions (largest submarine canyon in Europe, ~230 km long, ~5,000 m
+        deep) and the 26.2 m wave record set in 2020. Distances and drive times calculated with OSRM from Abiul
+        (39.8726, -8.5386); they are estimates, not guarantees. Opening times and prices change &mdash; always confirm
+        with the venue before travelling.
+      </p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Three towns, one day, one quiet base"
+    subtitle="Stay 11 minutes from the A1 in Abiul and reach Alcobaça, Nazaré and Óbidos before the crowds"
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

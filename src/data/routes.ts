@@ -40,7 +40,8 @@ export type RouteKey =
   | 'blogWinterzon'
   | 'blogAutumnCentral'
   | 'blogBussaco'
-  | 'blogWandelenPombal';
+  | 'blogWandelenPombal'
+  | 'blogObidosNazareAlcobaca';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -228,6 +229,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogWandelenPombal: {
     nl: '/nl/blog/wandelen-rond-pombal-sico-zezere-dal/',
+  },
+  blogObidosNazareAlcobaca: {
+    en: '/blog/obidos-nazare-alcobaca-day-trip-pombal/',
   },
 };
 
