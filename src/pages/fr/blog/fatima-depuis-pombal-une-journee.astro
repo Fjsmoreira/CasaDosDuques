@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/fatima-depuis-pombal-une-journee/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Visiter Fátima depuis Pombal : la journée complète (60 km, 47 min)',
+      description: 'Fátima est à 60 km et 47 minutes de la Casa dos Duques, à Abiul. Horaires officiels des messes, procession aux chandelles du 12, maisons des bergers à Aljustrel, musée à 3 € : le guide d\'une journée.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-10-26',
+      dateModified: '2026-10-26',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Visiter Fátima depuis Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Visiter Fátima depuis Pombal : la journée complète (60 km, 47 min)"
+  description="Fátima à 60 km et 47 min de la Casa dos Duques : horaires officiels des messes, procession aux chandelles du 12, maisons des bergers d'Aljustrel et musée à 3 €. Le guide d'une journée."
+  canonical="/fr/blog/fatima-depuis-pombal-une-journee/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Excursions</span>
+        <span>Octobre 2026</span>
+        <span>&middot; 8 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">Visiter F&aacute;tima depuis Pombal&nbsp;: la journ&eacute;e compl&egrave;te (60&nbsp;km, 47&nbsp;min)</h1>
+      <p class="text-lg text-muted font-body">Le sanctuaire de F&aacute;tima se trouve &agrave; <strong>60&nbsp;kilom&egrave;tres d&rsquo;Abiul, soit environ 47&nbsp;minutes de route</strong> par l&rsquo;IC8 puis l&rsquo;A1 (calcul d&rsquo;itin&eacute;raire OSRM, octobre&nbsp;2026). Assez pr&egrave;s pour y consacrer une journ&eacute;e enti&egrave;re depuis la <a href="/fr/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> et rentrer d&icirc;ner au jardin. Voici l&rsquo;essentiel&nbsp;: horaires officiels des messes, procession aux chandelles du&nbsp;12, maisons des bergers &agrave; Aljustrel et itin&eacute;raire heure par heure.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Ce que l&rsquo;on visite r&eacute;ellement&nbsp;: la Cova da Iria</h2>
+      <p>Entre le 13&nbsp;mai et le 13&nbsp;octobre&nbsp;1917, trois enfants d&rsquo;Aljustrel &mdash; L&uacute;cia, Francisco et Jacinta &mdash; rapportent six apparitions de la Vierge dans un terrain communal en pente appel&eacute; la Cova da Iria. <strong>Cinq de ces six apparitions ont eu lieu exactement l&agrave; o&ugrave; se trouve aujourd&rsquo;hui la Capelinha das Apari&ccedil;&otilde;es</strong>&nbsp;; la quatri&egrave;me, le 19&nbsp;ao&ucirc;t, a lieu aux Valinhos, les enfants ayant &eacute;t&eacute; retenus &agrave; Vila Nova de Our&eacute;m.</p>
+      <p>La petite chapelle a &eacute;t&eacute; construite entre le 28&nbsp;avril et le 15&nbsp;juin&nbsp;1919, dynamit&eacute;e dans la nuit du 6&nbsp;mars&nbsp;1922, puis restaur&eacute;e et rouverte le 13&nbsp;janvier&nbsp;1923. C&rsquo;est l&agrave; que se d&eacute;roulent les chapelets de 12h00, 18h30 et 21h30, et la messe de 12h30.</p>
+      <p>Autour de l&rsquo;esplanade, deux basiliques se font face&nbsp;:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Basilique Notre-Dame du Rosaire</strong> &mdash; premi&egrave;re pierre b&eacute;nie le 13&nbsp;mai&nbsp;1928, d&eacute;di&eacute;e le 7&nbsp;octobre&nbsp;1953, &eacute;lev&eacute;e au rang de basilique en&nbsp;1954. 70,5&nbsp;m de long, tour de 65&nbsp;m et 62&nbsp;cloches. Dans les bras du transept reposent Francisco (depuis&nbsp;1952), Jacinta (depuis&nbsp;1951) et s&oelig;ur L&uacute;cia (depuis&nbsp;2006).</li>
+        <li><strong>Basilique de la Sainte-Trinit&eacute;</strong> &mdash; premi&egrave;re pierre en&nbsp;2004, d&eacute;di&eacute;e le 12&nbsp;octobre&nbsp;2007, <strong>8&nbsp;633 places</strong> en cercle de 125&nbsp;m&egrave;tres de diam&egrave;tre. C&rsquo;est l&agrave; que se c&eacute;l&egrave;brent les grandes messes.</li>
+        <li><strong>La Colonnade</strong> &mdash; 200 colonnes et demi-colonnes, 14 autels, qui ferment le Recinto de Ora&ccedil;&atilde;o.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Les horaires officiels &mdash; et pourquoi ils changent le 1<sup>er</sup> novembre</h2>
+      <p>Le sanctuaire publie deux grilles&nbsp;: l&rsquo;<strong>horaire d&rsquo;&eacute;t&eacute;</strong>, de P&acirc;ques au 31&nbsp;octobre, et l&rsquo;<strong>horaire d&rsquo;hiver</strong>, du 1<sup>er</sup>&nbsp;novembre &agrave; P&acirc;ques. Autrement dit&nbsp;: si vous venez en novembre, les horaires ne sont plus ceux de l&rsquo;&eacute;t&eacute;. Les messes en portugais&nbsp;:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>7h30</strong> &mdash; basilique Notre-Dame du Rosaire, tous les jours.</li>
+        <li><strong>9h00</strong> &mdash; du lundi au samedi &agrave; la chapelle de la Mort de J&eacute;sus&nbsp;; le dimanche &agrave; la basilique de la Sainte-Trinit&eacute;.</li>
+        <li><strong>11h00</strong> &mdash; en &eacute;t&eacute;, &agrave; la Sainte-Trinit&eacute; du lundi au samedi et sur le Recinto le dimanche&nbsp;; en hiver, au Rosaire en semaine.</li>
+        <li><strong>12h30</strong> &mdash; chapelle des Apparitions (Sainte-Trinit&eacute; le dimanche, en &eacute;t&eacute;).</li>
+        <li><strong>15h00</strong> et <strong>16h30</strong> &mdash; chapelle de la Mort de J&eacute;sus en semaine, Sainte-Trinit&eacute; le dimanche.</li>
+        <li><strong>18h30</strong> &mdash; basilique Notre-Dame du Rosaire, tous les jours.</li>
+      </ul>
+      <p>Chapelet &agrave; la chapelle des Apparitions&nbsp;: <strong>12h00</strong> du lundi au samedi, <strong>18h30 et 21h30 tous les jours</strong>. Les messes en langues &eacute;trang&egrave;res, en saison (de P&acirc;ques au 31&nbsp;octobre)&nbsp;: italien &agrave; 8h00 tous les jours, anglais &agrave; 15h30 du lundi au vendredi, espagnol &agrave; 19h15. Le programme officiel des p&egrave;lerinages indique par ailleurs une <strong>messe en fran&ccedil;ais &agrave; 11h30</strong> &agrave; la Capelinha en mai, juin, ao&ucirc;t, septembre et octobre &mdash; l&rsquo;horaire exact du jour est &agrave; v&eacute;rifier sur le site du sanctuaire avant de partir.</p>
+
+      <h2 class="mt-8 mb-3">Le 12 et le 13&nbsp;: la procession aux chandelles</h2>
+      <p>C&rsquo;est le moment que beaucoup de voyageurs fran&ccedil;ais viennent chercher, et il n&rsquo;est pas r&eacute;serv&eacute; &agrave; l&rsquo;&eacute;t&eacute;. <strong>Le 12 de chaque mois, &agrave; 21h30, chapelet puis procession aux chandelles</strong> depuis la chapelle des Apparitions. Le 13 au matin, chapelet &agrave; 10h00, procession &agrave; 10h45 et messe &agrave; 11h00 &agrave; la basilique de la Sainte-Trinit&eacute; (programme des p&eacute;lerinages mensuels, de novembre &agrave; avril). De mai &agrave; octobre, ce sont les grands p&egrave;lerinages anniversaires, avec une veill&eacute;e nocturne compl&egrave;te du 12 au 13 et une messe de 10h00 sur le Recinto.</p>
+      <p>Cons&eacute;quence pratique&nbsp;: les 12 et 13, F&aacute;tima est noire de monde et les h&ocirc;tels affichent complet des semaines &agrave; l&rsquo;avance. Si vous voulez la procession, pr&eacute;voyez le retour de nuit (environ 22h30 &agrave; Abiul) ou une nuit sur place.</p>
+
+      <h2 class="mt-8 mb-3">Aljustrel&nbsp;: les maisons des bergers</h2>
+      <p>&Agrave; 2&nbsp;km du sanctuaire, le hameau d&rsquo;Aljustrel conserve les deux maisons o&ugrave; sont n&eacute;s les trois voyants, distantes d&rsquo;environ <strong>200&nbsp;m&egrave;tres</strong> l&rsquo;une de l&rsquo;autre&nbsp;: la maison de Francisco et Jacinta, acquise par le sanctuaire en 1996 puis reconstruite, et celle de L&uacute;cia, offerte par elle en 1981. Visite libre, tous les jours de <strong>9h00 &agrave; 12h45 et de 14h00 &agrave; 17h45</strong> (derni&egrave;res entr&eacute;es). Les deux maisons peuvent fermer temporairement pour travaux de conservation &mdash; v&eacute;rifiez l&rsquo;information du jour sur le site officiel.</p>
+      <p>&Agrave; pied depuis Aljustrel, le chemin des bergers m&egrave;ne aux <strong>Valinhos</strong> (lieu de l&rsquo;apparition du 19&nbsp;ao&ucirc;t&nbsp;1917, entre les 8<sup>e</sup> et 9<sup>e</sup> stations du chemin de croix) et &agrave; la <strong>Loca do Cabe&ccedil;o</strong>, o&ugrave; les enfants situent les premi&egrave;re et troisi&egrave;me apparitions de l&rsquo;Ange. Ce sont des chemins de terre, ombrag&eacute;s, parfaits en fin d&rsquo;apr&egrave;s-midi.</p>
+
+      <h2 class="mt-8 mb-3">Le mus&eacute;e et la couronne</h2>
+      <p>Le Mus&eacute;e du Sanctuaire, fond&eacute; en&nbsp;1955, pr&eacute;sente depuis&nbsp;2002 l&rsquo;exposition permanente <em>F&aacute;tima Luz e Paz</em> dans le b&acirc;timent de la Reitoria. On y voit la <strong>couronne pr&eacute;cieuse de Notre-Dame</strong>, qui contient la balle qui a atteint Jean-Paul&nbsp;II, et des ex-voto du monde entier. Ouvert tous les jours de <strong>9h00 &agrave; 12h15 et de 14h00 &agrave; 17h15</strong> (derni&egrave;res entr&eacute;es), <strong>3&nbsp;&euro;</strong>, ferm&eacute; l&rsquo;apr&egrave;s-midi du 24&nbsp;d&eacute;cembre, le 25&nbsp;d&eacute;cembre et le 1<sup>er</sup>&nbsp;janvier. Les 13 (de mai &agrave; octobre), le 15&nbsp;ao&ucirc;t et le 8&nbsp;d&eacute;cembre, la couronne n&rsquo;est pas au mus&eacute;e&nbsp;: elle couronne la statue dans la Capelinha.</p>
+
+      <h2 class="mt-8 mb-3">L&rsquo;itin&eacute;raire heure par heure depuis Abiul</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>8h15</strong> &mdash; d&eacute;part de la Casa dos Duques (EM501, puis IC8 et A1 vers le sud, sortie F&aacute;tima).</li>
+        <li><strong>9h05</strong> &mdash; arriv&eacute;e, cap sur la Capelinha avant l&rsquo;arriv&eacute;e des cars.</li>
+        <li><strong>9h45</strong> &mdash; basilique Notre-Dame du Rosaire et les tombeaux des voyants.</li>
+        <li><strong>10h30</strong> &mdash; basilique de la Sainte-Trinit&eacute;, plus &eacute;tonnante qu&rsquo;elle n&rsquo;y para&icirc;t.</li>
+        <li><strong>11h00</strong> &mdash; messe (ou 12h30 &agrave; la Capelinha en semaine).</li>
+        <li><strong>13h00</strong> &mdash; d&eacute;jeuner &agrave; F&aacute;tima ou retour vers Aljustrel.</li>
+        <li><strong>14h00</strong> &mdash; mus&eacute;e (3&nbsp;&euro;), une heure suffit.</li>
+        <li><strong>15h15</strong> &mdash; Aljustrel&nbsp;: les deux maisons, puis le chemin des Valinhos.</li>
+        <li><strong>17h00</strong> &mdash; retour&nbsp;; <strong>17h50</strong> &agrave; Abiul, &agrave; temps pour la piscine ou le d&icirc;ner.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Combiner avec Batalha</h2>
+      <p>Si vous partez t&ocirc;t, le monast&egrave;re de Batalha &mdash; UNESCO, b&acirc;ti apr&egrave;s la victoire d&rsquo;Aljubarrota en&nbsp;1385 &mdash; n&rsquo;est qu&rsquo;&agrave; <strong>22&nbsp;km et 25&nbsp;minutes</strong> de F&aacute;tima. Sanctuaire le matin, Batalha en fin d&rsquo;apr&egrave;s-midi&nbsp;: la journ&eacute;e est longue mais coh&eacute;rente. Toutes les autres id&eacute;es de sorties sont dans notre guide des <a href="/fr/excursions/" class="text-terracotta-500 hover:text-terracotta-600 underline">excursions au d&eacute;part de Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">Dormir &agrave; F&aacute;tima ou &agrave; Pombal&nbsp;?</h2>
+      <p>Si votre priorit&eacute; est la vie liturgique &mdash; chapelet de 21h30, procession du 12 &mdash;, dormir &agrave; F&aacute;tima est plus simple&nbsp;: tout se fait &agrave; pied. Si votre priorit&eacute; est le voyage, la r&eacute;gion de Pombal est une meilleure base&nbsp;: moins d&rsquo;une heure des plages atlantiques, de Coimbra, de Tomar et de Batalha, et le retour de F&aacute;tima se fait sur autoroute en moins de cinquante minutes. C&rsquo;est le compromis de la plupart de nos h&ocirc;tes&nbsp;: une journ&eacute;e &agrave; F&aacute;tima, le reste du s&eacute;jour dans le Centre. Pour pr&eacute;parer le reste, lisez <a href="/fr/blog/que-visiter-autour-de-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">que visiter autour de Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">Quand venir</h2>
+      <p>&Eacute;vitez les 12 et 13 de chaque mois si vous cherchez le calme, et l&rsquo;ao&ucirc;t, mois le plus charg&eacute;. Le d&eacute;but novembre a sa propre atmosphere&nbsp;: comm&eacute;moration de tous les fid&egrave;les d&eacute;funts le 2&nbsp;novembre, et horaires d&rsquo;hiver d&egrave;s le 1<sup>er</sup>. L&rsquo;automne et le printemps offrent les meilleures lumi&egrave;res sur l&rsquo;esplanade. En &eacute;t&eacute;, partiez t&ocirc;t&nbsp;: &agrave; 10h la chaleur devient s&eacute;rieuse sur le Recinto, qui n&rsquo;offre presque pas d&rsquo;ombre.</p>
+
+      <p>Une journ&eacute;e &agrave; F&aacute;tima depuis Abiul, c&rsquo;est 120&nbsp;kilom&egrave;tres aller-retour et un retour au calme de la campagne le soir m&ecirc;me. <a href="/fr/reservation/" class="text-terracotta-500 hover:text-terracotta-600 underline">R&eacute;servez votre s&eacute;jour &agrave; la Casa dos Duques</a> et gardez une journ&eacute;e libre pour F&aacute;tima.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources&nbsp;: Santu&aacute;rio de F&aacute;tima, site officiel (hor&aacute;rios das celebra&ccedil;&otilde;es, Programa de Atividades 2025-2026, lieux des apparitions, mus&eacute;e) consult&eacute; le 26&nbsp;octobre&nbsp;2026&nbsp;; distances et temps de trajet calcul&eacute;s via OSRM/OpenStreetMap depuis Abiul le 26&nbsp;octobre&nbsp;2026 (Abiul&ndash;F&aacute;tima 60,4&nbsp;km&nbsp;/ 47&nbsp;min&nbsp;; F&aacute;tima&ndash;Batalha 21,9&nbsp;km&nbsp;/ 25&nbsp;min). Horaires et tarifs peuvent changer&nbsp;: v&eacute;rifiez toujours sur fatima.pt avant de partir.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Fátima à 47 minutes, la campagne à la maison"
+    subtitle="Une journée au sanctuaire, et le soir la piscine et le jardin de la Casa dos Duques"
+    primaryCta={{ label: 'Réserver', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

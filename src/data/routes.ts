@@ -41,7 +41,8 @@ export type RouteKey =
   | 'blogAutumnCentral'
   | 'blogBussaco'
   | 'blogWandelenPombal'
-  | 'blogObidosNazareAlcobaca';
+  | 'blogObidosNazareAlcobaca'
+  | 'blogFatimaPombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -232,6 +233,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogObidosNazareAlcobaca: {
     en: '/blog/obidos-nazare-alcobaca-day-trip-pombal/',
+  },
+  blogFatimaPombal: {
+    fr: '/fr/blog/fatima-depuis-pombal-une-journee/',
   },
 };
 
