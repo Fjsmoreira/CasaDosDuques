@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/nl/blog/coimbra-dagtocht-vanuit-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Coimbra in één dag vanuit Pombal: 61 km, 48 minuten — de complete planning',
+      description: 'Coimbra ligt 60,7 km en 48 minuten rijden van Abiul. Een uur-voor-uur planning voor de universiteitsheuvel (UNESCO 2013), de Joanina-bibliotheek, de Sé Velha en de botanische tuin — met parkeren, tickets en een extra stop in Conímbriga.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-10-28',
+      dateModified: '2026-10-28',
+      image: 'https://casadosduques.pt/images/garden-1.jpg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/nl/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Coimbra in één dag vanuit Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Coimbra in één dag vanuit Pombal: 61 km, 48 minuten — de complete planning"
+  description="Coimbra bezoeken vanuit Pombal: 60,7 km en 48 minuten rijden vanaf Abiul. Uur-voor-uur planning met de Joanina-bibliotheek, de Sé Velha, de botanische tuin, parkeergarages en een stop in Conímbriga."
+  canonical="/nl/blog/coimbra-dagtocht-vanuit-pombal/"
+  locale="nl"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Daguitstap</span>
+        <span>Oktober 2026</span>
+        <span>&middot; 7 min lezen</span>
+      </div>
+      <h1 class="leading-tight mb-4">Coimbra in één dag vanuit Pombal: 61 km, 48 minuten</h1>
+      <p class="text-lg text-muted font-body">Coimbra ligt op <strong>60,7 km en 48 minuten rijden</strong> van <a href="/nl/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> in Abiul &mdash; de snelste route die OSRM vandaag berekent. Dat is kort genoeg voor een dagtocht en ver genoeg voor een volle dag: de universiteitsheuvel Alta en de wijk Sofia staan sinds <strong>2013</strong> op de UNESCO-Werelderfgoedlijst. Reken op vertrek om <strong>09:00</strong> en thuiskomst rond <strong>18:30</strong>, met de hoge stad in de ochtend, de benedenstad en de Sé Velha rond het middaguur en de tuinen in de middag. Het is er ook buiten het hoogseizoen goed te doen: de gemiddelde dagmaximumtemperatuur in Coimbra was <strong>17,6 &deg;C in november</strong> en <strong>15,3 &deg;C in december</strong> (gemiddelde 2021&ndash;2025, Open-Meteo) &mdash; ideaal om te lopen, met korte dagen en weinig drukte.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">De rit: 61 km, twee varianten</h2>
+      <p>Vanuit Abiul rijd je in noordelijke richting naar Coimbra. OSRM geeft twee routes: de snelste is <strong>60,7 km in 48 minuten</strong>, een alternatief is <strong>63,7 km in 53 minuten</strong>. Op een doordeweekse ochtend is de eerste de logische keuze, op vrijdagmiddag kan de tweede rustiger zijn. Vertrek voor negenen: dan ben je ruim voor de eerste tijdsloten van de universiteit binnen en heb je nog keuze uit parkeerplaatsen in plaats van rondjes rijden door de smalle straten van de Alta.</p>
+
+      <h2 class="mt-8 mb-3">Ochtend: de Alta en de Joanina-bibliotheek</h2>
+      <p>Parkeer bij voorkeur in een garage aan de rand van het centrum en loop de heuvel op. Twee betaalde garages die het hele jaar door open zijn: <strong>Garagem Topázio</strong> (maandag t/m zaterdag 08:00&ndash;21:30) en <strong>Garagem Horizonte</strong> (24/7). Vanaf daar ben je in 10 tot 15 minuten boven, via de Rua Ferreira Borges en de oude stadspoort.</p>
+      <p>Bovenaan wacht het <strong>Pa&ccedil;o das Escolas</strong>, het voormalige koninklijk paleis waar de universiteit in 1537 werd gevestigd. De blikvanger is de <strong>Biblioteca Joanina</strong>: gebouwd tussen <strong>1717 en 1728</strong> in opdracht van koning D. Jo&atilde;o V, met drie zalen die van elkaar verschillen in kleur &mdash; goud op groen, goud op rood en goud op zwart &mdash; en ongeveer <strong>70.000 banden</strong>, vooral oude drukken tot 1800. De geschilderde plafonds en de vergulde stellingen maken het een van de meest gefotografeerde bibliotheekruimtes van Europa.</p>
+      <p>De bibliotheek werkt met tijdsloten en tickets; die koop je vooraf via <a href="https://www.uc.pt/" rel="nofollow noopener" target="_blank" class="text-terracotta-500 hover:text-terracotta-600 underline">uc.pt</a>. In het hoogseizoen en in weekenden is vooraf reserveren echt nodig; buiten de vakanties kun je vaak dezelfde dag nog terecht. Hetzelfde ticket geeft toegang tot de rest van het paleis, waaronder de Sala dos Capelos met zijn portretten van Portugese koningen.</p>
+
+      <h2 class="mt-8 mb-3">Zeven eeuwen in één straat</h2>
+      <p>De universiteit begon als academie aan het einde van de 13e eeuw en vestigde zich in 1537 definitief op de heuvel. UNESCO noemt haar &ldquo;een uitzonderlijk voorbeeld van een universiteitsstad&rdquo; &mdash; reden voor inschrijving onder de criteria (ii), (iv) en (vi).</p>
+      <p>Op weg naar beneden loop je door de <strong>Torre de Almedina</strong>, de middeleeuwse stadspoort aan de Rua Ferreira Borges: mogelijk 11e-eeuws van oorsprong, in haar huidige vorm uit het begin van de 16e eeuw, en sinds 1910 onderdeel van het beschermde stadsmonument.</p>
+
+      <h2 class="mt-8 mb-3">Middag: Sé Velha en de benedenstad</h2>
+      <p>De <strong>S&eacute; Velha</strong> is een van de belangrijkste romaanse gebouwen van Portugal. De bouw begon na de <strong>Slag bij Ourique (1139)</strong>, toen Afonso Henriques zich koning noemde en Coimbra hoofdstad van het jonge rijk maakte; de definitieve impuls kwam in 1162. Binnen ligt het graf van D. Sesnando, de graaf die Coimbra in 1064 veroverde. Sinds 1910 is de kerk een nationaal monument; de kloostergang erachter is het rustigste plekje van de Alta.</p>
+      <p>Voor de lunch zak je af naar de Baixa. De <strong>Mercado Municipal D. Pedro V</strong> is de klassieke markthal van de stad &mdash; goed voor koffie, kaas en een boterham, en een prima plek om even uit te rusten voordat je aan het middagprogramma begint. Rond het marktplein en in de straten eromheen zit genoeg om te kiezen, van eenvoudige tascas tot restaurants met meer ambitie.</p>
+
+      <h2 class="mt-8 mb-3">Namiddag: tuinen, aquaduct en kinderen</h2>
+      <p>De <strong>Jardim Bot&acirc;nico</strong> van de universiteit beslaat <strong>13,5 hectare</strong> en werd in <strong>1772</strong> gesticht door de markies van Pombal, als onderdeel van het natuurhistorisch museum. Het is sinds 1996 beschermd erfgoed. Je wandelt er onder exotische bomen langs terrassen en vijvers, en aan de rand staat het <strong>Aqueduto de S&atilde;o Sebasti&atilde;o</strong> &mdash; door iedereen &ldquo;Arcos do Jardim&rdquo; genoemd &mdash; dat met zijn bogen de Cal&ccedil;ada Martim de Freitas overspant.</p>
+      <p>Reis je met kinderen, dan is <strong>Portugal dos Pequenitos</strong> de klassieker: een miniatuurpark dat in <strong>1938</strong> werd begonnen op initiatief van professor Bissaya Barreto, naar een ontwerp van architect Cassiano Branco, en op <strong>8 juni 1940</strong> opende. Portugal in het klein, op een schaal waar kinderen vrij tussen kunnen lopen.</p>
+      <p>Regent het, dan zijn er twee binnenopties. Het <strong>Museu da Ci&ecirc;ncia</strong> zit in het Laborat&oacute;rio Chimico uit 1772 &mdash; het eerste laboratorium voor chemisch onderwijs in Portugal &mdash; en toont sinds 2006 de interactieve expositie &ldquo;Segredos da Luz e da Mat&eacute;ria&rdquo;. Muziekliefhebbers gaan naar het <strong>N&uacute;cleo da Guitarra e do Fado de Coimbra</strong> (volgens OpenStreetMap di&ndash;zo 10:00&ndash;13:00 en 14:00&ndash;18:00; check ter plaatse).</p>
+
+      <h2 class="mt-8 mb-3">De planning op een rij</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>08:45</strong> &mdash; vertrek uit Abiul (61 km, 48 min)</li>
+        <li><strong>09:40</strong> &mdash; auto in de garage, te voet de Alta op</li>
+        <li><strong>10:15</strong> &mdash; Pa&ccedil;o das Escolas en Biblioteca Joanina (tijdslot)</li>
+        <li><strong>11:45</strong> &mdash; te voet naar beneden via de Torre de Almedina</li>
+        <li><strong>12:15</strong> &mdash; S&eacute; Velha en de kloostergang</li>
+        <li><strong>13:15</strong> &mdash; lunch in de Baixa / Mercado Municipal D. Pedro V</li>
+        <li><strong>14:30</strong> &mdash; Jardim Bot&acirc;nico en de Arcos do Jardim</li>
+        <li><strong>16:00</strong> &mdash; Portugal dos Pequenitos, Museu da Ci&ecirc;ncia of fado</li>
+        <li><strong>17:15</strong> &mdash; terug naar de auto, <strong>18:15</strong> thuis in Abiul</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Extra stop: Con&iacute;mbriga op de terugweg</h2>
+      <p>Heb je energie over, dan ligt <strong>Con&iacute;mbriga</strong> op de terugweg: <strong>17,4 km en 22 minuten</strong> van Coimbra, en van daaruit <strong>44,3 km en 39 minuten</strong> naar Abiul. Het is de best bewaarde Romeinse nederzetting van Portugal, met grote moza&iuml;ekvloeren. Reken op een uur extra &mdash; je bent dan rond 19:30 thuis. In ons artikel over <a href="/nl/blog/wandelen-rond-pombal-sico-zezere-dal/" class="text-terracotta-500 hover:text-terracotta-600 underline">wandelen rond Pombal</a> staan de routes die bij Con&iacute;mbriga beginnen.</p>
+
+      <h2 class="mt-8 mb-3">Praktisch</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Kosten</strong> &mdash; de stad zelf, de straatjes van de Alta, de buitenkant van de S&eacute; Velha en een wandeling door de tuinen kosten niets aan entree. Betaald zijn de Joanina-bibliotheek met het paleis, het Museu da Ci&ecirc;ncia, Portugal dos Pequenitos en het museum van Con&iacute;mbriga. Tarieven worden jaarlijks aangepast: check <a href="https://www.uc.pt/" rel="nofollow noopener" target="_blank" class="text-terracotta-500 hover:text-terracotta-600 underline">uc.pt</a> voor de universiteit en de sites van de musea voor de actuele prijzen en openingstijden.</li>
+        <li><strong>Parkeren</strong> &mdash; betaalde garages Top&aacute;zio (ma&ndash;za 08:00&ndash;21:30) en Horizonte (24/7); binnen de muren van de Alta is parkeren beperkt.</li>
+        <li><strong>Schoenen</strong> &mdash; Coimbra is gebouwd op een helling met kasseien en trappen; doe comfortabele schoenen aan.</li>
+        <li><strong>Weer</strong> &mdash; van oktober tot maart valt er gemiddeld 4&ndash;6 mm regen per dag; een paraplu en een jas zijn geen overbodige luxe, maar tussen de buien door is het meestal zacht.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Waarom Coimbra juist vanuit Abiul werkt</h2>
+      <p>De kracht van een verblijf in het binnenland is dat je de grote stad opspaart voor een grijze dag en de zonnige dagen aan de kust of in de Serra de Sic&oacute; besteedt. Vanuit <a href="/nl/huis/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> sta je in minder dan een uur in een UNESCO-stad en kom je terug in een dorp waar het 's avonds stil is. Meer idee&euml;n vind je bij de <a href="/nl/daguitstapjes/" class="text-terracotta-500 hover:text-terracotta-600 underline">daguitstappen vanuit Pombal</a> en de <a href="/nl/activiteiten/" class="text-terracotta-500 hover:text-terracotta-600 underline">activiteiten in de regio</a>; beschikbaarheid voor een korte trip check je op de <a href="/nl/boeking/" class="text-terracotta-500 hover:text-terracotta-600 underline">boekingspagina</a>.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Bronnen: UNESCO World Heritage Centre &mdash; &ldquo;University of Coimbra &ndash; Alta and Sofia&rdquo; (ingeschreven 2013, criteria ii, iv en vi; academie eind 13e eeuw, vestiging in het Pa&ccedil;o da Alc&aacute;&ccedil;ova in 1537); Wikipedia (PT) &mdash; Biblioteca Joanina (gebouwd 1717&ndash;1728, ca. 70.000 banden, drie zalen), S&eacute; Velha de Coimbra (bouw na 1139, nationaal monument sinds 1910), Porta e Torre de Almedina, Jardim Bot&acirc;nico da Universidade de Coimbra (13,5 ha, gesticht 1772), Portugal dos Pequenitos (1938&ndash;1940, Bissaya Barreto/Cassiano Branco), Museu da Ci&ecirc;ncia (Laborat&oacute;rio Chimico 1772, museum sinds 2006); OpenStreetMap &mdash; garages Top&aacute;zio en Horizonte, N&uacute;cleo da Guitarra e do Fado de Coimbra, Mercado Municipal D. Pedro V; Open-Meteo &mdash; archief 2021&ndash;2025 voor Coimbra (gemiddelde dagmaximum november 17,6 &deg;C, december 15,3 &deg;C). Afstanden en rijtijden berekend met OSRM vanuit Abiul op 28/10/2026; openingstijden en prijzen kunnen wijzigen &mdash; controleer ze voor vertrek.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Een UNESCO-stad op 48 minuten, een zwembad aan huis"
+    subtitle="Casa dos Duques in Abiul — de uitvalsbasis voor Coimbra, Conímbriga en de Serra de Sicó"
+    primaryCta={{ label: 'Boek uw verblijf', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
