@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/plages-fluviales-pres-de-pombal-baignade-riviere/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Se baigner en rivière près de Pombal : quatre plages fluviales à 34–70 minutes',
+      description: 'La plage fluviale la plus proche de la Casa dos Duques est Agroal, à 27,3 km et 34 minutes. Mosteiro, Louçainha et Penedo Furado complètent la liste : distances OSRM, rivières, accès et conseils pratiques.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-10-30',
+      dateModified: '2026-10-30',
+      image: 'https://casadosduques.pt/images/pool-1.jpg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Plages fluviales près de Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Se baigner en rivière près de Pombal : quatre plages fluviales à 34–70 minutes"
+  description="Agroal (27,3 km, 34 min), Mosteiro, Louçainha et Penedo Furado : les plages fluviales autour de Pombal, avec distances calculées, rivières, accès et conseils pour la baignade en famille."
+  canonical="/fr/blog/plages-fluviales-pres-de-pombal-baignade-riviere/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Baignade</span>
+        <span>Octobre 2026</span>
+        <span>&middot; 7 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">Se baigner en rivière près de Pombal&nbsp;: quatre plages fluviales à 34&ndash;70 minutes</h1>
+      <p class="text-lg text-muted font-body">Oui, on peut se baigner en rivière près de Pombal &mdash; et c&rsquo;est souvent plus proche que l&rsquo;océan. La plage fluviale la plus accessible depuis la <a href="/fr/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> est celle d&rsquo;<strong>Agroal&nbsp;: 27,3&nbsp;km et 34&nbsp;minutes de route</strong>. Suivent <strong>Mosteiro</strong> (42,2&nbsp;km / 37&nbsp;min), <strong>Louçainha</strong> (42&nbsp;km / 40&nbsp;min) et <strong>Penedo Furado</strong> (79,1&nbsp;km / 70&nbsp;min). Distances et temps calculés par itinéraire routier OSRM depuis Abiul le 30&nbsp;octobre&nbsp;2026. Voici ce que vous trouverez sur place, et pour quel type de baignade.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Les quatre plages fluviales en un coup d&rsquo;&oelig;il</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Agroal</strong> &mdash; 27,3&nbsp;km, 34&nbsp;min. Rivière Nabão, paroisse de Sabacheira, commune de Tomar. La plus proche, et la plus &laquo;&nbsp;aménagée&nbsp;&raquo; des quatre.</li>
+        <li><strong>Mosteiro</strong> &mdash; 42,2&nbsp;km, 37&nbsp;min. Ribeira de Pera, au pied de l&rsquo;aldeia do xisto de Mosteiro, commune de Pedrógão Grande.</li>
+        <li><strong>Louçainha</strong> &mdash; 42&nbsp;km, 40&nbsp;min. Rio Dueça, commune de Penela, au c&oelig;ur de la Serra do Espinhal.</li>
+        <li><strong>Penedo Furado</strong> &mdash; 79,1&nbsp;km, 70&nbsp;min. Cascades et vasques naturelles, commune de Vila de Rei (Castelo Branco). La plus spectaculaire, la plus lointaine.</li>
+      </ul>
+      <p>À titre de comparaison, les plages océanes ne sont pas plus proches&nbsp;: <strong>Praia da Leirosa</strong> 41,6&nbsp;km / 37&nbsp;min, <strong>Praia do Osso da Baleia</strong> 42,8&nbsp;km / 38&nbsp;min (la seule plage de la commune de Pombal), <strong>Praia do Pedrógão</strong> 49,9&nbsp;km / 44&nbsp;min et <strong>Figueira da Foz</strong> 59,6&nbsp;km / 46&nbsp;min.</p>
+
+      <h2 class="mt-8 mb-3">Rivière ou océan&nbsp;: comment choisir</h2>
+      <p>La côte atlantique de cette latitude, entre Leiria et Figueira da Foz, est belle mais exposée&nbsp;: houle, vent du nord presque quotidien l&rsquo;après-midi, courants le long des plages non surveillées. Les rivières du Centre offrent l&rsquo;inverse&nbsp;: eau calme, profondeur progressive, ombre des arbres et des galets clairs. Pour des enfants qui ne savent pas encore nager, la différence est décisive.</p>
+      <p>L&rsquo;océan garde deux avantages&nbsp;: l&rsquo;espace (à Pedrógão et à Leirosa, le sable s&rsquo;étend sur des centaines de mètres) et le ressac, qui amuse les plus grands. Beaucoup de nos hôtes font les deux&nbsp;: rivière le matin, océan en fin d&rsquo;après-midi quand le vent tombe. Notre page des <a href="/fr/plages/" class="text-terracotta-500 hover:text-terracotta-600 underline">plages océanes et fluviales</a> donne la liste complète avec les temps de trajet.</p>
+
+      <h2 class="mt-8 mb-3">Agroal&nbsp;: le Nabão à sa source (34 min)</h2>
+      <p>C&rsquo;est le bon plan &laquo;&nbsp;petite baignade&nbsp;&raquo; du séjour. Le Nabão &mdash; la rivière qui traverse ensuite Tomar et se jette dans le Zêzere &mdash; prend sa source sur le territoire d&rsquo;Agroal, dans la paroisse de Sabacheira. Le site est aménagé&nbsp;: parc nature, passerelles en bois (passadiços) le long du cours d&rsquo;eau, berges ombragées et zones de baignade peu profondes. On y va pour une matinée, pas pour la journée entière&nbsp;: c&rsquo;est intime, et cela se remplit vite en août.</p>
+      <p>L&rsquo;intérêt, c&rsquo;est aussi la route&nbsp;: 34&nbsp;minutes depuis Abiul, en traversant l&rsquo;oliveraie et les petits villages entre Pombal et la vallée du Nabão. Comptez une demi-journée, avec un arrêt à Tomar pour le couvent de l&rsquo;Ordre du Christ sur le chemin du retour.</p>
+
+      <h2 class="mt-8 mb-3">Mosteiro&nbsp;: la Ribeira de Pera et les schistes (37 min)</h2>
+      <p>La plage fluviale de Mosteiro s&rsquo;installe sur la rive droite de la <strong>Ribeira de Pera</strong>, juste sous le village de Mosteiro, dans la commune de Pedrógão Grande. C&rsquo;est un hameau d&rsquo;ardoise &mdash; une <em>aldeia do xisto</em> &mdash; avec ruelles étroites, maisons de pierre sombre et un parfum de figuier. La baignade y est fraîche et sans vagues&nbsp;; le cadre, lui, mérite à lui seul le déplacement.</p>
+      <p>À 37&nbsp;minutes de la maison, c&rsquo;est la combinaison la plus équilibrée&nbsp;: une heure de route aller-retour, une baignade, une balade dans le village. Les amateurs de randonnée trouveront sur place le départ de sentiers balisés vers les belvédères du Zêzere. Nos suggestions de villages de schiste et de forêts sont rassemblées dans <a href="/fr/blog/que-visiter-autour-de-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">que visiter autour de Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">Louçainha&nbsp;: le Dueça dans la forêt (40 min)</h2>
+      <p>Au sud-ouest, la <strong>Praia Fluvial da Louçainha</strong> occupe un méandre du <strong>rio Dueça</strong> &mdash; aussi appelé rio Corvo &mdash; qui naît dans la commune de Penela avant de rejoindre le Ceira. La particularité du site&nbsp;: la forêt. On est dans la Serra do Espinhal, sur la paroisse d&rsquo;Espinhal, avec des châtaigniers, des chênes et une eau franchement plus froide que celle des plaines.</p>
+      <p>C&rsquo;est notre recommandation pour les journées de canicule&nbsp;: 40&nbsp;minutes de route, et l&rsquo;ombre ne manque pas. Le site est classé comme plage fluviale dans la liste officielle des plages portugaises&nbsp;; les aménagements restent simples, prévoyez donc eau et pique-nique.</p>
+
+      <h2 class="mt-8 mb-3">Penedo Furado&nbsp;: cascades et vasques (70 min)</h2>
+      <p>Le plus loin, et le plus impressionnant. À Vila de Rei, dans le district de Castelo Branco, la <strong>Cascata do Penedo Furado</strong> forme une série de chutes et de vasques naturelles dans un chaos de granite. Des passerelles en bois ont été inaugurées en 2019 pour descendre jusqu&rsquo;aux vasques sans grimper sur les rochers&nbsp;; elles ont transformé le site en l&rsquo;une des excursions nature les plus populaires du Centre.</p>
+      <p>Une heure dix de route, cela se justifie si vous combinez avec le reste&nbsp;: Vila de Rei est aussi le centre géodésique du Portugal, et l&rsquo;on revient par les barrages du Zêzere. Prévoyez des chaussures qui adhèrent&nbsp;: les rochers polis par l&rsquo;eau sont glissants, et l&rsquo;on ne se baigne pas sous les chutes elles-mêmes.</p>
+
+      <h2 class="mt-8 mb-3">Six conseils pratiques</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Chaussures d&rsquo;eau</strong> &mdash; les lits de rivière sont en galets, pas en sable fin. C&rsquo;est la différence principale avec l&rsquo;océan.</li>
+        <li><strong>Arrivez avant 11h en juillet-août</strong> &mdash; les plages fluviales sont petites et très fréquentées par les familles portugaises le week-end.</li>
+        <li><strong>Vérifiez la surveillance sur place</strong> &mdash; toutes les plages fluviales ne disposent pas de sauveteurs, et la période de surveillance ne couvre pas forcément votre séjour. Les panneaux à l&rsquo;entrée du site font foi.</li>
+        <li><strong>Attention à l&rsquo;orage</strong> &mdash; en été, un orage en amont fait monter le niveau en quelques minutes. Sortez de l&rsquo;eau au premier coup de tonnerre.</li>
+        <li><strong>Eau et nourriture</strong> &mdash; Mosteiro et Louçainha n&rsquo;ont pas de commerce à proximité immédiate. Agroal et Penedo Furado ont des cafés en saison.</li>
+        <li><strong>Après la pluie</strong> &mdash; en automne et au printemps, le débit monte et l&rsquo;eau se trouble. Les mois idéaux vont de juin à septembre.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">La meilleure combinaison&nbsp;: rivière le matin, piscine l&rsquo;après-midi</h2>
+      <p>L&rsquo;avantage de loger à Abiul plutôt qu&rsquo;en ville, c&rsquo;est le retour. Une baignade à Agroal ou à Mosteiro, un déjeuner à Pombal &mdash; les adresses sont dans notre guide des <a href="/fr/blog/meilleurs-restaurants-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">meilleurs restaurants</a> &mdash; et l&rsquo;après-midi au bord de la piscine de la maison, à l&rsquo;ombre du jardin. Zéro trajet, zéro parking.</p>
+      <p>Et si vous voulez varier les plaisirs sur une semaine&nbsp;: Coimbra est à 60,1&nbsp;km et 46&nbsp;minutes, Fátima à 47&nbsp;minutes, les monastères de Batalha et d&rsquo;Alcobaça à moins d&rsquo;une heure. Le programme complet des sorties &agrave; la journée est dans nos <a href="/fr/excursions/" class="text-terracotta-500 hover:text-terracotta-600 underline">excursions au départ de Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">Quand venir pour la baignade en rivière</h2>
+      <p>La saison confortable va de la mi-juin à la fin septembre. Juillet et août sont les plus chauds, donc les plus tentants &mdash; et les plus fréquentés. Septembre est le meilleur compromis&nbsp;: l&rsquo;eau reste bonne, les enfants sont à l&rsquo;école, les vasques du Penedo Furado se vident. C&rsquo;est aussi la période que nous recommandons pour l&rsquo;ensemble du séjour, comme expliqué dans notre article sur <a href="/fr/blog/arriere-saison-portugal-septembre-octobre-centre/" class="text-terracotta-500 hover:text-terracotta-600 underline">l&rsquo;arrière-saison dans le Centre</a>.</p>
+      <p>Une dernière chose&nbsp;: ces rivières ne sont pas des piscines. Elles sont belles parce qu&rsquo;elles sont vivantes, avec des galets, des racines et parfois un courant. C&rsquo;est précisément ce qui rend la baignade mémorable &mdash; et ce qui justifie de garder un &oelig;il sur les plus petits.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources&nbsp;: distances et temps de trajet calculés par itinéraire routier OSRM depuis la Casa dos Duques (Abiul, 39,8726&nbsp;N / 8,5386&nbsp;O) le 30&nbsp;octobre&nbsp;2026 &mdash; Agroal 27,3&nbsp;km&nbsp;/&nbsp;34&nbsp;min&nbsp;; Mosteiro 42,2&nbsp;km&nbsp;/&nbsp;37&nbsp;min&nbsp;; Louçainha 42,0&nbsp;km&nbsp;/&nbsp;40&nbsp;min&nbsp;; Penedo Furado 79,1&nbsp;km&nbsp;/&nbsp;70&nbsp;min&nbsp;; Leirosa 41,6&nbsp;km&nbsp;/&nbsp;37&nbsp;min&nbsp;; Osso da Baleia 42,8&nbsp;km&nbsp;/&nbsp;38&nbsp;min&nbsp;; Pedrógão 49,9&nbsp;km&nbsp;/&nbsp;44&nbsp;min&nbsp;; Figueira da Foz 59,6&nbsp;km&nbsp;/&nbsp;46&nbsp;min&nbsp;; Coimbra 60,1&nbsp;km&nbsp;/&nbsp;46&nbsp;min. Localisation des sites et cours d&rsquo;eau&nbsp;: Wikipédia PT (Rio Nabão, Ribeira de Pera, Rio Dueça/Corvo, Cascata do Penedo Furado, Lista de praias em Portugal), consultée le 30&nbsp;octobre&nbsp;2026. Les aménagements, la surveillance et les périodes de baignade changent d&rsquo;une année à l&rsquo;autre&nbsp;: vérifiez sur place ou auprès des municipalités de Tomar, Pedrógão Grande, Penela et Vila de Rei avant de partir.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="La rivière à 34 minutes, la piscine à la maison"
+    subtitle="Une baignade en eau douce le matin, le jardin et la piscine de la Casa dos Duques l'après-midi"
+    primaryCta={{ label: 'Réserver', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

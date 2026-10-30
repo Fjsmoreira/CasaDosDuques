@@ -43,7 +43,8 @@ export type RouteKey =
   | 'blogWandelenPombal'
   | 'blogObidosNazareAlcobaca'
   | 'blogFatimaPombal'
-  | 'blogCoimbraPombal';
+  | 'blogCoimbraPombal'
+  | 'blogPlagesFluvialesPombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -240,6 +241,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogCoimbraPombal: {
     nl: '/nl/blog/coimbra-dagtocht-vanuit-pombal/',
+  },
+  blogPlagesFluvialesPombal: {
+    fr: '/fr/blog/plages-fluviales-pres-de-pombal-baignade-riviere/',
   },
 };
 
