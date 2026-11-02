@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/nl/blog/alcobaca-batalha-fatima-dagtocht-vanuit-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Alcobaça, Batalha en Fátima op één dag vanuit Pombal: 189 km, drie hoogtepunten',
+      description: 'De volledige lus vanaf Abiul is 189 km en 2 uur 44 rijden: 83 km naar het cisterciënzerklooster van Alcobaça, 24 km naar het Mosteiro da Batalha en 23 km naar het heiligdom van Fátima. Met openingstijden, ticketprijzen en een uur-voor-uur planning voor november.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-11-02',
+      dateModified: '2026-11-02',
+      image: 'https://casadosduques.pt/images/house-exterior.jpg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/nl/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Alcobaça, Batalha en Fátima op één dag', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Alcobaça, Batalha en Fátima op één dag vanuit Pombal: 189 km"
+  description="Twee UNESCO-kloosters en het heiligdom van Fátima op één dag vanuit Abiul: 189 km, 2 uur 44 rijden, openingstijden, ticketprijzen (€15) en een planning uur voor uur."
+  canonical="/nl/blog/alcobaca-batalha-fatima-dagtocht-vanuit-pombal/"
+  locale="nl"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Daguitstap</span>
+        <span>November 2026</span>
+        <span>&middot; 8 min lezen</span>
+      </div>
+      <h1 class="leading-tight mb-4">Alcobaça, Batalha en Fátima op één dag vanuit Pombal: 189 km</h1>
+      <p class="text-lg text-muted font-body">Het kan op één dag &mdash; maar het is een lange dag. De volledige lus vanaf <a href="/nl/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> in Abiul is <strong>189 km en 2 uur 44 rijden</strong> (OSRM, 2 november 2026): <strong>83,4 km (66 min)</strong> naar Alcobaça, <strong>24 km (27 min)</strong> door naar Batalha, <strong>23 km (26 min)</strong> naar Fátima en <strong>59 km (45 min)</strong> terug. Twee van de drie stops zijn UNESCO-werelderfgoed; een ticket kost <strong>€15 per volwassene per klooster</strong>, kinderen tot 12 jaar komen in Batalha gratis binnen. In november opent Alcobaça om 09:00 en sluit het om 17:30 (laatste entree 17:00), Batalha sluit om 18:00 (laatste entree 17:30) &mdash; dus wegrijden v&oacute;&oacute;r 08:00 als je de rozenkrans van 18:30 in F&aacute;tima nog wilt halen.</p>
+    </div>
+
+    <OptimizedImage src="/images/house-exterior.jpg" alt="Casa dos Duques in Abiul, het witte vakantiehuis met zwembad en tuin dat als uitvalsbasis dient voor Alcobaça, Batalha en Fátima" class="w-full my-6" loading="lazy" width={1200} height={800} sizes="(max-width: 896px) 100vw, 896px" />
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">De route: vier etappes, één lus</h2>
+      <p>De drie plaatsen liggen in een boog ten zuidwesten van Abiul, en de volgorde is niet willekeurig: je rijdt van west naar oost en pakt onderweg alles mee.</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Abiul &rarr; Alcobaça</strong> &mdash; 83,4 km, 66 min. Via de IC8 en de A1 naar Leiria, dan de A8 richting de kust en de EN8-5 het stadje in. De A1 en de A8 zijn tolwegen: met een Via Verde-kastje of het elektronische tolsysteem van je huurauto rijd je zonder stoppen door.</li>
+        <li><strong>Alcobaça &rarr; Batalha</strong> &mdash; 24,0 km, 27 min. Eerst de IC9, dan een stukje EN1 en de EM545.</li>
+        <li><strong>Batalha &rarr; F&aacute;tima</strong> &mdash; 23,0 km, 26 min over de EN356 en de IC9: de kortste etappe van de dag.</li>
+        <li><strong>F&aacute;tima &rarr; Abiul</strong> &mdash; 59,0 km, 45 min. Via de A1 naar Pombal en de IC8 terug naar huis.</li>
+      </ul>
+      <p>Wil je alleen de twee kloosters, dan is de lus <strong>167 km en 2 uur 22</strong> (Alcobaça, Batalha, terug). Wil je alleen Batalha en F&aacute;tima, dan blijft het bij <strong>142 km en 2 uur</strong>. F&aacute;tima kost je dus maar 22 km extra ten opzichte van de kloosterlus &mdash; daarom staat het heiligdom er in de standaardplanning gewoon bij.</p>
+
+      <h2 class="mt-8 mb-3">09:00 &mdash; Alcobaça: het eerste gotische gebouw van Portugal</h2>
+      <p>Het <strong>Mosteiro de Santa Maria de Alcobaça</strong> begon als een geschenk: koning D. Afonso Henriques gaf het terrein in <strong>1153</strong> aan Bernardus van Clairvaux en de cisterciënzer orde. De bouw begon in <strong>1178</strong> en duurde ongeveer een eeuw. Precies daarom is dit het eerste gebouw in Portugal waarin de gotiek volledig wordt uitgespeeld: hoge, kale ruimtes die op akoestiek en stilte zijn gebouwd in plaats van op versiering. Sinds <strong>1989</strong> staat het op de UNESCO-lijst.</p>
+      <p>Het hart van de kerk is het koninklijk pantheon: de <strong>graftombes van D. Pedro I en D. In&ecirc;s de Castro</strong>, allebei uit de 14e eeuw en in de officiële beschrijving van het monument getypeerd als meesterwerken van de Europese grafsculptuur. Op de tombe van In&ecirc;s staat het Laatste Oordeel, op die van Pedro het Rad van het Leven. De twee graven liggen tegenover elkaar in het transept &mdash; het verhaal erachter, de vermoorde minnares die postuum tot koningin werd gekroond, is het meest vertelde verhaal van Portugal.</p>
+      <p><strong>Praktisch:</strong> van 1 november tot 31 maart is het klooster open van <strong>09:00 tot 17:30</strong>, laatste entree om 17:00. Van 1 april tot 31 oktober loopt dat door tot 18:30, laatste entree 18:00. Het volwassenentarief is <strong>€15</strong> (€15,92 inclusief reserveringskosten via de officiële bilheteira van Museus e Monumentos de Portugal); kortingstarieven verschillen per monument, dus check de bilheteira voordat je boekt. Reken op 90 minuten voor kerk, kloostergang, keuken en de koninklijke zalen.</p>
+
+      <h2 class="mt-8 mb-3">11:45 &mdash; Batalha: een eed in steen, twee jaar na Aljubarrota</h2>
+      <p>De bouw van het <strong>Mosteiro de Santa Maria da Vit&oacute;ria</strong> begon in <strong>1387</strong>, twee jaar na de slag bij Aljubarrota (1385), als dank voor de overwinning die de Portugese onafhankelijkheid bezegelde. De eerste bouwmeester was <strong>Afonso Domingues</strong>; na zijn dood in 1406 nam <strong>Huguet</strong> het over. In de officiële chronologie van het monument staan de jaartallen die je wilt onthouden: <strong>1435</strong> is de westgevel met de <strong>Capela do Fundador</strong> klaar, de graftkapel van D. Jo&atilde;o I; in <strong>1437</strong> begint D. Duarte aan de <strong>Capelas Imperfeitas</strong>, de &ldquo;onvoltooide kapellen&rdquo; die nooit werden afgemaakt omdat de koning jong stierf en het geld op was. In <strong>1515</strong> neemt Jo&atilde;o de Castilho het werk over in manuelijnse stijl. UNESCO-lijst: <strong>1983</strong>.</p>
+      <p>Bewaar de Onvoltooide Kapellen voor het laatst: je staat er onder een open hemel, tussen de eerste pilaren van een gewelf dat er nooit kwam.</p>
+      <p><strong>Praktisch:</strong> van 16 oktober tot 31 maart open van <strong>09:00 tot 18:00</strong>, laatste entree 17:30; van 1 april tot 15 oktober tot 18:30. Gesloten op 1 januari, paaszondag, 1 mei en 25 december. Tarieven volgens de officiële prijstabel: <strong>volwassenen €15</strong>, 65-plussers en jongeren van 13 tot 24 jaar <strong>€7,50</strong>, kinderen tot 12 jaar en bezoekers met beperkte mobiliteit <strong>gratis</strong>, gezinnen met minstens &eacute;&eacute;n volwassene en &eacute;&eacute;n kind 50% korting. Parkeren is gratis op het <strong>Largo C&oacute;nego Sim&otilde;es In&aacute;cio</strong>, op 50 meter van het klooster &mdash; een uitzondering in Portugal.</p>
+
+      <h2 class="mt-8 mb-3">15:45 &mdash; F&aacute;tima: de Capelinha, twee basilieken en een kogel</h2>
+      <p>Tussen 13 mei en 13 oktober <strong>1917</strong> rapporteerden drie kinderen uit Aljustrel &mdash; L&uacute;cia, Francisco en Jacinta &mdash; zes verschijningen van de Maagd op de Cova da Iria. Vijf daarvan vonden plaats op de plek waar nu de <strong>Capelinha das Apari&ccedil;&otilde;es</strong> staat: gebouwd in 1919, in 1922 opgeblazen en in 1923 gerestaureerd. Rond het plein staan de <strong>Basilica de Nossa Senhora do Ros&aacute;rio</strong> (eerste steen 1928, ingewijd 1953) en de moderne <strong>Basilica da Sant&iacute;ssima Trindade</strong> uit 2007, met <strong>8.633 zitplaatsen</strong> in een cirkel van 125 meter doorsnee. De toegang tot het heiligdom is gratis; je betaalt alleen voor het museum.</p>
+      <p>Het museum van het heiligdom (opgericht 1955) toont de <strong>kostbare kroon van Onze-Lieve-Vrouw</strong>, waarin de kogel is verwerkt die Johannes Paulus II in 1981 trof, plus ex-voto&rsquo;s uit de hele wereld. Het is open van 09:00 tot 12:15 en van 14:00 tot 17:15 (laatste entree), kost <strong>€3</strong> en is gesloten op de middag van 24 december, op 25 december en op 1 januari. Op de 13e van de maanden mei tot oktober, op 15 augustus en op 8 december staat de kroon niet in het museum maar op het standbeeld in de Capelinha.</p>
+      <p>Volgens het actuele schema van het santu&aacute;rio wordt de rozenkrans in de Capelinha om <strong>12:00</strong> en om <strong>18:30</strong> gebeden, met om <strong>21:30</strong> nog een rozenkrans en de kaarsenprocessie in het Recinto de Ora&ccedil;&atilde;o. Op een gewone weekdag in november is de 18:30-rozenkrans het moment waarop F&aacute;tima pas echt begint: honderden kaarsen, weinig bussen.</p>
+
+      <h2 class="mt-8 mb-3">De dag op een rij</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>07:45</strong> &mdash; vertrek uit Abiul (koffie mee, de eerste stop heeft geen haast)</li>
+        <li><strong>08:55</strong> &mdash; aankomst Alcoba&ccedil;a, auto kwijt, om 09:00 naar binnen</li>
+        <li><strong>09:00&ndash;10:45</strong> &mdash; klooster: kerk, koninklijk pantheon, kloostergang, keuken</li>
+        <li><strong>11:15</strong> &mdash; vertrek naar Batalha (24 km, 27 min)</li>
+        <li><strong>11:45&ndash;12:45</strong> &mdash; lunch in Batalha, rond het kloosterplein</li>
+        <li><strong>12:45&ndash;14:30</strong> &mdash; Mosteiro da Batalha: Capela do Fundador, kloostergang, Onvoltooide Kapellen</li>
+        <li><strong>14:45</strong> &mdash; vertrek naar F&aacute;tima (23 km, 26 min)</li>
+        <li><strong>15:15&ndash;16:45</strong> &mdash; heiligdom en museum (museum sluit om 17:15, dus eerst het museum)</li>
+        <li><strong>18:30</strong> &mdash; rozenkrans in de Capelinha</li>
+        <li><strong>19:15</strong> &mdash; eten, dan <strong>20:00</strong> terug en rond <strong>20:45</strong> thuis in Abiul</li>
+      </ul>
+      <p>Dit is een dag van dertien uur. Wie het rustiger wil, laat &eacute;&eacute;n stop vallen: Alcoba&ccedil;a en Batalha samen zijn 167 km, Batalha en F&aacute;tima samen 142 km. Met kinderen is de variant zonder museum en zonder avondrozenkrans de verstandigste: dan ben je rond 17:30 thuis en heb je nog tijd voor het zwembad.</p>
+
+      <h2 class="mt-8 mb-3">Praktisch: wanneer wel, wanneer niet</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Vermijd 13 mei en 13 oktober</strong>, en in mindere mate 12 en 13 van elke maand van mei tot oktober: op die dagen trekt F&aacute;tima honderdduizenden pelgrims en staan de toegangswegen vast.</li>
+        <li><strong>November tot maart</strong> is de rustigste periode: geen wachtrijen bij de kloosters, wel kortere dagen. De zon gaat nu rond 17:20 onder, dus plan de laatste stop niet te laat.</li>
+        <li><strong>Tol</strong> &mdash; de A1 en de A8 zijn elektronisch tolweg. Zonder kastje kun je bij de meeste verhuurders een tolpakket bijnemen; reken op enkele euro&rsquo;s per traject.</li>
+        <li><strong>Tickets</strong> &mdash; in het hoogseizoen is online reserveren bij de kloosters verstandig; in november kun je meestal aan de deur terecht.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Waarom Abiul werkt als uitvalsbasis</h2>
+      <p>De kracht van logeren in het binnenland is dat je zulke dagen kunt combineren met dagen waarop je niets doet. Vanuit <a href="/nl/huis/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> sta je in iets meer dan een uur bij de Atlantische kust en in drie kwartier bij een heiligdom dat jaarlijks miljoenen bezoekers trekt &mdash; en 's avonds zit je in een dorp waar je de krekels hoort. Meer routes vind je bij de <a href="/nl/daguitstapjes/" class="text-terracotta-500 hover:text-terracotta-600 underline">daguitstappen vanuit Pombal</a> en de <a href="/nl/activiteiten/" class="text-terracotta-500 hover:text-terracotta-600 underline">activiteiten in de regio</a>, inclusief onze <a href="/nl/blog/coimbra-dagtocht-vanuit-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">complete planning voor Coimbra</a>. Beschikbaarheid voor een week in november of december check je op de <a href="/nl/boeking/" class="text-terracotta-500 hover:text-terracotta-600 underline">boekingspagina</a>.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Bronnen: Mosteiro da Batalha, website officieel &mdash; bezoekpagina (openingstijden 16/10&ndash;31/03 en 01/04&ndash;15/10, sluitingsdagen, prijstabel per type bezoeker, gratis parkeren Largo C&oacute;nego Sim&otilde;es In&aacute;cio) en de chronologie 1387&ndash;2026 (bouwstart 1387, Afonso Domingues, Huguet 1406, Capela do Fundador 1435, Capelas Imperfeitas 1437, Jo&atilde;o de Castilho 1515), geraadpleegd op 2 november 2026; Patrim&oacute;nio Cultural, I.P. &mdash; fiche Mosteiro de Alcoba&ccedil;a (stichting 1153, bouw vanaf 1178, gotiek, graven van D. Pedro I en D. In&ecirc;s de Castro, UNESCO 1989); bilheteira oficial Museus e Monumentos de Portugal &mdash; Mosteiro de Alcoba&ccedil;a (winter- en zomeruurregeling, laatste entree, tarief) en Mosteiro da Batalha; Santu&aacute;rio de F&aacute;tima &mdash; fatima.pt (geschiedenis van de verschijningen, Capelinha, basilieken, museum en celebratieschema, geraadpleegd 2 november 2026); afstanden en rijtijden berekend met OSRM/OpenStreetMap vanaf Abiul op 2 november 2026. Openingstijden, prijzen en het celebratieschema kunnen wijzigen &mdash; controleer ze voor vertrek op de offici&euml;le sites.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Twee UNESCO-kloosters op 60 minuten, een zwembad aan huis"
+    subtitle="Casa dos Duques in Abiul — de uitvalsbasis voor Alcobaça, Batalha, Fátima en de Serra de Sicó"
+    primaryCta={{ label: 'Boek uw verblijf', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
