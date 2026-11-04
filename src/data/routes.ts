@@ -45,7 +45,8 @@ export type RouteKey =
   | 'blogFatimaPombal'
   | 'blogCoimbraPombal'
   | 'blogPlagesFluvialesPombal'
-  | 'blogAlcobacaBatalhaFatima';
+  | 'blogAlcobacaBatalhaFatima'
+  | 'blogBucacoPombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -248,6 +249,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogAlcobacaBatalhaFatima: {
     nl: '/nl/blog/alcobaca-batalha-fatima-dagtocht-vanuit-pombal/',
+  },
+  blogBucacoPombal: {
+    pt: '/pt/blog/mata-do-bucaco-visitar-desde-pombal/',
   },
 };
 
