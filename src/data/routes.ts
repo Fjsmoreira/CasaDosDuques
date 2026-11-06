@@ -46,7 +46,8 @@ export type RouteKey =
   | 'blogCoimbraPombal'
   | 'blogPlagesFluvialesPombal'
   | 'blogAlcobacaBatalhaFatima'
-  | 'blogBucacoPombal';
+  | 'blogBucacoPombal'
+  | 'blogTomarConvento';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -252,6 +253,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogBucacoPombal: {
     pt: '/pt/blog/mata-do-bucaco-visitar-desde-pombal/',
+  },
+  blogTomarConvento: {
+    en: '/blog/tomar-convent-of-christ-day-trip-pombal/',
   },
 };
 

@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/tomar-convent-of-christ-day-trip-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Tomar and the Convent of Christ: a day trip from Pombal (40 km, 49 minutes)',
+      description:
+        'A realistic day trip from Abiul, Pombal to the Convent of Christ in Tomar: 40 km and 49 minutes of country road, a €15 ticket, opening hours by season, and what is closed during restoration works.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-11-06',
+      dateModified: '2026-11-06',
+      image: 'https://casadosduques.pt/images/hero.jpg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Tomar and the Convent of Christ', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Tomar and the Convent of Christ: a day trip from Pombal (40 km, 49 min)"
+  description="The Convent of Christ in Tomar is 40 km and 49 minutes from Abiul, Pombal — no motorway, no tolls. Ticket €15, open daily, hours by season, and what restoration works currently close."
+  canonical="/blog/tomar-convent-of-christ-day-trip-pombal/"
+  locale="en"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Day Trips</span>
+        <span>November 2026</span>
+        <span>&middot; 6 min read</span>
+      </div>
+      <h1 class="leading-tight mb-4">Tomar and the Convent of Christ: a day trip from Pombal (40 km, 49 minutes)</h1>
+      <p class="text-lg text-muted font-body">
+        Yes, and it is the easiest UNESCO day trip on our list. From Abiul the Convent of Christ is
+        <strong>40 km and about 49 minutes</strong> away, almost entirely on country roads &mdash; no motorway, no tolls.
+        The ticket is <strong>&euro;15</strong> and the monument opens <strong>every day</strong>, 09:00&ndash;17:30 from
+        October to May (last entry 17:00). Plan on <strong>two to three hours inside</strong> and another two in Tomar's
+        old town: leave the house at 09:15 in November and you are back for a late lunch by the pool.
+      </p>
+    </div>
+
+    <OptimizedImage src="/images/hero.jpg" alt="Casa dos Duques, the holiday home in Abiul, Pombal, from which Tomar is a 49-minute drive" class="w-full my-6" loading="lazy" width={1200} height={800} sizes="(max-width: 896px) 100vw, 896px" />
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Why this one, and not another monastery</h2>
+      <p>
+        Central Portugal has more UNESCO monuments per hour of driving than almost anywhere in Europe, and we are
+        spoiled by it: Alcoba&ccedil;a at 35 minutes, Batalha at 30. Tomar is different in kind. Alcoba&ccedil;a and
+        Batalha are masterpieces you <em>look at</em>. The Convent of Christ is a building you walk <em>through</em>
+        for seven centuries in a single loop &mdash; a 12th-century Templar rotunda, a Manueline nave, five Renaissance
+        cloisters and a 17th-century aqueduct that arrives over the roof.
+      </p>
+      <p>
+        UNESCO inscribed it in 1983 on criteria (i) and (vi): the primitive Templar church and its later additions form,
+        in the committee's words, &ldquo;a masterpiece of human creative genius&rdquo;, and the complex began as a symbol
+        of the Reconquest before turning into the opposite &mdash; the Manueline symbol of Portugal opening to other
+        civilisations. That second reading is the one you feel standing in the Chapter Window.
+      </p>
+
+      <h2 class="mt-8 mb-3">The drive: 49 minutes, no tolls, no motorway</h2>
+      <p>
+        The route runs south-east from Abiul on the <strong>EM 501</strong> through the hills, then picks up the
+        <strong>EM 525</strong> and the <strong>EN 113</strong> into Tomar, finishing on the Estrada do Convento that
+        climbs to the monument gate. It is 40 km of olive groves, stone walls and small villages &mdash; the kind of
+        drive that makes people understand why we live here. Because there is no motorway, there is no toll transponder
+        to worry about and no service-area coffee.
+      </p>
+      <p>
+        Two practical notes. First, the last kilometre is uphill and narrow; go past the first informal parking you see
+        and follow the signs to the monument. Second, coaches tend to land mid-morning, so the 09:00 opening is worth
+        the early alarm &mdash; the Charola with twelve people in it instead of eighty is a different building.
+      </p>
+
+      <h2 class="mt-8 mb-3">Seven centuries, in the order they were built</h2>
+      <p>
+        Tomar was founded by the Templars in <strong>1160</strong>, and the castle that still crowns the hill was built
+        with it. When the order was suppressed in <strong>1312</strong>, the Portuguese crown simply reinvented it as the
+        Order of Christ and kept the site. Under the administration of Infante D. Henrique between <strong>1420 and
+        1460</strong>, the conventual rooms grew around two Gothic cloisters, the Claustro da Lavagem and the Claustro
+        do Cemitério.
+      </p>
+      <p>
+        The heart of it all is the <strong>Charola</strong>, a rare medieval round church modelled on the
+        paleo-Christian basilica of the Holy Sepulchre in Jerusalem. Its original entrance faced east until the works of
+        D. Manuel I opened a new one to the south, in the nave that extended the oratory westwards. That Manueline nave
+        was built by Diogo de Arruda between 1510 and 1513 and finished by Jo&atilde;o de Castilho between 1513 and 1515,
+        and above the sacristy &mdash; the Sala do Cap&iacute;tulo &mdash; sits the <em>Janela do Cap&iacute;tulo</em>,
+        the carved window that became the emblem of Portugal's maritime expansion.
+      </p>
+      <p>
+        From <strong>1528</strong>, D. Jo&atilde;o III built the vast Renaissance convent that wraps west of the church
+        around five cloisters. Under the Spanish kings, between 1580 and 1640, the Claustro Principal was finished, the
+        Sacristia Nova was added in the Claustro do Cemit&eacute;rio, and the south facade was remodelled by the arcade
+        of the <strong>Aqueduto dos Peg&otilde;es</strong> &mdash; the most striking construction of the Philippine
+        period. The last big works came in the final quarter of the 17th century: the great infirmary and the new
+        pharmacy, which give the north flank the bulk you see from the approach road. In 1835 the politician Costa Cabral
+        bought the convent grounds at auction; only in the mid-1980s did the State take full possession of the whole
+        complex again.
+      </p>
+
+      <h2 class="mt-8 mb-3">What to see, in the order that works</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Charola first.</strong> Walk straight into the round church before anything else; it is the oldest thing here and the one room people remember.</li>
+        <li><strong>The Manueline nave and the Chapter Window.</strong> Climb to the Sala do Cap&iacute;tulo and give the window ten minutes &mdash; rope, coral, artichokes and armillary spheres carved in limestone.</li>
+        <li><strong>The João III cloisters.</strong> Five of them, in sequence, each with a different proportion; the Claustro Principal is the largest and the quietest.</li>
+        <li><strong>The aqueduct.</strong> Look up at the Pegões arcade from the terrace side; it is the reason the south facade reads like a stage set.</li>
+        <li><strong>The Mata dos Sete Montes.</strong> The old convent enclosure is now a wooded park on the hillside &mdash; a 30-minute walk if the weather is kind, and free.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Hours, closures and the ticket</h2>
+      <p>
+        One of the underrated things about the Convent of Christ is that it opens seven days a week &mdash; unusual for
+        Portuguese monuments, many of which close on Mondays. The schedule, as published by Museus e Monumentos de
+        Portugal, is <strong>October to May: 09:00&ndash;17:30, last entry 17:00</strong>; and
+        <strong>June to September: 09:00&ndash;18:30, last entry 18:00</strong>. The normal ticket is
+        <strong>&euro;15</strong> and can be bought online. It closes on 1 January, 1 March, Easter Sunday, 1 May, and
+        24&ndash;25 December.
+      </p>
+
+      <h2 class="mt-8 mb-3">What is closed right now</h2>
+      <p>
+        Conservation and restoration work funded through Portugal's PRR recovery plan is still running, and the monument
+        is honest about it: access is currently restricted to the <strong>South Terrace and the path to the Horta dos
+        Frades</strong>, the <strong>&ldquo;da Cera&rdquo; terrace of the Claustro Principal</strong>, the
+        <strong>Claustro da Lavagem</strong>, and the <strong>garden and Terreiro</strong>. In plain terms: one Gothic
+        cloister and the outdoor terraces are out of bounds, while the Charola, the Manueline nave, the Chapter Window
+        and the main Renaissance cloisters &mdash; the reason you came &mdash; are all open. If a particular room is the
+        whole point of your visit, ring ahead on +351 249 313 481.
+      </p>
+
+      <h2 class="mt-8 mb-3">After the convent: Tomar on foot</h2>
+      <p>
+        Walk down rather than drive. The Estrada do Convento drops you into the old town in fifteen minutes, past the
+        Mata dos Sete Montes on your right. The grid of streets between the hill and the river Nab&atilde;o is small
+        enough to cross in twenty minutes and old enough to reward a slow hour: this was a Templar town, and it still
+        feels like one. Eat late, Portuguese-style, and skip the places with photographs of the food.
+      </p>
+      <p>
+        A realistic November timetable: leave Abiul at 09:15, at the gate for 10:05, three hours in the monument, lunch
+        in town at 13:30, coffee and a wander until 15:30, home by 16:30 with daylight to spare. In July and August,
+        invert it &mdash; the cloisters are cool at opening, and the town is unbearable at three in the afternoon.
+      </p>
+
+      <h2 class="mt-8 mb-3">Where to base it</h2>
+      <p>
+        The whole point of staying in Abiul rather than in Tomar is that Tomar becomes a morning, not a hotel booking.
+        <a href="/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> is 11 minutes
+        from Pombal and a few minutes from the A1, which puts four UNESCO sites inside an hour &mdash; our
+        <a href="/day-trips/" class="text-terracotta-500 hover:text-terracotta-600 underline">day trips page</a> lists
+        every one of them with real drive times. If you are planning a week of this, the
+        <a href="/guide/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Central
+        Portugal guide</a> explains how the region fits together, and the
+        <a href="/guide/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Pombal guide</a> covers
+        the castle and the old town ten minutes from the house.
+      </p>
+      <p>
+        One last thing worth saying: Tomar is not a box to tick on the way to Lisbon. The building rewards an unhurried
+        morning, and the drive there is half the pleasure.
+      </p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">
+        Sources: Museus e Monumentos de Portugal &mdash; Convento de Cristo (opening hours Oct&ndash;May and
+        Jun&ndash;Sep, last-entry times, annual closures, &euro;15 normal ticket, PRR restoration restrictions, history
+        of the complex); UNESCO World Heritage List no. 265 (inscription 1983, criteria (i) and (vi), statement of
+        Outstanding Universal Value). Distance and drive time calculated with OSRM from Abiul (39.8726, -8.5386) to the
+        monument (39.6039, -8.4176): 40.2 km, 49 min. They are estimates, not guarantees &mdash; opening times, prices
+        and closures change, so confirm with the monument before travelling.
+      </p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Four UNESCO sites, one quiet base"
+    subtitle="Stay in Abiul, Pombal and reach Tomar, Alcobaça, Batalha and Coimbra in under an hour"
+    primaryCta={{ label: 'Book your stay', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
