@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/nl/blog/nazare-golven-dagtocht-vanuit-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Nazaré vanuit Pombal: 87 km, 66 minuten — en de maanden waarin je de reuzen ziet',
+      description: 'Nazaré ligt 86,5 km en 66 minuten rijden van Abiul. Waar je de grootste golven van Europa bekijkt, wanneer het seizoen piekt (november tot maart, gemiddeld 3,0 m deining), en hoe je de dag combineert met Alcobaça.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-11-11',
+      dateModified: '2026-11-11',
+      image: 'https://casadosduques.pt/images/garden-1.jpg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/nl/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Nazaré vanuit Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Nazaré vanuit Pombal: 87 km, 66 minuten — en de maanden waarin je de reuzen ziet"
+  description="Nazaré bezoeken vanuit Pombal: 86,5 km en 66 minuten rijden vanaf Abiul. Waar je de reuzen golven bekijkt, wanneer het seizoen piekt, en de volledige dagplanning met het fort, de kabelbaan en Alcobaça."
+  canonical="/nl/blog/nazare-golven-dagtocht-vanuit-pombal/"
+  locale="nl"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Daguitstap</span>
+        <span>November 2026</span>
+        <span>&middot; 8 min lezen</span>
+      </div>
+      <h1 class="leading-tight mb-4">Nazaré vanuit Pombal: 87 km, 66 minuten &mdash; en de maanden waarin je de reuzen ziet</h1>
+      <p>Nazaré ligt op <strong>86,5 km en 66 minuten rijden</strong> van <a href="/nl/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> in Abiul &mdash; de snelste route die OSRM op 11 november 2026 berekent. Je gaat er niet heen voor het ansichtkaartstrand, maar voor de enige plek in Europa waar de oceaan jaar na jaar golven van meer dan twintig meter tegen een klif zet. Het grote-golvenseizoen loopt van <strong>november tot maart</strong>: het golfmodel van Open-Meteo geeft voor de kust bij Nazaré in november een gemiddeld dagmaximum van <strong>3,0 m</strong>, tegen <strong>1,7 m in juli</strong> (2022&ndash;2025). Vertrek om <strong>09:00</strong>, sta om <strong>10:10</strong> bij het fort, en je bent vóór het donker terug.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">De rit: 87 km, twee varianten</h2>
+      <p>Vanuit Abiul rijd je westwaarts richting de kust. OSRM geeft twee routes: de snelste is <strong>86,5 km in 66 minuten</strong>, een alternatief door het binnenland is <strong>74,2 km in 70 minuten</strong> &mdash; handig als je onderweg wilt stoppen in Pombal. Reken voor de heen-en-terugrit op ongeveer <strong>10 liter brandstof</strong> bij een verbruik van 6 liter per 100 km; dat is samen met de lunch de grootste kostenpost, want het uitzicht op de klif en het stadstrand zijn gratis.</p>
+
+      <h2 class="mt-8 mb-3">Waarom de golven hier zo groot worden</h2>
+      <p>Het antwoord ligt onder water. Ongeveer een kilometer voor de kust begint de <strong>Canhão da Nazaré</strong>, met een lengte van rond <strong>230 km</strong> de grootste onderzeese canyon van Europa. De geul loopt van zo'n 50 m diepte bij de kusthelling naar ongeveer <strong>5.000 m</strong> op de abyssale vlakte &mdash; een V-vormige kloof in de continentale helling, met steile wanden en een diepe as.</p>
+      <p>Die vorm verandert alles voor de branding. Deining die van de Atlantische Oceaan binnenkomt, wordt door de canyon gefocust: de golven reizen versneld door de geul en bereiken de kust met nauwelijks verlies van energie, waarna ze bij <strong>Praia do Norte</strong> samenkomen en omhoog worden gestuwd. Daarom is het strand aan de noordkant van de klif consequent zwaarder dan de rest van de Portugese kust, terwijl het stadstrand aan de zuidkant, beschut door dezelfde landtong, een gewone baai blijft.</p>
+
+      <h2 class="mt-8 mb-3">De records die Nazaré beroemd maakten</h2>
+      <p>In <strong>november 2011</strong> surfte Garrett McNamara bij Praia do Norte een golf van <strong>23,8 m</strong> &mdash; het begin van Nazaré als bedevaartsoord voor big-wave-surfers. Op <strong>8 november 2017</strong> ging dat record opnieuw naar beneden: Rodrigo Koxa reed een golf van <strong>24,4 m</strong>. In <strong>oktober 2020</strong> kwam Sebastian Steudtner met <strong>26,2 m</strong>, nog steeds de hoogst gemeten golf die ooit werd gesurft; bij de vrouwen staat het record op <strong>22,4 m</strong> (Maya Gabeira, 11 februari 2020).</p>
+      <p>Die bekendheid is meetbaar. Het uitkijkpunt bij de vuurtoren van het fort trok in 2015 ongeveer <strong>80.000 bezoekers</strong>; in 2017 waren dat er <strong>174.000</strong>. In de zomer staat men er in de rij voor een plekje langs de muur &mdash; in november loop je er meestal zo door.</p>
+
+      <h2 class="mt-8 mb-3">Waar je gaat staan: het Forte de São Miguel Arcanjo</h2>
+      <p>Het fort op de punt van de klif is je uitvalsbasis. De eerste verdedigingswerken dateren van <strong>1577</strong>, onder koning D. Sebastião, bedoeld om de vissershaven van Pederneira en de scheepswerven te beschermen. In <strong>1641</strong> werd het onder leiding van ingenieur Mateus do Couto herbouwd en in <strong>1644</strong> kreeg het onder D. João IV zijn huidige vorm, met boven de toegangspoort een beeld van São Miguel Arcanjo en de inscriptie &ldquo;ELREY DOM JOAN 4&ordm; &mdash; 1644&rdquo;. Sinds <strong>1978</strong> is het een beschermd monument, sinds <strong>2014</strong> opengesteld voor publiek.</p>
+      <p>Binnen huist het <strong>Interpretatiecentrum van de Nazaré-canyon</strong>, met een driedimensionaal model van de onderzeese vallei. Maar het echte werk gebeurt buiten, op de omloop van de vuurtoren: van daaruit kijk je recht op Praia do Norte, met de klifwand links en de open oceaan rechts. Bij grote deining zie je de golven van ver aankomen &mdash; een brede witte lijn die langzaam groeit en dan met een klap tegen de rotsen slaat.</p>
+
+      <h2 class="mt-8 mb-3">Het Sítio en de legende van 1182</h2>
+      <p>Boven de klif ligt het oude dorp <strong>Sítio</strong>. Volgens de legende werd ridder <strong>D. Fuas Roupinho</strong> in <strong>1182</strong> tijdens de jacht door dichte mist overvallen; zijn paard stopte op het laatste moment op de rand van de afgrond, 110 m boven de zee, nadat hij de hulp van Nossa Senhora da Nazaré had ingeroepen. Uit dank werd de <strong>Capela da Memória</strong> boven de grot gebouwd, en later het <strong>Santuário de Nossa Senhora da Nazaré</strong> &mdash; een barokke kerk met azulejos en de zwarte madonna die pelgrims al eeuwen naar boven brengt. De feesten rond 8 september duren tien dagen.</p>
+      <p>Vanaf het terras bij het heiligdom kijk je over de rode daken naar beneden en zie je pas hoe steil de klif echt is. De straatjes tussen Sítio en de Praia staan vol kleine visrestaurants &mdash; de logische plek voor de lunch.</p>
+
+      <h2 class="mt-8 mb-3">Met de kabelbaan naar beneden</h2>
+      <p>Tussen het Sítio en het stadstrand hangt sinds <strong>28 juli 1889</strong> een kabelbaan, de <strong>Elevador da Nazaré</strong>, ontworpen door Raul Mesnier de Ponsard &mdash; dezelfde ingenieur achter de liften van Glória, Bica en Lavra in Lissabon. Het is een van de drukste funiculaires van Portugal, met ongeveer een miljoen passagiers per jaar. Te voet kan ook via de trap naast de kerk, maar met kinderen of bij regen is de kabelbaan de praktische keuze. Check de actuele dienstregeling en het tarief op de site van de gemeente Nazaré.</p>
+
+      <h2 class="mt-8 mb-3">Twee stranden, twee werelden</h2>
+      <p>Het is verleidelijk om Praia do Norte te zien als &ldquo;het strand van Nazaré&rdquo;. Dat is het niet. <strong>Praia da Nazaré</strong>, aan de voet van het dorp, ligt beschut achter de landtong: hier zwemmen gezinnen, liggen de boten van de vissers en loopt de promenade met kiosken. <strong>Praia do Norte</strong> is de open oceaan: geen beschutting, sterke stroming en precies de branding die de surfers trekken. Zwemmen is daar ook buiten de golfsport om geen goed idee &mdash; blijf bij grote deining op de klif of op het zand boven de vloedlijn, en houd kinderen bij de hand: de golven kunnen ver het strand op lopen.</p>
+      <p>Voor een gewone stranddag met kinderen zijn de beschutte baai van São Martinho do Porto en de stranden bij Leiria een betere keuze &mdash; ze staan in ons overzicht van <a href="/nl/stranden/" class="text-terracotta-500 hover:text-terracotta-600 underline">stranden bij Pombal</a>.</p>
+
+      <h2 class="mt-8 mb-3">De dagplanning</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>08:45</strong> &mdash; vertrek uit Abiul (86,5 km, 66 min)</li>
+        <li><strong>09:55</strong> &mdash; aankomst bij het Sítio, auto parkeren bij het fort</li>
+        <li><strong>10:10</strong> &mdash; Forte de São Miguel Arcanjo en de vuurtorenomloop</li>
+        <li><strong>11:15</strong> &mdash; Capela da Memória en het Santuário</li>
+        <li><strong>12:30</strong> &mdash; lunch in het Sítio of beneden bij de Praia</li>
+        <li><strong>14:00</strong> &mdash; kabelbaan naar beneden, promenade en het stadstrand</li>
+        <li><strong>15:00</strong> &mdash; optioneel: Alcobaça, 15,9 km en 20 minuten verderop</li>
+        <li><strong>16:30</strong> &mdash; terugrit, rond <strong>17:40</strong> thuis in Abiul</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Combineren met Alcobaça</h2>
+      <p>Heb je tijd over, dan ligt het cisterciënzerklooster van <strong>Alcobaça</strong> op <strong>15,9 km en 20 minuten</strong> van Nazaré &mdash; UNESCO-werelderfgoed sinds 1989, met de graftombes van Pedro en Inês in de kerk. Je bent dan rond 18:30 thuis, wat in november net na zonsondergang is. Wil je die dag liever volledig aan kloosters en heiligdommen besteden, dan hebben we daar een aparte route voor: <a href="/nl/blog/alcobaca-batalha-fatima-dagtocht-vanuit-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Alcobaça, Batalha en Fátima in één dag</a>.</p>
+
+      <h2 class="mt-8 mb-3">Praktisch</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Weer</strong> &mdash; het zeewater was in de tweede week van november 2026 rond <strong>17 &deg;C</strong> (Open-Meteo, 10/11/2026). Op de klif staat bijna altijd wind: een windjack is belangrijker dan een trui.</li>
+        <li><strong>Deining checken</strong> &mdash; kijk de avond ervoor naar de zeewaarschuwing van het IPMA; bij 4 m of meer is het uitzicht spectaculair, bij 1 m is er weinig te zien.</li>
+        <li><strong>Parkeren</strong> &mdash; bij het Sítio, vlak bij het fort. In het weekend en in het hoogseizoen is het terrein snel vol.</li>
+        <li><strong>Kinderen</strong> &mdash; de klif is niet overal afgezet; houd ze bij de randen weg en laat ze niet bij Praia do Norte het water in.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Waarom Abiul als uitvalsbasis werkt</h2>
+      <p>De kust is dichtbij genoeg voor een dagtocht en ver genoeg om er 's avonds niet meer te zijn: je vertrekt uit een dorp waar niets gebeurt, rijdt een uur westwaarts naar een van de meest gefotografeerde kliffen van Europa, en komt terug in een tuin waar het stil is. In november is dat gunstig &mdash; de kust is rustig, de deining is op zijn best en het binnenland zit nog in het laagseizoen. Meer routes staan bij de <a href="/nl/daguitstapjes/" class="text-terracotta-500 hover:text-terracotta-600 underline">daguitstappen vanuit Pombal</a>; beschikbaarheid check je op de <a href="/nl/boeking/" class="text-terracotta-500 hover:text-terracotta-600 underline">boekingspagina</a>.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Bronnen: Wikipedia (EN) &mdash; &ldquo;Nazar&eacute;, Portugal&rdquo; (record 26,2 m Sebastian Steudtner, oktober 2020; McNamara 23,8 m november 2011; Koxa 24,4 m op 8 november 2017; Gabeira 22,4 m op 11 februari 2020; bezoekersaantallen vuurtoren 80.000 in 2015 en 174.000 in 2017; HBO <em>100 Foot Wave</em>), &ldquo;Nazar&eacute; Canyon&rdquo; (grootste onderzeese canyon van Europa, ca. 230 km lang, ca. 5.000 m diep, bovenloop vanaf circa 1 km uit de kust); Wikipedia (PT) &mdash; &ldquo;Nazar&eacute; (Portugal)&rdquo; (canhão, drie wijken Praia/S&iacute;tio/Pederneira), &ldquo;Forte de S&atilde;o Miguel Arcanjo&rdquo; (1577 onder D. Sebasti&atilde;o, herbouw 1641 onder Mateus do Couto, vorm 1644 onder D. Jo&atilde;o IV, Im&oacute;vel de Interesse P&uacute;blico sinds 1978, open voor publiek sinds 2014, interpretatiecentrum en U-963), &ldquo;Elevador da Nazar&eacute;&rdquo; (geopend 28 juli 1889, Raul Mesnier de Ponsard, circa een miljoen passagiers per jaar); Open-Meteo &mdash; marien archief 2022&ndash;2025 (gemiddeld dagmaximum golfhoogte 3,0 m in november, 1,7 m in juli) en zeewatertemperatuur 17,2 &deg;C op 10/11/2026; OSRM &mdash; afstanden en rijtijden berekend vanaf Abiul op 11/11/2026 (86,5 km/66 min en 74,2 km/70 min naar Praia do Norte; Nazar&eacute;&ndash;Alcoba&ccedil;a 15,9 km/20 min). Openingstijden, tarieven en de staat van de zee kunnen wijzigen &mdash; controleer ze voor vertrek.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="De grootste golven van Europa op 66 minuten — en een tuin om op terug te vallen"
+    subtitle="Casa dos Duques in Abiul — uw uitvalsbasis voor Nazaré, Alcobaça en de kust van de Costa de Prata"
+    primaryCta={{ label: 'Boek uw verblijf', href: '/nl/boeking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

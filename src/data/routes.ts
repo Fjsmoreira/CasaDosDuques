@@ -48,7 +48,8 @@ export type RouteKey =
   | 'blogAlcobacaBatalhaFatima'
   | 'blogBucacoPombal'
   | 'blogTomarConvento'
-  | 'blogNoelCentrePortugal';
+  | 'blogNoelCentrePortugal'
+  | 'blogNazareGolvenPombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -260,6 +261,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogNoelCentrePortugal: {
     fr: '/fr/blog/noel-nouvel-an-centre-portugal-coimbra-obidos/',
+  },
+  blogNazareGolvenPombal: {
+    nl: '/nl/blog/nazare-golven-dagtocht-vanuit-pombal/',
   },
 };
 
