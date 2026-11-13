@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/conimbriga-ruinas-romanas-desde-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Conímbriga: as ruínas romanas a 44 km de Pombal — guia de visita',
+      description: 'As ruínas de Conímbriga ficam a 44,2 km da Casa dos Duques, em Abiul: 38 minutos de carro. Bilhete de 10 €, museu das 10h00 às 18h00 (bilheteira até às 17h15). O que ver, quanto tempo reservar e como combinar com Coimbra.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-11-13',
+      dateModified: '2026-11-13',
+      image: 'https://casadosduques.pt/images/airbnb/16b41c25-33a1-4607-9919-e7076c85ba9c.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Conímbriga desde Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Conímbriga: as ruínas romanas a 44 km de Pombal (guia 2026)"
+  description="Distância, preços e horários reais das ruínas de Conímbriga a partir de Pombal: 44,2 km, 38 minutos, bilhete 10 €. O que ver e como combinar com Coimbra."
+  canonical="/pt/blog/conimbriga-ruinas-romanas-desde-pombal/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Passeios</span>
+        <span>Novembro 2026</span>
+        <span>&middot; 8 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">Conímbriga: visitar as ruínas romanas desde Pombal</h1>
+      <p class="text-lg text-muted font-body">As <strong>ruínas de Conímbriga</strong> ficam a <strong>44,2 km</strong> da Casa dos Duques, em Abiul &mdash; <strong>38 minutos</strong> de carro pela A1, saída Condeixa-a-Nova. O bilhete custa <strong>10 &euro; por adulto</strong>, o museu está aberto das <strong>10h00 às 18h00</strong> (a bilheteira fecha às 17h15) e a visita às ruínas e ao museu leva entre duas e três horas. Em novembro e dezembro é o passeio certo para um dia de chuva: metade do percurso é debaixo de telha, no museu, e a outra metade são três hectares de cidade romana ao ar livre, quase sempre vazios.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Distância, tempo e bilhetes: as contas de uma manhã em Conímbriga</h2>
+      <p>Da Casa dos Duques ao Museu Nacional de Conímbriga são <strong>44,2 km</strong> e cerca de <strong>38 minutos</strong> por estrada. O caminho natural é entrar na A1 em Pombal e sair em <strong>Condeixa-a-Nova</strong>, seguindo depois a sinalização para Condeixa-a-Velha, que é a aldeia onde o sítio arqueológico se implanta. A alternativa sem portagens é o IC2, mais lento mas direto para quem quer parar pelo caminho.</p>
+      <p>O preçário oficial do museu é simples e não tem surpresas:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Bilhete normal</strong> &mdash; 10 &euro; por adulto, e dá acesso ao museu e à área visitável das ruínas (o bilhete é único, não se paga duas vezes)</li>
+        <li><strong>Público escolar</strong> &mdash; entrada gratuita, com marcação prévia</li>
+        <li><strong>Residentes em Portugal</strong> &mdash; entrada gratuita ao abrigo da iniciativa Acesso 52</li>
+      </ul>
+      <p>Horários: o museu e as ruínas estão abertos das <strong>10h00 às 18h00</strong>, com a bilheteira a encerrar às <strong>17h15</strong> &mdash; ou seja, chegar depois das cinco da tarde é chegar tarde. A loja funciona das 10h00 às 17h30.</p>
+      <p>Uma nota útil para quem viaja com alguém de mobilidade reduzida: o museu não tem barreiras arquitetónicas e há cadeira de rodas para empréstimo, mas <strong>as ruínas ainda não reúnem condições</strong> para serem visitadas por pessoas com mobilidade reduzida. O percurso arqueológico é de terra batida, com desníveis e pisos irregulares.</p>
+
+      <h2 class="mt-8 mb-3">O que é, afinal, Conímbriga</h2>
+      <p>Conímbriga foi uma das cidades romanas mais importantes da <strong>Lusitânia</strong>, no planalto do Baixo Mondego, e é hoje o sítio arqueológico mais visitado de Portugal. A ocupação do lugar remonta ao final da Idade do Bronze, mas é a partir da época de <strong>Augusto</strong> que o assentamento é reformado à maneira romana: chegam arquitetos, levanta-se o fórum, constroem-se as termas e a cidade ganha muralha. Sob <strong>Vespasiano</strong>, entre os anos 70 e 80, Conímbriga torna-se município &mdash; o estatuto que explica a escala dos edifícios que hoje se visitam.</p>
+      <p>A cidade foi classificada <strong>Monumento Nacional em 1910</strong>. As escavações começaram no século XIX, com as primeiras sondagens importantes em 1899, e ganharam escala a partir de 1964, em campanhas que juntaram a Universidade de Coimbra e equipas estrangeiras. O museu nasceu em 1962 como Museu Monográfico, foi classificado museu nacional em 2017 e chama-se Museu Nacional de Conímbriga desde setembro de 2023. Hoje expõe cerca de <strong>1.500 objetos</strong> e gere uma área visitável de aproximadamente <strong>3 hectares</strong> &mdash; ruínas e museu funcionam como uma só visita, e é assim que devem ser vistos.</p>
+
+      <h2 class="mt-8 mb-3">O que ver: cinco paragens que justificam a viagem</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Casa dos Repuxos</strong> &mdash; a casa senhorial mais conhecida da cidade, organizada em torno de um jardim com tanques e fontes. Os mosaicos no local, com cenas de caça e motivos geométricos, são o ex-libris de Conímbriga e o motivo pelo qual vale a pena vir em qualquer estação.</li>
+        <li><strong>Casa de Cantaber</strong> &mdash; a grande residência privada do sítio, escavada em profundidade nas campanhas dos anos 90 e 2000. Dá a medida de como vivia a elite de uma cidade de província no auge do Império.</li>
+        <li><strong>Fórum flávio e termas</strong> &mdash; o segundo fórum foi construído para celebrar a promoção a município e substituiu o primeiro; ao lado, o complexo termal de época de Augusto, alimentado por água trazida de fora da cidade, porque Conímbriga não tinha nascente suficiente.</li>
+        <li><strong>Muralha e aqueduto de Alcabideque</strong> &mdash; a linha de muralha do Baixo Império, erguida quando o mundo romano começou a ficar inseguro, e o aqueduto que ia buscar água a alguns quilómetros de distância. É a engenharia da cidade a céu aberto.</li>
+        <li><strong>Anfiteatro</strong> &mdash; a arena oval, com cerca de 98 por 86 metros, e os túneis de acesso. Mesmo em ruína, a escala impressiona: era um edifício para milhares de espectadores numa cidade do interior da Lusitânia.</li>
+      </ul>
+      <p>No museu, a coleção cobre dois milénios de ocupação, do Bronze final à Idade Média, e é o complemento indispensável das ruínas: peças pequenas, fragmentos, escultura e o espólio das escavações desde 1899. Ver primeiro o museu e depois as ruínas (ou o contrário) muda completamente a leitura do sítio.</p>
+
+      <h2 class="mt-8 mb-3">Porque novembro e dezembro são boa altura</h2>
+      <p>Conímbriga tem uma característica rara entre os grandes sítios arqueológicos portugueses: funciona com chuva. O museu é coberto, a bilheteira e a loja são abrigadas, e as ruínas visitam-se em 60 a 90 minutos, com paragens frequentes. Num fim de semana de novembro, com o Douro e o Algarve já fora de época, aqui encontra-se o contrário do que se espera de um sítio "mais visitado do país": estacionamento à porta, mosaicos sem multidão à frente e silêncio suficiente para ler as placas.</p>
+      <p>É também um plano que funciona com crianças em idade escolar &mdash; há túneis, termas, mosaicos com animais e um anfiteatro para correr &mdash; e um plano que funciona sem elas, para quem quer história a sério sem passar o dia numa fila.</p>
+
+      <h2 class="mt-8 mb-3">Como encaixar Conímbriga num dia a partir de Abiul</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>09h30</strong> &mdash; saída de Abiul pela A1, rumo a Condeixa-a-Nova.</li>
+        <li><strong>10h15&ndash;12h30</strong> &mdash; museu e ruínas, com tempo para a Casa dos Repuxos e o anfiteatro.</li>
+        <li><strong>12h45</strong> &mdash; almoço em Condeixa-a-Nova, a cinco minutos do museu. A chanfana é o prato da terra e resolve o almoço de inverno.</li>
+        <li><strong>14h30</strong> &mdash; Coimbra fica a <strong>18,6 km</strong> e <strong>21 minutos</strong> de Conímbriga: dá para juntar a Alta e o Portugal dos Pequeninos à tarde, ou voltar para casa e guardar Coimbra para outro dia.</li>
+        <li><strong>17h30</strong> &mdash; regresso a Abiul em menos de três quartos de hora.</li>
+      </ul>
+      <p>Se preferir um dia mais lento, troque Coimbra por uma visita ao <a href="/pt/blog/mata-do-bucaco-visitar-desde-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Buçaco</a>, que fica a norte, no mesmo eixo da A1: são dois patrimónios muito diferentes &mdash; uma cidade romana e uma floresta murada por carmelitas &mdash; que raramente se visitam no mesmo fim de semana.</p>
+
+      <h2 class="mt-8 mb-3">Dicas práticas</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Calçado fechado.</strong> As ruínas são de terra e pedra; em novembro há zonas húmidas e musgo entre os mosaicos.</li>
+        <li><strong>Leve 2 a 3 horas.</strong> Menos do que isso é passar a correr pelo museu; mais do que isso é repetir caminho.</li>
+        <li><strong>Confirme os horários no dia.</strong> O museu pode ter encerramentos pontuais por feriado ou manutenção &mdash; a página oficial é a única fonte fiável.</li>
+        <li><strong>Dias de semana.</strong> Como em todo o Centro de Portugal, o sábado é o dia mais cheio; uma terça-feira de manhã em Conímbriga é outra coisa.</li>
+        <li><strong>Dinheiro e bilheteira.</strong> Chegue antes das 17h15: a bilheteira fecha antes do museu.</li>
+      </ul>
+
+      <p>Para enquadrar Conímbriga no resto da região &mdash; Fátima, Coimbra, as serras de Sicó e o litoral &mdash; veja a nossa <a href="/pt/guia/central-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia do Centro de Portugal</a>, o <a href="/pt/o-que-fazer/" class="text-terracotta-500 hover:text-terracotta-600 underline">roteiro do que fazer perto de Pombal</a> e os <a href="/pt/passeios/" class="text-terracotta-500 hover:text-terracotta-600 underline">passeios a menos de uma hora</a>. Se quiser fazer de Abiul a base para vários dias destes, veja como <a href="/pt/reserva/" class="text-terracotta-500 hover:text-terracotta-600 underline">reservar a Casa dos Duques</a>.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Museu Nacional de Conímbriga &mdash; páginas oficiais &ldquo;Visitar&rdquo; (horário 10h00&ndash;18h00, bilheteira até 17h15, preçário 10 &euro; por adulto, gratuitidade escolar e Acesso 52, acessibilidades) e &ldquo;Museu&rdquo; (fundação em 1962, classificação como museu nacional em 2017, designação atual pelo Decreto-Lei n.&ordm; 79/2023, cerca de 1.500 objetos e 3 hectares visitáveis), consultadas a 13/11/2026; Wikipédia &mdash; verbete &ldquo;Conímbriga&rdquo; (Monumento Nacional de 1910, municipalização sob Vespasiano, mosaicos, Casa de Cantaber e Casa dos Repuxos, anfiteatro de c. 98&times;86 m, invasões suevas de 465&ndash;468 e transferência da população para Aemínio). Distâncias e tempos de viagem calculados por estrada com OpenStreetMap/OSRM a partir de Abiul (39,8726; -8,5386) a 13/11/2026. Preços, horários e condições de visita podem mudar: confirme em conimbriga.pt antes de partir.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Uma base tranquila a 38 minutos de Conímbriga"
+    subtitle="Piscina, jardim e o Centro de Portugal à porta, em Abiul"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

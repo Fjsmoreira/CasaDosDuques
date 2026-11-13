@@ -49,7 +49,8 @@ export type RouteKey =
   | 'blogBucacoPombal'
   | 'blogTomarConvento'
   | 'blogNoelCentrePortugal'
-  | 'blogNazareGolvenPombal';
+  | 'blogNazareGolvenPombal'
+  | 'blogConimbriga';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -264,6 +265,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogNazareGolvenPombal: {
     nl: '/nl/blog/nazare-golven-dagtocht-vanuit-pombal/',
+  },
+  blogConimbriga: {
+    pt: '/pt/blog/conimbriga-ruinas-romanas-desde-pombal/',
   },
 };
 
