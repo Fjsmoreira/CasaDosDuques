@@ -50,7 +50,8 @@ export type RouteKey =
   | 'blogTomarConvento'
   | 'blogNoelCentrePortugal'
   | 'blogNazareGolvenPombal'
-  | 'blogConimbriga';
+  | 'blogConimbriga'
+  | 'blogWinterCentralPortugal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -268,6 +269,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogConimbriga: {
     pt: '/pt/blog/conimbriga-ruinas-romanas-desde-pombal/',
+  },
+  blogWinterCentralPortugal: {
+    en: '/blog/winter-central-portugal-december-february/',
   },
 };
 
