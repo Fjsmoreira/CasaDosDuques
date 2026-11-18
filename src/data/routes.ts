@@ -51,7 +51,8 @@ export type RouteKey =
   | 'blogNoelCentrePortugal'
   | 'blogNazareGolvenPombal'
   | 'blogConimbriga'
-  | 'blogWinterCentralPortugal';
+  | 'blogWinterCentralPortugal'
+  | 'blogCasteloLeiria';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -272,6 +273,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogWinterCentralPortugal: {
     en: '/blog/winter-central-portugal-december-february/',
+  },
+  blogCasteloLeiria: {
+    pt: '/pt/blog/castelo-de-leiria-visita-desde-pombal/',
   },
 };
 

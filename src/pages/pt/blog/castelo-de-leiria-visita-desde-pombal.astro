@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/pt/blog/castelo-de-leiria-visita-desde-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Castelo de Leiria: visita desde Pombal — horários, preços e o que ver',
+      description: 'O Castelo de Leiria fica a 47,5 km da Casa dos Duques, em Abiul: 38 minutos de carro. Entrada de 2,10 €, horário de inverno das 9h30 às 17h30 (última entrada às 16h30). História, bilhetes e roteiro de meio dia.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-11-18',
+      dateModified: '2026-11-18',
+      image: 'https://casadosduques.pt/images/airbnb/2f21c46e-f9c5-41eb-9b22-264e8158eb9b.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://casadosduques.pt/pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blogue', item: 'https://casadosduques.pt/pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Castelo de Leiria desde Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+<BaseLayout
+  title="Castelo de Leiria: visita a 47 km de Pombal (horários e preços)"
+  description="Distância, horários de inverno e preços reais do Castelo de Leiria a partir de Pombal: 47,5 km, 38 minutos, entrada 2,10 €. História, o que ver lá dentro e roteiro de meio dia."
+  canonical="/pt/blog/castelo-de-leiria-visita-desde-pombal/"
+  locale="pt"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Passeios</span>
+        <span>Novembro 2026</span>
+        <span>&middot; 8 min de leitura</span>
+      </div>
+      <h1 class="leading-tight mb-4">Castelo de Leiria: como visitar desde Pombal</h1>
+      <p class="text-lg text-muted font-body">O <strong>Castelo de Leiria</strong> fica a <strong>47,5 km</strong> da Casa dos Duques, em Abiul &mdash; <strong>38 minutos</strong> de carro pela A1. O bilhete custa <strong>2,10 &euro;</strong> por pessoa, e no horário de inverno (1 de outubro a 31 de março) o monumento está aberto <strong>todos os dias das 9h30 às 17h30</strong>, com a última entrada às <strong>16h30</strong>. Meio dia chega para a visita, e o resto do dia fica livre para o centro da cidade ou para a praia do Pedrógão, a 40 minutos do castelo.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Distância, tempo e acesso a partir de Abiul</h2>
+      <p>De Abiul ao <strong>Largo de S. Pedro</strong>, onde fica a entrada do castelo, são <strong>47,5 km</strong> e cerca de <strong>38 minutos</strong> por estrada. O caminho mais direto é entrar na A1 em Pombal e sair em Leiria; quem preferir evitar portagens pode seguir pelo <strong>IC2</strong>, que liga Pombal a Leiria pelo mesmo eixo mas demora mais e passa por dentro de várias localidades.</p>
+      <p>O castelo implanta-se num morro rochoso a sul da confluência do <strong>rio Lis com o rio Lena</strong>, e a subida faz-se a pé a partir do largo, no centro histórico. Desde as obras de requalificação concluídas em 2021 há também <strong>dois acessos mecânicos</strong> &mdash; um no lado norte e outro no lado sul &mdash; de utilização gratuita, o que resolve a subida a quem viaja com pessoas com mobilidade reduzida ou com carrinhos de bebé.</p>
+      <p>Para comparar com outros passeios que fazemos a partir de Abiul: o <a href="/pt/blog/conimbriga-ruinas-romanas-desde-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Conímbriga</a> fica a 44,2 km e 38 minutos, a <a href="/pt/blog/mata-do-bucaco-visitar-desde-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Mata do Buçaco</a> a 85 km e 67 minutos. Leiria está, por isso, no grupo dos passeios de meio dia &mdash; não do dia inteiro.</p>
+
+      <h2 class="mt-8 mb-3">Horários e bilhetes: o que se paga em 2026</h2>
+      <p>O castelo tem dois horários, e a diferença importa em novembro e dezembro, quando a luz se vai antes das cinco da tarde:</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Inverno (1 de outubro a 31 de março)</strong> &mdash; todos os dias, das 9h30 às 17h30, com última entrada às 16h30</li>
+        <li><strong>Verão (1 de abril a 30 de setembro)</strong> &mdash; todos os dias, das 9h30 às 18h30, com última entrada às 17h30</li>
+        <li><strong>Em dias de espetáculo</strong> &mdash; o monumento abre uma hora antes e encerra uma hora depois</li>
+      </ul>
+      <p>O preçário é igualmente simples. O <strong>bilhete normal custa 2,10 &euro; por dia e por pessoa</strong>; jovens entre os 11 e os 25 anos e visitantes com 65 ou mais anos pagam <strong>1,05 &euro;</strong>, e grupos de 30 ou mais elementos pagam <strong>1,50 &euro; por pessoa</strong>. Há ainda um <strong>pack de 3 &euro;</strong> que junta o Castelo, o m|i|mo (museu da imagem em movimento) e o Museu de Leiria &mdash; é a opção óbvia se quiser passar o dia na cidade em vez de fazer só a visita ao monumento.</p>
+      <p>A entrada é gratuita para residentes no concelho de Leiria (com documento de identificação), crianças até aos 10 anos, alunos de escolas do concelho, alunos e professores do Politécnico de Leiria, cidadãos com deficiência e antigos combatentes. Em 2026 há ainda dias comemorativos com entrada gratuita para todos, cuja lista o município publica na página oficial do castelo. Confirme sempre antes de partir: horários e gratuitidades mudam com os feriados.</p>
+
+      <h2 class="mt-8 mb-3">O que é, afinal, este castelo</h2>
+      <p>A tradição atribui a <strong>D. Afonso Henriques</strong> a construção de um castelo em <strong>1135</strong>, entre Coimbra e Santarém, no alto de uma elevação rochosa a sul da confluência do Lis com o Lena. O que se visita hoje é o resultado de nove séculos de camadas: fortaleza militar, depois palácio real, com vestígios das várias fases de ocupação dentro das muralhas.</p>
+      <p><strong>D. Dinis</strong> passou temporadas em Leiria com a rainha <strong>Santa Isabel</strong>, e é a ambos que se associa a lenda do <strong>Milagre das Rosas</strong>: a rainha saía do castelo numa manhã de inverno para distribuir pães pelos pobres, foi surpreendida pelo rei e respondeu que levava rosas &mdash; e rosas havia no regaço. Ao mesmo D. Dinis se atribui a reforma da <strong>Igreja de Santa Maria da Pena</strong> e a reconstrução e ampliação da <strong>Torre de Menagem</strong>. A <strong>D. João I</strong> deve-se a construção dos <strong>Paços Novos</strong>, um dos palácios reais mais interessantes do país, e a adaptação de Santa Maria da Pena a capela palaciana.</p>
+      <p>Depois vieram os séculos maus: o <strong>terramoto de 1755</strong> e as <strong>invasões francesas</strong> deixaram o conjunto quase ao abandono. A recuperação começou no início do século XX, com a <strong>Liga dos Amigos do Castelo</strong> e o arquiteto suíço <strong>Ernesto Korrodi</strong>, que devolveram o monumento à cidade. Entre 2019 e 2021 houve nova campanha de requalificação &mdash; uma das cisternas foi transformada em espaço visitável, os acessos mecânicos foram construídos e a intervenção recebeu o Prémio SIL do Imobiliário 2022 na categoria de Espaços Públicos e uma menção honrosa no Prémio Nacional de Reabilitação Urbana 2022.</p>
+
+      <h2 class="mt-8 mb-3">O que ver lá dentro</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Igreja de Santa Maria da Pena</strong> &mdash; a igreja do castelo, adaptada a capela palaciana no tempo de D. João I.</li>
+        <li><strong>Torre de Menagem</strong> &mdash; a torre reconstruída e ampliada por D. Dinis, o ponto mais alto da visita.</li>
+        <li><strong>Paços Novos</strong> &mdash; o palácio real de D. João I, com a varanda virada sobre a cidade; é daqui que se entende a posição estratégica do morro.</li>
+        <li><strong>Cisternas</strong> &mdash; uma delas visitável desde a requalificação de 2021 e usada pontualmente para exposições.</li>
+        <li><strong>Terreiro da Albacara</strong> &mdash; o pátio interior, o sítio certo para perceber a planta do conjunto.</li>
+        <li><strong>Sala de exposições e loja</strong> &mdash; a receção e a loja funcionam na antiga Casa da Guarda.</li>
+      </ul>
+      <p>Conte com <strong>60 a 90 minutos</strong> para o castelo, mais o tempo de subida e descida. Não é um monumento que se veja a correr: metade do interesse está na varanda dos Paços Novos e na leitura das muralhas a partir do terreiro.</p>
+
+      <h2 class="mt-8 mb-3">Roteiro de meio dia, com hora de saída</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>09h00</strong> &mdash; saída de Abiul pela A1. Em 38 minutos está no centro de Leiria.</li>
+        <li><strong>09h45&ndash;11h15</strong> &mdash; castelo: igreja, torre de menagem, Paços Novos e cisterna. A manhã é a melhor hora para a varanda, antes de o sol bater de frente.</li>
+        <li><strong>11h30&ndash;13h00</strong> &mdash; centro histórico e margem do Lis. Se quiser completar com museus, o pack de 3 &euro; cobre o m|i|mo e o Museu de Leiria.</li>
+        <li><strong>13h00</strong> &mdash; almoço na cidade e regresso a Abiul, ou prolongamento até à costa.</li>
+      </ul>
+      <p>Quem quiser esticar o dia tem uma saída natural: a <strong>praia do Pedrógão</strong>, a praia do concelho de Leiria, fica a <strong>42,4 km</strong> e <strong>40 minutos</strong> do castelo, e o regresso de lá a Abiul são <strong>39,3 km</strong> e <strong>39 minutos</strong> &mdash; fecha-se um triângulo sem repetir estrada. É a mesma praia que já descrevemos no guia das <a href="/pt/blog/praias-perto-de-pombal-urso-osso-baleia-pedrogao/" class="text-terracotta-500 hover:text-terracotta-600 underline">praias perto de Pombal</a>, com o mesmo problema de sempre: em novembro está vazia, em agosto enche cedo.</p>
+
+      <h2 class="mt-8 mb-3">Porque novembro e dezembro são boa altura</h2>
+      <p>Com a última entrada às 16h30, o inverno obriga a chegar cedo &mdash; mas em troca dá o monumento praticamente vazio. Entre outubro e março, o castelo deixa de ser paragem de autocarro turístico e passa a ser o que era na origem: um morro com vista sobre uma cidade pequena, o Lis em baixo e a serra ao fundo. Numa manhã de nevoeiro, a subida pelo largo com a torre a aparecer e desaparecer vale tanto como a visita guiada.</p>
+      <p>É também o passeio certo para um dia de chuva intermitente: a igreja, os Paços Novos, a cisterna e a sala de exposições são cobertos, e as partes ao ar livre fazem-se em 20 minutos de cada vez.</p>
+
+      <h2 class="mt-8 mb-3">Dicas práticas</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Chegue antes das 16h30</strong> entre outubro e março. Depois disso a porta fecha, independentemente da luz.</li>
+        <li><strong>Leve trocos ou multibanco</strong>: 2,10 &euro; é barato, mas o pack de 3 &euro; com os dois museus é o melhor negócio da cidade.</li>
+        <li><strong>Calçado confortável.</strong> A subida é a pé e o piso do terreiro é de pedra irregular.</li>
+        <li><strong>Semana em vez de sábado.</strong> Como em todo o Centro de Portugal, o fim de semana concentra as visitas escolares e familiares.</li>
+        <li><strong>Confirme a agenda.</strong> Em dias de espetáculo o horário muda (abre uma hora antes, fecha uma hora depois), e há dias comemorativos com entrada gratuita.</li>
+      </ul>
+
+      <p>Para enquadrar Leiria no resto da região &mdash; Pombal, Coimbra, Fátima e o litoral &mdash; veja o <a href="/pt/guia/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">guia de Pombal</a>, o <a href="/pt/o-que-fazer/" class="text-terracotta-500 hover:text-terracotta-600 underline">roteiro do que fazer perto da casa</a> e os <a href="/pt/passeios/" class="text-terracotta-500 hover:text-terracotta-600 underline">passeios a menos de uma hora</a>. Se quiser fazer de Abiul a base para vários dias destes, veja como <a href="/pt/reserva/" class="text-terracotta-500 hover:text-terracotta-600 underline">reservar a Casa dos Duques</a>.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Fontes: Câmara Municipal de Leiria &mdash; página oficial &ldquo;Castelo&rdquo; (morada Largo de S. Pedro, telefone 244 839 670, horários de verão e inverno com última entrada, preçário de 2,10 &euro;/1,05 &euro;/1,50 &euro;, pack Castelo + m|i|mo + Museu de Leiria a 3 &euro;, gratuitidades, lista do interior visitável, história de 1135 a D. João I, terramoto de 1755 e invasões francesas, Liga dos Amigos do Castelo e Ernesto Korrodi, requalificação concluída em 2021, acessos mecânicos gratuitos e prémios de 2022), consultada a 18/11/2026 em cm-leiria.pt. Distâncias e tempos de viagem calculados por estrada com OpenStreetMap/OSRM a partir de Abiul (39,8726; -8,5386) a 18/11/2026. Horários, preços e dias de entrada gratuita mudam: confirme em cm-leiria.pt antes de partir.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Uma base tranquila a 38 minutos do Castelo de Leiria"
+    subtitle="Piscina, jardim e o Centro de Portugal à porta, em Abiul"
+    primaryCta={{ label: 'Reservar', href: '/pt/reserva/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
