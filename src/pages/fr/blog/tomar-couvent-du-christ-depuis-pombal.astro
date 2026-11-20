@@ -1,0 +1,210 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/tomar-couvent-du-christ-depuis-pombal/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Tomar depuis Pombal : le Couvent du Christ et la cité des Templiers (40 km, 49 min)',
+      description:
+        'Le Couvent du Christ à Tomar est à 40,2 km et 49 minutes d’Abiul, sans autoroute ni péage. Billet 15 €, horaires par saison, salles fermées pour travaux et itinéraire heure par heure.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-11-20',
+      dateModified: '2026-11-20',
+      image: 'https://casadosduques.pt/images/hero.jpg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/fr/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Tomar, le Couvent du Christ', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Tomar depuis Pombal : le Couvent du Christ et la cité des Templiers (40 km, 49 min)"
+  description="Le Couvent du Christ est à 40,2 km et 49 min d'Abiul, sans autoroute ni péage. Billet 15 €, ouvert tous les jours, horaires par saison et salles fermées pour travaux."
+  canonical="/fr/blog/tomar-couvent-du-christ-depuis-pombal/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Excursions</span>
+        <span>Novembre 2026</span>
+        <span>&middot; 9 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">Tomar depuis Pombal&nbsp;: le Couvent du Christ et la cit&eacute; des Templiers</h1>
+      <p class="text-lg text-muted font-body">
+        Le Couvent du Christ se trouve &agrave; <strong>40,2&nbsp;km et 49&nbsp;minutes de route d&rsquo;Abiul</strong>,
+        presque uniquement par des routes de campagne &mdash; pas d&rsquo;autoroute, pas de p&eacute;age. Le billet co&ucirc;te
+        <strong>15&nbsp;&euro;</strong>, le monument ouvre <strong>tous les jours</strong> de 9h00 &agrave; 17h30
+        d&rsquo;octobre &agrave; mai (derni&egrave;re entr&eacute;e &agrave; 17h00), et il faut compter
+        <strong>deux &agrave; trois heures</strong> de visite. En novembre, on part &agrave; 9h15 et on rentre d&eacute;jeuner
+        au bord de la piscine.
+      </p>
+    </div>
+
+    <OptimizedImage src="/images/hero.jpg" alt="Casa dos Duques, la maison de vacances à Abiul d'où le Couvent du Christ de Tomar est à 49 minutes" class="w-full my-6" loading="lazy" width={1200} height={800} sizes="(max-width: 896px) 100vw, 896px" />
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Pourquoi Tomar et pas un autre monast&egrave;re&nbsp;?</h2>
+      <p>
+        Alcoba&ccedil;a et Batalha sont des chefs-d&rsquo;&oelig;uvre que l&rsquo;on <em>regarde</em>. Le Couvent du
+        Christ est un b&acirc;timent que l&rsquo;on <em>traverse</em>, sept si&egrave;cles en une seule boucle&nbsp;: une
+        rotonde templi&egrave;re du XII<sup>e</sup>&nbsp;si&egrave;cle, une nef manu&eacute;line, cinq clo&icirc;tres
+        Renaissance et un aqueduc qui arrive au-dessus des toits.
+      </p>
+      <p>
+        Pour un visiteur fran&ccedil;ais, il y a une raison suppl&eacute;mentaire&nbsp;: c&rsquo;est ici que l&rsquo;histoire
+        des Templiers ne s&rsquo;arr&ecirc;te pas en 1312. Quand le pape Cl&eacute;ment&nbsp;V supprime l&rsquo;ordre,
+        le roi Denis du Portugal ne dissout rien&nbsp;: il le refonde sous un autre nom, l&rsquo;<strong>Ordre du
+        Christ</strong>, avec les m&ecirc;mes hommes, les m&ecirc;mes biens et le m&ecirc;me b&acirc;timent. Cent ans plus
+        tard, ce sont ces chevaliers-l&agrave; qui arment les caravelles de Vasco de Gama. La croix patt&eacute;e des
+        cartes anciennes sort de cette colline.
+      </p>
+
+      <h2 class="mt-8 mb-3">La route&nbsp;: 40&nbsp;km, 49&nbsp;minutes, z&eacute;ro p&eacute;age</h2>
+      <p>
+        L&rsquo;itin&eacute;raire descend vers le sud-est par l&rsquo;<strong>EM&nbsp;501</strong> &agrave; travers les
+        oliveraies, puis l&rsquo;<strong>ER&nbsp;356</strong>, l&rsquo;<strong>EM&nbsp;525</strong> et un tron&ccedil;on de
+        <strong>CM&nbsp;1088</strong>, avant d&rsquo;entrer dans Tomar par l&rsquo;<strong>EN&nbsp;113</strong>. Calcul
+        OSRM depuis Abiul&nbsp;: 40,2&nbsp;km et 49&nbsp;minutes, sans autoroute et sans p&eacute;age&nbsp;: on traverse
+        des villages, on double des tracteurs, on s&rsquo;arr&ecirc;te pour un caf&eacute; &agrave; mi-chemin.
+      </p>
+      <p>
+        Le dernier kilom&egrave;tre monte et se r&eacute;tr&eacute;cit&nbsp;: d&eacute;passez le premier parking informel
+        et suivez les panneaux. Et les cars arrivent en milieu de matin&eacute;e&nbsp;: l&rsquo;ouverture de 9h00 vaut le
+        r&eacute;veil, la Charola avec douze personnes n&rsquo;est pas la m&ecirc;me qu&rsquo;avec quatre-vingts.
+      </p>
+
+      <h2 class="mt-8 mb-3">Sept si&egrave;cles, dans l&rsquo;ordre o&ugrave; ils ont &eacute;t&eacute; construits</h2>
+      <p>
+        Le ch&acirc;teau appara&icirc;t en <strong>1160</strong>, avec la fondation de Tomar par les Templiers. Apr&egrave;s
+        l&rsquo;extinction de l&rsquo;ordre en <strong>1312</strong>, le site devient le si&egrave;ge de l&rsquo;Ordre du
+        Christ&nbsp;; sous l&rsquo;administration de l&rsquo;infant D.&nbsp;Henrique, entre <strong>1420 et 1460</strong>,
+        les salles conventuelles s&rsquo;organisent autour de deux clo&icirc;tres gothiques, le Claustro da Lavagem et le
+        Claustro do Cemit&eacute;rio.
+      </p>
+      <p>
+        Le c&oelig;ur de tout cela est la <strong>Charola</strong>, l&rsquo;un des rares temples en rotonde de
+        l&rsquo;Europe m&eacute;di&eacute;vale, copi&eacute; sur la basilique du Saint-S&eacute;pulcre de
+        J&eacute;rusalem. D.&nbsp;Manuel&nbsp;I<sup>er</sup> y a ouvert une entr&eacute;e au sud, dans la nef qui prolonge
+        l&rsquo;oratoire vers l&rsquo;ouest&nbsp;: cette nef manu&eacute;line est l&rsquo;&oelig;uvre de Diogo de Arruda
+        (<strong>1510-1513</strong>), achev&eacute;e par Jo&atilde;o de Castilho (<strong>1513-1515</strong>).
+        Au-dessus de la sacristie s&rsquo;ouvre la <em>Janela do Cap&iacute;tulo</em>, o&ugrave; cordages, corail,
+        artichauts et sph&egrave;res armillaires sont taill&eacute;s dans le calcaire&nbsp;: l&rsquo;embl&egrave;me du
+        Portugal maritime.
+      </p>
+      <p>
+        &Agrave; partir de <strong>1528</strong>, D.&nbsp;Jo&atilde;o&nbsp;III fait construire &agrave; l&rsquo;ouest un
+        immense couvent Renaissance organis&eacute; autour de <strong>cinq clo&icirc;tres</strong>. Sous les Philippe
+        d&rsquo;Espagne, entre <strong>1580 et 1640</strong>, la fa&ccedil;ade sud est transform&eacute;e par
+        l&rsquo;arcature du <strong>grand aqueduc des Peg&otilde;es</strong>, l&rsquo;ouvrage le plus marquant de la
+        p&eacute;riode philippine, et les derniers grands travaux du XVII<sup>e</sup>&nbsp;si&egrave;cle ajoutent la
+        grande infirmerie et la nouvelle pharmacie. L&rsquo;UNESCO a inscrit l&rsquo;ensemble en <strong>1983</strong>.
+      </p>
+
+      <h2 class="mt-8 mb-3">Ce qu&rsquo;il faut voir, dans le bon ordre</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>La Charola d&rsquo;abord.</strong> Entrez directement dans la rotonde&nbsp;: c&rsquo;est la partie la plus ancienne et la salle dont on se souvient.</li>
+        <li><strong>La nef manu&eacute;line et la Fen&ecirc;tre du Chapitre.</strong> Montez &agrave; la Sala do Cap&iacute;tulo et prenez le temps de d&eacute;tailler la pierre.</li>
+        <li><strong>Les cinq clo&icirc;tres de Jean&nbsp;III.</strong> En s&eacute;quence&nbsp;; le Claustro Principal est le plus vaste et le plus silencieux.</li>
+        <li><strong>L&rsquo;aqueduc des Peg&otilde;es.</strong> Regardez-le depuis les terrasses&nbsp;: c&rsquo;est lui qui transforme la fa&ccedil;ade sud en d&eacute;cor de th&eacute;&acirc;tre.</li>
+        <li><strong>La Mata dos Sete Montes.</strong> L&rsquo;ancien enclos conventuel est devenu un parc boisé sur la colline&nbsp;: 30&nbsp;minutes de marche, et c&rsquo;est gratuit.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Ce qui est ferm&eacute; en ce moment</h2>
+      <p>
+        Les travaux de conservation et de restauration financ&eacute;s par le PRR portugais sont toujours en cours, et le
+        monument l&rsquo;annonce clairement. L&rsquo;acc&egrave;s est actuellement restreint&nbsp;: <strong>terrasse Sud et
+        acc&egrave;s &agrave; la Horta dos Frades</strong>, <strong>terrasse &laquo;&nbsp;da Cera&nbsp;&raquo; du Claustro
+        Principal</strong>, <strong>Claustro da Lavagem</strong>, <strong>jardin et Terreiro</strong>. En clair&nbsp;: un
+        clo&icirc;tre gothique et les terrasses ext&eacute;rieures sont hors circuit, tandis que la Charola, la nef
+        manu&eacute;line, la Fen&ecirc;tre du Chapitre et les grands clo&icirc;tres Renaissance &mdash; la raison de votre
+        venue &mdash; restent ouverts. Si une salle pr&eacute;cise est le but du voyage, appelez avant de partir&nbsp;:
+        <strong>+351&nbsp;249&nbsp;313&nbsp;481</strong>.
+      </p>
+      <p>
+        Le monument ferme aussi ponctuellement pour des interventions techniques&nbsp;: en novembre&nbsp;2026, il a &eacute;t&eacute;
+        ferm&eacute; trois jours (17, 18 et 19) pour des travaux sur l&rsquo;infrastructure &eacute;lectrique. Ce genre
+        d&rsquo;annonce n&rsquo;appara&icirc;t que sur la page officielle, jamais sur les r&eacute;servations en ligne.
+      </p>
+
+      <h2 class="mt-8 mb-3">Horaires, tarif et fermetures annuelles</h2>
+      <p>
+        C&rsquo;est l&rsquo;un des rares monuments portugais ouverts sept jours sur sept &mdash; beaucoup de sites
+        nationaux ferment le lundi. Le calendrier publi&eacute; par Museus e Monumentos de Portugal est le suivant&nbsp;:
+        <strong>octobre &agrave; mai, 9h00-17h30, derni&egrave;re entr&eacute;e &agrave; 17h00</strong>&nbsp;;
+        <strong>juin &agrave; septembre, 9h00-18h30, derni&egrave;re entr&eacute;e &agrave; 18h00</strong>. Billet normal
+        <strong>15&nbsp;&euro;</strong>, achet&eacute; sur place ou en ligne. Fermetures annuelles&nbsp;: 1<sup>er</sup>
+        janvier, 1<sup>er</sup> mars, dimanche de P&acirc;ques, 1<sup>er</sup> mai, 24 et 25 d&eacute;cembre.
+      </p>
+      <p>
+        Pr&eacute;voyez un peu de liquide pour le caf&eacute; et le stationnement informel, et prenez le billet en ligne en
+        haute saison.
+      </p>
+
+      <h2 class="mt-8 mb-3">L&rsquo;apr&egrave;s-midi&nbsp;: Tomar &agrave; pied</h2>
+      <p>
+        Descendez &agrave; pied plut&ocirc;t qu&rsquo;en voiture&nbsp;: l&rsquo;Estrada do Convento vous d&eacute;pose dans
+        la vieille ville en quinze minutes, la Mata dos Sete Montes sur votre droite. La grille de rues entre la colline
+        et la rivi&egrave;re Nab&atilde;o se traverse en vingt minutes et m&eacute;rite une heure lente&nbsp;: c&rsquo;&eacute;tait
+        une ville templi&egrave;re, et elle en a encore l&rsquo;allure.
+      </p>
+      <p>
+        Un d&eacute;roul&eacute; r&eacute;aliste en novembre&nbsp;: d&eacute;part d&rsquo;Abiul &agrave; 9h15, au portail
+        &agrave; 10h05, trois heures dans le monument, d&eacute;jeuner en ville &agrave; 13h30, retour &agrave; 16h30 avec
+        encore de la lumi&egrave;re. En juillet et en ao&ucirc;t, inversez&nbsp;: les clo&icirc;tres sont frais &agrave;
+        l&rsquo;ouverture et la ville est intenable &agrave; trois heures de l&rsquo;apr&egrave;s-midi.
+      </p>
+
+      <h2 class="mt-8 mb-3">O&ugrave; loger pour faire Tomar en une matin&eacute;e</h2>
+      <p>
+        L&rsquo;int&eacute;r&ecirc;t de loger &agrave; Abiul plut&ocirc;t qu&rsquo;&agrave; Tomar, c&rsquo;est que Tomar
+        devient une matin&eacute;e au lieu d&rsquo;une nuit d&rsquo;h&ocirc;tel. La
+        <a href="/fr/" class="text-terracotta-500 hover:text-terracotta-600 underline">Casa dos Duques</a> est &agrave;
+        11&nbsp;minutes de Pombal et &agrave; quelques minutes de l&rsquo;A1, ce qui place quatre sites UNESCO &agrave;
+        moins d&rsquo;une heure&nbsp;; notre page des
+        <a href="/fr/excursions/" class="text-terracotta-500 hover:text-terracotta-600 underline">excursions au d&eacute;part de Pombal</a>
+        les liste avec des temps de trajet r&eacute;els. Pour le reste du s&eacute;jour, lisez
+        <a href="/fr/blog/que-visiter-autour-de-pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">que visiter autour de Pombal</a>
+        et notre page <a href="/fr/emplacement/" class="text-terracotta-500 hover:text-terracotta-600 underline">emplacement</a>.
+      </p>
+      <p>
+        Une derni&egrave;re chose&nbsp;: Tomar n&rsquo;est pas une case &agrave; cocher sur la route de Lisbonne. Le
+        b&acirc;timent r&eacute;compense une matin&eacute;e sans h&acirc;te, et la route fait partie du plaisir.
+      </p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">
+        Sources&nbsp;: Museus e Monumentos de Portugal &mdash; Convento de Cristo (horaires octobre-mai et juin-septembre,
+        derni&egrave;re entr&eacute;e, fermetures annuelles, billet de 15&nbsp;&euro;, restrictions de la restauration PRR,
+        fermeture technique des 17-19 novembre 2026, histoire du complexe et inscription UNESCO de 1983), page consult&eacute;e
+        le 20&nbsp;novembre&nbsp;2026. Distances et temps de trajet calcul&eacute;s avec OSRM/OpenStreetMap depuis Abiul
+        (39,8726&nbsp;N, 8,5386&nbsp;O) jusqu&rsquo;au monument (39,6039&nbsp;N, 8,4176&nbsp;O)&nbsp;: 40,2&nbsp;km et
+        49&nbsp;min. Ce sont des estimations, pas des garanties&nbsp;: horaires, tarifs et fermetures changent, v&eacute;rifiez
+        aupr&egrave;s du monument avant de partir.
+      </p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Quatre sites UNESCO, une seule base au calme"
+    subtitle="Logez à Abiul, Pombal et rejoignez Tomar, Alcobaça, Batalha et Coimbra en moins d'une heure"
+    primaryCta={{ label: 'Réserver', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>

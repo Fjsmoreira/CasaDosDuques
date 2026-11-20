@@ -52,7 +52,8 @@ export type RouteKey =
   | 'blogNazareGolvenPombal'
   | 'blogConimbriga'
   | 'blogWinterCentralPortugal'
-  | 'blogCasteloLeiria';
+  | 'blogCasteloLeiria'
+  | 'blogTomarCouventFr';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -261,6 +262,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogTomarConvento: {
     en: '/blog/tomar-convent-of-christ-day-trip-pombal/',
+  },
+  blogTomarCouventFr: {
+    fr: '/fr/blog/tomar-couvent-du-christ-depuis-pombal/',
   },
   blogNoelCentrePortugal: {
     fr: '/fr/blog/noel-nouvel-an-centre-portugal-coimbra-obidos/',
