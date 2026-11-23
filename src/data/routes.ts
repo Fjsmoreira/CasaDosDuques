@@ -53,7 +53,8 @@ export type RouteKey =
   | 'blogConimbriga'
   | 'blogWinterCentralPortugal'
   | 'blogCasteloLeiria'
-  | 'blogTomarCouventFr';
+  | 'blogTomarCouventFr'
+  | 'blogBeachesPombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -277,6 +278,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogWinterCentralPortugal: {
     en: '/blog/winter-central-portugal-december-february/',
+  },
+  blogBeachesPombal: {
+    en: '/blog/beaches-near-pombal-osso-da-baleia-praia-do-urso/',
   },
   blogCasteloLeiria: {
     pt: '/pt/blog/castelo-de-leiria-visita-desde-pombal/',

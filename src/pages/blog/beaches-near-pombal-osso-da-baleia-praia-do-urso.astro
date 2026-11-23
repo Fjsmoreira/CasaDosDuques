@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/blog/beaches-near-pombal-osso-da-baleia-praia-do-urso/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Beaches near Pombal: Osso da Baleia, Praia do Urso and the quiet Atlantic coast',
+      description: 'The nearest beach to Abiul is 42 km and 37 minutes away. A practical guide to the five Atlantic beaches near Pombal — Blue Flag status in 2026, lifeguards, access, parking and when to swim.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-11-23',
+      dateModified: '2026-11-23',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://casadosduques.pt/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Beaches near Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Beaches near Pombal: Osso da Baleia, Praia do Urso and the quiet Atlantic coast"
+  description="The nearest beach to Abiul is 42 km and 37 minutes away. A practical guide to the five Atlantic beaches near Pombal: Blue Flag status in 2026, lifeguards, access, parking and when to swim."
+  canonical="/blog/beaches-near-pombal-osso-da-baleia-praia-do-urso/"
+  locale="en"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Beaches</span>
+        <span>November 2026</span>
+        <span>&middot; 7 min read</span>
+      </div>
+      <h1 class="leading-tight mb-4">Beaches near Pombal: Osso da Baleia, Praia do Urso and the quiet Atlantic coast</h1>
+      <p class="text-lg text-muted font-body">The closest beach to Casa dos Duques is <strong>Praia da Leirosa</strong>: <strong>42 km, about 37 minutes</strong> by car from Abiul. The beach most people mean when they search for beaches near Pombal, though, is <strong>Praia do Osso da Baleia</strong> &mdash; <strong>43 km, 38 minutes</strong>, in the municipality of Pombal itself, and one of the few here to fly a <strong>Blue Flag in 2026</strong>. The wild dune beach next door, <strong>Praia do Urso</strong> (<strong>44 km, 38 minutes</strong>), was formally added to Portugal&rsquo;s coastal-management plan in <strong>August 2026</strong>. All of them are free public beaches; all of them have lifeguards only during the official bathing season.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">The five beaches, at a glance</h2>
+      <p>Distances below are road distances from Abiul, measured with OpenStreetMap/OSRM routing &mdash; the same route your satnav will take.</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Praia da Leirosa</strong> &mdash; 42 km / 37 min. The nearest of all, in Figueira da Foz municipality. Quiet, sandy, few facilities. Best for a short afternoon.</li>
+        <li><strong>Praia do Osso da Baleia</strong> &mdash; 43 km / 38 min. Pombal&rsquo;s own beach, inside the Mata Nacional do Urso. Blue Flag, accessible walkways, parking, toilets, first aid, a bar and a picnic area.</li>
+        <li><strong>Praia do Urso</strong> &mdash; 44 km / 38 min. Raw dunes and no infrastructure at all. The one to choose for emptiness, not convenience.</li>
+        <li><strong>Praia de Pedrógão</strong> &mdash; 50 km / 44 min. Very wide sand with pine forest behind it, supervised in season, and the best fish restaurants of the group.</li>
+        <li><strong>Figueira da Foz</strong> &mdash; 60 km / 46 min. A resort town rather than a beach: long city sand, promenade, casino, everything open out of season.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Praia do Osso da Baleia: the one that has everything</h2>
+      <p>If you only drive to the coast once during your stay, make it this one. The beach sits in the <strong>Mata Nacional do Urso</strong>, in the parish of Carriço, and it is the <strong>only beach in the municipality of Pombal</strong>. The name &mdash; &ldquo;whale bone&rdquo; &mdash; comes from a whale skeleton that, according to local oral history, washed up on this sand in the early 20th century.</p>
+      <p>The credentials are unusually strong for a beach this quiet. It has been classified a <strong>Praia Dourada</strong> since 1998 for its geological, botanical and landscape value, has held the <strong>Blue Flag since 2004</strong>, and in May 2026 the ABAAE confirmed it would keep the flag for the 2026 season. Since 2005 it has also been a <strong>Praia Acess&iacute;vel</strong>, with wooden walkways over the dunes, amphibious beach wheelchairs and accessible toilets &mdash; note that those resources are only in place during the bathing season. In 2026 the municipality also signed off the contract for a new beach-support building here, an investment of around <strong>&euro;717,000</strong>.</p>
+      <p>What that means in practice: a municipal car park, toilets, a first-aid post, a bar and a picnic area in summer, plus walking, sport fishing, bodyboard, surf and beach volleyball on the sand. One honest caveat: in 2026 the beach dropped off Quercus&rsquo;s &ldquo;Qualidade de Ouro&rdquo; list, which it had appeared on in previous years, because it no longer met all the criteria cumulatively. The Blue Flag stayed.</p>
+
+      <h2 class="mt-8 mb-3">Praia do Urso: the new beach next door</h2>
+      <p>A few kilometres south of Osso da Baleia, Praia do Urso is what the Portuguese coast looked like before beach bars: a broad band of dunes, marram grass, pine forest and nobody but a few anglers. Access has historically been the problem &mdash; the old coastal plan effectively blocked the municipality from building proper roads and beach access, and the mayor of Pombal, Pedro Pimp&atilde;o, described waiting for a new plan for &ldquo;many, many years&rdquo;.</p>
+      <p>That changed in <strong>August 2026</strong>, when the government approved a revision of the <strong>Programa da Orla Costeira Ovar&ndash;Marinha Grande</strong> covering around 140 km of coastline and formally integrated Praia do Urso into it. The municipality has said it now intends to build accesses and beach infrastructure, with the stated aim of receiving bathers in a future bathing season, and the regional press reported that goal in August 2026.</p>
+      <p>Until that happens, treat it as an undeveloped beach, not a resort: <strong>no lifeguards, no bar, no shade, no facilities</strong>. Go for the walk, the dunes and the emptiness, take water and a windbreak, and do not swim alone. If you want a supervised swim with children, drive the extra few minutes to Osso da Baleia.</p>
+
+      <h2 class="mt-8 mb-3">Pedrógão, Leirosa and Figueira da Foz</h2>
+      <p><strong>Praia de Pedrógão</strong> (50 km, 44 min) is the big, broad one: a wide sweep of sand backed by pine forest in the municipality of Leiria, supervised during the bathing season, with a row of fish and seafood restaurants behind it &mdash; the best choice for a long lunch after the beach. <strong>Praia da Leirosa</strong> (42 km, 37 min) is the closest and the most low-key: a sandy residential beach in Figueira da Foz municipality, usually empty on weekdays, with few facilities. <strong>Figueira da Foz</strong> (60 km, 46 min) is the opposite &mdash; a proper seaside town with a long city beach, a promenade, a casino and restaurants that stay open all year.</p>
+
+      <h2 class="mt-8 mb-3">When can you actually swim?</h2>
+      <p>This is the part that catches visitors out. Portugal does not have a single national swimming season: the <strong>APA (Ag&ecirc;ncia Portuguesa do Ambiente)</strong> identifies the official bathing waters each year and fixes the season for each one &mdash; for 2026 that was done by <strong>Portaria n.&ordm; 204-A/2026/1</strong> of 30 April, which listed 671 bathing waters nationally, 523 of them on the mainland. These central-coast beaches are typically supervised from <strong>June to mid-September</strong>; outside that window there are no lifeguards, no flags and no first-aid post, even though the beach is open and free.</p>
+      <p>Two things worth knowing before you run in. First, the Atlantic here is <strong>cold</strong> even in August &mdash; this is not the Algarve, and a long swim is a short one. Second, this coast has real currents and a heavy shore break; swim between the flags, near other people, and never at Praia do Urso outside a supervised period. If you want water you can stay in for an hour, the river beaches inland are the better answer on a hot day &mdash; see our <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">full beaches and river-beach page</a>.</p>
+
+      <h2 class="mt-8 mb-3">Out of season: the best time for the coast</h2>
+      <p>From November to March these beaches belong to walkers. The dunes at Osso da Baleia and Praia do Urso are at their best in low winter light, the pine forest smells of resin after rain, and you can walk for an hour without meeting anyone. Storms rewrite the sand every year, and the big-wave season at Nazar&eacute; (65 minutes north) runs through the winter months &mdash; the clifftop at S&iacute;tio is a spectacle in itself, no swimming involved.</p>
+      <p>Bring a windproof layer and proper shoes; the wind off the Atlantic in January is not a beach-towel wind. If the weather turns, the <a href="/guide/pombal/" class="text-terracotta-500 hover:text-terracotta-600 underline">Pombal guide</a> has the castle, the museums and the indoor options, and our <a href="/day-trips/" class="text-terracotta-500 hover:text-terracotta-600 underline">day-trip list</a> covers Coimbra, Tomar and the monasteries for the days when the coast is under cloud.</p>
+
+      <h2 class="mt-8 mb-3">Doing it from Casa dos Duques</h2>
+      <p>Every beach above is a day trip, not a journey: 37 to 46 minutes of secondary road from Abiul, with no need to book anything and no entry fee. The pattern that works best in summer is to leave after breakfast, swim and eat fish at Pedr&oacute;g&atilde;o or Osso da Baleia, and be back at the house for a late-afternoon swim in the pool while the coast empties. In winter, invert it: walk the dunes in the morning, then drive into Pombal for lunch &mdash; our guide to the <a href="/blog/best-restaurants-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">best restaurants in Pombal</a> has the reliable addresses.</p>
+      <p>The house is 10&ndash;15 minutes from Pombal town and 50 minutes from Coimbra, which is what makes this stretch of coast usable: close enough for a spontaneous afternoon, far enough that the hinterland is still countryside. You can see the full layout on our <a href="/beaches/" class="text-terracotta-500 hover:text-terracotta-600 underline">beaches page</a> or go straight to <a href="/booking/" class="text-terracotta-500 hover:text-terracotta-600 underline">availability</a>.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources: C&acirc;mara Municipal de Pombal &mdash; official page for Praia do Osso da Baleia (Praia Dourada 1998, Blue Flag since 2004, Praia Acess&iacute;vel since 2005, services and accessibility resources available during the bathing season only); Pombal Jornal, 5 May 2026 &mdash; &ldquo;Praia do Osso da Baleia renova galard&atilde;o da Bandeira Azul&rdquo; (ABAAE list 2026, Quercus Gold Quality list); Pombal Jornal, 15 June 2026 &mdash; new accesses to Praia do Urso after approval of the coastal plan, &euro;717,000 beach-support contract; Pombal Jornal, 25 August 2026 &mdash; &ldquo;Praia do Urso passa a integrar programa de gest&atilde;o da orla costeira&rdquo; (POCOMG revision, ~140 km of coast); Regi&atilde;o de Leiria, 15 August 2026 &mdash; municipality&rsquo;s aim of receiving bathers at Praia do Urso in a future bathing season; APA &mdash; &Eacute;poca Balnear 2026 (Portaria n.&ordm; 204-A/2026/1, 30 April; 671 bathing waters, 523 on the mainland). Distances and drive times computed with OpenStreetMap/OSRM from Abiul, 23 November 2026. Bathing-season dates and beach infrastructure change: confirm with the C&acirc;mara Municipal de Pombal or the APA&rsquo;s Info&aacute;gua service before you rely on them.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="Base for the coast, without the coast crowds"
+    subtitle="Casa dos Duques — 38 minutes from the Atlantic, with a pool and garden for the rest of the day"
+    primaryCta={{ label: 'Check availability', href: '/booking/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
