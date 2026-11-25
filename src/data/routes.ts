@@ -54,7 +54,8 @@ export type RouteKey =
   | 'blogWinterCentralPortugal'
   | 'blogCasteloLeiria'
   | 'blogTomarCouventFr'
-  | 'blogBeachesPombal';
+  | 'blogBeachesPombal'
+  | 'blogPlagesAtlantiquePombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -281,6 +282,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogBeachesPombal: {
     en: '/blog/beaches-near-pombal-osso-da-baleia-praia-do-urso/',
+  },
+  blogPlagesAtlantiquePombal: {
+    fr: '/fr/blog/plages-atlantique-pres-de-pombal-osso-da-baleia/',
   },
   blogCasteloLeiria: {
     pt: '/pt/blog/castelo-de-leiria-visita-desde-pombal/',

@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTASection from '../../../components/CTASection.astro';
+
+const canonicalUrl = 'https://casadosduques.pt/fr/blog/plages-atlantique-pres-de-pombal-osso-da-baleia/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: 'Les plages de l’Atlantique près de Pombal : quatre plages à 37–46 minutes',
+      description: 'La plage la plus proche de Casa dos Duques est Praia da Leirosa, à 42 km et 37 minutes. Osso da Baleia (43 km, 38 min), Pedrógão et Figueira da Foz : distances réelles, Pavillon Bleu, accès et saison de baignade.',
+      author: { '@type': 'Person', name: 'Casa dos Duques' },
+      datePublished: '2026-11-25',
+      dateModified: '2026-11-25',
+      image: 'https://casadosduques.pt/images/airbnb/467c6107-9824-44ec-98f5-fcc2d62cb186.jpeg',
+      publisher: { '@type': 'Organization', name: 'Casa dos Duques' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://casadosduques.pt/fr/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://casadosduques.pt/fr/blog/' },
+        { '@type': 'ListItem', position: 3, name: 'Plages de l’Atlantique près de Pombal', item: canonicalUrl },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Les plages de l’Atlantique près de Pombal : quatre plages à 37–46 minutes"
+  description="La plage la plus proche de Casa dos Duques est Praia da Leirosa (42 km, 37 min). Osso da Baleia (43 km, 38 min) est la plage de la commune de Pombal : Pavillon Bleu, accès PMR et saison de baignade expliqués."
+  canonical="/fr/blog/plages-atlantique-pres-de-pombal-osso-da-baleia/"
+  locale="fr"
+  schema={schema}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <div class="flex items-center gap-2 text-sm text-muted font-body mb-4">
+        <span class="bg-stone-100 text-wood-700 px-3 py-1">Plages</span>
+        <span>Novembre 2026</span>
+        <span>&middot; 7 min de lecture</span>
+      </div>
+      <h1 class="leading-tight mb-4">Les plages de l’Atlantique près de Pombal : quatre plages à 37–46 minutes</h1>
+      <p class="text-lg text-muted font-body">La plage la plus proche de Casa dos Duques s’appelle <strong>Praia da Leirosa</strong> : <strong>42 km et 37 minutes</strong> de route depuis Abiul. Mais celle que l’on cherche vraiment quand on tape « plages près de Pombal », c’est <strong>Praia do Osso da Baleia</strong> — <strong>43 km, 38 minutes</strong>, sur la commune de Pombal elle-même, <strong>Pavillon Bleu depuis 2004</strong> et classée <strong>Praia Dourada depuis 1998</strong>. Quatre plages de sable atlantique se trouvent entre <strong>37 et 46 minutes</strong> de la maison, toutes gratuites, toutes surveillées uniquement pendant la saison balnéaire officielle.</p>
+    </div>
+
+    <div class="text-muted leading-relaxed space-y-4 font-body">
+      <h2 class="mt-8 mb-3">Les quatre plages, en un coup d’œil</h2>
+      <p>Les distances ci-dessous sont des distances routières calculées depuis Abiul avec le routage OpenStreetMap/OSRM — donc l’itinéraire que prendra votre GPS, pas la distance à vol d’oiseau.</p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Praia da Leirosa</strong> — 42 km / 37 min. La plus proche de toutes, sur la commune de Figueira da Foz. Sable calme, peu d’équipements, presque vide en semaine. Idéale pour un après-midi improvisé.</li>
+        <li><strong>Praia do Osso da Baleia</strong> — 43 km / 38 min. La plage de Pombal, au cœur de la Mata Nacional do Urso. Pavillon Bleu, passerelles en bois, parking, sanitaires, bar et aire de pique-nique en saison.</li>
+        <li><strong>Praia de Pedrógão</strong> — 50 km / 44 min. Très large banc de sable adossé à une pinède, surveillée pendant la saison, avec les meilleurs restaurants de poisson du secteur juste derrière les dunes.</li>
+        <li><strong>Figueira da Foz</strong> — 60 km / 46 min. Une vraie ville balnéaire plutôt qu’une plage : long sable urbain, promenade, casino et restaurants ouverts toute l’année.</li>
+      </ul>
+
+      <h2 class="mt-8 mb-3">Osso da Baleia : celle qui a tout</h2>
+      <p>Si vous ne devez aller qu’une seule fois à la mer pendant votre séjour, allez là. La plage se trouve dans la <strong>Mata Nacional do Urso</strong>, sur la paroisse de Carriço, et c’est la seule plage de la commune de Pombal. Son nom — « os de baleine » — vient d’un squelette de baleine qui, selon les témoignages oraux recueillis par la mairie, aurait échoué sur ce sable au début du XX<sup>e</sup> siècle.</p>
+      <p>Le palmarès est inhabituel pour une plage aussi tranquille. La mairie de Pombal rappelle qu’elle est classée <strong>Praia Dourada depuis 1998</strong> pour ses valeurs géologiques, floristiques, faunistiques, paysagères et patrimoniales, qu’elle a reçu le <strong>Pavillon Bleu en 2004</strong> et l’a renouvelé chaque année depuis, et qu’elle est <strong>Praia Acessível depuis 2005</strong>. L’équipement d’accessibilité est concret : passerelles permettant de circuler jusqu’au sable, chaises amphibies pour la baignade, fauteuils de plage, cannes et déambulateurs amphibies, panneaux en braille, plan tactile en relief des accès et le code couleur ColorAdd pour les personnes daltoniennes. Une précision utile : ces ressources ne sont en place que pendant la saison balnéaire.</p>
+      <p>Sur place, en saison, vous trouverez un parking municipal, des sanitaires, un poste de secours, un bar et une aire de pique-nique. Les activités officielles listées par la commune sont simples : randonnée, promenades à pied, pêche sportive et volley. C’est une plage pour marcher, pique-niquer et se baigner entre les drapeaux — pas pour les parcs aquatiques.</p>
+
+      <h2 class="mt-8 mb-3">Praia do Urso : la voisine sauvage</h2>
+      <p>À quelques kilomètres au sud d’Osso da Baleia, <strong>Praia do Urso</strong> montre à quoi ressemblait cette côte avant les bars de plage : une large bande de dunes, des oyats, la pinède derrière, et pour toute compagnie quelques pêcheurs à la ligne. Il n’y a <strong>ni sauveteur, ni bar, ni ombre, ni sanitaires</strong>. C’est la plage à choisir pour la solitude, pas pour la commodité : emportez de l’eau et un coupe-vent, et ne vous baignez pas seul. Si vous voyagez avec des enfants et que vous voulez une baignade surveillée, faites les quelques minutes de route supplémentaires jusqu’à Osso da Baleia.</p>
+
+      <h2 class="mt-8 mb-3">Pedrógão, Leirosa et Figueira da Foz</h2>
+      <p><strong>Praia de Pedrógão</strong> (50 km, 44 min) est la grande : un vaste croissant de sable sur la commune de Leiria, surveillé en saison, avec une rangée de restaurants de poisson et de fruits de mer derrière la plage — le bon choix pour un long déjeuner après la baignade. <strong>Praia da Leirosa</strong> (42 km, 37 min) est l’inverse : discrète, résidentielle, peu équipée, souvent déserte en semaine. <strong>Figueira da Foz</strong> (60 km, 46 min) est une station balnéaire complète, avec sa promenade, son casino et ses restaurants qui ne ferment pas en hiver.</p>
+
+      <h2 class="mt-8 mb-3">Pourquoi ce n’est pas l’Algarve (et pourquoi c’est très bien ainsi)</h2>
+      <p>Trois différences à connaître avant de partir, surtout si vous arrivez du sud du Portugal. D’abord, <strong>l’eau est froide</strong>, même en août : l’Atlantique de la côte centrale n’a rien à voir avec les lagunes de l’Algarve, et une longue baignade devient vite une baignade courte. Ensuite, <strong>le vent et le ressac</strong> sont réels : ce littoral est exposé, la barre est parfois forte, et il faut se baigner entre les drapeaux et près des autres baigneurs. Enfin, <strong>l’espace</strong> : à Osso da Baleia ou à Pedrógão, vous pouvez poser votre serviette sans négocier un carré de sable.</p>
+      <p>C’est aussi pour cela que cette côte fonctionne très bien en famille : sable large, pente douce à Osso da Baleia, poste de secours en saison, et la possibilité de rentrer à la maison pour la sieste. Et si l’eau de mer reste trop fraîche pour les plus petits, la région a une alternative : les plages fluviales, plus chaudes et sans vagues — nous les détaillons dans notre guide des <a href="/fr/blog/plages-fluviales-pres-de-pombal-baignade-riviere/" class="text-terracotta-500 hover:text-terracotta-600 underline">plages fluviales près de Pombal</a>, à partir de 34 minutes de la maison.</p>
+
+      <h2 class="mt-8 mb-3">Quand peut-on vraiment se baigner ?</h2>
+      <p>Le Portugal n’a pas une saison balnéaire unique : l’<strong>Agência Portuguesa do Ambiente (APA)</strong> définit chaque année les eaux de baignade et fixe la période de surveillance pour chacune. Sur cette portion de côte, la surveillance va <strong>généralement de juin à la mi-septembre</strong> ; en dehors de cette fenêtre, il n’y a ni sauveteur, ni drapeaux, ni poste de secours — la plage reste ouverte et gratuite, mais vous êtes seul. Les dates exactes changent d’une année à l’autre : vérifiez-les auprès de la mairie de Pombal ou du service Infoágua de l’APA avant de compter sur une baignade surveillée.</p>
+      <p>Hors saison, ces plages appartiennent aux promeneurs. De novembre à mars, les dunes d’Osso da Baleia et de Praia do Urso sont à leur meilleur dans la lumière basse, la pinède sent la résine après la pluie, et l’on peut marcher une heure sans croiser personne. Emportez une couche coupe-vent et de bonnes chaussures : le vent d’Atlantique en janvier n’est pas un vent de serviette de plage. Si le temps tourne, la liste des <a href="/fr/excursions/" class="text-terracotta-500 hover:text-terracotta-600 underline">excursions et visites</a> couvre Coimbra, Tomar et les monastères pour les journées sous les nuages.</p>
+
+      <h2 class="mt-8 mb-3">Y aller depuis Casa dos Duques</h2>
+      <p>Chacune de ces plages est une sortie à la journée, pas un voyage : 37 à 46 minutes de route secondaire depuis Abiul, sans réservation et sans entrée à payer. La maison est à <strong>11 minutes de Pombal</strong> et à <strong>48 minutes de Coimbra</strong>. Si vous arrivez en avion, comptez <strong>173 km et environ 1 h 55 depuis l’aéroport de Lisbonne</strong>, <strong>181 km et environ 2 h 07 depuis Porto</strong> — la voiture est de toute façon indispensable pour profiter de cette côte.</p>
+      <p>Le rythme qui fonctionne le mieux en été : partir après le petit-déjeuner, se baigner et déjeuner de poisson à Pedrógão ou à Osso da Baleia, puis rentrer pour une fin d’après-midi au bord de la piscine pendant que la côte se vide. En hiver, inversez : marcher sur les dunes le matin, puis descendre déjeuner à Pombal — nos <a href="/fr/blog/meilleurs-restaurants-pombal-portugal/" class="text-terracotta-500 hover:text-terracotta-600 underline">meilleures adresses de restaurants à Pombal</a> sont à jour. Pour la vue d’ensemble des plages océaniques et fluviales, notre page <a href="/fr/plages/" class="text-terracotta-500 hover:text-terracotta-600 underline">plages près de Pombal</a> rassemble les temps de trajet, et les disponibilités sont sur la page <a href="/fr/reservation/" class="text-terracotta-500 hover:text-terracotta-600 underline">réservation</a>.</p>
+    </div>
+
+    <div class="mt-8 p-6 bg-stone-100">
+      <p class="text-sm text-muted italic font-body">Sources : Câmara Municipal de Pombal, page officielle « Praia do Osso da Baleia » (situation dans la Mata Nacional do Urso, origine du nom, Praia Dourada depuis 1998, Pavillon Bleu depuis 2004 renouvelé chaque année, Praia Acessível depuis 2005, liste des ressources d’accessibilité et des activités) ; Agência Portuguesa do Ambiente — saison balnéaire (dates fixées annuellement, à confirmer via Infoágua) ; distances et temps de trajet calculés avec OpenStreetMap/OSRM depuis Abiul (39.8726, -8.5386) le 25 novembre 2026. Les équipements de plage, horaires de surveillance et dates de saison changent : vérifiez auprès de la mairie de Pombal avant de vous déplacer.</p>
+    </div>
+  </article>
+
+  <CTASection
+    title="La côte à 38 minutes, la campagne autour de vous"
+    subtitle="Casa dos Duques — piscine et jardin à Abiul, à 37–46 minutes des plages de l’Atlantique"
+    primaryCta={{ label: 'Voir les disponibilités', href: '/fr/reservation/' }}
+    variant="terracotta"
+  />
+</BaseLayout>
