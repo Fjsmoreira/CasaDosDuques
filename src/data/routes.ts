@@ -55,7 +55,8 @@ export type RouteKey =
   | 'blogCasteloLeiria'
   | 'blogTomarCouventFr'
   | 'blogBeachesPombal'
-  | 'blogPlagesAtlantiquePombal';
+  | 'blogPlagesAtlantiquePombal'
+  | 'blogZwemmenPombal';
 
 export const LOCALE_CODES: LocaleCode[] = ['en', 'pt', 'nl', 'fr'];
 
@@ -288,6 +289,9 @@ export const ROUTE_GROUPS: Record<RouteKey, Partial<Record<LocaleCode, string>>>
   },
   blogCasteloLeiria: {
     pt: '/pt/blog/castelo-de-leiria-visita-desde-pombal/',
+  },
+  blogZwemmenPombal: {
+    nl: '/nl/blog/zwemmen-bij-pombal-zee-of-rivier-stranden-gezinnen/',
   },
 };
 
